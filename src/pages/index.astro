@@ -131,49 +131,6 @@ const destaqueFormula =
                 >.
             </p>
 
-            <!-- Busca — ação principal, no topo -->
-            <div class="home-search mt-8">
-                <svg
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="1.7"
-                    aria-hidden="true"
-                    ><circle cx="11" cy="11" r="7"></circle><path
-                        d="m21 21-4.3-4.3"></path></svg
-                >
-                <input
-                    type="search"
-                    id="q"
-                    autocomplete="off"
-                    aria-label="Buscar pesquisas, pessoas e grupos"
-                />
-            </div>
-
-            <!-- Personas -->
-            <div
-                class="mt-4 flex items-center flex-wrap gap-2 text-sm"
-                role="group"
-                aria-label="Quem está buscando"
-            >
-                <span class="text-text-muted mr-1">Busco como</span>
-                <button type="button" data-persona="aluno" class="persona-btn"
-                    >aluno</button
-                >
-                <button type="button" data-persona="professor" class="persona-btn"
-                    >professor</button
-                >
-                <button type="button" data-persona="empresa" class="persona-btn"
-                    >empresa</button
-                >
-            </div>
-            <p id="lens" class="mt-2 text-sm text-text-muted"></p>
-            <p
-                id="suggest"
-                class="mt-4 text-sm text-text-muted flex flex-wrap gap-x-4 gap-y-1"
-            >
-            </p>
-
             <!-- Números do acervo -->
             <div class="home-stats mt-8" aria-label="Números do acervo">
                 {
@@ -230,6 +187,49 @@ const destaqueFormula =
 
             <!-- Assinatura: publicações por ano (linha do horizonte) -->
             <HomeHero />
+
+            <!-- Busca — ação principal, no topo -->
+            <div class="home-search mt-8">
+                <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.7"
+                    aria-hidden="true"
+                    ><circle cx="11" cy="11" r="7"></circle><path
+                        d="m21 21-4.3-4.3"></path></svg
+                >
+                <input
+                    type="search"
+                    id="q"
+                    autocomplete="off"
+                    aria-label="Buscar pesquisas, pessoas e grupos"
+                />
+            </div>
+
+            <!-- Personas -->
+            <div
+                class="mt-4 flex items-center flex-wrap gap-2 text-sm"
+                role="group"
+                aria-label="Quem está buscando"
+            >
+                <span class="text-text-muted mr-1">Busco como</span>
+                <button type="button" data-persona="aluno" class="persona-btn"
+                    >aluno</button
+                >
+                <button type="button" data-persona="professor" class="persona-btn"
+                    >professor</button
+                >
+                <button type="button" data-persona="empresa" class="persona-btn"
+                    >empresa</button
+                >
+            </div>
+            <p id="lens" class="mt-2 text-sm text-text-muted"></p>
+            <p
+                id="suggest"
+                class="mt-4 text-sm text-text-muted flex flex-wrap gap-x-4 gap-y-1"
+            >
+            </p>
         </section>
 
         <!-- Results -->
