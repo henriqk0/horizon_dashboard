@@ -262,6 +262,14 @@ const graphDescriptionText =
         ? `${graph.focusName} possui ${graph.stats.edgeCount} conexões diretas neste recorte.`
         : graphEmptyDescription;
 
+const formatShortName = (fullName: string): string => {
+    if (!fullName) return "";
+    const parts = String(fullName).trim().split(/\s+/).filter(Boolean);
+    if (parts.length === 0) return "";
+    if (parts.length === 1) return parts[0];
+    return `${parts[0]} ${parts[parts.length - 1]}`;
+};
+
 const getNodeLabelPlacement = (
     node: StudentInteractionNode,
     position: {
@@ -272,7 +280,8 @@ const getNodeLabelPlacement = (
 ): NodeLabelPlacement => {
     const isCentral = node.isFocus || node.id === focusNode.id;
     const maxLength = isCentral ? 44 : usesDenseLabels ? 18 : 26;
-    const text = truncateLabel(node.name, maxLength);
+    const shortName = formatShortName(node.name);
+    const text = truncateLabel(shortName, maxLength);
 
     if (isCentral) {
         return {

@@ -760,6 +760,14 @@ const legendSections = [
                 return `rgba(${r}, ${g}, ${b}, ${alpha})`;
             };
 
+            const formatShortName = (fullName: string): string => {
+                if (!fullName) return "";
+                const parts = String(fullName).trim().split(/\s+/).filter(Boolean);
+                if (parts.length === 0) return "";
+                if (parts.length === 1) return parts[0];
+                return `${parts[0]} ${parts[parts.length - 1]}`;
+            };
+
             const truncateLabel = (value: string, maxLength: number) =>
                 value.length > maxLength ? `${value.slice(0, maxLength - 1)}…` : value;
 
@@ -1551,7 +1559,8 @@ const legendSections = [
                                 node.id === selectedNodeId ||
                                 selectedNeighbors.has(node.id);
                             const opacity = selectedNodeId && !isHighlighted ? 0.32 : 0.96;
-                            const label = truncateLabel(node.name, NODE_LABEL_MAX_LENGTH);
+                            const shortName = formatShortName(node.name);
+                            const label = truncateLabel(shortName, NODE_LABEL_MAX_LENGTH);
                             const textMetrics = context.measureText(label);
                             const boxWidth = textMetrics.width + 12;
                             const boxHeight = fontSize + 8;
