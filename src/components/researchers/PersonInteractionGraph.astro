@@ -328,16 +328,16 @@ const legendColors = {
 
 const legendSections = [
     {
-        title: "Nós (Entidades)",
+        title: "Nós (Estrutura)",
         items: [
             {
-                label: "Você (Nó Central)",
+                label: "Nó Central (Foco)",
                 type: "node" as const,
                 color: "#38bdf8",
                 strokeColor: "#0f172a"
             },
             {
-                label: "Conexões Diretas",
+                label: "Nó Conectado (Fundo branco)",
                 type: "node" as const,
                 color: "#ffffff",
                 strokeColor: "#94a3b8"
@@ -345,14 +345,15 @@ const legendSections = [
         ]
     },
     {
-        title: "Vínculos (Arestas)",
+        title: "Vínculos e Contorno dos Nós",
+        description: "A cor da aresta e do contorno reflete o tipo de conexão:",
         items: [
-            { label: "Projeto", type: "line" as const, color: getRelationColor(["projeto"]) },
-            { label: "Orientação", type: "line" as const, color: getRelationColor(["orientacao"]) },
-            { label: "Artigo", type: "line" as const, color: getRelationColor(["artigo"]) },
-            { label: "Iniciativa", type: "line" as const, color: getRelationColor(["iniciativa"]) },
-            { label: "Grupo de pesquisa", type: "line" as const, color: getRelationColor(["grupo de pesquisa"]) },
-            { label: "Múltiplos vínculos", type: "line" as const, color: "#7c3aed" }
+            { label: "Projeto", type: "node_line" as const, color: "#ffffff", strokeColor: getRelationColor(["projeto"]) },
+            { label: "Orientação", type: "node_line" as const, color: "#ffffff", strokeColor: getRelationColor(["orientacao"]) },
+            { label: "Artigo", type: "node_line" as const, color: "#ffffff", strokeColor: getRelationColor(["artigo"]) },
+            { label: "Iniciativa", type: "node_line" as const, color: "#ffffff", strokeColor: getRelationColor(["iniciativa"]) },
+            { label: "Grupo de pesquisa", type: "node_line" as const, color: "#ffffff", strokeColor: getRelationColor(["grupo de pesquisa"]) },
+            { label: "Múltiplos vínculos", type: "node_line" as const, color: "#ffffff", strokeColor: "#7c3aed" }
         ]
     }
 ];

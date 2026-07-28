@@ -1,7 +1,7 @@
 ---
 export interface LegendItem {
     label: string;
-    type: "dot" | "node" | "line";
+    type: "dot" | "node" | "line" | "node_line";
     color?: string;
     strokeColor?: string;
     secondaryIndicator?: "ring" | "double";
@@ -9,6 +9,7 @@ export interface LegendItem {
 
 export interface LegendSection {
     title: string;
+    description?: string;
     items: LegendItem[];
 }
 
@@ -91,6 +92,11 @@ const { sections } = Astro.props;
                     <h5 class="text-[10px] font-bold uppercase tracking-[0.1em] text-text-secondary">
                         {section.title}
                     </h5>
+                    {section.description && (
+                        <p class="text-[10px] text-text-muted leading-tight">
+                            {section.description}
+                        </p>
+                    )}
                     <ul class="space-y-2" role="list">
                         {section.items.map((item) => (
                             <li class="flex items-center gap-3 text-[11px] text-text-secondary">
@@ -125,6 +131,22 @@ const { sections } = Astro.props;
                                                 background: ${item.color || "#ffffff"};
                                                 border-color: ${item.strokeColor || "#94a3b8"};
                                                 ${item.secondaryIndicator === "double" ? `--tw-ring-color: ${item.strokeColor || "#94a3b8"}` : ""}
+                                            `}
+                                        ></div>
+                                    </div>
+                                )}
+
+                                {item.type === "node_line" && (
+                                    <div class="relative flex h-4 w-6 shrink-0 items-center justify-center" aria-hidden="true">
+                                        <span
+                                            class="h-0.5 w-6 rounded-full"
+                                            style={`background: ${item.strokeColor || item.color || "#94a3b8"}`}
+                                        ></span>
+                                        <div
+                                            class="absolute h-3 w-3 rounded-full border-2 bg-page-bg"
+                                            style={`
+                                                background: ${item.color || "#ffffff"};
+                                                border-color: ${item.strokeColor || "#94a3b8"};
                                             `}
                                         ></div>
                                     </div>
