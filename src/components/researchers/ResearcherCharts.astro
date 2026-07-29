@@ -366,4 +366,14 @@ const allArticles = researchers.flatMap((r) => r.articles || []);
     :global(.dark) .bg-glass-overlay {
         background: rgba(255, 255, 255, 0.05);
     }
+
+    :global(.dark) .bg-glass-overlay {
+        background: rgba(255, 255, 255, 0.05);
+    }
+    :global(.contrast-high) .bg-glass-overlay,
+    :global(.contrast-maximum) .bg-glass-overlay {
+        background: var(--surface);
+    }
+
+
 </style>
