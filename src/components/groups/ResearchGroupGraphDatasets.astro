@@ -46,16 +46,16 @@ const accentByKey: Record<
     }
 > = {
     membership: {
-        badge: "border-sky-400/25 bg-sky-400/10 text-sky-700",
-        border: "border-sky-200/80",
-        surface: "bg-sky-50/80",
-        accent: "text-sky-700",
+        badge: "border-sky-400/30 bg-sky-400/10 text-sky-700 dark:text-sky-300",
+        border: "border-sky-500/20",
+        surface: "bg-surface",
+        accent: "text-sky-700 dark:text-sky-300",
     },
     relationship: {
-        badge: "border-emerald-400/25 bg-emerald-400/10 text-emerald-700",
-        border: "border-emerald-200/80",
-        surface: "bg-emerald-50/80",
-        accent: "text-emerald-700",
+        badge: "border-emerald-400/30 bg-emerald-400/10 text-emerald-700 dark:text-emerald-300",
+        border: "border-emerald-500/20",
+        surface: "bg-surface",
+        accent: "text-emerald-700 dark:text-emerald-300",
     },
 };
 ---
@@ -67,7 +67,7 @@ const accentByKey: Record<
 
             return (
                 <article
-                    class={`rounded-3xl border ${accent.border} ${accent.surface} p-6 shadow-[0_20px_60px_rgba(148,163,184,0.10)] space-y-5`}
+                    class={`rounded-3xl border ${accent.border} ${accent.surface} p-6 shadow-sm space-y-5`}
                 >
                     <div class="flex flex-wrap items-start justify-between gap-3">
                         <div class="space-y-2">
@@ -86,20 +86,20 @@ const accentByKey: Record<
                             </div>
                         </div>
                         <span class={`text-xs font-bold ${accent.accent}`}>
-                            {dataset.available ? "Disponivel" : "Sem arquivo"}
+                            {dataset.available ? "Disponível" : "Sem arquivo"}
                         </span>
                     </div>
 
                     <div class="grid grid-cols-2 gap-3">
-                        <div class="rounded-2xl border border-border-main bg-white/70 p-4">
+                        <div class="rounded-2xl border border-border-main bg-track/50 p-4">
                             <p class="text-[11px] font-bold uppercase tracking-[0.18em] text-text-secondary">
-                                Nos
+                                Nós
                             </p>
                             <p class="mt-2 text-3xl font-bold font-display text-text-main">
                                 {dataset.stats.nodes}
                             </p>
                         </div>
-                        <div class="rounded-2xl border border-border-main bg-white/70 p-4">
+                        <div class="rounded-2xl border border-border-main bg-track/50 p-4">
                             <p class="text-[11px] font-bold uppercase tracking-[0.18em] text-text-secondary">
                                 Arestas
                             </p>
@@ -107,7 +107,7 @@ const accentByKey: Record<
                                 {dataset.stats.edges}
                             </p>
                         </div>
-                        <div class="rounded-2xl border border-border-main bg-white/70 p-4">
+                        <div class="rounded-2xl border border-border-main bg-track/50 p-4">
                             <p class="text-[11px] font-bold uppercase tracking-[0.18em] text-text-secondary">
                                 Membros
                             </p>
@@ -115,7 +115,7 @@ const accentByKey: Record<
                                 {dataset.stats.memberCount}
                             </p>
                         </div>
-                        <div class="rounded-2xl border border-border-main bg-white/70 p-4">
+                        <div class="rounded-2xl border border-border-main bg-track/50 p-4">
                             <p class="text-[11px] font-bold uppercase tracking-[0.18em] text-text-secondary">
                                 Componentes
                             </p>
@@ -125,9 +125,9 @@ const accentByKey: Record<
                         </div>
                     </div>
 
-                    <div class="rounded-2xl border border-border-main bg-white/70 p-4 space-y-3">
+                    <div class="rounded-2xl border border-border-main bg-track/50 p-4 space-y-3">
                         <div class="flex flex-wrap gap-2">
-                            <span class="inline-flex items-center rounded-full border border-border-main bg-white px-3 py-1 text-[10px] font-bold uppercase tracking-[0.18em] text-text-secondary">
+                            <span class="inline-flex items-center rounded-full border border-border-main bg-surface px-3 py-1 text-[10px] font-bold uppercase tracking-[0.18em] text-text-secondary">
                                 tipo: {dataset.graphType ?? "desconhecido"}
                             </span>
                         </div>
@@ -143,19 +143,19 @@ const accentByKey: Record<
 
                         <div>
                             <p class="text-[11px] font-bold uppercase tracking-[0.18em] text-text-secondary">
-                                Tipos de relacao
+                                Tipos de relação
                             </p>
                             <div class="mt-2 flex flex-wrap gap-2">
                                 {
                                     dataset.relationTotals.length > 0 ? (
                                         dataset.relationTotals.map((item) => (
-                                            <span class="inline-flex items-center rounded-full border border-border-main bg-white px-3 py-1 text-xs font-medium text-text-main">
+                                            <span class="inline-flex items-center rounded-full border border-border-main bg-surface px-3 py-1 text-xs font-medium text-text-main">
                                                 {item.label}: {item.value}
                                             </span>
                                         ))
                                     ) : (
                                         <span class="text-sm text-text-secondary">
-                                            Sem relacoes registradas neste export.
+                                            Sem relações registradas neste export.
                                         </span>
                                     )
                                 }
@@ -164,19 +164,19 @@ const accentByKey: Record<
 
                         <div>
                             <p class="text-[11px] font-bold uppercase tracking-[0.18em] text-text-secondary">
-                                Distribuicao por perfil
+                                Distribuição por perfil
                             </p>
                             <div class="mt-2 flex flex-wrap gap-2">
                                 {
                                     dataset.classificationDistribution.length > 0 ? (
                                         dataset.classificationDistribution.map((item) => (
-                                            <span class="inline-flex items-center rounded-full border border-border-main bg-white px-3 py-1 text-xs font-medium text-text-main">
+                                            <span class="inline-flex items-center rounded-full border border-border-main bg-surface px-3 py-1 text-xs font-medium text-text-main">
                                                 {item.label}: {item.value}
                                             </span>
                                         ))
                                     ) : (
                                         <span class="text-sm text-text-secondary">
-                                            Sem distribuicao disponivel.
+                                            Sem distribuição disponível.
                                         </span>
                                     )
                                 }
@@ -184,7 +184,7 @@ const accentByKey: Record<
                         </div>
                     </div>
 
-                    <div class="rounded-2xl border border-border-main bg-white/70 p-4">
+                    <div class="rounded-2xl border border-border-main bg-track/50 p-4">
                         <p class="text-[11px] font-bold uppercase tracking-[0.18em] text-text-secondary">
                             Pessoas em destaque
                         </p>
@@ -198,7 +198,7 @@ const accentByKey: Record<
                                                     {index + 1}. {person.name}
                                                 </p>
                                                 <p class="text-xs uppercase tracking-[0.14em] text-text-secondary">
-                                                    {person.classification ?? "sem classificacao"}
+                                                    {person.classification ?? "sem classificação"}
                                                 </p>
                                             </div>
                                             <div class="shrink-0 text-right text-xs text-text-secondary">

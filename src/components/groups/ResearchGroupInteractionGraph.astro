@@ -1384,26 +1384,39 @@ const legendSections = [
                     context.setTransform(viewport.dpr, 0, 0, viewport.dpr, 0, 0);
                     context.clearRect(0, 0, viewport.width, viewport.height);
 
-                    const backgroundGradient = context.createLinearGradient(0, 0, 0, viewport.height);
-                    backgroundGradient.addColorStop(0, "rgba(255, 255, 255, 1)");
-                    backgroundGradient.addColorStop(0.55, "rgba(248, 250, 252, 0.995)");
-                    backgroundGradient.addColorStop(1, "rgba(255, 255, 255, 1)");
-                    context.fillStyle = backgroundGradient;
-                    context.fillRect(0, 0, viewport.width, viewport.height);
+                    const isDark = document.documentElement.classList.contains("dark") ||
+                                   document.documentElement.classList.contains("contrast-high") ||
+                                   document.documentElement.classList.contains("contrast-maximum");
 
-                    const accentGlow = context.createRadialGradient(
-                        viewport.width * 0.22,
-                        viewport.height * 0.18,
-                        24,
-                        viewport.width * 0.22,
-                        viewport.height * 0.18,
-                        viewport.width * 0.56,
-                    );
-                    accentGlow.addColorStop(0, "rgba(125, 211, 252, 0.12)");
-                    accentGlow.addColorStop(0.5, "rgba(191, 219, 254, 0.07)");
-                    accentGlow.addColorStop(1, "rgba(255, 255, 255, 0)");
-                    context.fillStyle = accentGlow;
-                    context.fillRect(0, 0, viewport.width, viewport.height);
+                    if (isDark) {
+                        const backgroundGradient = context.createLinearGradient(0, 0, 0, viewport.height);
+                        backgroundGradient.addColorStop(0, "rgba(22, 32, 27, 1)");
+                        backgroundGradient.addColorStop(0.55, "rgba(14, 21, 18, 0.995)");
+                        backgroundGradient.addColorStop(1, "rgba(22, 32, 27, 1)");
+                        context.fillStyle = backgroundGradient;
+                        context.fillRect(0, 0, viewport.width, viewport.height);
+                    } else {
+                        const backgroundGradient = context.createLinearGradient(0, 0, 0, viewport.height);
+                        backgroundGradient.addColorStop(0, "rgba(255, 255, 255, 1)");
+                        backgroundGradient.addColorStop(0.55, "rgba(248, 250, 252, 0.995)");
+                        backgroundGradient.addColorStop(1, "rgba(255, 255, 255, 1)");
+                        context.fillStyle = backgroundGradient;
+                        context.fillRect(0, 0, viewport.width, viewport.height);
+
+                        const accentGlow = context.createRadialGradient(
+                            viewport.width * 0.22,
+                            viewport.height * 0.18,
+                            24,
+                            viewport.width * 0.22,
+                            viewport.height * 0.18,
+                            viewport.width * 0.56,
+                        );
+                        accentGlow.addColorStop(0, "rgba(125, 211, 252, 0.12)");
+                        accentGlow.addColorStop(0.5, "rgba(191, 219, 254, 0.07)");
+                        accentGlow.addColorStop(1, "rgba(255, 255, 255, 0)");
+                        context.fillStyle = accentGlow;
+                        context.fillRect(0, 0, viewport.width, viewport.height);
+                    }
 
                     context.save();
                     context.translate(transform.x, transform.y);
@@ -1530,12 +1543,12 @@ const legendSections = [
                                 boxHeight,
                                 9,
                             );
-                            context.fillStyle = hexToRgba("#ffffff", opacity);
+                            context.fillStyle = isDark ? hexToRgba("#16201b", opacity) : hexToRgba("#ffffff", opacity);
                             context.fill();
                             context.strokeStyle = hexToRgba(getRelationColor(edge), opacity);
                             context.lineWidth = 1;
                             context.stroke();
-                            context.fillStyle = hexToRgba(getRelationColor(edge), opacity);
+                            context.fillStyle = isDark ? hexToRgba("#eaf1ec", opacity) : hexToRgba(getRelationColor(edge), opacity);
                             context.fillText(label, centerX, centerY + 0.5);
                         });
                     }
@@ -1575,15 +1588,15 @@ const legendSections = [
                                 9,
                             );
                             context.fillStyle = isSelected || isHovered
-                                ? hexToRgba("#eff6ff", opacity)
-                                : hexToRgba("#ffffff", opacity);
+                                ? (isDark ? hexToRgba("#24322b", opacity) : hexToRgba("#eff6ff", opacity))
+                                : (isDark ? hexToRgba("#16201b", opacity) : hexToRgba("#ffffff", opacity));
                             context.fill();
                             context.strokeStyle = isSelected || isHovered
                                 ? hexToRgba("#60a5fa", opacity)
-                                : hexToRgba("#cbd5e1", opacity);
+                                : (isDark ? hexToRgba("#3a4b41", opacity) : hexToRgba("#cbd5e1", opacity));
                             context.lineWidth = isSelected || isHovered ? 1.2 : 1;
                             context.stroke();
-                            context.fillStyle = hexToRgba("#0f172a", opacity);
+                            context.fillStyle = isDark ? hexToRgba("#eaf1ec", opacity) : hexToRgba("#0f172a", opacity);
                             context.fillText(label, screenPoint.x, labelY + 0.5);
                         });
                     }
