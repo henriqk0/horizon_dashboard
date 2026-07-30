@@ -1,11 +1,11 @@
 {
     "metadata": {
-        "generated_at": "2026-07-28T15:37:19.893896+00:00",
+        "generated_at": "2026-07-12T13:24:41.215478+00:00",
         "sources": {
-            "researchers": "/home/henriq/Documents/gitProjs/forks/horizon_etl/data/exports/researchers_canonical.json",
-            "initiatives": "/home/henriq/Documents/gitProjs/forks/horizon_etl/data/exports/initiatives_canonical.json",
-            "research_groups": "/home/henriq/Documents/gitProjs/forks/horizon_etl/data/exports/research_groups_canonical.json",
-            "advisorships": "/home/henriq/Documents/gitProjs/forks/horizon_etl/data/exports/advisorships_canonical.json"
+            "researchers": "/Users/paulossjunior/projects/diretoria/horizon/horizon_etl/data/exports/researchers_canonical.json",
+            "initiatives": "/Users/paulossjunior/projects/diretoria/horizon/horizon_etl/data/exports/initiatives_canonical.json",
+            "research_groups": "/Users/paulossjunior/projects/diretoria/horizon/horizon_etl/data/exports/research_groups_canonical.json",
+            "advisorships": "/Users/paulossjunior/projects/diretoria/horizon/horizon_etl/data/exports/advisorships_canonical.json"
         },
         "scope": {
             "type": "research_group",
@@ -54,21 +54,21 @@
                 "degree": 3
             },
             {
-                "id": 1216,
+                "id": 1237,
                 "name": "Abrahao Alexandre Alden Elesbon",
                 "classification": "researcher",
                 "weighted_degree": 3,
                 "degree": 3
             },
             {
-                "id": 1217,
+                "id": 1238,
                 "name": "Déborah Cunha Cassuce",
                 "classification": "researcher",
                 "weighted_degree": 3,
                 "degree": 3
             },
             {
-                "id": 1218,
+                "id": 1239,
                 "name": "Alex Sandro Xavier",
                 "classification": "student",
                 "weighted_degree": 3,
@@ -81,19 +81,6 @@
         "multigraph": false,
         "graph": {},
         "nodes": [
-            {
-                "name": "Abrahao Alexandre Alden Elesbon",
-                "classification": "researcher",
-                "classification_confidence": "high",
-                "was_student": false,
-                "was_staff": true,
-                "campus_name": "Colatina",
-                "degree": 3,
-                "weighted_degree": 3,
-                "is_group_member": true,
-                "is_advisorship_neighbor": false,
-                "id": 1216
-            },
             {
                 "name": "Marcelo Gomes De Araujo",
                 "classification": "researcher",
@@ -108,17 +95,17 @@
                 "id": 17
             },
             {
-                "name": "Alex Sandro Xavier",
-                "classification": "student",
-                "classification_confidence": "medium",
-                "was_student": true,
-                "was_staff": false,
-                "campus_name": "Itapina",
+                "name": "Abrahao Alexandre Alden Elesbon",
+                "classification": "researcher",
+                "classification_confidence": "high",
+                "was_student": false,
+                "was_staff": true,
+                "campus_name": "Colatina",
                 "degree": 3,
                 "weighted_degree": 3,
                 "is_group_member": true,
                 "is_advisorship_neighbor": false,
-                "id": 1218
+                "id": 1237
             },
             {
                 "name": "Déborah Cunha Cassuce",
@@ -131,7 +118,20 @@
                 "weighted_degree": 3,
                 "is_group_member": true,
                 "is_advisorship_neighbor": false,
-                "id": 1217
+                "id": 1238
+            },
+            {
+                "name": "Alex Sandro Xavier",
+                "classification": "student",
+                "classification_confidence": "medium",
+                "was_student": true,
+                "was_staff": false,
+                "campus_name": "Itapina",
+                "degree": 3,
+                "weighted_degree": 3,
+                "is_group_member": true,
+                "is_advisorship_neighbor": false,
+                "id": 1239
             }
         ],
         "edges": [
@@ -143,30 +143,8 @@
                 "relation_types": [
                     "research_group"
                 ],
-                "source": 1216,
-                "target": 17
-            },
-            {
-                "weight": 1,
-                "initiative_count": 0,
-                "research_group_count": 1,
-                "advisorship_count": 0,
-                "relation_types": [
-                    "research_group"
-                ],
-                "source": 1216,
-                "target": 1217
-            },
-            {
-                "weight": 1,
-                "initiative_count": 0,
-                "research_group_count": 1,
-                "advisorship_count": 0,
-                "relation_types": [
-                    "research_group"
-                ],
-                "source": 1216,
-                "target": 1218
+                "source": 17,
+                "target": 1237
             },
             {
                 "weight": 1,
@@ -177,7 +155,7 @@
                     "research_group"
                 ],
                 "source": 17,
-                "target": 1217
+                "target": 1238
             },
             {
                 "weight": 1,
@@ -188,7 +166,7 @@
                     "research_group"
                 ],
                 "source": 17,
-                "target": 1218
+                "target": 1239
             },
             {
                 "weight": 1,
@@ -198,8 +176,30 @@
                 "relation_types": [
                     "research_group"
                 ],
-                "source": 1218,
-                "target": 1217
+                "source": 1237,
+                "target": 1238
+            },
+            {
+                "weight": 1,
+                "initiative_count": 0,
+                "research_group_count": 1,
+                "advisorship_count": 0,
+                "relation_types": [
+                    "research_group"
+                ],
+                "source": 1237,
+                "target": 1239
+            },
+            {
+                "weight": 1,
+                "initiative_count": 0,
+                "research_group_count": 1,
+                "advisorship_count": 0,
+                "relation_types": [
+                    "research_group"
+                ],
+                "source": 1238,
+                "target": 1239
             }
         ]
     }
