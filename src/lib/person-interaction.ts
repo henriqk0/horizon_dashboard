@@ -19,8 +19,8 @@ const RELATION_TYPE_ORDER_BY_KIND: Record<
     PersonInteractionGraphKind,
     PersonInteractionRelationType[]
 > = {
-    collaboration: ["project", "orientation", "article"],
-    relationship: ["initiative", "research_group", "advisorship", "article"],
+    collaboration: ["initiative", "article", "advisorship"],
+    relationship: ["initiative", "research_group", "advisorship"],
 };
 
 const createRelationCounter = (): Record<PersonInteractionRelationType, number> => ({
