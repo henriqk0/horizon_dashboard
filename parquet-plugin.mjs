@@ -76,6 +76,15 @@ async function readTable(path) {
   return rows.map((row) => reviveRow(row, jsonCols));
 }
 
+// Emit the data as `JSON.parse("...")` instead of a raw object literal. A huge
+// literal makes V8/Rollup build a massive AST (multiple GB for large tables),
+// while JSON.parse keeps the parsed code tiny and defers object construction
+// to runtime. Mirrors Vite's own handling of large JSON files.
+function embedJson(value) {
+  const json = JSON.stringify(value);
+  return `export default /* #__PURE__ */ JSON.parse(${JSON.stringify(json)});`;
+}
+
 export default function parquetPlugin() {
   return {
     name: "horizon-parquet",
@@ -99,12 +108,12 @@ export default function parquetPlugin() {
           graph_stats: meta.graph_stats,
           graph: { ...(meta.graph || {}), nodes, edges },
         };
-        return `export default ${JSON.stringify(assembled)};`;
+        return embedJson(assembled);
       }
 
       if (id.endsWith(".parquet")) {
         const rows = await readTable(id);
-        return `export default ${JSON.stringify(rows)};`;
+        return embedJson(rows);
       }
 
       return null;
