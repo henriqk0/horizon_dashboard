@@ -1,5 +1,5 @@
-import articlesCanonical from "../data/articles_canonical.parquet";
-import researchersCanonical from "../data/researchers_canonical.parquet";
+import articlesCanonical from "../data/articles_canonical.json";
+import researchersCanonical from "../data/researchers_canonical.json";
 import type { Article, Researcher } from "../types/researchers";
 import { getRealCampuses } from "./tenant-data";
 

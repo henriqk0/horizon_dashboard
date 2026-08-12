@@ -3,12 +3,12 @@
 // cards — never the 20 MB canonical files — so the home search stays fully
 // client-side on GitHub Pages (no backend).
 
-import researchers from "../data/researchers_canonical.parquet";
-import students from "../data/students_canonical.parquet";
-import groups from "../data/research_groups_canonical.parquet";
-import initiatives from "../data/initiatives_canonical.parquet";
-import articles from "../data/articles_canonical.parquet";
-import impact from "../data/researcher_impact.parquet";
+import researchers from "../data/researchers_canonical.json";
+import students from "../data/students_canonical.json";
+import groups from "../data/research_groups_canonical.json";
+import initiatives from "../data/initiatives_canonical.json";
+import articles from "../data/articles_canonical.json";
+import impact from "../data/researcher_impact.json";
 import { normalizeSearchText } from "../lib/search";
 
 export const prerender = true;

@@ -2,7 +2,7 @@
 // Junta researcher_impact.json ao pesquisador por id Lattes (extraído do
 // cnpq_url) e, na falta, por nome normalizado. Mesma estratégia do índice de
 // busca (search-index.json.ts).
-import impactData from "../data/researcher_impact.parquet";
+import impactData from "../data/researcher_impact.json";
 import { normalizeSearchText } from "./search";
 
 export interface ResearcherImpact {

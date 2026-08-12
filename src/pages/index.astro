@@ -3,8 +3,8 @@ import { statSync } from "node:fs";
 import { fileURLToPath } from "node:url";
 import Layout from "../layouts/Layout.astro";
 import HomeHero from "../components/home/HomeHero.astro";
-import groupsData from "../data/research_groups_canonical.parquet";
-import projectsData from "../data/initiatives_canonical.parquet";
+import groupsData from "../data/research_groups_canonical.json";
+import projectsData from "../data/initiatives_canonical.json";
 import dataMeta from "../data/_meta.json";
 import { researcherCollectionCounts } from "../lib/researcher-collections";
 import {
@@ -27,7 +27,7 @@ if (!Number.isNaN(metaDate.getTime())) {
 } else {
     try {
         lastUpdate = statSync(
-            fileURLToPath(new URL("../data/articles_canonical.parquet", import.meta.url)),
+            fileURLToPath(new URL("../data/articles_canonical.json", import.meta.url)),
         ).mtime;
     } catch {
         lastUpdate = new Date();

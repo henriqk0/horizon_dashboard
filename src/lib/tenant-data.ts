@@ -1,9 +1,9 @@
-import campusesCanonical from "../data/campuses_canonical.parquet";
-import groupsCanonical from "../data/research_groups_canonical.parquet";
-import researchersCanonical from "../data/researchers_canonical.parquet";
-import initiativesCanonical from "../data/initiatives_canonical.parquet";
-import advisorshipsCanonical from "../data/advisorships_canonical.parquet";
-import knowledgeAreasMart from "../data/knowledge_areas_mart.parquet";
+import campusesCanonical from "../data/campuses_canonical.json";
+import groupsCanonical from "../data/research_groups_canonical.json";
+import researchersCanonical from "../data/researchers_canonical.json";
+import initiativesCanonical from "../data/initiatives_canonical.json";
+import advisorshipsCanonical from "../data/advisorships_canonical.json";
+import knowledgeAreasMart from "../data/knowledge_areas_mart.json";
 import type { ResearchGroup } from "../types/groups";
 import type { Researcher } from "../types/researchers";
 import type { Project } from "../types/projects";

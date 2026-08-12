@@ -4,13 +4,13 @@
 // keyed by the researcher id as a string so the researcher detail page can
 // render each block without shipping the raw files to the client.
 
-import awardsData from "../data/awards_canonical.parquet";
-import languagesData from "../data/languages_canonical.parquet";
-import proficienciesData from "../data/proficiencies_canonical.parquet";
-import professionalActivitiesData from "../data/professional_activities_canonical.parquet";
-import researchProductionsData from "../data/research_productions_canonical.parquet";
-import productionTypesData from "../data/production_types_canonical.parquet";
-import productionAuthorsData from "../data/production_authors_canonical.parquet";
+import awardsData from "../data/awards_canonical.json";
+import languagesData from "../data/languages_canonical.json";
+import proficienciesData from "../data/proficiencies_canonical.json";
+import professionalActivitiesData from "../data/professional_activities_canonical.json";
+import researchProductionsData from "../data/research_productions_canonical.json";
+import productionTypesData from "../data/production_types_canonical.json";
+import productionAuthorsData from "../data/production_authors_canonical.json";
 
 export interface ResearcherAward {
     title: string;

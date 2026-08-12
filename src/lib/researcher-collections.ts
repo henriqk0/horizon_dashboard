@@ -1,8 +1,8 @@
-import allResearchersData from "../data/researchers_canonical.parquet";
-import nullResearchersData from "../data/null_researchers_canonical.parquet";
-import outsideIfesData from "../data/outside_ifes_canonical.parquet";
-import researchersOnlyData from "../data/researchers_only_canonical.parquet";
-import studentsData from "../data/students_canonical.parquet";
+import allResearchersData from "../data/researchers_canonical.json";
+import nullResearchersData from "../data/null_researchers_canonical.json";
+import outsideIfesData from "../data/outside_ifes_canonical.json";
+import researchersOnlyData from "../data/researchers_only_canonical.json";
+import studentsData from "../data/students_canonical.json";
 import { getRealCampuses, getResearcherCampusIds } from "./tenant-data";
 import type { Researcher } from "../types/researchers";
 

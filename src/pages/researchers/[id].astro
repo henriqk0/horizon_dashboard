@@ -1,13 +1,13 @@
 ---
 import Layout from "../../layouts/Layout.astro";
-import researchersData from "../../data/researchers_canonical.parquet";
-import initiativesData from "../../data/initiatives_canonical.parquet";
-import researchersOnlyCollaborationGraphData from "graph:researchers_only_collaboration_graph";
-import researchersOnlyRelationshipGraphData from "graph:researchers_only_relationship_graph";
-import outsideIfesCollaborationGraphData from "graph:outside_ifes_collaboration_graph";
-import outsideIfesRelationshipGraphData from "graph:outside_ifes_relationship_graph";
-import nullResearchersCollaborationGraphData from "graph:null_researchers_collaboration_graph";
-import nullResearchersRelationshipGraphData from "graph:null_researchers_relationship_graph";
+import researchersData from "../../data/researchers_canonical.json";
+import initiativesData from "../../data/initiatives_canonical.json";
+import researchersOnlyCollaborationGraphData from "../../data/researchers_only_collaboration_graph.json";
+import researchersOnlyRelationshipGraphData from "../../data/researchers_only_relationship_graph.json";
+import outsideIfesCollaborationGraphData from "../../data/outside_ifes_collaboration_graph.json";
+import outsideIfesRelationshipGraphData from "../../data/outside_ifes_relationship_graph.json";
+import nullResearchersCollaborationGraphData from "../../data/null_researchers_collaboration_graph.json";
+import nullResearchersRelationshipGraphData from "../../data/null_researchers_relationship_graph.json";
 import type { Researcher } from "../../types/researchers";
 import type { StudentInteractionRawGraphFile } from "../../types/student-graphs";
 import {

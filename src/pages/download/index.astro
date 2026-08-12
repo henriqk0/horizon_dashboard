@@ -1,78 +1,78 @@
 ---
 import Layout from "../../layouts/Layout.astro";
 
-import advisorshipsCanonical from "../../data/advisorships_canonical.parquet";
-import advisorshipsCanonicalUrl from "../../data/advisorships_canonical.parquet?url";
-import advisorshipsTracking from "../../data/advisorships_tracking.parquet";
-import advisorshipsTrackingUrl from "../../data/advisorships_tracking.parquet?url";
-import articlesCanonical from "../../data/articles_canonical.parquet";
-import articlesCanonicalUrl from "../../data/articles_canonical.parquet?url";
-import attributeAssertionsCanonical from "../../data/attribute_assertions_canonical.parquet";
-import attributeAssertionsCanonicalUrl from "../../data/attribute_assertions_canonical.parquet?url";
-import campusesCanonical from "../../data/campuses_canonical.parquet";
-import campusesCanonicalUrl from "../../data/campuses_canonical.parquet?url";
-import entityChangeLogsCanonical from "../../data/entity_change_logs_canonical.parquet";
-import entityChangeLogsCanonicalUrl from "../../data/entity_change_logs_canonical.parquet?url";
-import entityMatchesCanonical from "../../data/entity_matches_canonical.parquet";
-import entityMatchesCanonicalUrl from "../../data/entity_matches_canonical.parquet?url";
-import fellowshipsCanonical from "../../data/fellowships_canonical.parquet";
-import fellowshipsCanonicalUrl from "../../data/fellowships_canonical.parquet?url";
-import ingestionRunsCanonical from "../../data/ingestion_runs_canonical.parquet";
-import ingestionRunsCanonicalUrl from "../../data/ingestion_runs_canonical.parquet?url";
-import initiativeTypesCanonical from "../../data/initiative_types_canonical.parquet";
-import initiativeTypesCanonicalUrl from "../../data/initiative_types_canonical.parquet?url";
-import initiativesCanonical from "../../data/initiatives_canonical.parquet";
-import initiativesCanonicalUrl from "../../data/initiatives_canonical.parquet?url";
-import initiativesTracking from "../../data/initiatives_tracking.parquet";
-import initiativesTrackingUrl from "../../data/initiatives_tracking.parquet?url";
-import knowledgeAreasCanonical from "../../data/knowledge_areas_canonical.parquet";
-import knowledgeAreasCanonicalUrl from "../../data/knowledge_areas_canonical.parquet?url";
-import organizationsCanonical from "../../data/organizations_canonical.parquet";
-import organizationsCanonicalUrl from "../../data/organizations_canonical.parquet?url";
-import outsideIfesCanonical from "../../data/outside_ifes_canonical.parquet";
-import outsideIfesCanonicalUrl from "../../data/outside_ifes_canonical.parquet?url";
-import outsideIfesCollaborationGraph from "graph:outside_ifes_collaboration_graph";
-import outsideIfesCollaborationGraphUrl from "../../data/outside_ifes_collaboration_graph.nodes.parquet?url";
-import outsideIfesRelationshipGraph from "graph:outside_ifes_relationship_graph";
-import outsideIfesRelationshipGraphUrl from "../../data/outside_ifes_relationship_graph.nodes.parquet?url";
-import nullResearchersCanonical from "../../data/null_researchers_canonical.parquet";
-import nullResearchersCanonicalUrl from "../../data/null_researchers_canonical.parquet?url";
-import nullResearchersCollaborationGraph from "graph:null_researchers_collaboration_graph";
-import nullResearchersCollaborationGraphUrl from "../../data/null_researchers_collaboration_graph.nodes.parquet?url";
-import nullResearchersRelationshipGraph from "graph:null_researchers_relationship_graph";
-import nullResearchersRelationshipGraphUrl from "../../data/null_researchers_relationship_graph.nodes.parquet?url";
-import peopleCollaborationGraph from "graph:people_collaboration_graph";
-import peopleCollaborationGraphUrl from "../../data/people_collaboration_graph.nodes.parquet?url";
-import peopleRelationshipGraph from "graph:people_relationship_graph";
-import peopleRelationshipGraphUrl from "../../data/people_relationship_graph.nodes.parquet?url";
+import advisorshipsCanonical from "../../data/advisorships_canonical.json";
+import advisorshipsCanonicalUrl from "../../data/advisorships_canonical.json?url";
+import advisorshipsTracking from "../../data/advisorships_tracking.json";
+import advisorshipsTrackingUrl from "../../data/advisorships_tracking.json?url";
+import articlesCanonical from "../../data/articles_canonical.json";
+import articlesCanonicalUrl from "../../data/articles_canonical.json?url";
+import attributeAssertionsCanonical from "../../data/attribute_assertions_canonical.json";
+import attributeAssertionsCanonicalUrl from "../../data/attribute_assertions_canonical.json?url";
+import campusesCanonical from "../../data/campuses_canonical.json";
+import campusesCanonicalUrl from "../../data/campuses_canonical.json?url";
+import entityChangeLogsCanonical from "../../data/entity_change_logs_canonical.json";
+import entityChangeLogsCanonicalUrl from "../../data/entity_change_logs_canonical.json?url";
+import entityMatchesCanonical from "../../data/entity_matches_canonical.json";
+import entityMatchesCanonicalUrl from "../../data/entity_matches_canonical.json?url";
+import fellowshipsCanonical from "../../data/fellowships_canonical.json";
+import fellowshipsCanonicalUrl from "../../data/fellowships_canonical.json?url";
+import ingestionRunsCanonical from "../../data/ingestion_runs_canonical.json";
+import ingestionRunsCanonicalUrl from "../../data/ingestion_runs_canonical.json?url";
+import initiativeTypesCanonical from "../../data/initiative_types_canonical.json";
+import initiativeTypesCanonicalUrl from "../../data/initiative_types_canonical.json?url";
+import initiativesCanonical from "../../data/initiatives_canonical.json";
+import initiativesCanonicalUrl from "../../data/initiatives_canonical.json?url";
+import initiativesTracking from "../../data/initiatives_tracking.json";
+import initiativesTrackingUrl from "../../data/initiatives_tracking.json?url";
+import knowledgeAreasCanonical from "../../data/knowledge_areas_canonical.json";
+import knowledgeAreasCanonicalUrl from "../../data/knowledge_areas_canonical.json?url";
+import organizationsCanonical from "../../data/organizations_canonical.json";
+import organizationsCanonicalUrl from "../../data/organizations_canonical.json?url";
+import outsideIfesCanonical from "../../data/outside_ifes_canonical.json";
+import outsideIfesCanonicalUrl from "../../data/outside_ifes_canonical.json?url";
+import outsideIfesCollaborationGraph from "../../data/outside_ifes_collaboration_graph.json";
+import outsideIfesCollaborationGraphUrl from "../../data/outside_ifes_collaboration_graph.json?url";
+import outsideIfesRelationshipGraph from "../../data/outside_ifes_relationship_graph.json";
+import outsideIfesRelationshipGraphUrl from "../../data/outside_ifes_relationship_graph.json?url";
+import nullResearchersCanonical from "../../data/null_researchers_canonical.json";
+import nullResearchersCanonicalUrl from "../../data/null_researchers_canonical.json?url";
+import nullResearchersCollaborationGraph from "../../data/null_researchers_collaboration_graph.json";
+import nullResearchersCollaborationGraphUrl from "../../data/null_researchers_collaboration_graph.json?url";
+import nullResearchersRelationshipGraph from "../../data/null_researchers_relationship_graph.json";
+import nullResearchersRelationshipGraphUrl from "../../data/null_researchers_relationship_graph.json?url";
+import peopleCollaborationGraph from "../../data/people_collaboration_graph.json";
+import peopleCollaborationGraphUrl from "../../data/people_collaboration_graph.json?url";
+import peopleRelationshipGraph from "../../data/people_relationship_graph.json";
+import peopleRelationshipGraphUrl from "../../data/people_relationship_graph.json?url";
 import researchGroupMembershipGraphsManifest from "../../data/research_group_membership_graphs_manifest.json";
 import researchGroupMembershipGraphsManifestUrl from "../../data/research_group_membership_graphs_manifest.json?url";
 import researchGroupRelationshipGraphsManifest from "../../data/research_group_relationship_graphs_manifest.json";
 import researchGroupRelationshipGraphsManifestUrl from "../../data/research_group_relationship_graphs_manifest.json?url";
-import researchGroupsCanonical from "../../data/research_groups_canonical.parquet";
-import researchGroupsCanonicalUrl from "../../data/research_groups_canonical.parquet?url";
-import researchersCanonical from "../../data/researchers_canonical.parquet";
-import researchersCanonicalUrl from "../../data/researchers_canonical.parquet?url";
-import advisorshipAnalytics from "../../data/advisorship_analytics.parquet";
-import advisorshipAnalyticsUrl from "../../data/advisorship_analytics.parquet?url";
+import researchGroupsCanonical from "../../data/research_groups_canonical.json";
+import researchGroupsCanonicalUrl from "../../data/research_groups_canonical.json?url";
+import researchersCanonical from "../../data/researchers_canonical.json";
+import researchersCanonicalUrl from "../../data/researchers_canonical.json?url";
+import advisorshipAnalytics from "../../data/advisorship_analytics.json";
+import advisorshipAnalyticsUrl from "../../data/advisorship_analytics.json?url";
 import initiativesMart from "../../data/initiatives_analytics_mart.json";
 import initiativesMartUrl from "../../data/initiatives_analytics_mart.json?url";
-import knowledgeAreasMart from "../../data/knowledge_areas_mart.parquet";
-import knowledgeAreasMartUrl from "../../data/knowledge_areas_mart.parquet?url";
-import researchersOnlyCanonical from "../../data/researchers_only_canonical.parquet";
-import researchersOnlyCanonicalUrl from "../../data/researchers_only_canonical.parquet?url";
-import researchersOnlyCollaborationGraph from "graph:researchers_only_collaboration_graph";
-import researchersOnlyCollaborationGraphUrl from "../../data/researchers_only_collaboration_graph.nodes.parquet?url";
-import researchersOnlyRelationshipGraph from "graph:researchers_only_relationship_graph";
-import researchersOnlyRelationshipGraphUrl from "../../data/researchers_only_relationship_graph.nodes.parquet?url";
-import researchersTracking from "../../data/researchers_tracking.parquet";
-import researchersTrackingUrl from "../../data/researchers_tracking.parquet?url";
-import studentsCanonical from "../../data/students_canonical.parquet";
-import studentsCanonicalUrl from "../../data/students_canonical.parquet?url";
-import studentsCollaborationGraph from "graph:students_collaboration_graph";
-import studentsCollaborationGraphUrl from "../../data/students_collaboration_graph.nodes.parquet?url";
-import studentsRelationshipGraph from "graph:students_relationship_graph";
-import studentsRelationshipGraphUrl from "../../data/students_relationship_graph.nodes.parquet?url";
+import knowledgeAreasMart from "../../data/knowledge_areas_mart.json";
+import knowledgeAreasMartUrl from "../../data/knowledge_areas_mart.json?url";
+import researchersOnlyCanonical from "../../data/researchers_only_canonical.json";
+import researchersOnlyCanonicalUrl from "../../data/researchers_only_canonical.json?url";
+import researchersOnlyCollaborationGraph from "../../data/researchers_only_collaboration_graph.json";
+import researchersOnlyCollaborationGraphUrl from "../../data/researchers_only_collaboration_graph.json?url";
+import researchersOnlyRelationshipGraph from "../../data/researchers_only_relationship_graph.json";
+import researchersOnlyRelationshipGraphUrl from "../../data/researchers_only_relationship_graph.json?url";
+import researchersTracking from "../../data/researchers_tracking.json";
+import researchersTrackingUrl from "../../data/researchers_tracking.json?url";
+import studentsCanonical from "../../data/students_canonical.json";
+import studentsCanonicalUrl from "../../data/students_canonical.json?url";
+import studentsCollaborationGraph from "../../data/students_collaboration_graph.json";
+import studentsCollaborationGraphUrl from "../../data/students_collaboration_graph.json?url";
+import studentsRelationshipGraph from "../../data/students_relationship_graph.json";
+import studentsRelationshipGraphUrl from "../../data/students_relationship_graph.json?url";
 
 type DatasetSection = "canonical" | "tracking" | "graph" | "mart";
 
@@ -316,7 +316,7 @@ const createDataset = ({
 const datasets: DatasetItem[] = [
     createDataset({
         id: "campuses",
-        name: "campuses_canonical.parquet",
+        name: "campuses_canonical.json",
         description: "Cadastro de campi usado nos filtros e vínculos do portal.",
         section: "canonical",
         badgeLabel: "Base",
@@ -325,7 +325,7 @@ const datasets: DatasetItem[] = [
     }),
     createDataset({
         id: "organizations",
-        name: "organizations_canonical.parquet",
+        name: "organizations_canonical.json",
         description: "Organizações financiadoras, parceiras e relacionadas.",
         section: "canonical",
         badgeLabel: "Base",
@@ -334,7 +334,7 @@ const datasets: DatasetItem[] = [
     }),
     createDataset({
         id: "initiative-types",
-        name: "initiative_types_canonical.parquet",
+        name: "initiative_types_canonical.json",
         description: "Tipos de iniciativa utilizados na base do portal.",
         section: "canonical",
         badgeLabel: "Base",
@@ -343,7 +343,7 @@ const datasets: DatasetItem[] = [
     }),
     createDataset({
         id: "knowledge-areas",
-        name: "knowledge_areas_canonical.parquet",
+        name: "knowledge_areas_canonical.json",
         description: "Tabela de áreas do conhecimento adotadas no portal.",
         section: "canonical",
         badgeLabel: "Base",
@@ -352,7 +352,7 @@ const datasets: DatasetItem[] = [
     }),
     createDataset({
         id: "fellowships",
-        name: "fellowships_canonical.parquet",
+        name: "fellowships_canonical.json",
         description: "Bolsas e relações de fomento ligadas às iniciativas.",
         section: "canonical",
         badgeLabel: "Base",
@@ -361,7 +361,7 @@ const datasets: DatasetItem[] = [
     }),
     createDataset({
         id: "articles",
-        name: "articles_canonical.parquet",
+        name: "articles_canonical.json",
         description: "Artigos publicados com ano, tipo, DOI e veículo.",
         section: "canonical",
         badgeLabel: "Base",
@@ -370,7 +370,7 @@ const datasets: DatasetItem[] = [
     }),
     createDataset({
         id: "initiatives",
-        name: "initiatives_canonical.parquet",
+        name: "initiatives_canonical.json",
         description: "Projetos e iniciativas com vigência, equipe e tipologia.",
         section: "canonical",
         badgeLabel: "Base",
@@ -379,7 +379,7 @@ const datasets: DatasetItem[] = [
     }),
     createDataset({
         id: "advisorships",
-        name: "advisorships_canonical.parquet",
+        name: "advisorships_canonical.json",
         description: "Orientações com estudante, tipologia, período e status.",
         section: "canonical",
         badgeLabel: "Base",
@@ -388,7 +388,7 @@ const datasets: DatasetItem[] = [
     }),
     createDataset({
         id: "research-groups",
-        name: "research_groups_canonical.parquet",
+        name: "research_groups_canonical.json",
         description: "Grupos de pesquisa com líderes, membros, campus e áreas.",
         section: "canonical",
         badgeLabel: "Base",
@@ -397,7 +397,7 @@ const datasets: DatasetItem[] = [
     }),
     createDataset({
         id: "researchers",
-        name: "researchers_canonical.parquet",
+        name: "researchers_canonical.json",
         description: "Base completa de pessoas com perfis, vínculos, artigos e orientações.",
         section: "canonical",
         badgeLabel: "Base",
@@ -406,7 +406,7 @@ const datasets: DatasetItem[] = [
     }),
     createDataset({
         id: "researchers-only",
-        name: "researchers_only_canonical.parquet",
+        name: "researchers_only_canonical.json",
         description: "Base apenas dos pesquisadores identificados no portal.",
         section: "canonical",
         badgeLabel: "Base",
@@ -415,7 +415,7 @@ const datasets: DatasetItem[] = [
     }),
     createDataset({
         id: "students",
-        name: "students_canonical.parquet",
+        name: "students_canonical.json",
         description: "Base dos estudantes com iniciativas, grupos e publicações.",
         section: "canonical",
         badgeLabel: "Base",
@@ -424,7 +424,7 @@ const datasets: DatasetItem[] = [
     }),
     createDataset({
         id: "outside-ifes",
-        name: "outside_ifes_canonical.parquet",
+        name: "outside_ifes_canonical.json",
         description: "Pessoas externas ao Ifes que aparecem nas redes e iniciativas.",
         section: "canonical",
         badgeLabel: "Base",
@@ -433,7 +433,7 @@ const datasets: DatasetItem[] = [
     }),
     createDataset({
         id: "null-researchers",
-        name: "null_researchers_canonical.parquet",
+        name: "null_researchers_canonical.json",
         description: "Perfis sem classificação consolidada para revisão e auditoria.",
         section: "canonical",
         badgeLabel: "Base",
@@ -442,7 +442,7 @@ const datasets: DatasetItem[] = [
     }),
     createDataset({
         id: "attribute-assertions",
-        name: "attribute_assertions_canonical.parquet",
+        name: "attribute_assertions_canonical.json",
         description: "Atributos candidatos por fonte com seleção, hash e justificativa.",
         section: "tracking",
         badgeLabel: "Proveniência",
@@ -451,7 +451,7 @@ const datasets: DatasetItem[] = [
     }),
     createDataset({
         id: "entity-matches",
-        name: "entity_matches_canonical.parquet",
+        name: "entity_matches_canonical.json",
         description: "Pareamentos entre registros de origem e entidades canônicas.",
         section: "tracking",
         badgeLabel: "Proveniência",
@@ -460,7 +460,7 @@ const datasets: DatasetItem[] = [
     }),
     createDataset({
         id: "entity-change-logs",
-        name: "entity_change_logs_canonical.parquet",
+        name: "entity_change_logs_canonical.json",
         description: "Histórico de alterações canônicas por execução de ingestão.",
         section: "tracking",
         badgeLabel: "Proveniência",
@@ -469,7 +469,7 @@ const datasets: DatasetItem[] = [
     }),
     createDataset({
         id: "ingestion-runs",
-        name: "ingestion_runs_canonical.parquet",
+        name: "ingestion_runs_canonical.json",
         description: "Execuções de ingestão com fluxo, status, hash e janela temporal.",
         section: "tracking",
         badgeLabel: "Proveniência",
@@ -478,7 +478,7 @@ const datasets: DatasetItem[] = [
     }),
     createDataset({
         id: "researchers-tracking",
-        name: "researchers_tracking.parquet",
+        name: "researchers_tracking.json",
         description: "Rastro consolidado das fontes, correspondências, atributos e mudanças de pesquisadores.",
         section: "tracking",
         badgeLabel: "Proveniência",
@@ -487,7 +487,7 @@ const datasets: DatasetItem[] = [
     }),
     createDataset({
         id: "initiatives-tracking",
-        name: "initiatives_tracking.parquet",
+        name: "initiatives_tracking.json",
         description: "Rastro consolidado das fontes, correspondências, atributos e mudanças de iniciativas.",
         section: "tracking",
         badgeLabel: "Proveniência",
@@ -496,7 +496,7 @@ const datasets: DatasetItem[] = [
     }),
     createDataset({
         id: "advisorships-tracking",
-        name: "advisorships_tracking.parquet",
+        name: "advisorships_tracking.json",
         description: "Rastro consolidado das fontes, correspondências, atributos e mudanças de orientações.",
         section: "tracking",
         badgeLabel: "Proveniência",
@@ -505,7 +505,7 @@ const datasets: DatasetItem[] = [
     }),
     createDataset({
         id: "people-collaboration-graph",
-        name: "people_collaboration_graph.nodes.parquet",
+        name: "people_collaboration_graph.json",
         description: "Rede global de colaboração entre pessoas a partir de projetos, artigos e orientações.",
         section: "graph",
         badgeLabel: "Rede",
@@ -514,7 +514,7 @@ const datasets: DatasetItem[] = [
     }),
     createDataset({
         id: "people-relationship-graph",
-        name: "people_relationship_graph.nodes.parquet",
+        name: "people_relationship_graph.json",
         description: "Rede global de relacionamento com vínculos acadêmicos e institucionais ampliados.",
         section: "graph",
         badgeLabel: "Rede",
@@ -523,7 +523,7 @@ const datasets: DatasetItem[] = [
     }),
     createDataset({
         id: "researchers-only-collaboration-graph",
-        name: "researchers_only_collaboration_graph.nodes.parquet",
+        name: "researchers_only_collaboration_graph.json",
         description: "Recorte de colaboração apenas entre pesquisadores identificados.",
         section: "graph",
         badgeLabel: "Rede",
@@ -532,7 +532,7 @@ const datasets: DatasetItem[] = [
     }),
     createDataset({
         id: "researchers-only-relationship-graph",
-        name: "researchers_only_relationship_graph.nodes.parquet",
+        name: "researchers_only_relationship_graph.json",
         description: "Recorte relacional apenas entre pesquisadores identificados.",
         section: "graph",
         badgeLabel: "Rede",
@@ -541,7 +541,7 @@ const datasets: DatasetItem[] = [
     }),
     createDataset({
         id: "students-collaboration-graph",
-        name: "students_collaboration_graph.nodes.parquet",
+        name: "students_collaboration_graph.json",
         description: "Rede de colaboração centrada nos estudantes e seus vínculos diretos.",
         section: "graph",
         badgeLabel: "Rede",
@@ -550,7 +550,7 @@ const datasets: DatasetItem[] = [
     }),
     createDataset({
         id: "students-relationship-graph",
-        name: "students_relationship_graph.nodes.parquet",
+        name: "students_relationship_graph.json",
         description: "Rede de relacionamento dos estudantes com projetos, grupos e orientações.",
         section: "graph",
         badgeLabel: "Rede",
@@ -559,7 +559,7 @@ const datasets: DatasetItem[] = [
     }),
     createDataset({
         id: "outside-ifes-collaboration-graph",
-        name: "outside_ifes_collaboration_graph.nodes.parquet",
+        name: "outside_ifes_collaboration_graph.json",
         description: "Rede de colaboração dos perfis externos ao Ifes.",
         section: "graph",
         badgeLabel: "Rede",
@@ -568,7 +568,7 @@ const datasets: DatasetItem[] = [
     }),
     createDataset({
         id: "outside-ifes-relationship-graph",
-        name: "outside_ifes_relationship_graph.nodes.parquet",
+        name: "outside_ifes_relationship_graph.json",
         description: "Rede de relacionamento dos perfis externos ao Ifes.",
         section: "graph",
         badgeLabel: "Rede",
@@ -577,7 +577,7 @@ const datasets: DatasetItem[] = [
     }),
     createDataset({
         id: "null-researchers-collaboration-graph",
-        name: "null_researchers_collaboration_graph.nodes.parquet",
+        name: "null_researchers_collaboration_graph.json",
         description: "Rede de colaboração dos perfis ainda sem classificação consolidada.",
         section: "graph",
         badgeLabel: "Rede",
@@ -586,7 +586,7 @@ const datasets: DatasetItem[] = [
     }),
     createDataset({
         id: "null-researchers-relationship-graph",
-        name: "null_researchers_relationship_graph.nodes.parquet",
+        name: "null_researchers_relationship_graph.json",
         description: "Rede de relacionamento dos perfis ainda sem classificação consolidada.",
         section: "graph",
         badgeLabel: "Rede",
@@ -613,7 +613,7 @@ const datasets: DatasetItem[] = [
     }),
     createDataset({
         id: "advisorship-analytics",
-        name: "advisorship_analytics.parquet",
+        name: "advisorship_analytics.json",
         description: "Agregações analíticas das orientações para dashboards.",
         section: "mart",
         badgeLabel: "Agregado",
@@ -631,7 +631,7 @@ const datasets: DatasetItem[] = [
     }),
     createDataset({
         id: "knowledge-areas-mart",
-        name: "knowledge_areas_mart.parquet",
+        name: "knowledge_areas_mart.json",
         description: "Matriz analítica das áreas com contagens e agrupamentos.",
         section: "mart",
         badgeLabel: "Agregado",
