@@ -15,7 +15,7 @@ permissions:
 env:
   ETL_OWNER: henriqk0
   ETL_REPO: horizon_etl
-  ETL_BRANCH: mistral
+  ETL_BRANCH: merge
   EXPORTS_DIR: data/exports
 
 jobs:
@@ -42,8 +42,7 @@ jobs:
           zip_name=""
           found="false"
 
-          # api_url="https://api.github.com/repos/${{ env.ETL_OWNER }}/${{ env.ETL_REPO }}/contents/${{ env.EXPORTS_DIR }}?ref=${{ env.ETL_BRANCH }}"
-          api_url="https://api.github.com/repos/henriqk0/horizon_etl/contents/data/exports?ref=mistral"
+          api_url="https://api.github.com/repos/${{ env.ETL_OWNER }}/${{ env.ETL_REPO }}/contents/${{ env.EXPORTS_DIR }}?ref=${{ env.ETL_BRANCH }}"
 
           if curl -fsSL \
             -H "Accept: application/vnd.github+json" \
