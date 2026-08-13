@@ -25,12 +25,12 @@ jobs:
       - name: Checkout dashboard repository
         uses: actions/checkout@v4
         with:
-          ref: main
+          ref: ${{ github.ref }}
           fetch-depth: 0
 
-      # O zip de exportacao do ETL ainda nao e publicado em lugar nenhum.
-      # Quando `data/exports` passara a existir/alimentar-se, esta resolucao
-      # comeca a funcionar; ate la, o job termina verde com um aviso.
+      # O zip de exportacao vem do branch `mistral` do fork do ETL
+      # (henriqk0/horizon_etl). Se faltar zip no diretorio apontado por
+      # EXPORTS_DIR, o job termina verde com um aviso (nada a sincronizar).
       - name: Resolve export zip from ETL data/exports
         id: zip
         env:
@@ -137,7 +137,7 @@ jobs:
 
           git add src/data
           git commit -m "chore(data): sync ETL exports"
-          git push origin HEAD:main
+          git push origin "HEAD:${{ github.ref_name }}"
 
           {
             echo "## Data sync summary"
