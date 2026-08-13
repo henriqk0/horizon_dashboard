@@ -1,18 +1,18 @@
 {
     "metadata": {
-        "generated_at": "2026-07-12T13:24:42.559329+00:00",
+        "generated_at": "2026-08-04T18:52:34.324498+00:00",
         "sources": {
-            "researchers": "/Users/paulossjunior/projects/diretoria/horizon/horizon_etl/data/exports/researchers_canonical.json",
-            "initiatives": "/Users/paulossjunior/projects/diretoria/horizon/horizon_etl/data/exports/initiatives_canonical.json",
-            "research_groups": "/Users/paulossjunior/projects/diretoria/horizon/horizon_etl/data/exports/research_groups_canonical.json",
-            "advisorships": "/Users/paulossjunior/projects/diretoria/horizon/horizon_etl/data/exports/advisorships_canonical.json"
+            "researchers": "/home/henriq/Documents/gitProjs/forks/horizon_etl/data/exports/researchers_canonical.json",
+            "initiatives": "/home/henriq/Documents/gitProjs/forks/horizon_etl/data/exports/initiatives_canonical.json",
+            "research_groups": "/home/henriq/Documents/gitProjs/forks/horizon_etl/data/exports/research_groups_canonical.json",
+            "advisorships": "/home/henriq/Documents/gitProjs/forks/horizon_etl/data/exports/advisorships_canonical.json"
         },
         "scope": {
             "type": "research_group",
             "research_group": {
                 "id": 67,
-                "name": "Estudos em Educação",
-                "short_name": null,
+                "name": "Estudos e Pesquisas Aplicadas em Geotecnia",
+                "short_name": "EPAG",
                 "member_count": 3,
                 "expanded_node_count": 3,
                 "advisorship_neighbor_count": 0
@@ -42,27 +42,28 @@
             "advisorship": 0
         },
         "classification_distribution": {
-            "researcher": 3
+            "researcher": 2,
+            "student": 1
         },
         "top_people_by_weighted_degree": [
             {
-                "id": 97,
-                "name": "Jenniffer Syreetta De Oliveira Spelta",
-                "classification": "researcher",
-                "weighted_degree": 2,
-                "degree": 2
-            },
-            {
                 "id": 98,
-                "name": "Majorie Mara Malacarne",
+                "name": "Luiz Santiago Souza do Nascimento de Lacerda",
                 "classification": "researcher",
                 "weighted_degree": 2,
                 "degree": 2
             },
             {
-                "id": 2377,
-                "name": "Larissa Sens",
+                "id": 2357,
+                "name": "Flavio Costa de Cerqueira",
                 "classification": "researcher",
+                "weighted_degree": 2,
+                "degree": 2
+            },
+            {
+                "id": 2358,
+                "name": "Guilherme Polastrelli Barbosa",
+                "classification": "student",
                 "weighted_degree": 2,
                 "degree": 2
             }
@@ -74,43 +75,43 @@
         "graph": {},
         "nodes": [
             {
-                "name": "Larissa Sens",
+                "name": "Luiz Santiago Souza do Nascimento de Lacerda",
                 "classification": "researcher",
                 "classification_confidence": "high",
                 "was_student": false,
                 "was_staff": true,
-                "campus_name": "Itapina",
-                "degree": 2,
-                "weighted_degree": 2,
-                "is_group_member": true,
-                "is_advisorship_neighbor": false,
-                "id": 2377
-            },
-            {
-                "name": "Jenniffer Syreetta De Oliveira Spelta",
-                "classification": "researcher",
-                "classification_confidence": "high",
-                "was_student": true,
-                "was_staff": true,
-                "campus_name": "Itapina",
-                "degree": 2,
-                "weighted_degree": 2,
-                "is_group_member": true,
-                "is_advisorship_neighbor": false,
-                "id": 97
-            },
-            {
-                "name": "Majorie Mara Malacarne",
-                "classification": "researcher",
-                "classification_confidence": "high",
-                "was_student": false,
-                "was_staff": true,
-                "campus_name": "Itapina",
+                "campus_name": "Ibatiba",
                 "degree": 2,
                 "weighted_degree": 2,
                 "is_group_member": true,
                 "is_advisorship_neighbor": false,
                 "id": 98
+            },
+            {
+                "name": "Flavio Costa de Cerqueira",
+                "classification": "researcher",
+                "classification_confidence": "high",
+                "was_student": false,
+                "was_staff": true,
+                "campus_name": "Ibatiba",
+                "degree": 2,
+                "weighted_degree": 2,
+                "is_group_member": true,
+                "is_advisorship_neighbor": false,
+                "id": 2357
+            },
+            {
+                "name": "Guilherme Polastrelli Barbosa",
+                "classification": "student",
+                "classification_confidence": "medium",
+                "was_student": true,
+                "was_staff": false,
+                "campus_name": "Ibatiba",
+                "degree": 2,
+                "weighted_degree": 2,
+                "is_group_member": true,
+                "is_advisorship_neighbor": false,
+                "id": 2358
             }
         ],
         "edges": [
@@ -122,8 +123,8 @@
                 "relation_types": [
                     "research_group"
                 ],
-                "source": 2377,
-                "target": 97
+                "source": 98,
+                "target": 2357
             },
             {
                 "weight": 1,
@@ -133,8 +134,8 @@
                 "relation_types": [
                     "research_group"
                 ],
-                "source": 2377,
-                "target": 98
+                "source": 98,
+                "target": 2358
             },
             {
                 "weight": 1,
@@ -144,8 +145,8 @@
                 "relation_types": [
                     "research_group"
                 ],
-                "source": 97,
-                "target": 98
+                "source": 2357,
+                "target": 2358
             }
         ]
     }
