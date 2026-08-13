@@ -28,49 +28,58 @@ jobs:
           ref: main
           fetch-depth: 0
 
-      - name: Resolve latest export zip from ETL data/exports
+      # O zip de exportacao do ETL ainda nao e publicado em lugar nenhum.
+      # Quando `data/exports` passara a existir/alimentar-se, esta resolucao
+      # comeca a funcionar; ate la, o job termina verde com um aviso.
+      - name: Resolve export zip from ETL data/exports
         id: zip
         env:
           GH_TOKEN: ${{ github.token }}
         shell: bash
         run: |
           set -euo pipefail
-          api_url="https://api.github.com/repos/${{ env.ETL_OWNER }}/${{ env.ETL_REPO }}/contents/${{ env.EXPORTS_DIR }}?ref=${{ env.ETL_BRANCH }}"
           manifest_file="$(mktemp)"
+          zip_name=""
+          found="false"
 
-          curl -fsSL \
+          api_url="https://api.github.com/repos/${{ env.ETL_OWNER }}/${{ env.ETL_REPO }}/contents/${{ env.EXPORTS_DIR }}?ref=${{ env.ETL_BRANCH }}"
+
+          if curl -fsSL \
             -H "Accept: application/vnd.github+json" \
             -H "Authorization: Bearer $GH_TOKEN" \
             -H "X-GitHub-Api-Version: 2022-11-28" \
-            "$api_url" > "$manifest_file"
+            "$api_url" > "$manifest_file" 2>/dev/null; then
 
-          # Preferencia de selecao:
-          # 1) ultimo zip com nome com timestamp (canonical_export_YYYYMMDD_HHMMSS.zip);
-          # 2) qualquer zip com "canonical" no nome;
-          # 3) o ultimo zip da listagem.
-          zip_name="$(jq -r '
-            (( map(select(.type == "file" and (.name | test("^canonical_export_[0-9]{8}_[0-9]{6}\\.zip$")))) | sort_by(.name) | last )
-              // ( map(select(.type == "file" and (.name | contains("canonical") and endswith(".zip")))) | sort_by(.name) | last )
-              // ( map(select(.type == "file" and (.name | endswith(".zip")))) | sort_by(.name) | last )
-            ).name
-          ' "$manifest_file")"
+            # Preferencia de selecao:
+            # 1) ultimo zip com nome com timestamp (canonical_export_YYYYMMDD_HHMMSS.zip);
+            # 2) qualquer zip com "canonical" no nome;
+            # 3) qualquer zip (ex.: o versionado `export.zip`).
+            zip_name="$(jq -r '
+              (( map(select(.type == "file" and (.name | test("^canonical_export_[0-9]{8}_[0-9]{6}\\.zip$")))) | sort_by(.name) | last )
+                // ( map(select(.type == "file" and (.name | contains("canonical") and endswith(".zip")))) | sort_by(.name) | last )
+                // ( map(select(.type == "file" and (.name | endswith(".zip")))) | sort_by(.name) | last )
+              ).name
+            ' "$manifest_file" 2>/dev/null | sed 's/^null$//')"
 
-          if [[ -z "$zip_name" || "$zip_name" == "null" ]]; then
-            echo "Nenhum arquivo .zip encontrado em ${{ env.ETL_OWNER }}/${{ env.ETL_REPO }}/${{ env.EXPORTS_DIR }}." >&2
-            exit 1
+            if [[ -n "$zip_name" ]]; then
+              download_url="$(jq -r --arg n "$zip_name" '.[] | select(.name == $n) | .download_url' "$manifest_file")"
+              if [[ -n "$download_url" && "$download_url" != "null" ]]; then
+                curl -fSL "$download_url" -o "${RUNNER_TEMP}/etl_exports.zip"
+                found="true"
+              fi
+            fi
           fi
 
-          download_url="$(jq -r --arg n "$zip_name" '.[] | select(.name == $n) | .download_url' "$manifest_file")"
-          if [[ -z "$download_url" ]]; then
-            echo "Nao foi possivel obter a URL de download de '$zip_name'." >&2
-            exit 1
+          echo "found=$found" >> "$GITHUB_OUTPUT"
+          if [[ "$found" == "true" ]]; then
+            echo "zip_name=$zip_name" >> "$GITHUB_OUTPUT"
+            echo "Export zip resolvido: $zip_name"
+          else
+            echo "Nenhum .zip encontrado ainda em ${{ env.ETL_OWNER }}/${{ env.ETL_REPO }}/${{ env.EXPORTS_DIR }}. O ETL ainda nao publica o export; sync sera ignorado ate la."
           fi
-
-          curl -fSL "$download_url" -o "${RUNNER_TEMP}/etl_exports.zip"
-
-          echo "zip_name=$zip_name" >> "$GITHUB_OUTPUT"
 
       - name: Extract exports into src/data
+        if: steps.zip.outputs.found == 'true'
         shell: bash
         run: |
           set -euo pipefail
@@ -81,6 +90,7 @@ jobs:
           find src/data -type d -name '__MACOSX' -prune -exec rm -rf {} +
 
       - name: Sanitize extracted JSON
+        if: steps.zip.outputs.found == 'true'
         shell: bash
         run: |
           # Exports podem conter NaN/Infinity (nao-JSON); normaliza para null.
@@ -88,6 +98,7 @@ jobs:
 
       - name: Detect data changes
         id: changed
+        if: steps.zip.outputs.found == 'true'
         shell: bash
         run: |
           if git diff --quiet -- src/data ':(exclude)src/data/_meta.json'; then
@@ -139,6 +150,13 @@ jobs:
             echo '```'
           } >> "$GITHUB_STEP_SUMMARY"
 
+      - name: No export zip published yet
+        if: steps.zip.outputs.found != 'true'
+        run: |
+          echo "O ETL ainda nao publica \`export.zip\` (pasta \`${{ env.EXPORTS_DIR }}\` vazia/ausente no repo). Nenhuma sincronizacao realizada; o job conclui verde propositalmente."
+          echo "## Data sync: nada a sincronizar" >> "$GITHUB_STEP_SUMMARY"
+          echo "O ETL ainda nao publicou o zip de exportacao em \`${{ env.ETL_OWNER }}/${{ env.ETL_REPO }}/${{ env.EXPORTS_DIR }}\`. O sync sera ignorado ate existir um zip." >> "$GITHUB_STEP_SUMMARY"
+
       - name: No data changes
-        if: steps.changed.outputs.changed != 'true'
+        if: steps.zip.outputs.found == 'true' && steps.changed.outputs.changed != 'true'
         run: echo "Nenhuma alteracao encontrada em src/data."
