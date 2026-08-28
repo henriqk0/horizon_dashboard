@@ -1,11 +1,11 @@
 {
     "metadata": {
-        "generated_at": "2026-08-04T18:52:34.640308+00:00",
+        "generated_at": "2026-08-28T15:07:38.161942+00:00",
         "sources": {
-            "researchers": "/home/henriq/Documents/gitProjs/forks/horizon_etl/data/exports/researchers_canonical.json",
-            "initiatives": "/home/henriq/Documents/gitProjs/forks/horizon_etl/data/exports/initiatives_canonical.json",
-            "research_groups": "/home/henriq/Documents/gitProjs/forks/horizon_etl/data/exports/research_groups_canonical.json",
-            "advisorships": "/home/henriq/Documents/gitProjs/forks/horizon_etl/data/exports/advisorships_canonical.json"
+            "researchers": "/home/rafael/horizon_etl/data/exports/researchers_canonical.json",
+            "initiatives": "/home/rafael/horizon_etl/data/exports/initiatives_canonical.json",
+            "research_groups": "/home/rafael/horizon_etl/data/exports/research_groups_canonical.json",
+            "advisorships": "/home/rafael/horizon_etl/data/exports/advisorships_canonical.json"
         },
         "scope": {
             "type": "research_group",
@@ -13,8 +13,8 @@
                 "id": 71,
                 "name": "Estudos sobre língua, linguagem e cultura",
                 "short_name": null,
-                "member_count": 1,
-                "expanded_node_count": 1,
+                "member_count": 2,
+                "expanded_node_count": 2,
                 "advisorship_neighbor_count": 0
             }
         },
@@ -26,31 +26,38 @@
         }
     },
     "graph_stats": {
-        "nodes": 1,
-        "edges": 0,
-        "isolated_nodes": 1,
+        "nodes": 2,
+        "edges": 1,
+        "isolated_nodes": 0,
         "connected_components": 1,
-        "largest_component_size": 1,
+        "largest_component_size": 2,
         "relation_event_totals": {
             "initiative": 0,
-            "research_group": 0,
+            "research_group": 1,
             "advisorship": 0
         },
         "edge_relation_presence": {
             "initiative": 0,
-            "research_group": 0,
+            "research_group": 1,
             "advisorship": 0
         },
         "classification_distribution": {
-            "researcher": 1
+            "researcher": 2
         },
         "top_people_by_weighted_degree": [
             {
                 "id": 103,
                 "name": "Samine de Almeida Benfica",
                 "classification": "researcher",
-                "weighted_degree": 0,
-                "degree": 0
+                "weighted_degree": 1,
+                "degree": 1
+            },
+            {
+                "id": 2434,
+                "name": "Laila de Oliveira Quadros",
+                "classification": "researcher",
+                "weighted_degree": 1,
+                "degree": 1
             }
         ]
     },
@@ -60,19 +67,44 @@
         "graph": {},
         "nodes": [
             {
+                "name": "Laila de Oliveira Quadros",
+                "classification": "researcher",
+                "classification_confidence": "high",
+                "was_student": false,
+                "was_staff": true,
+                "campus_name": "Centro-Serrano",
+                "degree": 1,
+                "weighted_degree": 1,
+                "is_group_member": true,
+                "is_advisorship_neighbor": false,
+                "id": 2434
+            },
+            {
                 "name": "Samine de Almeida Benfica",
                 "classification": "researcher",
                 "classification_confidence": "high",
                 "was_student": false,
                 "was_staff": true,
                 "campus_name": "Centro-Serrano",
-                "degree": 0,
-                "weighted_degree": 0,
+                "degree": 1,
+                "weighted_degree": 1,
                 "is_group_member": true,
                 "is_advisorship_neighbor": false,
                 "id": 103
             }
         ],
-        "edges": []
+        "edges": [
+            {
+                "weight": 1,
+                "initiative_count": 0,
+                "research_group_count": 1,
+                "advisorship_count": 0,
+                "relation_types": [
+                    "research_group"
+                ],
+                "source": 2434,
+                "target": 103
+            }
+        ]
     }
 }

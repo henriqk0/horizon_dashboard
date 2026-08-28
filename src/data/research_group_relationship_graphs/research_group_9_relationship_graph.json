@@ -1,11 +1,11 @@
 {
     "metadata": {
-        "generated_at": "2026-08-04T18:52:29.050959+00:00",
+        "generated_at": "2026-08-28T15:07:36.166581+00:00",
         "sources": {
-            "researchers": "/home/henriq/Documents/gitProjs/forks/horizon_etl/data/exports/researchers_canonical.json",
-            "initiatives": "/home/henriq/Documents/gitProjs/forks/horizon_etl/data/exports/initiatives_canonical.json",
-            "research_groups": "/home/henriq/Documents/gitProjs/forks/horizon_etl/data/exports/research_groups_canonical.json",
-            "advisorships": "/home/henriq/Documents/gitProjs/forks/horizon_etl/data/exports/advisorships_canonical.json"
+            "researchers": "/home/rafael/horizon_etl/data/exports/researchers_canonical.json",
+            "initiatives": "/home/rafael/horizon_etl/data/exports/initiatives_canonical.json",
+            "research_groups": "/home/rafael/horizon_etl/data/exports/research_groups_canonical.json",
+            "advisorships": "/home/rafael/horizon_etl/data/exports/advisorships_canonical.json"
         },
         "scope": {
             "type": "research_group",
@@ -13,9 +13,9 @@
                 "id": 9,
                 "name": "Aquicultura e Ambiência Animal",
                 "short_name": null,
-                "member_count": 4,
-                "expanded_node_count": 4,
-                "advisorship_neighbor_count": 0
+                "member_count": 9,
+                "expanded_node_count": 10,
+                "advisorship_neighbor_count": 1
             }
         },
         "weight_definition": "Each edge weight equals the total number of relationship evidences between two people. Every shared initiative, shared research group, and advisorship adds 1 to the edge weight.",
@@ -26,53 +26,95 @@
         }
     },
     "graph_stats": {
-        "nodes": 4,
-        "edges": 6,
+        "nodes": 10,
+        "edges": 38,
         "isolated_nodes": 0,
         "connected_components": 1,
-        "largest_component_size": 4,
+        "largest_component_size": 10,
         "relation_event_totals": {
-            "initiative": 0,
-            "research_group": 6,
-            "advisorship": 0
+            "initiative": 6,
+            "research_group": 37,
+            "advisorship": 5
         },
         "edge_relation_presence": {
-            "initiative": 0,
-            "research_group": 6,
-            "advisorship": 0
+            "initiative": 1,
+            "research_group": 37,
+            "advisorship": 1
         },
         "classification_distribution": {
-            "researcher": 3,
-            "student": 1
+            "student": 6,
+            "researcher": 4
         },
         "top_people_by_weighted_degree": [
+            {
+                "id": 1276,
+                "name": "Leandro de jesus",
+                "classification": "student",
+                "weighted_degree": 19,
+                "degree": 9
+            },
+            {
+                "id": 449,
+                "name": "Raphael Magalhães Gomes Moreira",
+                "classification": "researcher",
+                "weighted_degree": 12,
+                "degree": 2
+            },
+            {
+                "id": 1273,
+                "name": "Abrahao Alexandre Alden Elesbon",
+                "classification": "researcher",
+                "weighted_degree": 9,
+                "degree": 9
+            },
             {
                 "id": 17,
                 "name": "Marcelo Gomes De Araujo",
                 "classification": "researcher",
-                "weighted_degree": 3,
-                "degree": 3
+                "weighted_degree": 8,
+                "degree": 8
             },
             {
-                "id": 1205,
-                "name": "Abrahao Alexandre Alden Elesbon",
-                "classification": "researcher",
-                "weighted_degree": 3,
-                "degree": 3
-            },
-            {
-                "id": 1206,
+                "id": 1274,
                 "name": "Déborah Cunha Cassuce",
                 "classification": "researcher",
-                "weighted_degree": 3,
-                "degree": 3
+                "weighted_degree": 8,
+                "degree": 8
             },
             {
-                "id": 1207,
+                "id": 1275,
                 "name": "Alex Sandro Xavier",
                 "classification": "student",
-                "weighted_degree": 3,
-                "degree": 3
+                "weighted_degree": 8,
+                "degree": 8
+            },
+            {
+                "id": 1277,
+                "name": "Lucas Paixão Rodrigues",
+                "classification": "student",
+                "weighted_degree": 8,
+                "degree": 8
+            },
+            {
+                "id": 1278,
+                "name": "Maria Carolini Graviely Scherrer Lindoso",
+                "classification": "student",
+                "weighted_degree": 8,
+                "degree": 8
+            },
+            {
+                "id": 1279,
+                "name": "Matheus Firmino Da Rocha Dos Anjos",
+                "classification": "student",
+                "weighted_degree": 8,
+                "degree": 8
+            },
+            {
+                "id": 1280,
+                "name": "Wellington Sergio Oliveira",
+                "classification": "student",
+                "weighted_degree": 8,
+                "degree": 8
             }
         ]
     },
@@ -82,14 +124,40 @@
         "graph": {},
         "nodes": [
             {
+                "name": "Wellington Sergio Oliveira",
+                "classification": "student",
+                "classification_confidence": "medium",
+                "was_student": true,
+                "was_staff": false,
+                "campus_name": "Itapina",
+                "degree": 8,
+                "weighted_degree": 8,
+                "is_group_member": true,
+                "is_advisorship_neighbor": false,
+                "id": 1280
+            },
+            {
+                "name": "Raphael Magalhães Gomes Moreira",
+                "classification": "researcher",
+                "classification_confidence": "high",
+                "was_student": false,
+                "was_staff": true,
+                "campus_name": "Colatina",
+                "degree": 2,
+                "weighted_degree": 12,
+                "is_group_member": false,
+                "is_advisorship_neighbor": true,
+                "id": 449
+            },
+            {
                 "name": "Marcelo Gomes De Araujo",
                 "classification": "researcher",
                 "classification_confidence": "high",
                 "was_student": false,
                 "was_staff": true,
                 "campus_name": "Itapina",
-                "degree": 3,
-                "weighted_degree": 3,
+                "degree": 8,
+                "weighted_degree": 8,
                 "is_group_member": true,
                 "is_advisorship_neighbor": false,
                 "id": 17
@@ -101,11 +169,11 @@
                 "was_student": false,
                 "was_staff": true,
                 "campus_name": "Colatina",
-                "degree": 3,
-                "weighted_degree": 3,
+                "degree": 9,
+                "weighted_degree": 9,
                 "is_group_member": true,
                 "is_advisorship_neighbor": false,
-                "id": 1205
+                "id": 1273
             },
             {
                 "name": "Déborah Cunha Cassuce",
@@ -114,11 +182,11 @@
                 "was_student": false,
                 "was_staff": true,
                 "campus_name": "Itapina",
-                "degree": 3,
-                "weighted_degree": 3,
+                "degree": 8,
+                "weighted_degree": 8,
                 "is_group_member": true,
                 "is_advisorship_neighbor": false,
-                "id": 1206
+                "id": 1274
             },
             {
                 "name": "Alex Sandro Xavier",
@@ -127,11 +195,63 @@
                 "was_student": true,
                 "was_staff": false,
                 "campus_name": "Itapina",
-                "degree": 3,
-                "weighted_degree": 3,
+                "degree": 8,
+                "weighted_degree": 8,
                 "is_group_member": true,
                 "is_advisorship_neighbor": false,
-                "id": 1207
+                "id": 1275
+            },
+            {
+                "name": "Leandro de jesus",
+                "classification": "student",
+                "classification_confidence": "medium",
+                "was_student": true,
+                "was_staff": false,
+                "campus_name": "Itapina",
+                "degree": 9,
+                "weighted_degree": 19,
+                "is_group_member": true,
+                "is_advisorship_neighbor": false,
+                "id": 1276
+            },
+            {
+                "name": "Lucas Paixão Rodrigues",
+                "classification": "student",
+                "classification_confidence": "medium",
+                "was_student": true,
+                "was_staff": false,
+                "campus_name": "Itapina",
+                "degree": 8,
+                "weighted_degree": 8,
+                "is_group_member": true,
+                "is_advisorship_neighbor": false,
+                "id": 1277
+            },
+            {
+                "name": "Maria Carolini Graviely Scherrer Lindoso",
+                "classification": "student",
+                "classification_confidence": "medium",
+                "was_student": true,
+                "was_staff": false,
+                "campus_name": "Itapina",
+                "degree": 8,
+                "weighted_degree": 8,
+                "is_group_member": true,
+                "is_advisorship_neighbor": false,
+                "id": 1278
+            },
+            {
+                "name": "Matheus Firmino Da Rocha Dos Anjos",
+                "classification": "student",
+                "classification_confidence": "medium",
+                "was_student": true,
+                "was_staff": false,
+                "campus_name": "Itapina",
+                "degree": 8,
+                "weighted_degree": 8,
+                "is_group_member": true,
+                "is_advisorship_neighbor": false,
+                "id": 1279
             }
         ],
         "edges": [
@@ -143,8 +263,108 @@
                 "relation_types": [
                     "research_group"
                 ],
-                "source": 17,
-                "target": 1205
+                "source": 1280,
+                "target": 17
+            },
+            {
+                "weight": 1,
+                "initiative_count": 0,
+                "research_group_count": 1,
+                "advisorship_count": 0,
+                "relation_types": [
+                    "research_group"
+                ],
+                "source": 1280,
+                "target": 1273
+            },
+            {
+                "weight": 1,
+                "initiative_count": 0,
+                "research_group_count": 1,
+                "advisorship_count": 0,
+                "relation_types": [
+                    "research_group"
+                ],
+                "source": 1280,
+                "target": 1274
+            },
+            {
+                "weight": 1,
+                "initiative_count": 0,
+                "research_group_count": 1,
+                "advisorship_count": 0,
+                "relation_types": [
+                    "research_group"
+                ],
+                "source": 1280,
+                "target": 1275
+            },
+            {
+                "weight": 1,
+                "initiative_count": 0,
+                "research_group_count": 1,
+                "advisorship_count": 0,
+                "relation_types": [
+                    "research_group"
+                ],
+                "source": 1280,
+                "target": 1276
+            },
+            {
+                "weight": 1,
+                "initiative_count": 0,
+                "research_group_count": 1,
+                "advisorship_count": 0,
+                "relation_types": [
+                    "research_group"
+                ],
+                "source": 1280,
+                "target": 1277
+            },
+            {
+                "weight": 1,
+                "initiative_count": 0,
+                "research_group_count": 1,
+                "advisorship_count": 0,
+                "relation_types": [
+                    "research_group"
+                ],
+                "source": 1280,
+                "target": 1278
+            },
+            {
+                "weight": 1,
+                "initiative_count": 0,
+                "research_group_count": 1,
+                "advisorship_count": 0,
+                "relation_types": [
+                    "research_group"
+                ],
+                "source": 1280,
+                "target": 1279
+            },
+            {
+                "weight": 11,
+                "initiative_count": 6,
+                "research_group_count": 0,
+                "advisorship_count": 5,
+                "relation_types": [
+                    "initiative",
+                    "advisorship"
+                ],
+                "source": 449,
+                "target": 1276
+            },
+            {
+                "weight": 1,
+                "initiative_count": 0,
+                "research_group_count": 1,
+                "advisorship_count": 0,
+                "relation_types": [
+                    "research_group"
+                ],
+                "source": 449,
+                "target": 1273
             },
             {
                 "weight": 1,
@@ -155,7 +375,7 @@
                     "research_group"
                 ],
                 "source": 17,
-                "target": 1206
+                "target": 1273
             },
             {
                 "weight": 1,
@@ -166,7 +386,7 @@
                     "research_group"
                 ],
                 "source": 17,
-                "target": 1207
+                "target": 1274
             },
             {
                 "weight": 1,
@@ -176,8 +396,8 @@
                 "relation_types": [
                     "research_group"
                 ],
-                "source": 1205,
-                "target": 1206
+                "source": 17,
+                "target": 1275
             },
             {
                 "weight": 1,
@@ -187,8 +407,8 @@
                 "relation_types": [
                     "research_group"
                 ],
-                "source": 1205,
-                "target": 1207
+                "source": 17,
+                "target": 1276
             },
             {
                 "weight": 1,
@@ -198,8 +418,261 @@
                 "relation_types": [
                     "research_group"
                 ],
-                "source": 1206,
-                "target": 1207
+                "source": 17,
+                "target": 1277
+            },
+            {
+                "weight": 1,
+                "initiative_count": 0,
+                "research_group_count": 1,
+                "advisorship_count": 0,
+                "relation_types": [
+                    "research_group"
+                ],
+                "source": 17,
+                "target": 1278
+            },
+            {
+                "weight": 1,
+                "initiative_count": 0,
+                "research_group_count": 1,
+                "advisorship_count": 0,
+                "relation_types": [
+                    "research_group"
+                ],
+                "source": 17,
+                "target": 1279
+            },
+            {
+                "weight": 1,
+                "initiative_count": 0,
+                "research_group_count": 1,
+                "advisorship_count": 0,
+                "relation_types": [
+                    "research_group"
+                ],
+                "source": 1273,
+                "target": 1274
+            },
+            {
+                "weight": 1,
+                "initiative_count": 0,
+                "research_group_count": 1,
+                "advisorship_count": 0,
+                "relation_types": [
+                    "research_group"
+                ],
+                "source": 1273,
+                "target": 1275
+            },
+            {
+                "weight": 1,
+                "initiative_count": 0,
+                "research_group_count": 1,
+                "advisorship_count": 0,
+                "relation_types": [
+                    "research_group"
+                ],
+                "source": 1273,
+                "target": 1276
+            },
+            {
+                "weight": 1,
+                "initiative_count": 0,
+                "research_group_count": 1,
+                "advisorship_count": 0,
+                "relation_types": [
+                    "research_group"
+                ],
+                "source": 1273,
+                "target": 1277
+            },
+            {
+                "weight": 1,
+                "initiative_count": 0,
+                "research_group_count": 1,
+                "advisorship_count": 0,
+                "relation_types": [
+                    "research_group"
+                ],
+                "source": 1273,
+                "target": 1278
+            },
+            {
+                "weight": 1,
+                "initiative_count": 0,
+                "research_group_count": 1,
+                "advisorship_count": 0,
+                "relation_types": [
+                    "research_group"
+                ],
+                "source": 1273,
+                "target": 1279
+            },
+            {
+                "weight": 1,
+                "initiative_count": 0,
+                "research_group_count": 1,
+                "advisorship_count": 0,
+                "relation_types": [
+                    "research_group"
+                ],
+                "source": 1274,
+                "target": 1275
+            },
+            {
+                "weight": 1,
+                "initiative_count": 0,
+                "research_group_count": 1,
+                "advisorship_count": 0,
+                "relation_types": [
+                    "research_group"
+                ],
+                "source": 1274,
+                "target": 1276
+            },
+            {
+                "weight": 1,
+                "initiative_count": 0,
+                "research_group_count": 1,
+                "advisorship_count": 0,
+                "relation_types": [
+                    "research_group"
+                ],
+                "source": 1274,
+                "target": 1277
+            },
+            {
+                "weight": 1,
+                "initiative_count": 0,
+                "research_group_count": 1,
+                "advisorship_count": 0,
+                "relation_types": [
+                    "research_group"
+                ],
+                "source": 1274,
+                "target": 1278
+            },
+            {
+                "weight": 1,
+                "initiative_count": 0,
+                "research_group_count": 1,
+                "advisorship_count": 0,
+                "relation_types": [
+                    "research_group"
+                ],
+                "source": 1274,
+                "target": 1279
+            },
+            {
+                "weight": 1,
+                "initiative_count": 0,
+                "research_group_count": 1,
+                "advisorship_count": 0,
+                "relation_types": [
+                    "research_group"
+                ],
+                "source": 1275,
+                "target": 1276
+            },
+            {
+                "weight": 1,
+                "initiative_count": 0,
+                "research_group_count": 1,
+                "advisorship_count": 0,
+                "relation_types": [
+                    "research_group"
+                ],
+                "source": 1275,
+                "target": 1277
+            },
+            {
+                "weight": 1,
+                "initiative_count": 0,
+                "research_group_count": 1,
+                "advisorship_count": 0,
+                "relation_types": [
+                    "research_group"
+                ],
+                "source": 1275,
+                "target": 1278
+            },
+            {
+                "weight": 1,
+                "initiative_count": 0,
+                "research_group_count": 1,
+                "advisorship_count": 0,
+                "relation_types": [
+                    "research_group"
+                ],
+                "source": 1275,
+                "target": 1279
+            },
+            {
+                "weight": 1,
+                "initiative_count": 0,
+                "research_group_count": 1,
+                "advisorship_count": 0,
+                "relation_types": [
+                    "research_group"
+                ],
+                "source": 1276,
+                "target": 1277
+            },
+            {
+                "weight": 1,
+                "initiative_count": 0,
+                "research_group_count": 1,
+                "advisorship_count": 0,
+                "relation_types": [
+                    "research_group"
+                ],
+                "source": 1276,
+                "target": 1278
+            },
+            {
+                "weight": 1,
+                "initiative_count": 0,
+                "research_group_count": 1,
+                "advisorship_count": 0,
+                "relation_types": [
+                    "research_group"
+                ],
+                "source": 1276,
+                "target": 1279
+            },
+            {
+                "weight": 1,
+                "initiative_count": 0,
+                "research_group_count": 1,
+                "advisorship_count": 0,
+                "relation_types": [
+                    "research_group"
+                ],
+                "source": 1277,
+                "target": 1278
+            },
+            {
+                "weight": 1,
+                "initiative_count": 0,
+                "research_group_count": 1,
+                "advisorship_count": 0,
+                "relation_types": [
+                    "research_group"
+                ],
+                "source": 1277,
+                "target": 1279
+            },
+            {
+                "weight": 1,
+                "initiative_count": 0,
+                "research_group_count": 1,
+                "advisorship_count": 0,
+                "relation_types": [
+                    "research_group"
+                ],
+                "source": 1278,
+                "target": 1279
             }
         ]
     }

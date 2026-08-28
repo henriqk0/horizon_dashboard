@@ -1,24 +1,27 @@
 [
     {
         "id": 1,
-        "source_system": "all_sources",
-        "flow_name": "all_sources",
+        "source_system": "sigpesq_research_group",
+        "flow_name": "sigpesq_research_groups",
         "status": "success",
         "input_snapshot_hash": null,
         "notes": null,
-        "started_at": "2026-08-04T16:15:04",
-        "finished_at": "2026-08-04T18:48:38.270526",
-        "campus": null
+        "started_at": "2026-08-28T13:44:05",
+        "finished_at": "2026-08-28T13:44:35.200042",
+        "campus": {
+            "id": 2,
+            "name": "Vitória"
+        }
     },
     {
         "id": 2,
-        "source_system": "sigpesq",
-        "flow_name": "ingest_sigpesq_full",
+        "source_system": "sigpesq_research_projects",
+        "flow_name": "sigpesq_projects",
         "status": "success",
         "input_snapshot_hash": null,
         "notes": null,
-        "started_at": "2026-08-04T16:15:04",
-        "finished_at": "2026-08-04T16:18:20.572513",
+        "started_at": "2026-08-28T13:44:35",
+        "finished_at": "2026-08-28T13:44:55.308199",
         "campus": {
             "id": 6,
             "name": "Serra"
@@ -26,41 +29,41 @@
     },
     {
         "id": 3,
-        "source_system": "cnpq",
-        "flow_name": "sync_cnpq_groups",
+        "source_system": "sigpesq_advisorships",
+        "flow_name": "sigpesq_advisorships",
         "status": "success",
         "input_snapshot_hash": null,
         "notes": null,
-        "started_at": "2026-08-04T16:18:21",
-        "finished_at": "2026-08-04T16:36:21.129186",
-        "campus": {
-            "id": 2,
-            "name": "Vitória"
-        }
-    },
-    {
-        "id": 4,
-        "source_system": "lattes",
-        "flow_name": "ingest_lattes_projects",
-        "status": "success",
-        "input_snapshot_hash": null,
-        "notes": null,
-        "started_at": "2026-08-04T16:36:43",
-        "finished_at": "2026-08-04T17:58:52.692653",
+        "started_at": "2026-08-28T13:44:55",
+        "finished_at": "2026-08-28T13:48:03.004712",
         "campus": {
             "id": 6,
             "name": "Serra"
         }
     },
     {
-        "id": 5,
-        "source_system": "lattes",
-        "flow_name": "ingest_lattes_advisorships",
+        "id": 4,
+        "source_system": "cnpq_sync",
+        "flow_name": "cnpq_sync",
         "status": "success",
         "input_snapshot_hash": null,
         "notes": null,
-        "started_at": "2026-08-04T17:59:23",
-        "finished_at": "2026-08-04T18:48:37.513579",
+        "started_at": "2026-08-28T13:48:06",
+        "finished_at": "2026-08-28T14:33:53.857908",
+        "campus": {
+            "id": 2,
+            "name": "Vitória"
+        }
+    },
+    {
+        "id": 5,
+        "source_system": "lattes_projects",
+        "flow_name": "lattes_projects",
+        "status": "success",
+        "input_snapshot_hash": null,
+        "notes": null,
+        "started_at": "2026-08-28T14:34:08",
+        "finished_at": "2026-08-28T14:44:07.445171",
         "campus": {
             "id": 6,
             "name": "Serra"
@@ -68,13 +71,30 @@
     },
     {
         "id": 6,
-        "source_system": "export_canonical",
-        "flow_name": "export_canonical",
-        "status": "running",
+        "source_system": "lattes_advisorships",
+        "flow_name": "lattes_advisorships",
+        "status": "success",
         "input_snapshot_hash": null,
         "notes": null,
-        "started_at": "2026-08-04T18:48:38",
-        "finished_at": null,
-        "campus": null
+        "started_at": "2026-08-28T14:44:10",
+        "finished_at": "2026-08-28T15:05:28.125077",
+        "campus": {
+            "id": 6,
+            "name": "Serra"
+        }
+    },
+    {
+        "id": 7,
+        "source_system": "sigpesq_project_files",
+        "flow_name": "Enrich SigPesq Projects",
+        "status": "success",
+        "input_snapshot_hash": null,
+        "notes": null,
+        "started_at": "2026-08-28T15:05:31",
+        "finished_at": "2026-08-28T15:05:39.852635",
+        "campus": {
+            "id": 6,
+            "name": "Serra"
+        }
     }
 ]

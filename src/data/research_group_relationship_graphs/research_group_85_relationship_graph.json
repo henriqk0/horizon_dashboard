@@ -1,21 +1,21 @@
 {
     "metadata": {
-        "generated_at": "2026-08-04T18:52:35.907503+00:00",
+        "generated_at": "2026-08-28T15:07:38.624958+00:00",
         "sources": {
-            "researchers": "/home/henriq/Documents/gitProjs/forks/horizon_etl/data/exports/researchers_canonical.json",
-            "initiatives": "/home/henriq/Documents/gitProjs/forks/horizon_etl/data/exports/initiatives_canonical.json",
-            "research_groups": "/home/henriq/Documents/gitProjs/forks/horizon_etl/data/exports/research_groups_canonical.json",
-            "advisorships": "/home/henriq/Documents/gitProjs/forks/horizon_etl/data/exports/advisorships_canonical.json"
+            "researchers": "/home/rafael/horizon_etl/data/exports/researchers_canonical.json",
+            "initiatives": "/home/rafael/horizon_etl/data/exports/initiatives_canonical.json",
+            "research_groups": "/home/rafael/horizon_etl/data/exports/research_groups_canonical.json",
+            "advisorships": "/home/rafael/horizon_etl/data/exports/advisorships_canonical.json"
         },
         "scope": {
             "type": "research_group",
             "research_group": {
                 "id": 85,
-                "name": "Grupo de Análises em Educação e Linguagens",
-                "short_name": "GAEL",
-                "member_count": 3,
+                "name": "Grupo de Apoio ao Ensino de Eletrônica",
+                "short_name": "GAEE",
+                "member_count": 1,
                 "expanded_node_count": 3,
-                "advisorship_neighbor_count": 0
+                "advisorship_neighbor_count": 2
             }
         },
         "weight_definition": "Each edge weight equals the total number of relationship evidences between two people. Every shared initiative, shared research group, and advisorship adds 1 to the edge weight.",
@@ -27,44 +27,45 @@
     },
     "graph_stats": {
         "nodes": 3,
-        "edges": 3,
+        "edges": 2,
         "isolated_nodes": 0,
         "connected_components": 1,
         "largest_component_size": 3,
         "relation_event_totals": {
-            "initiative": 0,
-            "research_group": 3,
-            "advisorship": 0
+            "initiative": 3,
+            "research_group": 0,
+            "advisorship": 2
         },
         "edge_relation_presence": {
-            "initiative": 0,
-            "research_group": 3,
-            "advisorship": 0
+            "initiative": 2,
+            "research_group": 0,
+            "advisorship": 2
         },
         "classification_distribution": {
-            "researcher": 3
+            "researcher": 1,
+            "student": 2
         },
         "top_people_by_weighted_degree": [
             {
                 "id": 121,
-                "name": "Rafael da Silva Marques Ferreira",
+                "name": "Vinícius Secchin De Melo",
                 "classification": "researcher",
-                "weighted_degree": 2,
+                "weighted_degree": 5,
                 "degree": 2
             },
             {
-                "id": 2542,
-                "name": "Claudia Rodrigues Muzy Fernandes",
-                "classification": "researcher",
-                "weighted_degree": 2,
-                "degree": 2
+                "id": 964,
+                "name": "Phillipe Rocha Maia",
+                "classification": "student",
+                "weighted_degree": 3,
+                "degree": 1
             },
             {
-                "id": 2543,
-                "name": "Willian Timóteo Oliveira",
-                "classification": "researcher",
+                "id": 9938,
+                "name": "Wallastan Melo da Silva Junior",
+                "classification": "student",
                 "weighted_degree": 2,
-                "degree": 2
+                "degree": 1
             }
         ]
     },
@@ -74,78 +75,69 @@
         "graph": {},
         "nodes": [
             {
-                "name": "Rafael da Silva Marques Ferreira",
+                "name": "Vinícius Secchin De Melo",
                 "classification": "researcher",
                 "classification_confidence": "high",
                 "was_student": false,
                 "was_staff": true,
-                "campus_name": "Viana",
+                "campus_name": "Serra",
                 "degree": 2,
-                "weighted_degree": 2,
+                "weighted_degree": 5,
                 "is_group_member": true,
                 "is_advisorship_neighbor": false,
                 "id": 121
             },
             {
-                "name": "Claudia Rodrigues Muzy Fernandes",
-                "classification": "researcher",
+                "name": "Wallastan Melo da Silva Junior",
+                "classification": "student",
                 "classification_confidence": "high",
-                "was_student": false,
-                "was_staff": true,
-                "campus_name": "Viana",
-                "degree": 2,
+                "was_student": true,
+                "was_staff": false,
+                "campus_name": null,
+                "degree": 1,
                 "weighted_degree": 2,
-                "is_group_member": true,
-                "is_advisorship_neighbor": false,
-                "id": 2542
+                "is_group_member": false,
+                "is_advisorship_neighbor": true,
+                "id": 9938
             },
             {
-                "name": "Willian Timóteo Oliveira",
-                "classification": "researcher",
+                "name": "Phillipe Rocha Maia",
+                "classification": "student",
                 "classification_confidence": "high",
-                "was_student": false,
-                "was_staff": true,
-                "campus_name": "Viana",
-                "degree": 2,
-                "weighted_degree": 2,
-                "is_group_member": true,
-                "is_advisorship_neighbor": false,
-                "id": 2543
+                "was_student": true,
+                "was_staff": false,
+                "campus_name": null,
+                "degree": 1,
+                "weighted_degree": 3,
+                "is_group_member": false,
+                "is_advisorship_neighbor": true,
+                "id": 964
             }
         ],
         "edges": [
             {
-                "weight": 1,
-                "initiative_count": 0,
-                "research_group_count": 1,
-                "advisorship_count": 0,
+                "weight": 3,
+                "initiative_count": 2,
+                "research_group_count": 0,
+                "advisorship_count": 1,
                 "relation_types": [
-                    "research_group"
+                    "initiative",
+                    "advisorship"
                 ],
                 "source": 121,
-                "target": 2542
+                "target": 964
             },
             {
-                "weight": 1,
-                "initiative_count": 0,
-                "research_group_count": 1,
-                "advisorship_count": 0,
+                "weight": 2,
+                "initiative_count": 1,
+                "research_group_count": 0,
+                "advisorship_count": 1,
                 "relation_types": [
-                    "research_group"
+                    "initiative",
+                    "advisorship"
                 ],
                 "source": 121,
-                "target": 2543
-            },
-            {
-                "weight": 1,
-                "initiative_count": 0,
-                "research_group_count": 1,
-                "advisorship_count": 0,
-                "relation_types": [
-                    "research_group"
-                ],
-                "source": 2542,
-                "target": 2543
+                "target": 9938
             }
         ]
     }
