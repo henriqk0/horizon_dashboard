@@ -427,3 +427,13 @@ export const buildPersonInteractionTableRows = (
             return left.targetName.localeCompare(right.targetName, "pt-BR");
         });
 };
+
+/**
+ * Serializes a table row's relation types for the `data-relation-types` attribute read by the
+ * graph filter script. The separator stays a bare comma because the consumer splits on `,` and
+ * normalizes each token itself, so the SVG edges and the table rows stay interchangeable inputs
+ * for the same matcher.
+ */
+export const serializeRelationTypesAttribute = (
+    row: PersonInteractionTableRow,
+): string => row.relations.map((relation) => relation.type).join(",");

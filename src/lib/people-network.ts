@@ -93,10 +93,10 @@ export interface PeopleNetworkGraphSummary {
     weightDefinition: string;
     nodeCount: number;
     edgeCount: number;
-    isolatedNodeCount: number;
+    isolatedNodeCount: number | null;
     connectedComponentCount: number;
-    largestComponentSize: number;
-    largestComponentShare: number;
+    largestComponentSize: number | null;
+    largestComponentShare: number | null;
     density: number | null;
     averageClustering: number | null;
     transitivity: number | null;
@@ -150,6 +150,14 @@ export const peopleClassificationLabels: Record<
     outside_ifes: "Externos ao Ifes",
     null: "Sem classificação",
 };
+
+/**
+ * Reads an optional numeric stat. Fields missing from the export must stay `null` so the interface
+ * can tell "not measured" apart from a measured zero — coercing them with `?? 0` renders absent
+ * data as a confident number.
+ */
+const toOptionalNumber = (value: number | undefined | null): number | null =>
+    typeof value === "number" && Number.isFinite(value) ? value : null;
 
 const normalizeBaseUrl = (baseUrl = "/") => {
     const normalized = baseUrl.trim() || "/";
@@ -291,7 +299,7 @@ const buildGraphSummary = (
     const stats = rawGraph.graph_stats;
     const networkMetrics = stats.complex_network_metrics ?? {};
     const nodeCount = Number(stats.nodes ?? 0);
-    const largestComponentSize = Number(stats.largest_component_size ?? 0);
+    const largestComponentSize = toOptionalNumber(stats.largest_component_size);
 
     return {
         kind,
@@ -306,11 +314,13 @@ const buildGraphSummary = (
         weightDefinition: rawGraph.metadata.weight_definition ?? "",
         nodeCount,
         edgeCount: Number(stats.edges ?? 0),
-        isolatedNodeCount: Number(stats.isolated_nodes ?? 0),
+        isolatedNodeCount: toOptionalNumber(stats.isolated_nodes),
         connectedComponentCount: Number(stats.connected_components ?? 0),
         largestComponentSize,
         largestComponentShare:
-            nodeCount > 0 ? largestComponentSize / nodeCount : 0,
+            largestComponentSize !== null && nodeCount > 0
+                ? largestComponentSize / nodeCount
+                : null,
         density:
             typeof networkMetrics.density === "number"
                 ? networkMetrics.density

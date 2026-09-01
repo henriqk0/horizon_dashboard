@@ -330,3 +330,82 @@ describe("people network overview", () => {
         );
     });
 });
+
+/**
+ * Mirrors the shape the ETL is currently exporting for `people_collaboration_graph.json`, where the
+ * component/isolation counters and the rankings are absent from `graph_stats`.
+ */
+const sparseGraphFixture: PeopleGraphRawFile = {
+    metadata: {
+        scope: {
+            type: "full",
+            graph_type: "collaboration",
+        },
+    },
+    graph_stats: {
+        nodes: 4139,
+        edges: 10310,
+        connected_components: 621,
+        relation_event_totals: {
+            initiative: 13425,
+            article: 438,
+        },
+    },
+    graph: {
+        nodes: [
+            {
+                id: 1,
+                name: "Alice Researcher",
+                classification: "researcher",
+                weighted_degree: 30,
+                degree: 10,
+            },
+        ],
+    },
+};
+
+describe("people network overview with incomplete exports", () => {
+    it("reports absent structural metrics as null instead of zero", () => {
+        const overview = buildPeopleNetworkOverview(
+            sparseGraphFixture,
+            sparseGraphFixture,
+        );
+
+        expect(overview.collaboration.isolatedNodeCount).toBeNull();
+        expect(overview.collaboration.largestComponentSize).toBeNull();
+        expect(overview.collaboration.largestComponentShare).toBeNull();
+    });
+
+    it("keeps the counters that every export carries", () => {
+        const overview = buildPeopleNetworkOverview(
+            sparseGraphFixture,
+            sparseGraphFixture,
+        );
+
+        expect(overview.collaboration.nodeCount).toBe(4139);
+        expect(overview.collaboration.edgeCount).toBe(10310);
+        expect(overview.collaboration.connectedComponentCount).toBe(621);
+    });
+
+    it("yields empty rankings rather than fabricated entries", () => {
+        const overview = buildPeopleNetworkOverview(
+            sparseGraphFixture,
+            sparseGraphFixture,
+        );
+
+        expect(overview.topCollaborators).toEqual([]);
+        expect(overview.topConnectors).toEqual([]);
+        expect(overview.collaboration.classificationDistribution).toEqual([]);
+    });
+
+    it("still computes the component share when the export is complete", () => {
+        const overview = buildPeopleNetworkOverview(
+            collaborationGraphFixture,
+            relationshipGraphFixture,
+        );
+
+        expect(overview.collaboration.isolatedNodeCount).toBe(5);
+        expect(overview.collaboration.largestComponentSize).toBe(12);
+        expect(overview.collaboration.largestComponentShare).toBe(0.6);
+    });
+});
