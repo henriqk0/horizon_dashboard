@@ -1048,6 +1048,9 @@ const legendSections = [
                     lastY: 0,
                 };
 
+                // Once the user frames the graph by hand, a resize must not throw that framing away.
+                let hasUserAdjustedView = false;
+
                 const getNodeRadius = (nodeId: string) => nodeRadiusMap.get(nodeId) ?? 11;
 
                 const buildNodeRadiusMap = (nodes: ResearchGroupInteractionNode[]) => {
@@ -1697,7 +1700,7 @@ const legendSections = [
                     viewport.dpr = window.devicePixelRatio || 1;
                     canvas.width = Math.round(rect.width * viewport.dpr);
                     canvas.height = Math.round(rect.height * viewport.dpr);
-                    applyFilters({ refit: true });
+                    applyFilters({ refit: !hasUserAdjustedView });
                 };
 
                 modeButtons.forEach((button) => {
@@ -1775,6 +1778,7 @@ const legendSections = [
                 });
 
                 recenterButton?.addEventListener("click", () => {
+                    hasUserAdjustedView = false;
                     fitView();
                     draw();
                 });
@@ -1790,6 +1794,7 @@ const legendSections = [
                     transform.scale = nextScale;
                     transform.x = pointer.x - worldPointer.x * transform.scale;
                     transform.y = pointer.y - worldPointer.y * transform.scale;
+                    hasUserAdjustedView = true;
                     draw();
                 });
 
@@ -1807,6 +1812,7 @@ const legendSections = [
                         const deltaY = event.clientY - dragState.lastY;
                         if (Math.abs(deltaX) > 1 || Math.abs(deltaY) > 1) {
                             dragState.moved = true;
+                            hasUserAdjustedView = true;
                         }
 
                         transform.x += deltaX;
@@ -1839,6 +1845,18 @@ const legendSections = [
                     dragState.active = false;
                     dragState.moved = false;
                     canvas.releasePointerCapture(event.pointerId);
+                });
+
+                // Without this the drag state stays stuck on `true` when the browser takes the
+                // pointer over, and the graph starts panning with no button pressed.
+                canvas.addEventListener("pointercancel", (event) => {
+                    dragState.active = false;
+                    dragState.moved = false;
+                    try {
+                        canvas.releasePointerCapture(event.pointerId);
+                    } catch (error) {
+                        // The capture was already released by the browser.
+                    }
                 });
 
                 canvas.addEventListener("pointerleave", () => {

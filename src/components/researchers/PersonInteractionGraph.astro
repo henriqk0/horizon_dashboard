@@ -696,8 +696,16 @@ const legendSections = [
 </section>
 
 <script>
+    import {
+        getUnitsPerPixel,
+        panFromDrag,
+        toTransformStyle,
+        zoomAtPointer,
+        type GraphPanZoomTransform,
+    } from "../../lib/graph-pan-zoom";
+
     function setupGraphPanZoom() {
-        const svgs = document.querySelectorAll('svg.interaction-graph-svg');
+        const svgs = document.querySelectorAll<SVGSVGElement>('svg.interaction-graph-svg');
         svgs.forEach(svg => {
             if (svg.dataset.panZoomInitialized) return;
             svg.dataset.panZoomInitialized = 'true';
@@ -708,19 +716,28 @@ const legendSections = [
             const parentDiv = svg.closest('.relative');
             const resetBtn = parentDiv ? parentDiv.querySelector('.reset-graph-btn') : null;
 
-            let scale = 1;
-            let translateX = 0;
-            let translateY = 0;
+            const limits = { minScale: 0.2, maxScale: 5 };
+            let transform: GraphPanZoomTransform = { x: 0, y: 0, scale: 1 };
 
-            let isDragging = false;
-            let startX = 0;
-            let startY = 0;
+            const dragState = {
+                active: false,
+                pointerStartX: 0,
+                pointerStartY: 0,
+                unitsPerPixel: 1,
+                origin: transform,
+            };
 
-            const minScale = 0.2;
-            const maxScale = 5;
+            // The transform is applied inside the SVG, so it is measured in viewBox user units,
+            // while pointer events report CSS pixels. Read the ratio on demand so the graph keeps
+            // tracking the cursor after the container is resized.
+            const readUnitsPerPixel = () =>
+                getUnitsPerPixel(
+                    svg.viewBox && svg.viewBox.baseVal ? svg.viewBox.baseVal.width : 0,
+                    svg.getBoundingClientRect().width,
+                );
 
             function updateTransform() {
-                viewport.style.transform = `translate(${translateX}px, ${translateY}px) scale(${scale})`;
+                viewport.style.transform = toTransformStyle(transform);
                 viewport.style.transformOrigin = '0px 0px';
             }
 
@@ -731,20 +748,19 @@ const legendSections = [
             svg.addEventListener('wheel', (e) => {
                 e.preventDefault();
                 const rect = svg.getBoundingClientRect();
-                const mouseX = e.clientX - rect.left;
-                const mouseY = e.clientY - rect.top;
+                const pointer = {
+                    x: e.clientX - rect.left,
+                    y: e.clientY - rect.top,
+                };
+                const zoomFactor = e.deltaY < 0 ? 1.1 : 1 / 1.1;
 
-                const zoomFactor = 1.1;
-                const oldScale = scale;
-                
-                if (e.deltaY < 0) {
-                    scale = Math.min(maxScale, scale * zoomFactor);
-                } else {
-                    scale = Math.max(minScale, scale / zoomFactor);
-                }
-
-                translateX = mouseX - (mouseX - translateX) * (scale / oldScale);
-                translateY = mouseY - (mouseY - translateY) * (scale / oldScale);
+                transform = zoomAtPointer(
+                    transform,
+                    pointer,
+                    zoomFactor,
+                    readUnitsPerPixel(),
+                    limits,
+                );
 
                 updateTransform();
             }, { passive: false });
@@ -752,23 +768,30 @@ const legendSections = [
             // Panning
             svg.addEventListener('pointerdown', (e) => {
                 if (e.button !== 0) return;
-                isDragging = true;
-                startX = e.clientX - translateX;
-                startY = e.clientY - translateY;
+                dragState.active = true;
+                dragState.pointerStartX = e.clientX;
+                dragState.pointerStartY = e.clientY;
+                // Frozen for the whole gesture so a mid-drag resize cannot make the graph jump.
+                dragState.unitsPerPixel = readUnitsPerPixel();
+                dragState.origin = transform;
                 svg.style.cursor = 'grabbing';
                 svg.setPointerCapture(e.pointerId);
             });
 
             svg.addEventListener('pointermove', (e) => {
-                if (!isDragging) return;
-                translateX = e.clientX - startX;
-                translateY = e.clientY - startY;
+                if (!dragState.active) return;
+                transform = panFromDrag(
+                    dragState.origin,
+                    e.clientX - dragState.pointerStartX,
+                    e.clientY - dragState.pointerStartY,
+                    dragState.unitsPerPixel,
+                );
                 updateTransform();
             });
 
             const endDrag = (e) => {
-                if (!isDragging) return;
-                isDragging = false;
+                if (!dragState.active) return;
+                dragState.active = false;
                 svg.style.cursor = 'grab';
                 try {
                     svg.releasePointerCapture(e.pointerId);
@@ -782,9 +805,7 @@ const legendSections = [
             // Reset
             if (resetBtn) {
                 resetBtn.addEventListener('click', () => {
-                    scale = 1;
-                    translateX = 0;
-                    translateY = 0;
+                    transform = { x: 0, y: 0, scale: 1 };
                     updateTransform();
                 });
             }

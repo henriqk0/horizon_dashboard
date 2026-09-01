@@ -164,8 +164,13 @@ const { sections } = Astro.props;
 
 <script>
     function initLegend() {
-        const legends = document.querySelectorAll("[data-graph-legend]");
+        const legends = document.querySelectorAll<HTMLElement>("[data-graph-legend]");
         legends.forEach((legend) => {
+            // initLegend runs on load, on astro:page-load and inline, so guard like the other
+            // graph scripts do to keep a single set of listeners per legend.
+            if (legend.dataset.legendInitialized === "true") return;
+            legend.dataset.legendInitialized = "true";
+
             const panel = legend.querySelector("[data-legend-panel]") as HTMLElement | null;
             const expandBtn = legend.querySelector("[data-legend-expand]") as HTMLButtonElement | null;
             const collapseBtn = legend.querySelector("[data-legend-collapse]") as HTMLButtonElement | null;

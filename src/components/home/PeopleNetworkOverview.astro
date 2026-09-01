@@ -144,6 +144,14 @@ const comparisonCards = [
                     </div>
                 </div>
 
+                {overview.topCollaborators.length === 0 && (
+                    <p class="mt-6 rounded-2xl border border-dashed border-border-main bg-page-bg p-5 text-sm leading-relaxed text-text-secondary">
+                        O export atual do grafo de colaboração não traz o ranking
+                        <code class="mx-1">top_people_by_weighted_degree</code>, então
+                        este bloco fica sem dados até a próxima sincronização do ETL.
+                    </p>
+                )}
+
                 <div class="mt-6 grid grid-cols-1 md:grid-cols-2 gap-4">
                     {
                         overview.topCollaborators.map((person, index) => (
@@ -494,6 +502,14 @@ const comparisonCards = [
                     relacionamento, úteis para identificar nós que ligam muitos
                     perfis dentro da rede.
                 </p>
+
+                {overview.topConnectors.length === 0 && (
+                    <p class="mt-6 rounded-2xl border border-dashed border-border-main bg-page-bg p-5 text-sm leading-relaxed text-text-secondary">
+                        O export atual do grafo de relacionamento não traz o ranking
+                        <code class="mx-1">top_hubs_by_degree_centrality</code>, então
+                        este bloco fica sem dados até a próxima sincronização do ETL.
+                    </p>
+                )}
 
                 <ol class="mt-6 space-y-4">
                     {
