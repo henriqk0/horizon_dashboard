@@ -3,7 +3,7 @@ name: Sync ETL Data
 on:
   workflow_dispatch:
   schedule:
-    - cron: "0 9 * * 0"
+    - cron: "0 * * * *"
 
 concurrency:
   group: etl-data-sync
@@ -13,9 +13,9 @@ permissions:
   contents: write
 
 env:
-  ETL_OWNER: henriqk0
+  ETL_OWNER: RafaelDeps
   ETL_REPO: horizon_etl
-  ETL_BRANCH: mistral
+  ETL_BRANCH: feat/009-commit-changes
   EXPORTS_DIR: data/exports
 
 jobs:
@@ -43,7 +43,7 @@ jobs:
           found="false"
 
           # api_url="https://api.github.com/repos/${{ env.ETL_OWNER }}/${{ env.ETL_REPO }}/contents/${{ env.EXPORTS_DIR }}?ref=${{ env.ETL_BRANCH }}"
-          api_url="https://api.github.com/repos/henriqk0/horizon_etl/contents/data/exports?ref=mistral"
+          api_url="https://api.github.com/repos/RafaelDeps/horizon_etl/contents/data/exports?ref=feat/009-commit-changes"
 
           if curl -fsSL \
             -H "Accept: application/vnd.github+json" \
