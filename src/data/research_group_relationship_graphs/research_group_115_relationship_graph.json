@@ -1,11 +1,11 @@
 {
     "metadata": {
-        "generated_at": "2026-08-28T15:07:39.610221+00:00",
+        "generated_at": "2026-08-31T18:52:14.240739+00:00",
         "sources": {
-            "researchers": "/home/rafael/horizon_etl/data/exports/researchers_canonical.json",
-            "initiatives": "/home/rafael/horizon_etl/data/exports/initiatives_canonical.json",
-            "research_groups": "/home/rafael/horizon_etl/data/exports/research_groups_canonical.json",
-            "advisorships": "/home/rafael/horizon_etl/data/exports/advisorships_canonical.json"
+            "researchers": "/home/henriq/Documents/gith/forks/others/horizon_etl/data/exports/researchers_canonical.json",
+            "initiatives": "/home/henriq/Documents/gith/forks/others/horizon_etl/data/exports/initiatives_canonical.json",
+            "research_groups": "/home/henriq/Documents/gith/forks/others/horizon_etl/data/exports/research_groups_canonical.json",
+            "advisorships": "/home/henriq/Documents/gith/forks/others/horizon_etl/data/exports/advisorships_canonical.json"
         },
         "scope": {
             "type": "research_group",
@@ -61,28 +61,28 @@
                 "degree": 5
             },
             {
-                "id": 3221,
+                "id": 3225,
                 "name": "Euléssia Costa Silva",
                 "classification": "researcher",
                 "weighted_degree": 9,
                 "degree": 5
             },
             {
-                "id": 3223,
+                "id": 3227,
                 "name": "Deiverson Rodrigues dos Santos",
                 "classification": "student",
                 "weighted_degree": 9,
                 "degree": 5
             },
             {
-                "id": 3224,
+                "id": 3228,
                 "name": "Ladson Surlo Ramos",
                 "classification": "student",
                 "weighted_degree": 9,
                 "degree": 5
             },
             {
-                "id": 3222,
+                "id": 3226,
                 "name": "Bianca de Freitas Romão",
                 "classification": "student",
                 "weighted_degree": 5,
@@ -95,6 +95,19 @@
         "multigraph": false,
         "graph": {},
         "nodes": [
+            {
+                "name": "Euléssia Costa Silva",
+                "classification": "researcher",
+                "classification_confidence": "high",
+                "was_student": true,
+                "was_staff": true,
+                "campus_name": "Vitória",
+                "degree": 5,
+                "weighted_degree": 9,
+                "is_group_member": true,
+                "is_advisorship_neighbor": false,
+                "id": 3225
+            },
             {
                 "name": "Mariana Dos Santos Cezar",
                 "classification": "researcher",
@@ -109,17 +122,17 @@
                 "id": 173
             },
             {
-                "name": "Euléssia Costa Silva",
+                "name": "Rodolfo Chaves",
                 "classification": "researcher",
                 "classification_confidence": "high",
-                "was_student": true,
+                "was_student": false,
                 "was_staff": true,
                 "campus_name": "Vitória",
                 "degree": 5,
                 "weighted_degree": 9,
                 "is_group_member": true,
                 "is_advisorship_neighbor": false,
-                "id": 3221
+                "id": 185
             },
             {
                 "name": "Bianca de Freitas Romão",
@@ -132,7 +145,7 @@
                 "weighted_degree": 5,
                 "is_group_member": true,
                 "is_advisorship_neighbor": false,
-                "id": 3222
+                "id": 3226
             },
             {
                 "name": "Deiverson Rodrigues dos Santos",
@@ -145,7 +158,7 @@
                 "weighted_degree": 9,
                 "is_group_member": true,
                 "is_advisorship_neighbor": false,
-                "id": 3223
+                "id": 3227
             },
             {
                 "name": "Ladson Surlo Ramos",
@@ -158,20 +171,7 @@
                 "weighted_degree": 9,
                 "is_group_member": true,
                 "is_advisorship_neighbor": false,
-                "id": 3224
-            },
-            {
-                "name": "Rodolfo Chaves",
-                "classification": "researcher",
-                "classification_confidence": "high",
-                "was_student": false,
-                "was_staff": true,
-                "campus_name": "Vitória",
-                "degree": 5,
-                "weighted_degree": 9,
-                "is_group_member": true,
-                "is_advisorship_neighbor": false,
-                "id": 185
+                "id": 3228
             }
         ],
         "edges": [
@@ -183,8 +183,8 @@
                 "relation_types": [
                     "research_group"
                 ],
-                "source": 173,
-                "target": 185
+                "source": 3225,
+                "target": 173
             },
             {
                 "weight": 2,
@@ -194,51 +194,7 @@
                 "relation_types": [
                     "research_group"
                 ],
-                "source": 173,
-                "target": 3221
-            },
-            {
-                "weight": 1,
-                "initiative_count": 0,
-                "research_group_count": 1,
-                "advisorship_count": 0,
-                "relation_types": [
-                    "research_group"
-                ],
-                "source": 173,
-                "target": 3222
-            },
-            {
-                "weight": 2,
-                "initiative_count": 0,
-                "research_group_count": 2,
-                "advisorship_count": 0,
-                "relation_types": [
-                    "research_group"
-                ],
-                "source": 173,
-                "target": 3223
-            },
-            {
-                "weight": 2,
-                "initiative_count": 0,
-                "research_group_count": 2,
-                "advisorship_count": 0,
-                "relation_types": [
-                    "research_group"
-                ],
-                "source": 173,
-                "target": 3224
-            },
-            {
-                "weight": 2,
-                "initiative_count": 0,
-                "research_group_count": 2,
-                "advisorship_count": 0,
-                "relation_types": [
-                    "research_group"
-                ],
-                "source": 3221,
+                "source": 3225,
                 "target": 185
             },
             {
@@ -249,8 +205,8 @@
                 "relation_types": [
                     "research_group"
                 ],
-                "source": 3221,
-                "target": 3222
+                "source": 3225,
+                "target": 3226
             },
             {
                 "weight": 2,
@@ -260,8 +216,8 @@
                 "relation_types": [
                     "research_group"
                 ],
-                "source": 3221,
-                "target": 3223
+                "source": 3225,
+                "target": 3227
             },
             {
                 "weight": 2,
@@ -271,18 +227,18 @@
                 "relation_types": [
                     "research_group"
                 ],
-                "source": 3221,
-                "target": 3224
+                "source": 3225,
+                "target": 3228
             },
             {
-                "weight": 1,
+                "weight": 2,
                 "initiative_count": 0,
-                "research_group_count": 1,
+                "research_group_count": 2,
                 "advisorship_count": 0,
                 "relation_types": [
                     "research_group"
                 ],
-                "source": 3222,
+                "source": 173,
                 "target": 185
             },
             {
@@ -293,8 +249,30 @@
                 "relation_types": [
                     "research_group"
                 ],
-                "source": 3222,
-                "target": 3223
+                "source": 173,
+                "target": 3226
+            },
+            {
+                "weight": 2,
+                "initiative_count": 0,
+                "research_group_count": 2,
+                "advisorship_count": 0,
+                "relation_types": [
+                    "research_group"
+                ],
+                "source": 173,
+                "target": 3227
+            },
+            {
+                "weight": 2,
+                "initiative_count": 0,
+                "research_group_count": 2,
+                "advisorship_count": 0,
+                "relation_types": [
+                    "research_group"
+                ],
+                "source": 173,
+                "target": 3228
             },
             {
                 "weight": 1,
@@ -304,8 +282,8 @@
                 "relation_types": [
                     "research_group"
                 ],
-                "source": 3222,
-                "target": 3224
+                "source": 185,
+                "target": 3226
             },
             {
                 "weight": 2,
@@ -315,8 +293,8 @@
                 "relation_types": [
                     "research_group"
                 ],
-                "source": 3223,
-                "target": 185
+                "source": 185,
+                "target": 3227
             },
             {
                 "weight": 2,
@@ -326,8 +304,30 @@
                 "relation_types": [
                     "research_group"
                 ],
-                "source": 3223,
-                "target": 3224
+                "source": 185,
+                "target": 3228
+            },
+            {
+                "weight": 1,
+                "initiative_count": 0,
+                "research_group_count": 1,
+                "advisorship_count": 0,
+                "relation_types": [
+                    "research_group"
+                ],
+                "source": 3226,
+                "target": 3227
+            },
+            {
+                "weight": 1,
+                "initiative_count": 0,
+                "research_group_count": 1,
+                "advisorship_count": 0,
+                "relation_types": [
+                    "research_group"
+                ],
+                "source": 3226,
+                "target": 3228
             },
             {
                 "weight": 2,
@@ -337,8 +337,8 @@
                 "relation_types": [
                     "research_group"
                 ],
-                "source": 3224,
-                "target": 185
+                "source": 3227,
+                "target": 3228
             }
         ]
     }

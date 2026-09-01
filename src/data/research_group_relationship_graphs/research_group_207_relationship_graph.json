@@ -1,20 +1,20 @@
 {
     "metadata": {
-        "generated_at": "2026-08-28T15:07:42.634031+00:00",
+        "generated_at": "2026-09-01T17:02:41.647430+00:00",
         "sources": {
-            "researchers": "/home/rafael/horizon_etl/data/exports/researchers_canonical.json",
-            "initiatives": "/home/rafael/horizon_etl/data/exports/initiatives_canonical.json",
-            "research_groups": "/home/rafael/horizon_etl/data/exports/research_groups_canonical.json",
-            "advisorships": "/home/rafael/horizon_etl/data/exports/advisorships_canonical.json"
+            "researchers": "/home/henriq/Documents/gith/forks/others/horizon_etl/data/exports/researchers_canonical.json",
+            "initiatives": "/home/henriq/Documents/gith/forks/others/horizon_etl/data/exports/initiatives_canonical.json",
+            "research_groups": "/home/henriq/Documents/gith/forks/others/horizon_etl/data/exports/research_groups_canonical.json",
+            "advisorships": "/home/henriq/Documents/gith/forks/others/horizon_etl/data/exports/advisorships_canonical.json"
         },
         "scope": {
             "type": "research_group",
             "research_group": {
                 "id": 207,
-                "name": "História, Memória, Educação tecnológica e Práticas de Turismo no Espírito Santo",
-                "short_name": null,
-                "member_count": 3,
-                "expanded_node_count": 3,
+                "name": "História das interações políticas, culturais, econômicas e sociais",
+                "short_name": "ECES História",
+                "member_count": 4,
+                "expanded_node_count": 4,
                 "advisorship_neighbor_count": 0
             }
         },
@@ -26,45 +26,52 @@
         }
     },
     "graph_stats": {
-        "nodes": 3,
-        "edges": 3,
+        "nodes": 4,
+        "edges": 6,
         "isolated_nodes": 0,
         "connected_components": 1,
-        "largest_component_size": 3,
+        "largest_component_size": 4,
         "relation_event_totals": {
             "initiative": 0,
-            "research_group": 4,
+            "research_group": 6,
             "advisorship": 0
         },
         "edge_relation_presence": {
             "initiative": 0,
-            "research_group": 3,
+            "research_group": 6,
             "advisorship": 0
         },
         "classification_distribution": {
-            "researcher": 3
+            "researcher": 4
         },
         "top_people_by_weighted_degree": [
             {
                 "id": 291,
-                "name": "Dinorah Lopes Rubim Almeida",
+                "name": "Amarildo Mendes Lemos",
                 "classification": "researcher",
                 "weighted_degree": 3,
-                "degree": 2
+                "degree": 3
             },
             {
-                "id": 308,
-                "name": "Bruno Dos Santos Prado Moura",
+                "id": 1081,
+                "name": "Ernesto Charpinel Borges",
                 "classification": "researcher",
                 "weighted_degree": 3,
-                "degree": 2
+                "degree": 3
             },
             {
-                "id": 3783,
-                "name": "Iuri Campos de Souza",
+                "id": 1082,
+                "name": "Tiago de Araujo Camillo",
                 "classification": "researcher",
-                "weighted_degree": 2,
-                "degree": 2
+                "weighted_degree": 3,
+                "degree": 3
+            },
+            {
+                "id": 1083,
+                "name": "Wander Luiz Demartini Nunes",
+                "classification": "researcher",
+                "weighted_degree": 3,
+                "degree": 3
             }
         ]
     },
@@ -74,56 +81,113 @@
         "graph": {},
         "nodes": [
             {
-                "name": "Dinorah Lopes Rubim Almeida",
+                "name": "Ernesto Charpinel Borges",
                 "classification": "researcher",
                 "classification_confidence": "high",
                 "was_student": false,
                 "was_staff": true,
-                "campus_name": "Vitória",
-                "degree": 2,
+                "campus_name": "Serra",
+                "degree": 3,
+                "weighted_degree": 3,
+                "is_group_member": true,
+                "is_advisorship_neighbor": false,
+                "id": 1081
+            },
+            {
+                "name": "Tiago de Araujo Camillo",
+                "classification": "researcher",
+                "classification_confidence": "high",
+                "was_student": false,
+                "was_staff": true,
+                "campus_name": "Serra",
+                "degree": 3,
+                "weighted_degree": 3,
+                "is_group_member": true,
+                "is_advisorship_neighbor": false,
+                "id": 1082
+            },
+            {
+                "name": "Amarildo Mendes Lemos",
+                "classification": "researcher",
+                "classification_confidence": "high",
+                "was_student": false,
+                "was_staff": true,
+                "campus_name": "Serra",
+                "degree": 3,
                 "weighted_degree": 3,
                 "is_group_member": true,
                 "is_advisorship_neighbor": false,
                 "id": 291
             },
             {
-                "name": "Bruno Dos Santos Prado Moura",
+                "name": "Wander Luiz Demartini Nunes",
                 "classification": "researcher",
                 "classification_confidence": "high",
                 "was_student": false,
                 "was_staff": true,
-                "campus_name": "Vitória",
-                "degree": 2,
+                "campus_name": "Serra",
+                "degree": 3,
                 "weighted_degree": 3,
                 "is_group_member": true,
                 "is_advisorship_neighbor": false,
-                "id": 308
-            },
-            {
-                "name": "Iuri Campos de Souza",
-                "classification": "researcher",
-                "classification_confidence": "high",
-                "was_student": false,
-                "was_staff": true,
-                "campus_name": "Colatina",
-                "degree": 2,
-                "weighted_degree": 2,
-                "is_group_member": true,
-                "is_advisorship_neighbor": false,
-                "id": 3783
+                "id": 1083
             }
         ],
         "edges": [
             {
-                "weight": 2,
+                "weight": 1,
                 "initiative_count": 0,
-                "research_group_count": 2,
+                "research_group_count": 1,
                 "advisorship_count": 0,
                 "relation_types": [
                     "research_group"
                 ],
-                "source": 291,
-                "target": 308
+                "source": 1081,
+                "target": 291
+            },
+            {
+                "weight": 1,
+                "initiative_count": 0,
+                "research_group_count": 1,
+                "advisorship_count": 0,
+                "relation_types": [
+                    "research_group"
+                ],
+                "source": 1081,
+                "target": 1082
+            },
+            {
+                "weight": 1,
+                "initiative_count": 0,
+                "research_group_count": 1,
+                "advisorship_count": 0,
+                "relation_types": [
+                    "research_group"
+                ],
+                "source": 1081,
+                "target": 1083
+            },
+            {
+                "weight": 1,
+                "initiative_count": 0,
+                "research_group_count": 1,
+                "advisorship_count": 0,
+                "relation_types": [
+                    "research_group"
+                ],
+                "source": 1082,
+                "target": 291
+            },
+            {
+                "weight": 1,
+                "initiative_count": 0,
+                "research_group_count": 1,
+                "advisorship_count": 0,
+                "relation_types": [
+                    "research_group"
+                ],
+                "source": 1082,
+                "target": 1083
             },
             {
                 "weight": 1,
@@ -134,18 +198,7 @@
                     "research_group"
                 ],
                 "source": 291,
-                "target": 3783
-            },
-            {
-                "weight": 1,
-                "initiative_count": 0,
-                "research_group_count": 1,
-                "advisorship_count": 0,
-                "relation_types": [
-                    "research_group"
-                ],
-                "source": 308,
-                "target": 3783
+                "target": 1083
             }
         ]
     }

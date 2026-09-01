@@ -1,11 +1,11 @@
 {
     "metadata": {
-        "generated_at": "2026-08-28T15:07:40.029779+00:00",
+        "generated_at": "2026-08-31T18:52:14.901907+00:00",
         "sources": {
-            "researchers": "/home/rafael/horizon_etl/data/exports/researchers_canonical.json",
-            "initiatives": "/home/rafael/horizon_etl/data/exports/initiatives_canonical.json",
-            "research_groups": "/home/rafael/horizon_etl/data/exports/research_groups_canonical.json",
-            "advisorships": "/home/rafael/horizon_etl/data/exports/advisorships_canonical.json"
+            "researchers": "/home/henriq/Documents/gith/forks/others/horizon_etl/data/exports/researchers_canonical.json",
+            "initiatives": "/home/henriq/Documents/gith/forks/others/horizon_etl/data/exports/initiatives_canonical.json",
+            "research_groups": "/home/henriq/Documents/gith/forks/others/horizon_etl/data/exports/research_groups_canonical.json",
+            "advisorships": "/home/henriq/Documents/gith/forks/others/horizon_etl/data/exports/advisorships_canonical.json"
         },
         "scope": {
             "type": "research_group",
@@ -46,7 +46,7 @@
         },
         "top_people_by_weighted_degree": [
             {
-                "id": 2525,
+                "id": 2529,
                 "name": "Sérgio Adriany Santos Moreira",
                 "classification": "researcher",
                 "weighted_degree": 5,
@@ -60,14 +60,14 @@
                 "degree": 3
             },
             {
-                "id": 3431,
+                "id": 3436,
                 "name": "Ricardo dos Santos Dias",
                 "classification": "researcher",
                 "weighted_degree": 4,
                 "degree": 3
             },
             {
-                "id": 2261,
+                "id": 2265,
                 "name": "Sâmela Pedrada Cardoso",
                 "classification": "researcher",
                 "weighted_degree": 3,
@@ -94,19 +94,6 @@
                 "id": 192
             },
             {
-                "name": "Sérgio Adriany Santos Moreira",
-                "classification": "researcher",
-                "classification_confidence": "high",
-                "was_student": false,
-                "was_staff": true,
-                "campus_name": "Centro-Serrano",
-                "degree": 3,
-                "weighted_degree": 5,
-                "is_group_member": true,
-                "is_advisorship_neighbor": false,
-                "id": 2525
-            },
-            {
                 "name": "Sâmela Pedrada Cardoso",
                 "classification": "researcher",
                 "classification_confidence": "high",
@@ -117,7 +104,7 @@
                 "weighted_degree": 3,
                 "is_group_member": true,
                 "is_advisorship_neighbor": false,
-                "id": 2261
+                "id": 2265
             },
             {
                 "name": "Ricardo dos Santos Dias",
@@ -130,7 +117,20 @@
                 "weighted_degree": 4,
                 "is_group_member": true,
                 "is_advisorship_neighbor": false,
-                "id": 3431
+                "id": 3436
+            },
+            {
+                "name": "Sérgio Adriany Santos Moreira",
+                "classification": "researcher",
+                "classification_confidence": "high",
+                "was_student": false,
+                "was_staff": true,
+                "campus_name": "Centro-Serrano",
+                "degree": 3,
+                "weighted_degree": 5,
+                "is_group_member": true,
+                "is_advisorship_neighbor": false,
+                "id": 2529
             }
         ],
         "edges": [
@@ -143,7 +143,7 @@
                     "research_group"
                 ],
                 "source": 192,
-                "target": 2525
+                "target": 2529
             },
             {
                 "weight": 1,
@@ -154,7 +154,7 @@
                     "research_group"
                 ],
                 "source": 192,
-                "target": 2261
+                "target": 2265
             },
             {
                 "weight": 1,
@@ -165,7 +165,7 @@
                     "research_group"
                 ],
                 "source": 192,
-                "target": 3431
+                "target": 3436
             },
             {
                 "weight": 1,
@@ -175,8 +175,19 @@
                 "relation_types": [
                     "research_group"
                 ],
-                "source": 2525,
-                "target": 2261
+                "source": 2265,
+                "target": 2529
+            },
+            {
+                "weight": 1,
+                "initiative_count": 0,
+                "research_group_count": 1,
+                "advisorship_count": 0,
+                "relation_types": [
+                    "research_group"
+                ],
+                "source": 2265,
+                "target": 3436
             },
             {
                 "weight": 2,
@@ -186,19 +197,8 @@
                 "relation_types": [
                     "research_group"
                 ],
-                "source": 2525,
-                "target": 3431
-            },
-            {
-                "weight": 1,
-                "initiative_count": 0,
-                "research_group_count": 1,
-                "advisorship_count": 0,
-                "relation_types": [
-                    "research_group"
-                ],
-                "source": 2261,
-                "target": 3431
+                "source": 3436,
+                "target": 2529
             }
         ]
     }

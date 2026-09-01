@@ -1,20 +1,20 @@
 {
     "metadata": {
-        "generated_at": "2026-08-28T15:07:45.607222+00:00",
+        "generated_at": "2026-08-31T18:52:23.516379+00:00",
         "sources": {
-            "researchers": "/home/rafael/horizon_etl/data/exports/researchers_canonical.json",
-            "initiatives": "/home/rafael/horizon_etl/data/exports/initiatives_canonical.json",
-            "research_groups": "/home/rafael/horizon_etl/data/exports/research_groups_canonical.json",
-            "advisorships": "/home/rafael/horizon_etl/data/exports/advisorships_canonical.json"
+            "researchers": "/home/henriq/Documents/gith/forks/others/horizon_etl/data/exports/researchers_canonical.json",
+            "initiatives": "/home/henriq/Documents/gith/forks/others/horizon_etl/data/exports/initiatives_canonical.json",
+            "research_groups": "/home/henriq/Documents/gith/forks/others/horizon_etl/data/exports/research_groups_canonical.json",
+            "advisorships": "/home/henriq/Documents/gith/forks/others/horizon_etl/data/exports/advisorships_canonical.json"
         },
         "scope": {
             "type": "research_group",
             "research_group": {
                 "id": 296,
-                "name": "Pesquisa em Recursos de Otimização Metalúrgica por Prompts e Tecnologias Inteligentes",
-                "short_name": "PROMPT",
-                "member_count": 2,
-                "expanded_node_count": 2,
+                "name": "Pesquisa em Difusão e Transferência de Tecnologia",
+                "short_name": null,
+                "member_count": 4,
+                "expanded_node_count": 4,
                 "advisorship_neighbor_count": 0
             }
         },
@@ -26,38 +26,52 @@
         }
     },
     "graph_stats": {
-        "nodes": 2,
-        "edges": 1,
+        "nodes": 4,
+        "edges": 6,
         "isolated_nodes": 0,
         "connected_components": 1,
-        "largest_component_size": 2,
+        "largest_component_size": 4,
         "relation_event_totals": {
             "initiative": 0,
-            "research_group": 1,
+            "research_group": 8,
             "advisorship": 0
         },
         "edge_relation_presence": {
             "initiative": 0,
-            "research_group": 1,
+            "research_group": 6,
             "advisorship": 0
         },
         "classification_distribution": {
-            "researcher": 2
+            "researcher": 4
         },
         "top_people_by_weighted_degree": [
             {
-                "id": 405,
-                "name": "Bruna Brito Freitas",
+                "id": 83,
+                "name": "Ednaldo Miranda De Oliveira",
                 "classification": "researcher",
-                "weighted_degree": 1,
-                "degree": 1
+                "weighted_degree": 5,
+                "degree": 3
             },
             {
-                "id": 1741,
-                "name": "Artur Pratti de Barros",
+                "id": 404,
+                "name": "Marcio Adonis Miranda Rocha",
                 "classification": "researcher",
-                "weighted_degree": 1,
-                "degree": 1
+                "weighted_degree": 4,
+                "degree": 3
+            },
+            {
+                "id": 4712,
+                "name": "Robson Celestino Meireles",
+                "classification": "researcher",
+                "weighted_degree": 4,
+                "degree": 3
+            },
+            {
+                "id": 6190,
+                "name": "Antonio Elias Souza da Silva",
+                "classification": "researcher",
+                "weighted_degree": 3,
+                "degree": 3
             }
         ]
     },
@@ -67,33 +81,70 @@
         "graph": {},
         "nodes": [
             {
-                "name": "Artur Pratti de Barros",
+                "name": "Robson Celestino Meireles",
                 "classification": "researcher",
                 "classification_confidence": "high",
                 "was_student": false,
                 "was_staff": true,
-                "campus_name": "Vitória",
-                "degree": 1,
-                "weighted_degree": 1,
+                "campus_name": "Santa Teresa",
+                "degree": 3,
+                "weighted_degree": 4,
                 "is_group_member": true,
                 "is_advisorship_neighbor": false,
-                "id": 1741
+                "id": 4712
             },
             {
-                "name": "Bruna Brito Freitas",
+                "name": "Ednaldo Miranda De Oliveira",
                 "classification": "researcher",
                 "classification_confidence": "high",
                 "was_student": false,
                 "was_staff": true,
-                "campus_name": "Vitória",
-                "degree": 1,
-                "weighted_degree": 1,
+                "campus_name": "Santa Teresa",
+                "degree": 3,
+                "weighted_degree": 5,
                 "is_group_member": true,
                 "is_advisorship_neighbor": false,
-                "id": 405
+                "id": 83
+            },
+            {
+                "name": "Marcio Adonis Miranda Rocha",
+                "classification": "researcher",
+                "classification_confidence": "high",
+                "was_student": false,
+                "was_staff": true,
+                "campus_name": "Santa Teresa",
+                "degree": 3,
+                "weighted_degree": 4,
+                "is_group_member": true,
+                "is_advisorship_neighbor": false,
+                "id": 404
+            },
+            {
+                "name": "Antonio Elias Souza da Silva",
+                "classification": "researcher",
+                "classification_confidence": "high",
+                "was_student": false,
+                "was_staff": true,
+                "campus_name": "Santa Teresa",
+                "degree": 3,
+                "weighted_degree": 3,
+                "is_group_member": true,
+                "is_advisorship_neighbor": false,
+                "id": 6190
             }
         ],
         "edges": [
+            {
+                "weight": 2,
+                "initiative_count": 0,
+                "research_group_count": 2,
+                "advisorship_count": 0,
+                "relation_types": [
+                    "research_group"
+                ],
+                "source": 4712,
+                "target": 83
+            },
             {
                 "weight": 1,
                 "initiative_count": 0,
@@ -102,8 +153,52 @@
                 "relation_types": [
                     "research_group"
                 ],
-                "source": 1741,
-                "target": 405
+                "source": 4712,
+                "target": 404
+            },
+            {
+                "weight": 1,
+                "initiative_count": 0,
+                "research_group_count": 1,
+                "advisorship_count": 0,
+                "relation_types": [
+                    "research_group"
+                ],
+                "source": 4712,
+                "target": 6190
+            },
+            {
+                "weight": 2,
+                "initiative_count": 0,
+                "research_group_count": 2,
+                "advisorship_count": 0,
+                "relation_types": [
+                    "research_group"
+                ],
+                "source": 83,
+                "target": 404
+            },
+            {
+                "weight": 1,
+                "initiative_count": 0,
+                "research_group_count": 1,
+                "advisorship_count": 0,
+                "relation_types": [
+                    "research_group"
+                ],
+                "source": 83,
+                "target": 6190
+            },
+            {
+                "weight": 1,
+                "initiative_count": 0,
+                "research_group_count": 1,
+                "advisorship_count": 0,
+                "relation_types": [
+                    "research_group"
+                ],
+                "source": 404,
+                "target": 6190
             }
         ]
     }
