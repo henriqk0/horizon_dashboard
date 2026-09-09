@@ -3,7 +3,8 @@ name: Sync ETL Data
 on:
   workflow_dispatch:
   schedule:
-    - cron: "0 * * * *"
+    - cron: "0 17,5 * * *"
+
 
 concurrency:
   group: etl-data-sync
@@ -15,7 +16,7 @@ permissions:
 env:
   ETL_OWNER: RafaelDeps
   ETL_REPO: horizon_etl
-  ETL_BRANCH: feat/009-commit-changes
+  ETL_BRANCH: main
   EXPORTS_DIR: data/exports
 
 jobs:
