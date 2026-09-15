@@ -76,6 +76,10 @@ export interface Researcher {
     role_evidence?: ResearcherRoleEvidence | null;
     was_student?: boolean;
     was_staff?: boolean;
+    campus?: {
+        id: string | number;
+        name: string;
+    } | null;
 }
 
 export interface ResearcherAdvisorship {

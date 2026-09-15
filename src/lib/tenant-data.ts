@@ -349,13 +349,31 @@ export const getResearcherCampusIds = (researcher: Researcher): string[] => {
         return cached;
     }
 
-    const campusGroupIds = new Set(
-        (researcher.research_groups || []).map((group) => String(group.id)),
-    );
-    const matchedCampuses = groups
-        .filter((group) => campusGroupIds.has(String(group.id)))
-        .map((group) => String(group.campus.id));
-    const campusIds = [...new Set(matchedCampuses)];
+    let campusIds: string[] = [];
+
+    if (researcher.campus && researcher.campus.id != null) {
+        const resolvedId =
+            resolveCampusId(researcher.campus.id) ||
+            String(researcher.campus.id).trim();
+        if (resolvedId) {
+            campusIds = [resolvedId];
+        }
+    }
+
+    if (
+        campusIds.length === 0 &&
+        researcher.research_groups &&
+        researcher.research_groups.length > 0
+    ) {
+        const campusGroupIds = new Set(
+            researcher.research_groups.map((group) => String(group.id)),
+        );
+        const matchedCampuses = groups
+            .filter((group) => campusGroupIds.has(String(group.id)))
+            .map((group) => String(group.campus.id));
+        campusIds = [...new Set(matchedCampuses)].slice(0, 1);
+    }
+
     researcherCampusIdsById.set(cacheKey, campusIds);
     return campusIds;
 };

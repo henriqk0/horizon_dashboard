@@ -36,36 +36,20 @@ const escapeHtml = (value: string | number | null | undefined) =>
         .replace(/'/g, "&#39;");
 
 const renderCampusPills = (campusNames: string[]) => {
-    if (!campusNames.length) {
+    const primaryCampusName = campusNames[0];
+    if (!primaryCampusName) {
         return "";
     }
-
-    const visibleCampusNames = campusNames.slice(0, MAX_VISIBLE_CAMPUSES);
-    const hiddenCampusCount = Math.max(
-        0,
-        campusNames.length - visibleCampusNames.length,
-    );
 
     return `
         <div
             class="flex flex-wrap justify-center gap-2 mb-3 w-full px-4"
-            title="${escapeHtml(campusNames.join(", "))}"
+            title="${escapeHtml(primaryCampusName)}"
         >
-            ${visibleCampusNames
-                .map(
-                    (campusName) => `
-                        <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-premium-accent/8 border border-premium-accent/15 text-[10px] font-bold text-premium-accent leading-none">
-                            <span class="w-1.5 h-1.5 rounded-full bg-premium-accent shrink-0"></span>
-                            ${escapeHtml(campusName)}
-                        </span>
-                    `,
-                )
-                .join("")}
-            ${
-                hiddenCampusCount > 0
-                    ? `<span class="inline-flex items-center px-2.5 py-1 rounded-full bg-premium-accent/8 border border-premium-accent/15 text-[10px] font-bold text-premium-accent leading-none">+${hiddenCampusCount}</span>`
-                    : ""
-            }
+            <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-premium-accent/8 border border-premium-accent/15 text-[10px] font-bold text-premium-accent leading-none">
+                <span class="w-1.5 h-1.5 rounded-full bg-premium-accent shrink-0"></span>
+                ${escapeHtml(primaryCampusName)}
+            </span>
         </div>
     `;
 };
@@ -164,8 +148,8 @@ export const buildResearcherCardView = ({
     name: researcher.name,
     initial: researcher.name.trim().charAt(0) || "?",
     searchIndex: buildSearchIndex([researcher.name]),
-    campusIds,
-    campusNames,
+    campusIds: campusIds.slice(0, 1),
+    campusNames: campusNames.slice(0, 1),
     highestDegree: getHighestAcademicDegree(researcher.academic_education),
     identificationLabel: researcher.identification_id
         ? `${researcher.identification_id.split("@")[0]}...`

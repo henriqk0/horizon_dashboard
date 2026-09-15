@@ -24,6 +24,13 @@ import {
     getCampusPublicationViews,
     getPublicationsByCampusId,
 } from "../src/lib/publications-data";
+import {
+    buildResearcherCardView,
+    renderResearcherCardMarkup,
+} from "../src/lib/researcher-card-markup";
+import { getCampusNamesFromIds } from "../src/lib/tenant-data";
+import { buildResearcherStatsById } from "../src/lib/researchers-data";
+import { buildCampusResearcherViews } from "../src/lib/researcher-collections";
 
 const researchers = researchersData as Researcher[];
 const projects = initiativesData as Project[];
@@ -176,3 +183,142 @@ describe("Publications use the canonical article campus", () => {
         );
     });
 });
+
+describe("Researcher primary campus resolution and card contract (US1)", () => {
+    it("returns strictly the primary campus id for a researcher with multiple research groups", () => {
+        // Maria Alice has campus: { id: 2, name: 'Vitória' } but groups in Vitória (2), Cefor (11), Cariacica (13)
+        const multiGroupResearcher = researchers.find(
+            (r) =>
+                r.name === "Maria Alice Veiga Ferreira De Souza" &&
+                r.campus &&
+                String(r.campus.id) === "2",
+        );
+
+        expect(multiGroupResearcher).toBeDefined();
+        const campusIds = getResearcherCampusIds(multiGroupResearcher!);
+        // Must strictly return only the primary campus id
+        expect(campusIds).toEqual(["2"]);
+    });
+
+    it("renders strictly one campus pill and no overflow badges on researcher card", () => {
+        const multiGroupResearcher = researchers.find(
+            (r) =>
+                r.name === "Maria Alice Veiga Ferreira De Souza" &&
+                r.campus &&
+                String(r.campus.id) === "2",
+        );
+        expect(multiGroupResearcher).toBeDefined();
+
+        const stats = buildResearcherStatsById([multiGroupResearcher!])[
+            multiGroupResearcher!.id
+        ];
+        const campusIds = getResearcherCampusIds(multiGroupResearcher!);
+        const campusNames = getCampusNamesFromIds(campusIds);
+
+        const cardView = buildResearcherCardView({
+            researcher: multiGroupResearcher!,
+            stats,
+            baseUrl: "/",
+            campusIds,
+            campusNames,
+        });
+
+        const markup = renderResearcherCardMarkup(cardView);
+
+        // Contains the primary campus name
+        expect(markup).toContain("Vitória");
+        // Does NOT contain secondary group campuses as pills
+        expect(markup).not.toContain("Cefor");
+        expect(markup).not.toContain("Cariacica");
+        // Does NOT contain overflow badges like +1, +2
+        expect(markup).not.toMatch(/\+\d+/);
+    });
+});
+
+describe("Strict campus filtering and DOM contract (US2)", () => {
+    it("sets data-campus-ids to strictly the primary campus id and rejects secondary campuses in filter predicate", () => {
+        const multiGroupResearcher = researchers.find(
+            (r) =>
+                r.name === "Maria Alice Veiga Ferreira De Souza" &&
+                r.campus &&
+                String(r.campus.id) === "2",
+        );
+        expect(multiGroupResearcher).toBeDefined();
+
+        const stats = buildResearcherStatsById([multiGroupResearcher!])[
+            multiGroupResearcher!.id
+        ];
+        const campusIds = getResearcherCampusIds(multiGroupResearcher!);
+        const campusNames = getCampusNamesFromIds(campusIds);
+
+        const cardView = buildResearcherCardView({
+            researcher: multiGroupResearcher!,
+            stats,
+            baseUrl: "/",
+            campusIds,
+            campusNames,
+        });
+
+        const markup = renderResearcherCardMarkup(cardView);
+
+        // Strict DOM attribute
+        expect(markup).toContain('data-campus-ids="2"');
+        expect(markup).not.toContain('data-campus-ids="2|11|13"');
+
+        // Client-side predicate test: matches primary campus
+        expect(matchesCampus("2", cardView.campusIds)).toBe(true);
+        // Does NOT match former secondary group campuses
+        expect(matchesCampus("11", cardView.campusIds)).toBe(false);
+        expect(matchesCampus("13", cardView.campusIds)).toBe(false);
+    });
+
+    it("handles researchers with no campus gracefully in filter predicates", () => {
+        const noCampusResearcher = researchers.find((r) => !r.campus);
+        expect(noCampusResearcher).toBeDefined();
+
+        const campusIds = getResearcherCampusIds(noCampusResearcher!);
+        expect(campusIds).toEqual([]);
+
+        // Without campus filter, matches all
+        expect(matchesCampus("", campusIds)).toBe(true);
+        // With specific campus filter, does not match
+        expect(matchesCampus("2", campusIds)).toBe(false);
+    });
+});
+
+describe("Disjoint campus researcher views without duplicate counts (US3)", () => {
+    it("ensures researchers are partitioned exclusively into their primary campus views", () => {
+        const campusViews = buildCampusResearcherViews(researchers);
+        const campusKeys = Object.keys(campusViews);
+
+        // Check pairwise disjunction across all campuses
+        for (let i = 0; i < campusKeys.length; i++) {
+            for (let j = i + 1; j < campusKeys.length; j++) {
+                const campusA = campusKeys[i];
+                const campusB = campusKeys[j];
+
+                const idsA = new Set(campusViews[campusA].map((r) => String(r.id)));
+                const idsB = new Set(campusViews[campusB].map((r) => String(r.id)));
+
+                const intersection = [...idsA].filter((id) => idsB.has(id));
+                expect(intersection).toEqual([]);
+            }
+        }
+    });
+
+    it("verifies multi-group researcher belongs only to their primary campus view", () => {
+        const campusViews = buildCampusResearcherViews(researchers);
+
+        const vitoriaResearchers = campusViews["2"] || [];
+        const ceforResearchers = campusViews["11"] || [];
+        const cariacicaResearchers = campusViews["13"] || [];
+
+        const mariaAliceId = "3"; // Maria Alice Veiga Ferreira De Souza
+
+        expect(vitoriaResearchers.some((r) => String(r.id) === mariaAliceId)).toBe(true);
+        expect(ceforResearchers.some((r) => String(r.id) === mariaAliceId)).toBe(false);
+        expect(cariacicaResearchers.some((r) => String(r.id) === mariaAliceId)).toBe(false);
+    });
+});
+
+
