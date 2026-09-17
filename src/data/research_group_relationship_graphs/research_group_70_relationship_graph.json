@@ -1,17 +1,17 @@
 {
     "metadata": {
-        "generated_at": "2026-09-17T15:17:43.784127+00:00",
+        "generated_at": "2026-09-17T17:31:11.437247+00:00",
         "sources": {
-            "researchers": "/home/runner/work/horizon_etl/horizon_etl/data/exports/researchers_canonical.json",
-            "initiatives": "/home/runner/work/horizon_etl/horizon_etl/data/exports/initiatives_canonical.json",
-            "research_groups": "/home/runner/work/horizon_etl/horizon_etl/data/exports/research_groups_canonical.json",
-            "advisorships": "/home/runner/work/horizon_etl/horizon_etl/data/exports/advisorships_canonical.json"
+            "researchers": "/home/rafael/horizon_etl/data/exports/researchers_canonical.json",
+            "initiatives": "/home/rafael/horizon_etl/data/exports/initiatives_canonical.json",
+            "research_groups": "/home/rafael/horizon_etl/data/exports/research_groups_canonical.json",
+            "advisorships": "/home/rafael/horizon_etl/data/exports/advisorships_canonical.json"
         },
         "scope": {
             "type": "research_group",
             "research_group": {
                 "id": 70,
-                "name": "Estudos em Geotecnia e Infraestrutura",
+                "name": "Estudos em Educação",
                 "short_name": null,
                 "member_count": 4,
                 "expanded_node_count": 4,
@@ -46,29 +46,29 @@
         },
         "top_people_by_weighted_degree": [
             {
-                "id": 102,
-                "name": "Morgana Moreschi",
+                "id": 101,
+                "name": "Jenniffer Syreetta De Oliveira Spelta",
                 "classification": "researcher",
                 "weighted_degree": 3,
                 "degree": 3
             },
             {
-                "id": 1533,
-                "name": "Marcela Giacometti de Avelar",
+                "id": 102,
+                "name": "Majorie Mara Malacarne",
+                "classification": "researcher",
+                "weighted_degree": 3,
+                "degree": 3
+            },
+            {
+                "id": 2450,
+                "name": "Gabriela Mantovanelli de Oliveira Giuberti",
                 "classification": "researcher",
                 "weighted_degree": 3,
                 "degree": 3
             },
             {
                 "id": 2451,
-                "name": "Gabriela Pereira Lubke Izoton",
-                "classification": "researcher",
-                "weighted_degree": 3,
-                "degree": 3
-            },
-            {
-                "id": 2452,
-                "name": "Marcos Hortolani Boldrim",
+                "name": "Larissa Sens",
                 "classification": "researcher",
                 "weighted_degree": 3,
                 "degree": 3
@@ -81,12 +81,25 @@
         "graph": {},
         "nodes": [
             {
-                "name": "Gabriela Pereira Lubke Izoton",
+                "name": "Gabriela Mantovanelli de Oliveira Giuberti",
                 "classification": "researcher",
                 "classification_confidence": "high",
                 "was_student": false,
                 "was_staff": true,
-                "campus_name": "Nova Venécia",
+                "campus_name": "Itapina",
+                "degree": 3,
+                "weighted_degree": 3,
+                "is_group_member": true,
+                "is_advisorship_neighbor": false,
+                "id": 2450
+            },
+            {
+                "name": "Larissa Sens",
+                "classification": "researcher",
+                "classification_confidence": "high",
+                "was_student": false,
+                "was_staff": true,
+                "campus_name": "Itapina",
                 "degree": 3,
                 "weighted_degree": 3,
                 "is_group_member": true,
@@ -94,38 +107,25 @@
                 "id": 2451
             },
             {
-                "name": "Marcos Hortolani Boldrim",
+                "name": "Jenniffer Syreetta De Oliveira Spelta",
                 "classification": "researcher",
                 "classification_confidence": "high",
-                "was_student": false,
+                "was_student": true,
                 "was_staff": true,
-                "campus_name": "Nova Venécia",
+                "campus_name": "Itapina",
                 "degree": 3,
                 "weighted_degree": 3,
                 "is_group_member": true,
                 "is_advisorship_neighbor": false,
-                "id": 2452
+                "id": 101
             },
             {
-                "name": "Marcela Giacometti de Avelar",
+                "name": "Majorie Mara Malacarne",
                 "classification": "researcher",
                 "classification_confidence": "high",
                 "was_student": false,
                 "was_staff": true,
-                "campus_name": "Nova Venécia",
-                "degree": 3,
-                "weighted_degree": 3,
-                "is_group_member": true,
-                "is_advisorship_neighbor": false,
-                "id": 1533
-            },
-            {
-                "name": "Morgana Moreschi",
-                "classification": "researcher",
-                "classification_confidence": "high",
-                "was_student": false,
-                "was_staff": true,
-                "campus_name": "Nova Venécia",
+                "campus_name": "Itapina",
                 "degree": 3,
                 "weighted_degree": 3,
                 "is_group_member": true,
@@ -142,6 +142,50 @@
                 "relation_types": [
                     "research_group"
                 ],
+                "source": 2450,
+                "target": 101
+            },
+            {
+                "weight": 1,
+                "initiative_count": 0,
+                "research_group_count": 1,
+                "advisorship_count": 0,
+                "relation_types": [
+                    "research_group"
+                ],
+                "source": 2450,
+                "target": 102
+            },
+            {
+                "weight": 1,
+                "initiative_count": 0,
+                "research_group_count": 1,
+                "advisorship_count": 0,
+                "relation_types": [
+                    "research_group"
+                ],
+                "source": 2450,
+                "target": 2451
+            },
+            {
+                "weight": 1,
+                "initiative_count": 0,
+                "research_group_count": 1,
+                "advisorship_count": 0,
+                "relation_types": [
+                    "research_group"
+                ],
+                "source": 2451,
+                "target": 101
+            },
+            {
+                "weight": 1,
+                "initiative_count": 0,
+                "research_group_count": 1,
+                "advisorship_count": 0,
+                "relation_types": [
+                    "research_group"
+                ],
                 "source": 2451,
                 "target": 102
             },
@@ -153,51 +197,7 @@
                 "relation_types": [
                     "research_group"
                 ],
-                "source": 2451,
-                "target": 1533
-            },
-            {
-                "weight": 1,
-                "initiative_count": 0,
-                "research_group_count": 1,
-                "advisorship_count": 0,
-                "relation_types": [
-                    "research_group"
-                ],
-                "source": 2451,
-                "target": 2452
-            },
-            {
-                "weight": 1,
-                "initiative_count": 0,
-                "research_group_count": 1,
-                "advisorship_count": 0,
-                "relation_types": [
-                    "research_group"
-                ],
-                "source": 2452,
-                "target": 102
-            },
-            {
-                "weight": 1,
-                "initiative_count": 0,
-                "research_group_count": 1,
-                "advisorship_count": 0,
-                "relation_types": [
-                    "research_group"
-                ],
-                "source": 2452,
-                "target": 1533
-            },
-            {
-                "weight": 1,
-                "initiative_count": 0,
-                "research_group_count": 1,
-                "advisorship_count": 0,
-                "relation_types": [
-                    "research_group"
-                ],
-                "source": 1533,
+                "source": 101,
                 "target": 102
             }
         ]
