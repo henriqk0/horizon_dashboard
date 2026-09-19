@@ -1,6 +1,6 @@
 {
     "metadata": {
-        "generated_at": "2026-09-17T17:31:16.198963+00:00",
+        "generated_at": "2026-09-19T02:43:24.137154+00:00",
         "sources": {
             "researchers": "/home/rafael/horizon_etl/data/exports/researchers_canonical.json",
             "initiatives": "/home/rafael/horizon_etl/data/exports/initiatives_canonical.json",
@@ -42,8 +42,8 @@
             "advisorship": 0
         },
         "classification_distribution": {
-            "researcher": 2,
-            "student": 1
+            "student": 1,
+            "researcher": 2
         },
         "top_people_by_weighted_degree": [
             {
@@ -54,14 +54,14 @@
                 "degree": 2
             },
             {
-                "id": 4758,
+                "id": 4759,
                 "name": "Daniela Alves Silva Serute",
                 "classification": "researcher",
                 "weighted_degree": 2,
                 "degree": 2
             },
             {
-                "id": 4759,
+                "id": 4760,
                 "name": "João Pedro Sartori Alves",
                 "classification": "student",
                 "weighted_degree": 2,
@@ -74,6 +74,19 @@
         "multigraph": false,
         "graph": {},
         "nodes": [
+            {
+                "name": "João Pedro Sartori Alves",
+                "classification": "student",
+                "classification_confidence": "medium",
+                "was_student": true,
+                "was_staff": false,
+                "campus_name": "Guarapari",
+                "degree": 2,
+                "weighted_degree": 2,
+                "is_group_member": true,
+                "is_advisorship_neighbor": false,
+                "id": 4760
+            },
             {
                 "name": "Marcelo Serute",
                 "classification": "researcher",
@@ -98,19 +111,6 @@
                 "weighted_degree": 2,
                 "is_group_member": true,
                 "is_advisorship_neighbor": false,
-                "id": 4758
-            },
-            {
-                "name": "João Pedro Sartori Alves",
-                "classification": "student",
-                "classification_confidence": "medium",
-                "was_student": true,
-                "was_staff": false,
-                "campus_name": "Guarapari",
-                "degree": 2,
-                "weighted_degree": 2,
-                "is_group_member": true,
-                "is_advisorship_neighbor": false,
                 "id": 4759
             }
         ],
@@ -123,8 +123,8 @@
                 "relation_types": [
                     "research_group"
                 ],
-                "source": 306,
-                "target": 4758
+                "source": 4760,
+                "target": 306
             },
             {
                 "weight": 1,
@@ -134,7 +134,7 @@
                 "relation_types": [
                     "research_group"
                 ],
-                "source": 306,
+                "source": 4760,
                 "target": 4759
             },
             {
@@ -145,7 +145,7 @@
                 "relation_types": [
                     "research_group"
                 ],
-                "source": 4758,
+                "source": 306,
                 "target": 4759
             }
         ]
