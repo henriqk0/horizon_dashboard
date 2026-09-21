@@ -1,84 +1,174 @@
 {
   "codigo": "PJ 7947",
   "titulo": "Avaliação de Erros Gramaticais e Aderência ao Tópico de Redações Dissertativas-Argumentativas",
-  "descricao": "Projeto de pesquisa que visa preencher lacunas na correção automática de erros gramaticais e na avaliação de aderência ao tópico em redações na língua portuguesa, utilizando modelos de aprendizado de máquina como BERT e T5.",
+  "descricao": "O projeto aborda duas subtarefas dentro da correção automática de redações: a correção automática de erros gramaticais e a avaliação de aderência ao tópico. Pretende-se preencher lacunas na pesquisa para o português, utilizando dados existentes para criar um novo conjunto de dados para correção gramatical e treinar modelos de linguagem como BERT e T5. Além disso, busca-se ajustar modelos para atribuir notas no aspecto de aderência ao tópico, contribuindo para o avanço da correção automática de redações em português brasileiro.",
   "palavras_chave": [
-    "correção automática de redações",
-    "erros gramaticais",
-    "aderência ao tópico",
-    "inteligência artificial",
-    "processamento de linguagem natural",
-    "modelos de linguagem",
-    "BERT",
-    "T5",
-    "aprendizado de máquina"
+    "Processamento de Linguagem Natural",
+    "Aprendizado de Máquina",
+    "Correção Automática de Redações",
+    "Correção Gramatical Automática"
   ],
-  "area_conhecimento": "Ciências Exatas e da Terra",
-  "linha_pesquisa": null,
+  "area_conhecimento": "CIÊNCIA DA COMPUTAÇÃO",
+  "linha_pesquisa": "Processamento de Linguagem Natural",
   "objetivos": {
-    "geral": "Analisar e estudar modelos de aprendizado de máquina que possam predizer erros gramaticais e atribuir notas de aderência ao tópico em redações com maior eficácia que um baseline, contribuindo para o avanço da pesquisa em correção automática de redações para o português brasileiro.",
+    "geral": "Analisar e estudar modelos de aprendizado de máquina que possam predizer erros gramaticais com uma eficácia maior que um dado baseline e analisar e estudar modelos que possam atribuir uma nota no aspecto de aderência ao tópico melhor que um dado baseline.",
     "especificos": [
-      "Construir um novo conjunto de dados para correção gramatical a partir de dados existentes, utilizando pré-processamento.",
-      "Treinar modelos de linguagem (BERT e T5) para correção de erros gramaticais e avaliação de aderência ao tópico.",
-      "Comparar a eficácia de diferentes arquiteturas de modelos de linguagem (BERT e T5) na tarefa de correção gramatical e avaliação de relevância de tópico.",
-      "Realizar revisão da literatura sobre avaliação automática de aderência ao tópico em redações em inglês e português.",
-      "Dividir e avaliar estatisticamente conjuntos de dados propostos para evitar enviesamento no modelo."
+      "Estudo e revisão da literatura sobre correção de erros gramaticais em português e em inglês.",
+      "Extrair do dataset apresentado por Amorim e Veloso (2017) os erros embutidos e etiquetados pelo corretor humano, além de extrair frases sem erros para diferenciar trechos com e sem erros.",
+      "Estabelecer um baseline com o CoGroo (Kinoshita et al., 2006) aplicado no conjunto de teste.",
+      "Treinar um modelo utilizando o BERT para classificação de tokens e identificação de trechos com erros gramaticais.",
+      "Treinar outro modelo utilizando a arquitetura T5 para gerar trechos com erros gramaticais.",
+      "Comparar os resultados das três estratégias utilizando métricas como revocação, precisão e F1.",
+      "Estudo e revisão da literatura sobre avaliação automática de aderência ao tópico de redações em inglês e português.",
+      "Dividir os dados de Amorim e Veloso (2017) e Marinho et al. (2021) em treino, teste e validação, realizando avaliação estatística para evitar enviesamento.",
+      "Agrupar tópicos similares com auxílio de anotadores para assegurar coerência.",
+      "Aplicar o baseline proposto por Amorim e Veloso (2017) nos dados selecionados.",
+      "Utilizar o BERT para treinar um modelo que atribua notas para aderência ao tópico.",
+      "Comparar e analisar os resultados dos modelos."
     ]
   },
   "coordenador": {
-    "nome": "Marta Talitha Carvalho Freire Mendes",
-    "email": "e1c7afa2c5f8@anon.lgpd",
-    "campus": "Serra",
+    "nome": null,
+    "email": null,
+    "campus": null,
     "titulacao": null
   },
-  "equipe": [
-    {
-      "nome": "Lucas Silverio Gums",
-      "funcao": "Estudante/Bolsista",
-      "instituicao": "Instituto Federal de Educação, Ciência e Tecnologia do Espírito Santo (IFES)",
-      "carga_horaria_semanal": null
-    }
-  ],
+  "equipe": [],
   "datas": {
-    "inicio": "2024-01-09",
-    "fim": null,
-    "duracao_meses": null
+    "inicio": "2024-09-01",
+    "fim": "2025-08-31",
+    "duracao_meses": 12
   },
   "cronograma": [
     {
       "atividade": "Revisão da Literatura",
-      "inicio": "2024-01",
-      "fim": "2024-02"
+      "inicio": "2024-09",
+      "fim": "2024-10"
     },
     {
       "atividade": "Coleta/Produção de Dados",
-      "inicio": "2024-03",
-      "fim": "2024-04"
+      "inicio": "2024-09",
+      "fim": "2024-10"
     },
     {
       "atividade": "Construção de um sistema baseline",
-      "inicio": "2024-05",
-      "fim": "2024-06"
-    },
-    {
-      "atividade": "Construção do script de treino",
-      "inicio": "2024-07",
+      "inicio": "2024-11",
       "fim": "2024-12"
     },
     {
-      "atividade": "Treino do modelo",
-      "inicio": "2024-10",
-      "fim": "2024-11"
+      "atividade": "Construção do script de treino",
+      "inicio": "2024-11",
+      "fim": "2025-04"
+    },
+    {
+      "atividade": "Treino do Modelo",
+      "inicio": "2025-01",
+      "fim": "2025-03"
     },
     {
       "atividade": "Experimentos",
-      "inicio": "2024-12",
+      "inicio": "2025-04",
+      "fim": "2025-04"
+    },
+    {
+      "atividade": "Escrita dos resultados em artigos",
+      "inicio": "2025-05",
+      "fim": "2025-05"
+    },
+    {
+      "atividade": "Construção de um Modelo para Correção Gramatical na Língua Portuguesa (Estudante 1)",
+      "inicio": null,
       "fim": null
     },
     {
-      "atividade": "Escrita dos resultados em um artigo",
+      "atividade": "Revisão da literatura (Estudante 1)",
+      "inicio": "2024-09",
+      "fim": "2024-10"
+    },
+    {
+      "atividade": "Coleta de dados a partir do conjunto de dados de Amorim e Veloso (2017) (Estudante 1)",
+      "inicio": "2024-09",
+      "fim": "2024-10"
+    },
+    {
+      "atividade": "Experimentar o CoGroo na divisão de teste dos dados (Estudante 1)",
+      "inicio": "2024-11",
+      "fim": "2024-12"
+    },
+    {
+      "atividade": "Construção de um script que faz ajuste fino do BERT na divisão de treino dos dados (Estudante 1)",
+      "inicio": "2024-11",
+      "fim": "2025-01"
+    },
+    {
+      "atividade": "Treino do modelo BERT (Estudante 1)",
       "inicio": "2025-01",
+      "fim": "2025-02"
+    },
+    {
+      "atividade": "Construção de um script para ajuste fino de um modelo T5 na divisão de treino dos dados (Estudante 1)",
+      "inicio": "2025-02",
+      "fim": "2025-04"
+    },
+    {
+      "atividade": "Treino do modelo T5 (Estudante 1)",
+      "inicio": "2025-03",
+      "fim": "2025-04"
+    },
+    {
+      "atividade": "Experimentos (Estudante 1)",
+      "inicio": "2025-05",
+      "fim": "2025-05"
+    },
+    {
+      "atividade": "Escrita de artigo com resultados (Estudante 1)",
+      "inicio": "2025-06",
+      "fim": "2025-06"
+    },
+    {
+      "atividade": "Construção de um Modelo para Avaliação de Aderência a Tópico de Redações (Estudante 2)",
+      "inicio": null,
       "fim": null
+    },
+    {
+      "atividade": "Revisão da literatura (Estudante 2)",
+      "inicio": "2024-09",
+      "fim": "2024-10"
+    },
+    {
+      "atividade": "Coleta dos dados de Amorim e Veloso (2017) e Essay-BR (Estudante 2)",
+      "inicio": "2024-11",
+      "fim": "2024-11"
+    },
+    {
+      "atividade": "Construção de um baseline com word2vec (Estudante 2)",
+      "inicio": "2024-11",
+      "fim": "2025-01"
+    },
+    {
+      "atividade": "Treino do modelo word2vec (Estudante 2)",
+      "inicio": "2024-12",
+      "fim": "2025-01"
+    },
+    {
+      "atividade": "Construção de um script que faz ajuste fino do BERT na divisão de treino dos dados (Estudante 2)",
+      "inicio": "2025-01",
+      "fim": "2025-04"
+    },
+    {
+      "atividade": "Treino do modelo BERT (Estudante 2)",
+      "inicio": "2025-03",
+      "fim": "2025-04"
+    },
+    {
+      "atividade": "Experimentos (Estudante 2)",
+      "inicio": "2025-05",
+      "fim": "2025-05"
+    },
+    {
+      "atividade": "Escrita de artigo com resultados (Estudante 2)",
+      "inicio": "2025-06",
+      "fim": "2025-06"
     }
   ],
   "financiamento": {
@@ -86,20 +176,27 @@
     "moeda": "BRL",
     "fontes": [
       {
-        "fonte": "Voluntariado: sem financiamento",
+        "fonte": "Google Colab (recursos gratuitos)",
         "valor": null,
-        "tipo": "Voluntário"
+        "tipo": "Recurso computacional"
+      },
+      {
+        "fonte": "Google Cloud (créditos gratuitos)",
+        "valor": 300.0,
+        "tipo": "Recurso computacional"
       }
     ]
   },
   "_meta": {
     "arquivo": "PJ_7947.pdf",
-    "paginas": 5,
-    "extraido_em": "2026-09-18T20:37:20.159733+00:00",
-    "modelo": "ministral-8b-latest",
+    "paginas": 14,
+    "extraido_em": "2026-08-10T21:24:57.617395+00:00",
+    "modelo": "mistral-large-latest",
     "fonte_texto": "pdf-text",
     "campos_ausentes": [
-      "datas.fim"
+      "coordenador.nome",
+      "coordenador.email",
+      "equipe"
     ]
   }
 }

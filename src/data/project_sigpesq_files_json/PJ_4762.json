@@ -1,84 +1,168 @@
 {
   "codigo": "PJ 4762",
   "titulo": "CONTROLE DA NAVEGAÇÃO DE UMA CADEIRA DE RODAS ROBOTIZADA DENTRO DE UM AMBIENTE CONTROLADO USANDO VISÃO COMPUTACIONAL",
-  "descricao": "Desenvolvimento de um sistema de visão computacional de baixo custo para uma cadeira de rodas motorizada, utilizando processamento de imagem e hardware embarcado (Raspberry Pi 3 e Arduino Uno R3) para auxiliar na locomoção autônoma de pessoas com deficiência em ambientes controlados.",
+  "descricao": "Este projeto visa a instrumentação de uma cadeira de rodas motorizada para navegação autônoma dentro de um ambiente controlado. Guiada por informações obtidas através de uma câmera e sensores, esta cadeira permitiria a locomoção de pessoas com deficiência através dos ambientes dentro de uma casa. Desta forma, o projeto visa desenvolver um algoritmo de processamento de vídeo fazendo uso da placa Raspberry Pi 3, câmera USB e sensores de desvio de obstáculos. Por conseguinte, obtém-se um ponto inicial para a criação de inovações tecnológicas embarcadas numa cadeira de rodas robotizada no auxílio de pessoas com deficiência.",
   "palavras_chave": [
-    "Visão computacional",
-    "Cadeira de rodas autônoma",
-    "Processamento de imagem",
-    "Hardware embarcado",
-    "Inclusão social",
-    "Mobilidade assistida",
-    "Raspberry Pi",
-    "Arduino",
-    "Robótica",
-    "Acessibilidade"
+    "CADEIRA DE RODAS",
+    "NAVEGAÇÃO",
+    "VISÃO COMPUTACIONAL",
+    "MICROCONTROLADORES",
+    "RASPBERRY PI"
   ],
-  "area_conhecimento": "Engenharia Elétrica",
-  "linha_pesquisa": null,
+  "area_conhecimento": "ENGENHARIA ELÉTRICA",
+  "linha_pesquisa": "ROBÓTICA DE REABILITAÇÃO",
   "objetivos": {
-    "geral": "Desenvolver um sistema de visão computacional de baixo custo para uma cadeira de rodas motorizada, permitindo navegação autônoma em ambientes controlados, visando a inclusão social e mobilidade assistida de pessoas com deficiência.",
+    "geral": "O objetivo deste trabalho visa o desenvolvimento de um sistema de visão computacional de baixo custo para uma cadeira de rodas motorizada. Da mesma forma, a cadeira apoiada por sensores realizará a navegação autônoma dentro de um ambiente controlado com o intuito de auxiliar na locomoção de pessoas com deficiência. O projeto envolve a programação de hardware embarcado e desenvolvimento de interfaces que apoiem na navegação.",
     "especificos": [
-      "Programar hardware embarcado para integrar sistemas de processamento de imagem e motorização.",
-      "Desenvolver um sistema de navegação autônoma utilizando processamento de imagem com Python.",
-      "Implementar um protótipo capaz de direcionar-se através de linhas em ambientes simulados.",
-      "Utilizar tecnologias acessíveis economicamente, como Raspberry Pi 3 e Arduino Uno R3, para viabilizar o projeto."
+      "Levantar a bibliografia básica e o estado da arte das técnicas de visão computacional à identificação de linhas e objetos em um ambiente controlado.",
+      "Realizar um estudo e testes dos diferentes elementos voltados ao sensoriamento de presença e desvio de obstáculos;",
+      "Desenvolver um algoritmo utilizando a Raspberry Pi 3 e as bibliotecas de visão computacional do software Python;",
+      "Integrar os algoritmos de visão computacional usando a Raspberry Pi 3 com os componentes voltados à detecção de obstáculos da cadeira de rodas.",
+      "Realizar testes iniciais."
     ]
   },
   "coordenador": {
-    "nome": "Richard Junior Manuel Godinez Tello",
-    "email": "8daa314703d9@anon.lgpd",
-    "campus": "Serra",
-    "titulacao": null
+    "nome": "Richard Godinez Tello",
+    "email": null,
+    "campus": "Instituto Federal do Espírito Santo - Campus Serra",
+    "titulacao": "Doutor"
   },
   "equipe": [
     {
-      "nome": "Júnior Aguilar de Amorim",
-      "funcao": "Bolsista",
-      "instituicao": "Instituto Federal do Espírito Santo (IFES)",
+      "nome": "Richard Godinez Tello",
+      "funcao": "Coordenador",
+      "instituicao": "Instituto Federal do Espírito Santo - Campus Serra",
+      "carga_horaria_semanal": null
+    },
+    {
+      "nome": "Leonardo Azevedo Scárdua",
+      "funcao": "Pesquisador",
+      "instituicao": "Instituto Federal do Espírito Santo - Campus Serra",
+      "carga_horaria_semanal": null
+    },
+    {
+      "nome": "Teodiano Freire Bastos",
+      "funcao": "Colaborador",
+      "instituicao": "UFES",
+      "carga_horaria_semanal": null
+    },
+    {
+      "nome": "Karin Komati",
+      "funcao": "Colaborador",
+      "instituicao": null,
       "carga_horaria_semanal": null
     }
   ],
   "datas": {
-    "inicio": "2018-01",
-    "fim": "2019-07-31",
-    "duracao_meses": 19
+    "inicio": "2018-08-01",
+    "fim": "2020-08-01",
+    "duracao_meses": 24
   },
   "cronograma": [
     {
-      "atividade": "Fundamentação teórica sobre processamento de imagem",
-      "inicio": "2018-01",
-      "fim": "2018-02"
+      "atividade": "Levantar a bibliografia básica e o estado da arte das tecnologias que envolvem sensores de obstáculos e processamento de imagens e visão computacional.",
+      "inicio": "2018-08",
+      "fim": "2018-08"
     },
     {
-      "atividade": "Estudo sobre software/hardware a ser utilizado",
-      "inicio": "2018-02",
-      "fim": "2018-03"
+      "atividade": "Estudar as características dos instrumentos, da câmera e acessórios utilizados no projeto.",
+      "inicio": "2018-09",
+      "fim": "2018-10"
     },
     {
-      "atividade": "Realizar aquisição de dados com câmera e Raspberry Pi 3",
-      "inicio": "2018-04",
-      "fim": "2018-07"
+      "atividade": "Desenvolver e testar algoritmos para o controle e desvio de obstáculos, como o sensoriamento e a visão computacional, utilizando as bibliotecas disponibilizadas pelo software.",
+      "inicio": "2018-12",
+      "fim": "2019-07"
     },
     {
-      "atividade": "Implementação e método de aplicação nos sistemas embarcados",
+      "atividade": "Implementar os algoritmos desenvolvidos em um protótipo realizando testes e corrigindo erros a fim de otimizar o processo.",
+      "inicio": "2018-12",
+      "fim": "2019-07"
+    },
+    {
+      "atividade": "Desenvolver uma interface gráfica visual para controle e exibição dos dados coletados pelos sensores e câmera.",
+      "inicio": "2019-04",
+      "fim": "2019-07"
+    },
+    {
+      "atividade": "Realizar testes iniciais",
+      "inicio": "2019-08",
+      "fim": "2019-10"
+    },
+    {
+      "atividade": "Integrar os sensores e câmera na cadeira de rodas motorizada e posicioná-los de maneira correta",
+      "inicio": "2019-08",
+      "fim": "2020-03"
+    },
+    {
+      "atividade": "Realizar testes de performance da cadeira de rodas em ambiente controlado.",
+      "inicio": "2019-11",
+      "fim": "2020-06"
+    },
+    {
+      "atividade": "Elaborar relatório final",
+      "inicio": "2020-07",
+      "fim": "2020-07"
+    },
+    {
+      "atividade": "Levantar um estudo dos instrumentos a serem utilizados no projeto",
       "inicio": "2018-08",
       "fim": "2018-09"
     },
     {
-      "atividade": "Montagem do Hardware",
+      "atividade": "Aplicar instrumentos adotados e fazer um relatório dos resultados obtidos",
       "inicio": "2018-10",
+      "fim": "2018-12"
+    },
+    {
+      "atividade": "Desenvolver um algoritmo inicial, realizando calibragem dos sensores optados",
+      "inicio": "2018-12",
+      "fim": "2019-03"
+    },
+    {
+      "atividade": "Realizar testes iniciais dos algoritmos em um protótipo corrigindo erros",
+      "inicio": "2019-02",
+      "fim": "2019-05"
+    },
+    {
+      "atividade": "Implementar e posicionar os instrumentos na cadeira de rodas",
+      "inicio": "2019-08",
+      "fim": "2019-10"
+    },
+    {
+      "atividade": "Efetuar um relatório geral com os dados e resultados obtidos",
+      "inicio": "2019-11",
+      "fim": "2019-11"
+    },
+    {
+      "atividade": "Avaliar as plataformas/software a serem utilizados no projeto.",
+      "inicio": "2018-08",
+      "fim": "2018-08"
+    },
+    {
+      "atividade": "Realizar a aquisição de dados utilizando Raspberry Pi 3 e Câmera",
+      "inicio": "2018-09",
       "fim": "2018-11"
     },
     {
-      "atividade": "Relacionar, aplicar e juntar o que foi desenvolvido em software e hardware",
+      "atividade": "Desenvolver algoritmo baseado nos estudos e dados obtidos.",
       "inicio": "2018-12",
-      "fim": "2019-02"
+      "fim": "2019-03"
     },
     {
-      "atividade": "Relatório a partir dos resultados e experiências obtidas",
-      "inicio": "2019-06",
+      "atividade": "Implementar e testar o algoritmo desenvolvido ao protótipo.",
+      "inicio": "2019-04",
       "fim": "2019-07"
+    },
+    {
+      "atividade": "Avaliar as adaptações e formas de implantação do algoritmo à cadeira de rodas.",
+      "inicio": "2019-08",
+      "fim": "2019-10"
+    },
+    {
+      "atividade": "Realizar um relatório a partir dos resultados e experiências obtidas durante o desenvolvimento do projeto",
+      "inicio": "2019-11",
+      "fim": "2019-12"
     }
   ],
   "financiamento": {
@@ -86,18 +170,20 @@
     "moeda": "BRL",
     "fontes": [
       {
-        "fonte": "CNPq",
+        "fonte": "EDITAL FAPES/CNPq Nº 04/2017 - PROGRAMA DE INFRA-ESTRUTURA PARA JOVENS PESQUISADORES (PROGRAMA PRIMEIROS PROJETOS – PPP)",
         "valor": null,
-        "tipo": "Programa Institucional de Bolsas de Iniciação Científica (PIBIC)"
+        "tipo": "Financiamento público"
       }
     ]
   },
   "_meta": {
     "arquivo": "PJ_4762.pdf",
-    "paginas": 7,
-    "extraido_em": "2026-09-18T20:02:59.663446+00:00",
-    "modelo": "ministral-8b-latest",
+    "paginas": 19,
+    "extraido_em": "2026-08-10T20:29:10.585332+00:00",
+    "modelo": "mistral-large-latest",
     "fonte_texto": "pdf-text",
-    "campos_ausentes": []
+    "campos_ausentes": [
+      "coordenador.email"
+    ]
   }
 }

@@ -1,31 +1,26 @@
 {
   "codigo": "PJ 7189",
-  "titulo": "Classificação de Arritmias Cardíacas através de Machine Learning aplicado a Sinais de Eletrocardiograma (ECG) com Random Forest",
-  "descricao": "Projeto que desenvolve um algoritmo em Python para processar e classificar sinais de eletrocardiograma (ECG) utilizando a técnica de classificação Random Forest, com objetivo de detectar precocemente arritmias cardíacas e doenças cardiovasculares. O algoritmo utiliza o banco de dados MIT-BIH Arrhythmia Database, extraindo características como intervalos RR, amplitudes de complexos QRS, RMSSD e frequência cardíaca, além de normalizar os dados para melhorar a precisão da classificação em categorias como normal (N), supraventricular (S) e ventricular (V).",
+  "titulo": "CLASSIFICAÇÃO DE ARRITMIAS E ISQUEMIAS CARDÍACAS A PARTIR DE EXAMES DE ELETROCARDIOGRAMA",
+  "descricao": "A evolução tecnológica e a redução de custos associadas ao acesso à internet têm contribuído para o crescimento dos serviços de telemedicina. Esses serviços são adequados em situações em que faltam profissionais de saúde ou o centro de atendimento médico mais próximo está localizado a uma grande distância daqueles que necessitam de atendimento. Entre as diversas modalidades de telemedicina, a Telecardiologia está relacionada à prestação remota de serviços cardiológicos. O principal serviço de Telecardiologia trata dos diagnósticos remotos de anormalidades presentes nos eletrocardiogramas (ECGs), que são enviados pela internet para um centro de telemedicina. O laudo diagnóstico gerado pelo cardiologista é então enviado de volta ao profissional de saúde que solicitou o serviço. O tempo de resposta do serviço de Telecardiologia é crítico dependendo da gravidade do diagnóstico, pois doenças graves requerem prioridade, diagnóstico precoce e tratamento imediato. Nesse contexto, este projeto de pesquisa está propondo um modelo de triagem automática para exames de ECG, onde os casos mais urgentes são priorizados na fila de espera para serem diagnosticados. Este projeto se concentrará em dois grupos principais de anomalias: arritmias e isquemias.",
   "palavras_chave": [
-    "Machine Learning",
-    "Eletrocardiograma (ECG)",
-    "Random Forest",
-    "Arritmias cardíacas",
-    "Processamento de sinais",
-    "Detecção precoce de doenças cardiovasculares",
-    "MIT-BIH Arrhythmia Database",
-    "Intervalos RR",
-    "Complexos QRS",
-    "RMSSD",
-    "Frequência cardíaca",
-    "Normalização de dados"
+    "Redes neurais",
+    "Coração – Doenças",
+    "Eletrocardiografia",
+    "Aprendizado de Máquina",
+    "Aprendizado Profundo",
+    "Sistemas Inteligentes"
   ],
-  "area_conhecimento": "Engenharia da Computação / Ciência da Computação",
-  "linha_pesquisa": "Processamento de Sinais Biométricos e Inteligência Artificial Aplicada à Saúde",
+  "area_conhecimento": "Ciências da Computação",
+  "linha_pesquisa": "Predição em Séries Temporais",
   "objetivos": {
-    "geral": "Desenvolver um algoritmo automatizado para classificar batimentos cardíacos a partir de sinais de eletrocardiograma (ECG) utilizando técnicas de Machine Learning, visando a detecção precoce de arritmias cardíacas e doenças cardiovasculares.",
+    "geral": "Avaliar diferentes algoritmos de classificação de ritmo e isquemias em sinais eletrocardiográficos.",
     "especificos": [
-      "Extrair características dos batimentos cardíacos a partir de registros de ECG, como intervalos RR, amplitudes de complexos QRS, RMSSD e frequência cardíaca.",
-      "Normalizar os dados de ECG para melhorar a robustez e precisão do modelo de classificação.",
-      "Aplicar o algoritmo Random Forest para classificar os batimentos em categorias: normal (N), supraventricular (S) e ventricular (V).",
-      "Avaliar o desempenho do algoritmo utilizando métricas como precisão, recall, F1-score e acurácia geral.",
-      "Utilizar o banco de dados MIT-BIH Arrhythmia Database para treinar e testar o modelo, garantindo uma avaliação robusta e confiável."
+      "Estudar o estado da arte de detecção de isquemias em sinais de ECG.",
+      "Estudar o estado da arte de detecção de arritmias em sinais de ECG.",
+      "Desenvolver modelos de aprendizado de máquina clássicos para detecção de isquemias em sinais de ECG.",
+      "Desenvolver modelos de aprendizado de máquina clássicos para detecção de arritmias em sinais de ECG.",
+      "Desenvolver modelos de aprendizado profundo para detecção de isquemias em sinais de ECG.",
+      "Desenvolver modelos de aprendizado profundo para detecção de arritmias em sinais de ECG."
     ]
   },
   "coordenador": {
@@ -34,56 +29,77 @@
     "campus": null,
     "titulacao": null
   },
-  "equipe": [
-    {
-      "nome": "Erick K. Komati",
-      "funcao": "Pesquisador",
-      "instituicao": "Instituto Federal do Espírito Santo (IFES)",
-      "carga_horaria_semanal": null
-    },
-    {
-      "nome": "Filipe S. N. Silva",
-      "funcao": "Pesquisador",
-      "instituicao": "Instituto Federal do Espírito Santo (IFES)",
-      "carga_horaria_semanal": null
-    },
-    {
-      "nome": "Gabriel T. Zago",
-      "funcao": "Pesquisador",
-      "instituicao": "Instituto Federal do Espírito Santo (IFES)",
-      "carga_horaria_semanal": null
-    }
-  ],
+  "equipe": [],
   "datas": {
-    "inicio": null,
-    "fim": null,
-    "duracao_meses": null
+    "inicio": "2022-10-01",
+    "fim": "2023-07-01",
+    "duracao_meses": 9
   },
   "cronograma": [
     {
-      "atividade": "Processamento dos dados do ECG utilizando a biblioteca wfdb",
+      "atividade": "Estudo sobre as técnicas de Aprendizado Profundo e Processamento de Sinais Biológicos",
+      "inicio": "2022-10",
+      "fim": "2022-12"
+    },
+    {
+      "atividade": "Aquisição e pré-processamento das bases de dados de ECG",
+      "inicio": "2022-11",
+      "fim": "2023-01"
+    },
+    {
+      "atividade": "Desenvolvimento dos diferentes algoritmos de aprendizado profundo aplicados aos sinais de ECG",
+      "inicio": "2023-01",
+      "fim": "2023-04"
+    },
+    {
+      "atividade": "Treinamento e teste dos algoritmos utilizando diferentes estratégias de partição dos dados",
+      "inicio": "2023-04",
+      "fim": "2023-06"
+    },
+    {
+      "atividade": "Escrita de artigos científicos com os resultados encontrados, além da escrita dos relatórios finais",
+      "inicio": "2023-06",
+      "fim": "2023-07"
+    },
+    {
+      "atividade": "Classificação de arritmias cardíacas a partir de exames de eletrocardiograma",
       "inicio": null,
       "fim": null
     },
     {
-      "atividade": "Extração de características dos batimentos (Intervalos RR, Amplitudes QRS, RMSSD, Frequência Cardíaca)",
+      "atividade": "Estudo sobre as técnicas de Aprendizado Profundo e Processamento de Sinais Eletrocardiográficos (ECG)",
+      "inicio": "2022-10",
+      "fim": "2022-12"
+    },
+    {
+      "atividade": "Aquisição e Pré-processamento da base de dados de ECG aplicada à classificação de arritmias",
+      "inicio": "2022-11",
+      "fim": "2023-01"
+    },
+    {
+      "atividade": "Desenvolvimento dos algoritmos clássicos e de aprendizado profundo",
+      "inicio": "2023-01",
+      "fim": "2023-04"
+    },
+    {
+      "atividade": "Treinamento e teste dos modelos utilizando as estratégias k-Fold cross-validation, stratified cross-validation e 80/20 split",
+      "inicio": "2023-04",
+      "fim": "2023-06"
+    },
+    {
+      "atividade": "Escrita de artigo científico com os resultados encontrados",
+      "inicio": "2023-06",
+      "fim": "2023-07"
+    },
+    {
+      "atividade": "Classificação de isquemias cardíacas a partir de exames de eletrocardiograma",
       "inicio": null,
       "fim": null
     },
     {
-      "atividade": "Normalização dos batimentos cardíacos",
-      "inicio": null,
-      "fim": null
-    },
-    {
-      "atividade": "Treinamento e avaliação do modelo Random Forest com validação cruzada (Stratified K-fold)",
-      "inicio": null,
-      "fim": null
-    },
-    {
-      "atividade": "Análise e discussão dos resultados obtidos com métricas de precisão, recall, F1-score e acurácia",
-      "inicio": null,
-      "fim": null
+      "atividade": "Aquisição e Pré-processamento da base de dados de ECG aplicada à classificação de isquemias",
+      "inicio": "2022-11",
+      "fim": "2023-01"
     }
   ],
   "financiamento": {
@@ -93,15 +109,14 @@
   },
   "_meta": {
     "arquivo": "PJ_7189.pdf",
-    "paginas": 14,
-    "extraido_em": "2026-09-18T20:27:02.886914+00:00",
-    "modelo": "ministral-8b-latest",
+    "paginas": 16,
+    "extraido_em": "2026-08-10T21:08:04.057162+00:00",
+    "modelo": "mistral-large-latest",
     "fonte_texto": "pdf-text",
     "campos_ausentes": [
       "coordenador.nome",
       "coordenador.email",
-      "datas.inicio",
-      "datas.fim",
+      "equipe",
       "financiamento"
     ]
   }

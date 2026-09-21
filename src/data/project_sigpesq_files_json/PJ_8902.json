@@ -1,97 +1,193 @@
 {
   "codigo": "PJ 8902",
   "titulo": "VitaBot: Robô de Resgate e Inspeção com Sensoriamento Visual e Térmico",
-  "descricao": "Projeto que propõe o desenvolvimento de um robô equipado com câmera térmica e convencional para auxiliar em ações de resgate e inspeções técnicas, utilizando sensoriamento visual e térmico para detecção de pessoas e anomalias térmicas em contextos de alto risco.",
+  "descricao": "O projeto VitaBot propõe o desenvolvimento de um robô equipado com câmera térmica e câmera convencional, voltado ao apoio em missões de resgate e inspeções técnicas. O sistema visa detectar anormalidades térmicas que possam indicar a presença de pessoas ou situações críticas em locais afetados por desastres, como enchentes, incêndios, desabamentos e acidentes, além de identificar falhas térmicas em equipamentos. Combinando análise térmica com visão computacional, o robô poderá contribuir para a identificação de pessoas em áreas de difícil acesso, auxiliando na priorização de ações de resgate. Além do uso em situações emergenciais, o sistema poderá ser aplicado em ambientes industriais para inspeções térmicas de rotina, identificando pontos de aquecimento que indiquem falhas ou riscos operacionais.",
   "palavras_chave": [
-    "Robótica",
-    "Sensoriamento térmico",
-    "Detecção de pessoas",
-    "Resgate e inspeção",
-    "Câmeras térmicas",
-    "Câmeras RGB",
-    "Segurança pública",
-    "Inspeção técnica",
-    "Visão computacional",
-    "YOLO",
-    "Detecção de anomalias térmicas"
+    "SENSORIAMENTO TÉRMICO",
+    "ROBÓTICA MÓVEL",
+    "VISÃO COMPUTACIONAL",
+    "ANÁLISE DE IMAGENS",
+    "INSPEÇÃO AUTOMATIZADA",
+    "TECNOLOGIAS DE APOIO AO RESGATE"
   ],
-  "area_conhecimento": "Engenharia Elétrica",
-  "linha_pesquisa": null,
+  "area_conhecimento": "ENGENHARIA ELÉTRICA (3.04.00.00-7)",
+  "linha_pesquisa": "ROBÓTICA",
   "objetivos": {
-    "geral": "Desenvolver um protótipo funcional de robô equipado com câmera térmica e convencional, capaz de auxiliar na localização de pessoas e na detecção de anomalias térmicas em contextos de resgate e inspeção técnica.",
+    "geral": "Desenvolver um protótipo funcional de robô equipado com câmera térmica e câmera convencional, capaz de auxiliar na localização de pessoas e na detecção de anomalias térmicas em contextos de resgate e inspeção técnica, respectivamente.",
     "especificos": [
-      "Implementar a detecção de pessoas em imagens obtidas por câmera RGB.",
-      "Desenvolver um modelo baseado na arquitetura YOLO para detecção de pessoas em imagens térmicas.",
-      "Integrar informações provenientes das câmeras RGB e térmica para auxiliar na confirmação da presença de pessoas.",
-      "Desenvolver uma interface gráfica para visualização integrada das imagens e resultados das detecções.",
-      "Avaliar o desempenho do modelo de detecção em imagens térmicas por meio de métricas de precisão, recall e mAP."
+      "Projetar e construir a estrutura física do robô com mobilidade adequada para operação em terrenos acidentados ou instáveis;",
+      "Integrar sensoriamento visual e térmico através da integração de câmera térmica e câmera convencional (RGB) a um sistema embarcado para captura e armazenamento de dados ambientais;",
+      "Programar a unidade de controle para organização das informações térmicas e visuais;",
+      "Implementar uma interface básica para visualização das imagens captadas e marcação de áreas críticas;",
+      "Realizar testes funcionais em ambientes simulados/reais, avaliando a precisão na detecção térmica e na identificação de pessoas ou equipamentos em risco;",
+      "Avaliar a viabilidade técnica e o potencial de aplicação do robô em contextos de resgate e manutenção preventiva."
     ]
   },
   "coordenador": {
-    "nome": "Richard Junior Manuel Godinez Tello",
-    "email": "8daa314703d9@anon.lgpd",
+    "nome": null,
+    "email": null,
     "campus": "Serra",
     "titulacao": null
   },
-  "equipe": [
-    {
-      "nome": "Luma Tavares Lopes de Souza",
-      "funcao": "Bolsista",
-      "instituicao": "IFES",
-      "carga_horaria_semanal": null
-    }
-  ],
+  "equipe": [],
   "datas": {
-    "inicio": null,
+    "inicio": "2025-09-01",
     "fim": "2026-08-31",
-    "duracao_meses": null
+    "duracao_meses": 12
   },
   "cronograma": [
     {
-      "atividade": "Estudo de técnicas de detecção térmica e de hot spots (regiões com temperatura elevada) e revisão de métodos aplicados à inspeção térmica",
-      "inicio": "2025-01",
-      "fim": "2025-01"
-    },
-    {
-      "atividade": "Implementação de algoritmos para identificação automática de hot spots em imagens térmicas",
-      "inicio": "2025-02",
-      "fim": "2025-05"
-    },
-    {
-      "atividade": "Ajuste de limiares e parâmetros de sensibilidade para detecção confiável de anomalias térmicas em diferentes contextos. Testes com dados simulados/reais em ambientes diversos",
-      "inicio": "2025-06",
+      "atividade": "Levantamento técnico, revisão de literatura e definição dos requisitos computacionais e sensores necessários para o sistema",
+      "inicio": "2025-09",
       "fim": "2025-09"
     },
     {
-      "atividade": "Integração com o Sistema de Detecção Corporal e a Interface",
+      "atividade": "Montagem da estrutura física do robô e integração básica dos sensores com a unidade de controle",
       "inicio": "2025-10",
       "fim": "2025-11"
     },
     {
-      "atividade": "Avaliação do desempenho e documentação dos resultados",
+      "atividade": "Desenvolvimento dos algoritmos de aquisição e processamento de dados térmicos e visuais, com foco na identificação de presenças térmicas ou corporais e hot spots",
       "inicio": "2025-12",
+      "fim": "2026-02"
+    },
+    {
+      "atividade": "Implementação dos módulos de análise e estruturação dos dados, incluindo tratamento das imagens/frames, marcação de regiões críticas e geração de alertas",
+      "inicio": "2026-03",
+      "fim": "2026-05"
+    },
+    {
+      "atividade": "Integração dos módulos com uma interface de visualização",
+      "inicio": "2026-06",
+      "fim": "2026-07"
+    },
+    {
+      "atividade": "Validação do protótipo, refinamento dos algoritmos, análise dos resultados obtidos e elaboração dos relatórios",
+      "inicio": "2026-08",
+      "fim": "2026-08"
+    },
+    {
+      "atividade": "Desenvolvimento do Sistema de Detecção Corporal do Robô VitaBot",
+      "inicio": null,
+      "fim": null
+    },
+    {
+      "atividade": "Levantamento de estudos sobre padrões corporais e técnicas utilizadas usando visão computacional e sensoriamento",
+      "inicio": "2025-09",
+      "fim": "2025-09"
+    },
+    {
+      "atividade": "Implementação de algoritmos de visão computacional para identificação e segmentação de formas corporais",
+      "inicio": "2025-10",
       "fim": "2026-01"
+    },
+    {
+      "atividade": "Testes e análise da confiabilidade",
+      "inicio": "2026-02",
+      "fim": "2026-05"
+    },
+    {
+      "atividade": "Integração com o sistema de Detecção térmica e Hot Spots e a Interface",
+      "inicio": "2026-06",
+      "fim": "2026-07"
+    },
+    {
+      "atividade": "Avaliação do desempenho e documentação dos resultados",
+      "inicio": "2026-08",
+      "fim": "2026-08"
+    },
+    {
+      "atividade": "Sistema de Detecção térmica e Hot Spots (pontos de aquecimento) do Robô VitaBot",
+      "inicio": null,
+      "fim": null
+    },
+    {
+      "atividade": "Estudo de técnicas de detecção térmica e de hot spots (regiões com temperatura elevada) e revisão de métodos aplicados à inspeção térmica",
+      "inicio": "2025-09",
+      "fim": "2025-09"
+    },
+    {
+      "atividade": "Implementação de algoritmos para identificação automática de hot spots em imagens térmicas",
+      "inicio": "2025-10",
+      "fim": "2026-01"
+    },
+    {
+      "atividade": "Ajuste de limiares e parâmetros de sensibilidade para detecção confiável de anomalias térmicas em diferentes contextos. Testes com dados simulados/reais em ambientes diversos",
+      "inicio": "2026-02",
+      "fim": "2026-05"
+    },
+    {
+      "atividade": "Integração com o Sistema de Detecção Corporal e a Interface",
+      "inicio": "2026-06",
+      "fim": "2026-07"
+    },
+    {
+      "atividade": "Montagem Estrutural e Integração de Componentes do Robô VitaBot",
+      "inicio": null,
+      "fim": null
+    },
+    {
+      "atividade": "Estudo técnico da estrutura do robô e definição dos componentes eletrônicos, sensores e peças mecânicas necessárias",
+      "inicio": "2025-09",
+      "fim": "2025-09"
+    },
+    {
+      "atividade": "Modelagem e confecção das peças estruturais, incluindo impressão 3D e preparação da base física do robô",
+      "inicio": "2025-10",
+      "fim": "2025-12"
+    },
+    {
+      "atividade": "Montagem da estrutura física com instalação dos sensores térmicos, câmera RGB e demais módulos. Integração dos sensores e componentes com a unidade de controle embarcada",
+      "inicio": "2026-01",
+      "fim": "2026-03"
+    },
+    {
+      "atividade": "Realização de testes preliminares de funcionamento, verificando a comunicação entre os módulos e estabilidade do sistema",
+      "inicio": "2026-04",
+      "fim": "2026-07"
+    },
+    {
+      "atividade": "Interface de Visualização e Sistema de Alertas do Robô VitaBot",
+      "inicio": null,
+      "fim": null
+    },
+    {
+      "atividade": "Definição dos requisitos da interface e escolha da tecnologia de desenvolvimento",
+      "inicio": "2025-09",
+      "fim": "2025-09"
+    },
+    {
+      "atividade": "Implementação da interface para visualização dos dados",
+      "inicio": "2025-10",
+      "fim": "2025-12"
+    },
+    {
+      "atividade": "Implementação dos módulos de alerta visual para presenças térmicas e detecção de hot spots",
+      "inicio": "2026-01",
+      "fim": "2026-03"
+    },
+    {
+      "atividade": "Testes de usabilidade e integração com os sistemas do robô",
+      "inicio": "2026-04",
+      "fim": "2026-07"
     }
   ],
   "financiamento": {
     "valor_total": null,
     "moeda": "BRL",
-    "fontes": [
-      {
-        "fonte": "Instituto Federal do Espírito Santo (Ifes)",
-        "valor": null,
-        "tipo": "Voluntariado (sem financiamento)"
-      }
-    ]
+    "fontes": []
   },
   "_meta": {
     "arquivo": "PJ_8902.pdf",
-    "paginas": 7,
-    "extraido_em": "2026-09-18T20:50:00.870566+00:00",
-    "modelo": "ministral-8b-latest",
+    "paginas": 11,
+    "extraido_em": "2026-08-10T21:46:52.969716+00:00",
+    "modelo": "mistral-large-latest",
     "fonte_texto": "pdf-text",
     "campos_ausentes": [
-      "datas.inicio"
+      "coordenador.nome",
+      "coordenador.email",
+      "equipe",
+      "financiamento"
     ]
   }
 }

@@ -1,45 +1,35 @@
 {
   "codigo": "PJ 6956",
   "titulo": "Análise de transcrição musical automática do tipo piano roll por compositor",
-  "descricao": "Elaboração de algoritmos para converter sinais acústicos de música em notação musical do tipo piano roll, utilizando arquiteturas de aprendizado profundo treinadas separadamente para cada compositor, visando melhorar a acurácia da transcrição musical automática.",
+  "descricao": "A tarefa de 'Transcrição Musical Automática' é a elaboração de algoritmos para converter sinais acústicos de música em alguma forma de notação musical, sendo uma destas notações a piano roll. A técnica que está ganhando cada vez mais espaço é o uso de arquiteturas de aprendizado profundo (DL, do inglês Deep Learning). Trabalhos anteriores usam uma única arquitetura para o aprendizado de vários compositores diferentes. A hipótese deste trabalho é que arquiteturas de DL podem ter resultados melhores de acurácia caso sejam treinadas separadamente para cada compositor. Esta abordagem é usada em sistemas biomédicos, em que a rede neural é treinada para cada paciente, pois cada um tem um padrão diferente do outro. Para os experimentos será usada a base de dados MusicNet, com métricas padrões: precisão, revocação e acurácia. O fluxo do sistema será a conversão do áudio em imagem, usando a imagem do gráfico do espectograma associado, que será a entrada para uma rede neural.",
   "palavras_chave": [
     "Processamento de Sinais",
     "Aprendizado Profundo",
     "Análise musical",
-    "Transcrição musical",
-    "Deep Learning",
-    "Piano roll",
-    "Redes neurais"
+    "Transcrição musical"
   ],
-  "area_conhecimento": "Ciência da Computação",
+  "area_conhecimento": "Ciências Exatas e da Terra",
   "linha_pesquisa": "Processamento de Sinais",
   "objetivos": {
-    "geral": "Investigar as arquiteturas de rede neural treinadas especificamente por compositor para o problema de transcrição musical automática do tipo piano roll.",
+    "geral": "O objetivo deste trabalho é investigar as arquiteturas de rede neural treinadas especificamente por compositor para o problema de transcrição musical automática do tipo piano roll.",
     "especificos": [
-      "Compreender a base de dados MusicNet e sua anotação piano roll;",
-      "Desenvolver arquiteturas de redes neurais baseadas no trabalho de Thickstun et al. (2018);",
-      "Coletar métricas da execução de experimentos por compositor;",
+      "Compreender a base de dados MusicNet e sua anotação piano roll",
+      "Desenvolver arquiteturas de redes neurais baseadas no trabalho de Thickstun et al. (2018)",
+      "Coletar métricas da execução de experimentos por compositor",
       "Comparar os resultados da abordagem proposta com o trabalho original de Thickstun et al. (2018)"
     ]
   },
   "coordenador": {
     "nome": null,
     "email": null,
-    "campus": null,
+    "campus": "Serra",
     "titulacao": null
   },
-  "equipe": [
-    {
-      "nome": null,
-      "funcao": null,
-      "instituicao": "Ifes",
-      "carga_horaria_semanal": null
-    }
-  ],
+  "equipe": [],
   "datas": {
     "inicio": "2022-08-01",
     "fim": "2023-12-30",
-    "duracao_meses": 24
+    "duracao_meses": 17
   },
   "cronograma": [
     {
@@ -54,23 +44,28 @@
     },
     {
       "atividade": "Desenvolvimento do sistema",
-      "inicio": "2022-08",
+      "inicio": "2022-10",
       "fim": "2023-02"
     },
     {
       "atividade": "Treinamento e execução dos experimentos",
-      "inicio": "2022-09",
-      "fim": "2023-02"
+      "inicio": "2023-03",
+      "fim": "2023-06"
     },
     {
       "atividade": "Análise da coleta de dados",
-      "inicio": "2022-10",
-      "fim": "2023-01"
+      "inicio": "2023-07",
+      "fim": "2023-09"
     },
     {
       "atividade": "Escrita de relatórios e artigo",
-      "inicio": "2022-11",
-      "fim": "2023-02"
+      "inicio": "2023-10",
+      "fim": "2023-12"
+    },
+    {
+      "atividade": "Análise de transcrição musical automática do tipo piano roll por compositor (Plano de Trabalho do estudante 1)",
+      "inicio": null,
+      "fim": null
     }
   ],
   "financiamento": {
@@ -81,12 +76,13 @@
   "_meta": {
     "arquivo": "PJ_6956.pdf",
     "paginas": 10,
-    "extraido_em": "2026-09-18T20:25:54.098725+00:00",
-    "modelo": "ministral-8b-latest",
+    "extraido_em": "2026-08-10T21:05:20.781155+00:00",
+    "modelo": "mistral-large-latest",
     "fonte_texto": "pdf-text",
     "campos_ausentes": [
       "coordenador.nome",
       "coordenador.email",
+      "equipe",
       "financiamento"
     ]
   }

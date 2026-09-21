@@ -1,99 +1,176 @@
 {
   "codigo": "PJ 4742",
-  "titulo": "Tecnologia vestível para alerta e vigilância de atmosfera perigosa",
-  "descricao": "Desenvolvimento de um protótipo de roupa com tecnologias vestíveis (wearable) para bombeiros, capaz de medir e detectar gases perigosos, temperatura, pressão, umidade e biomarcadores do profissional, transmitindo dados em tempo real para um centro de controle. O projeto visa melhorar a segurança de socorristas e vítimas em cenários de desastres, utilizando sensores de gás, microcontroladores e transmissão de dados via rádio frequência.",
+  "titulo": "TECNOLOGIA VESTÍVEL PARA ALERTA E VIGILÂNCIA DE ATMOSFERA PERIGOSA",
+  "descricao": "As atividades de atendimento a emergências dos corpos de bombeiros se dão em situações onde a atmosfera encontra-se geralmente contaminada por vapores e gases tóxicos e explosivos. O monitoramento do ambiente de trabalho dos bombeiros é condição fundamental para a mitigação dos riscos envolvidos, bem como para determinar as causas das doenças que esses profissionais podem adquirir em decorrência de sua atividade. Este projeto propõe o desenvolvimento de uma rede de sensores e componentes eletrônicos de baixo custo embarcados numa vestimenta de proteção para bombeiros com a finalidade de promover a proteção à saúde desses profissionais por meio do monitoramento dos dados em tempo real, utilizando os conceitos de Tecnologia Vestível (Wearable technology) e Internet das Coisas (IoT).",
   "palavras_chave": [
-    "Tecnologia vestível",
-    "Sensores de gás",
-    "Bombeiros",
-    "Segurança ambiental",
-    "Internet das Coisas (IoT)",
-    "Gás liquefeito de petróleo (GLP)",
-    "Transmissão de dados sem fio",
-    "Robótica vestível",
-    "Monitoramento ambiental",
-    "Segurança em emergências pré-hospitalares"
+    "WEARABLES",
+    "ARDUINO LILYPAD",
+    "BOMBEIROS",
+    "SENSORES",
+    "TECNOLOGIA VESTÍVEL",
+    "MICROCONTROLADORES"
   ],
-  "area_conhecimento": "Engenharias/Engenharia elétrica/Circuitos eletrônicos (IoT/Wearables)",
-  "linha_pesquisa": null,
+  "area_conhecimento": "ENGENHARIA ELÉTRICA",
+  "linha_pesquisa": "Internet das Coisas - IoT",
   "objetivos": {
-    "geral": "Desenvolver um protótipo de roupa de aproximação para bombeiros com tecnologias vestíveis embarcadas, capaz de medir e detectar gases perigosos, temperatura, pressão, umidade e biomarcadores do profissional, transmitindo dados em tempo real para um centro de gerenciamento e controle.",
+    "geral": "O objetivo da pesquisa proposta é o desenvolvimento de um protótipo de roupa de aproximação para bombeiros com tecnologias vestíveis embarcadas baseada nos conceitos de 'robótica vestível' (wearable robotics). Esta roupa será capaz de medir e detectar o tipo de gás periculoso presente no ambiente com o uso de uma rede de sensores projetados para detectar gases tóxicos e limites de explosividade na atmosfera, bem como, outros parâmetros como temperatura, pressão e umidade, além de biomarcadores do profissional (temperatura corporal, pressão arterial, frequência cardíaca). A roupa robótica ainda será capaz de transmitir os dados coletados instantaneamente, para um centro de gerenciamento e controle, visando garantir a segurança dos socorristas e vítimas em diversos cenários de desastres.",
     "especificos": [
-      "Detectar gases tóxicos e limites de explosividade na atmosfera, como GLP (gás liquefeito de petróleo).",
-      "Monitorar outros parâmetros como temperatura, pressão e umidade ambiental.",
-      "Monitorar biomarcadores do profissional, como temperatura corporal, pressão arterial e frequência cardíaca.",
-      "Transmitir dados coletados instantaneamente para um centro de gerenciamento e controle.",
-      "Garantir a segurança dos socorristas e vítimas em diversos cenários de desastres."
+      "levantar a bibliografia básica e o estado da arte das tecnologias que envolvem detectores de gás, processamento de sinais e transmissão de dados em radiofrequência que possuam características vestíveis;",
+      "estudar as características dos sensores, placas de prototipagem e módulos de conectividade wireless e acessórios existentes no mercado;",
+      "implementar e testar uma rede de sensores de gás conectadas a um circuito de processamento e transmissão de dados sem fio autônomo e de baixo custo e reduzido consumo de energia;",
+      "embarcar a rede de sensores e seus componentes em uma jaqueta de combate a incêndios de bombeiros;",
+      "desenvolver uma interface gráfica para exibição dos dados coletados pela rede de sensores;",
+      "realizar testes iniciais do protótipo em ambiente de incêndio simulado;",
+      "ajustar o protótipo e realizar testes finais."
     ]
   },
   "coordenador": {
-    "nome": "Richard Junior Manuel Godinez Tello",
-    "email": "8daa314703d9@anon.lgpd",
+    "nome": null,
+    "email": null,
     "campus": "Serra",
     "titulacao": null
   },
   "equipe": [
     {
-      "nome": "Pedro Dalvi Boina",
-      "funcao": "Estudante/Bolsista",
-      "instituicao": "Instituto Federal do Espírito Santo (IFES)",
+      "nome": "Richard Godinez Tello",
+      "funcao": "Pesquisador",
+      "instituicao": "Instituto Federal do Espírito Santo - Campus Serra",
+      "carga_horaria_semanal": null
+    },
+    {
+      "nome": "Leonardo Azevedo Scárdua",
+      "funcao": "Pesquisador",
+      "instituicao": "Instituto Federal do Espírito Santo - Campus Serra",
       "carga_horaria_semanal": null
     }
   ],
   "datas": {
-    "inicio": "2018-01",
-    "fim": "2019-07-31",
-    "duracao_meses": 19
+    "inicio": "2018-08-01",
+    "fim": "2020-08-01",
+    "duracao_meses": 24
   },
   "cronograma": [
     {
-      "atividade": "Levantar a bibliografia básica e o estado da arte das tecnologias que envolvem detectores de gás que possuam características vestíveis.",
-      "inicio": "2018-01",
-      "fim": "2018-03"
-    },
-    {
-      "atividade": "Levantar a bibliografia básica e o estado da arte das tecnologias de transmissão de dados em radiofrequência que possuam características vestíveis.",
-      "inicio": "2018-02",
-      "fim": "2018-03"
-    },
-    {
-      "atividade": "Implementar um algoritmo de teste para os sensores de gás com uso da plataforma de prototipagem microcontrolada.",
-      "inicio": "2018-04",
+      "atividade": "Levantar a bibliografia básica e o estado da arte das tecnologias que envolvem detectores de gás, processamento de sinais e transmissão de dados em radiofrequência que possuam características vestíveis.",
+      "inicio": "2018-08",
       "fim": "2018-09"
     },
     {
+      "atividade": "Estudar as características dos sensores, placas de prototipagem e módulos de conectividade wireless e acessórios existentes no mercado.",
+      "inicio": "2018-10",
+      "fim": "2018-10"
+    },
+    {
+      "atividade": "Implementar e testar uma rede de sensores de gás conectadas a um circuito de processamento e transmissão de dados sem fio autônomo e de baixo custo e reduzido consumo de energia.",
+      "inicio": "2018-11",
+      "fim": "2019-10"
+    },
+    {
+      "atividade": "Desenvolver uma interface gráfica para exibição dos dados coletados pela rede de sensores.",
+      "inicio": "2018-11",
+      "fim": "2019-08"
+    },
+    {
+      "atividade": "Embarcar a rede de sensores e seus componentes em uma jaqueta de combate a incêndios de bombeiros.",
+      "inicio": "2019-09",
+      "fim": "2020-04"
+    },
+    {
+      "atividade": "Realizar testes iniciais do protótipo em ambiente de incêndio simulado.",
+      "inicio": "2020-03",
+      "fim": "2020-06"
+    },
+    {
+      "atividade": "Ajustar o protótipo e realizar testes finais em ambiente de incêndio simulado.",
+      "inicio": "2020-05",
+      "fim": "2020-08"
+    },
+    {
+      "atividade": "Comunicação da rede sem fio para os sensores de gás em dispositivo vestível.",
+      "inicio": null,
+      "fim": null
+    },
+    {
+      "atividade": "Levantar a bibliografia básica e o estado da arte das tecnologias que envolvem detectores de gás que possuam características vestíveis.",
+      "inicio": "2018-08",
+      "fim": "2018-09"
+    },
+    {
+      "atividade": "Levantar a bibliografia básica e o estado da arte das tecnologias de transmissão de dados em radiofrequência que possuam características vestíveis.",
+      "inicio": "2018-09",
+      "fim": "2018-09"
+    },
+    {
+      "atividade": "Implementar um algoritmo de teste para os sensores de gás com uso da plataforma de prototipagem microcontrolada.",
+      "inicio": "2018-11",
+      "fim": "2019-04"
+    },
+    {
       "atividade": "Implementar via hardware e software um algoritmo de conectividade wireless de baixa taxa de transmissão de dados e baixa potência.",
-      "inicio": "2018-07",
-      "fim": "2018-12"
+      "inicio": "2019-03",
+      "fim": "2019-06"
     },
     {
       "atividade": "Implementar e testar uma rede de sensores de gás conectadas a um sistema de processamento e transmissão de dados sem fio e autônomo.",
+      "inicio": "2019-07",
+      "fim": "2019-10"
+    },
+    {
+      "atividade": "Apresentar relatório final da pesquisa.",
+      "inicio": "2019-12",
+      "fim": "2019-12"
+    },
+    {
+      "atividade": "Desenvolvimento de uma Interface Gráfica Visual que exibe de forma clara e processada as informações coletadas pela rede de sensores de gás.",
+      "inicio": null,
+      "fim": null
+    },
+    {
+      "atividade": "Analisar e avaliar as diferentes plataformas e linguagens de programação que a Interface será implementada.",
+      "inicio": "2018-08",
+      "fim": "2018-09"
+    },
+    {
+      "atividade": "Realizar a conectividade wireless entre a tecnologia vestível e a Interface.",
       "inicio": "2018-10",
       "fim": "2019-01"
     },
     {
-      "atividade": "Apresentar relatório final da pesquisa",
+      "atividade": "Testar o sistema de processamento dos dados obtidos através da conectividade wireless.",
+      "inicio": "2019-02",
+      "fim": "2019-03"
+    },
+    {
+      "atividade": "Desenvolver e testar um sistema de cruzamento de dados processados com informações dos bombeiros já armazenadas em banco de dados.",
+      "inicio": "2019-04",
+      "fim": "2019-06"
+    },
+    {
+      "atividade": "Desenvolvimento da Interface Gráfica Visual que exibe de forma clara os dados obtidos e processados em tempo real.",
       "inicio": "2019-07",
-      "fim": null
+      "fim": "2019-09"
+    },
+    {
+      "atividade": "Realizar um relatório das experiências obtidas.",
+      "inicio": "2019-12",
+      "fim": "2019-12"
     }
   ],
   "financiamento": {
     "valor_total": null,
     "moeda": "BRL",
-    "fontes": [
-      {
-        "fonte": "Voluntariado (sem financiamento)",
-        "valor": null,
-        "tipo": "Autofinanciado"
-      }
-    ]
+    "fontes": []
   },
   "_meta": {
     "arquivo": "PJ_4742.pdf",
-    "paginas": 8,
-    "extraido_em": "2026-09-18T20:01:49.682153+00:00",
-    "modelo": "ministral-8b-latest",
+    "paginas": 19,
+    "extraido_em": "2026-08-10T20:27:30.039803+00:00",
+    "modelo": "mistral-large-latest",
     "fonte_texto": "pdf-text",
-    "campos_ausentes": []
+    "campos_ausentes": [
+      "coordenador.nome",
+      "coordenador.email",
+      "financiamento"
+    ]
   }
 }

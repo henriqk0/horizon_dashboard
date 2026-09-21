@@ -1,29 +1,26 @@
 {
   "codigo": "PJ 9152",
   "titulo": "Recuperação de Conhecimento em Documentos com Conteúdo Textual e Visual para o SUFRAMA-GPT",
-  "descricao": "Desenvolvimento de um módulo avançado de Recuperação de Conhecimento baseado em Retrieval-Augmented Generation (RAG) para uma plataforma de IA generativa (SUFRAMA-GPT) que responde a perguntas sobre incentivos fiscais e serviços da Superintendência da Zona Franca de Manaus (SUFRAMA). O projeto integra dados textuais, visuais e estruturados para fornecer respostas contextualizadas e eficientes, visando melhorar a interação entre a SUFRAMA e seus usuários.",
+  "descricao": "Plataforma baseada em Inteligência Artificial Generativa para responder questões de baixa e média complexidade sobre incentivos fiscais e serviços oferecidos pela Superintendência da Zona Franca de Manaus (SUFRAMA). O sistema será alimentado por diversas fontes de dados, incluindo documentos institucionais (com conteúdo visual), registros históricos de atendimento por e-mail e telefone, bem como consultas em bases de dados e APIs da própria SUFRAMA.",
   "palavras_chave": [
     "Inteligência Artificial",
     "Retrieval-Augmented Generation (RAG)",
-    "Recuperação de Conhecimento",
+    "SUFRAMA",
     "Chatbot",
     "Incentivos Fiscais",
-    "SUFRAMA",
-    "Processamento de Linguagem Natural",
-    "OCR (Reconhecimento Óptico de Caracteres)",
-    "Análise Semântica de Imagens",
-    "Sistemas de Informação"
+    "OCR",
+    "GraphRAG"
   ],
   "area_conhecimento": "Inteligência Artificial (Computação)",
-  "linha_pesquisa": "Recuperação de Conhecimento e Processamento de Linguagem Natural com IA Generativa",
+  "linha_pesquisa": null,
   "objetivos": {
-    "geral": "Desenvolver um módulo avançado de Recuperação de Conhecimento baseado em Retrieval-Augmented Generation (RAG) como componente do SUFRAMA-GPT, integrando informações oriundas de múltiplas fontes (textuais, visuais e estruturadas) para produzir respostas contextualizadas e eficientes.",
+    "geral": "Desenvolvimento de um módulo avançado de Recuperação de Conhecimento baseado em Retrieval-Augmented Generation (RAG) como componente do SUFRAMA-GPT. Integração de informações oriundas de múltiplas fontes — como documentos normativos, textos digitalizados e conteúdos visuais — para produção de respostas contextualizadas.",
     "especificos": [
-      "Adaptar e aprimorar a solução de RAG textual existente ao contexto documental da SUFRAMA, considerando domínio, linguagem e estrutura dos dados.",
-      "Investigar variações da arquitetura RAG, testando diferentes estratégias de embeddings e chunking para formatos de documentos (PDFs, páginas HTML, transcrições).",
+      "Adaptar e aprimorar a solução de RAG textual existente da empresa parceira ao contexto documental da SUFRAMA, considerando o domínio, linguagem e estrutura dos dados.",
+      "Investigar variações da arquitetura RAG, testando diferentes estratégias de embeddings e chunking e formatação de documentos (PDFs, páginas HTML, transcrições).",
       "Investigar RAG baseado em grafos (GraphRAG) para representação estruturada de conhecimento das entidades normativas da SUFRAMA.",
-      "Desenvolver um protótipo funcional de RAG textual, integrando modelos generativos com estratégias de recuperação, testado sobre documentos reais e sintéticos.",
-      "Integrar soluções de OCR à arquitetura RAG para extração automática de texto a partir de documentos digitalizados da SUFRAMA.",
+      "Desenvolver um protótipo funcional de RAG textual, integrando modelos generativos com as estratégias de recuperação implementadas, testado sobre um conjunto de documentos reais e sintéticos.",
+      "Integrar soluções de OCR à arquitetura RAG, permitindo a extração automática de texto a partir de documentos digitalizados provenientes da SUFRAMA.",
       "Desenvolver e incorporar mecanismos de análise semântica de imagens relevantes ao contexto da SUFRAMA.",
       "Testar a solução em um cenário realista com documentos heterogêneos, simulando casos práticos da SUFRAMA que demandam extração de dados via OCR e resposta baseada em contexto.",
       "Investigar ferramentas e abordagens para incorporar imagens como parte das respostas geradas no pipeline RAG."
@@ -31,121 +28,115 @@
   },
   "coordenador": {
     "nome": "Thiago Meireles Paixão",
-    "email": "ab84379a56c9@anon.lgpd",
-    "campus": "Ifes (Campus Serra)",
+    "email": "e33b5a327283@anon.lgpd",
+    "campus": "Serra",
     "titulacao": null
   },
   "equipe": [
     {
       "nome": "Thiago Meireles Paixão",
-      "funcao": "Coordenador do projeto",
-      "instituicao": "Instituto Federal do Espírito Santo (Ifes)",
+      "funcao": "Coordenador",
+      "instituicao": "Instituto Federal do Espírito Santo",
       "carga_horaria_semanal": null
     },
     {
       "nome": "Hilário Tomaz Alves de Oliveira",
       "funcao": "Pesquisador",
-      "instituicao": "Instituto Federal do Espírito Santo (Ifes)",
+      "instituicao": "Instituto Federal do Espírito Santo",
       "carga_horaria_semanal": null
     },
     {
       "nome": "Elaine Cristina Rocha de Oliveira",
-      "funcao": "Responsável Técnico",
+      "funcao": "Colaborador",
       "instituicao": "Intelliway Tecnologia LTDA",
-      "carga_horaria_semanal": null
-    },
-    {
-      "nome": "Bolsista graduando (a definir)",
-      "funcao": "Bolsista na área de IA",
-      "instituicao": "Instituto Federal do Espírito Santo (Ifes)",
       "carga_horaria_semanal": null
     }
   ],
   "datas": {
-    "inicio": "2025-01-01",
-    "fim": "2026-06-30",
+    "inicio": null,
+    "fim": null,
     "duracao_meses": 18
   },
   "cronograma": [
     {
-      "atividade": "A1: Realizar revisão da literatura técnico-científica para embasar a implementação do módulo avançado de Recuperação de Conhecimento",
-      "inicio": "2025-01",
-      "fim": "2026-06"
+      "atividade": "Realizar revisão da literatura técnico-científica para embasar a implementação do módulo avançado de Recuperação de Conhecimento (A1)",
+      "inicio": null,
+      "fim": null
     },
     {
-      "atividade": "A2: Investigar e implementar variações da arquitetura RAG adaptadas ao domínio da SUFRAMA",
-      "inicio": "2025-01",
-      "fim": "2026-06"
+      "atividade": "Investigar e implementar variações da arquitetura RAG adaptadas ao domínio da SUFRAMA (A2)",
+      "inicio": "2025-06",
+      "fim": "2025-12"
     },
     {
-      "atividade": "A3: Construir benchmarks e conduzir experimentos para aferição da assertividade do sistema",
-      "inicio": "2025-01",
-      "fim": "2026-06"
+      "atividade": "Construir benchmarks e conduzir experimentos para aferição da assertividade do sistema (A3)",
+      "inicio": "2025-06",
+      "fim": "2026-03"
     },
     {
-      "atividade": "A4: Elaborar relatórios técnicos de desempenho",
-      "inicio": "2025-01",
-      "fim": "2026-06"
+      "atividade": "Elaborar relatórios técnicos de desempenho (A4)",
+      "inicio": null,
+      "fim": null
     },
     {
-      "atividade": "A5: Conduzir reuniões semanais de acompanhamento interno do projeto",
-      "inicio": "2025-01",
-      "fim": "2026-06"
+      "atividade": "Conduzir reuniões semanais de acompanhamento interno do projeto (A5)",
+      "inicio": "2025-06",
+      "fim": "2026-11"
     },
     {
-      "atividade": "A6: Participar das reuniões técnicas e administrativas com a empresa parceira",
-      "inicio": "2025-01",
-      "fim": "2026-06"
+      "atividade": "Participar das reuniões técnicas e administrativas com a empresa parceira (A6)",
+      "inicio": "2025-06",
+      "fim": "2026-11"
     },
     {
-      "atividade": "A7: Capacitar o bolsista de graduação em atividades de pesquisa e desenvolvimento",
-      "inicio": "2025-01",
-      "fim": "2026-06"
+      "atividade": "Capacitar o bolsista de graduação em atividades de pesquisa e desenvolvimento (A7)",
+      "inicio": "2025-06",
+      "fim": "2026-11"
     },
     {
-      "atividade": "A8: Desenvolver a arquitetura de software da solução de chatbot",
-      "inicio": "2025-01",
-      "fim": "2026-06"
+      "atividade": "Desenvolver a arquitetura de software da solução de chatbot (A8)",
+      "inicio": null,
+      "fim": null
     },
     {
-      "atividade": "A9: Realizar reuniões quinzenais com a equipe da ICT",
-      "inicio": "2025-01",
-      "fim": "2026-06"
+      "atividade": "Realizar reuniões quinzenais com a equipe da ICT (A9)",
+      "inicio": "2025-06",
+      "fim": "2026-11"
     },
     {
-      "atividade": "A10: Orientar e priorizar as linhas de investigação macro",
-      "inicio": "2025-01",
-      "fim": "2026-06"
+      "atividade": "Orientar e priorizar as linhas de investigação macro (A10)",
+      "inicio": "2025-06",
+      "fim": "2026-11"
     },
     {
-      "atividade": "A11: Disponibilizar acesso a dados e repositório de software, bem como recursos computacionais",
-      "inicio": "2025-01",
-      "fim": "2025-02"
+      "atividade": "Disponibilizar acesso a dados e repositório de software (A11)",
+      "inicio": "2025-06",
+      "fim": "2025-06"
     },
     {
-      "atividade": "A12: Investigação de tecnologias para implementação do módulo avançado de Recuperação de Conhecimento",
-      "inicio": "2025-01",
-      "fim": "2026-06"
+      "atividade": "Investigação de tecnologias para implementação do módulo avançado de Recuperação de Conhecimento (A12)",
+      "inicio": "2025-06",
+      "fim": "2026-03"
     },
     {
-      "atividade": "A13: Coordenar a elaboração de materiais de apresentação, documentação e relatórios finais do projeto",
-      "inicio": "2025-01",
-      "fim": "2026-06"
+      "atividade": "Coordenar a elaboração de materiais de apresentação, documentação e relatórios finais (A13)",
+      "inicio": "2025-06",
+      "fim": "2026-11"
     },
     {
-      "atividade": "A14: Apoiar a disseminação dos resultados em eventos técnicos e institucionais",
-      "inicio": "2025-07",
-      "fim": "2026-06"
+      "atividade": "Apoiar a disseminação dos resultados em eventos técnicos e institucionais (A14)",
+      "inicio": "2026-04",
+      "fim": "2026-11"
     },
     {
-      "atividade": "Macro entrega 1: Protótipo funcional de RAG baseado em dados textuais (mês 10)",
-      "inicio": "2025-10",
-      "fim": "2025-10"
+      "atividade": "Macro entrega 1: Protótipo funcional de RAG baseado em dados textuais",
+      "inicio": null,
+      "fim": "2026-03"
     },
     {
-      "atividade": "Macro entrega 2: Protótipo funcional de RAG incorporando informação visual (mês 18)",
-      "inicio": "2026-06",
-      "fim": "2026-06"
+      "atividade": "Macro entrega 2: Protótipo funcional de RAG incorporando informação visual",
+      "inicio": null,
+      "fim": "2026-11"
     }
   ],
   "financiamento": {
@@ -154,22 +145,20 @@
     "fontes": [
       {
         "fonte": "Intelliway Tecnologia LTDA",
-        "valor": 71950.0,
-        "tipo": "Contribuição direta"
-      },
-      {
-        "fonte": "Finep (via acordo de parceria)",
-        "valor": 36050.0,
-        "tipo": "Subvenção Econômica"
+        "valor": 108000.0,
+        "tipo": "Privado"
       }
     ]
   },
   "_meta": {
     "arquivo": "PJ_9152.pdf",
     "paginas": 12,
-    "extraido_em": "2026-09-18T20:53:11.086581+00:00",
-    "modelo": "ministral-8b-latest",
+    "extraido_em": "2026-08-10T21:52:46.166090+00:00",
+    "modelo": "mistral-large-latest",
     "fonte_texto": "pdf-text",
-    "campos_ausentes": []
+    "campos_ausentes": [
+      "datas.inicio",
+      "datas.fim"
+    ]
   }
 }

@@ -1,27 +1,20 @@
 {
   "codigo": "PJ 9628",
   "titulo": "OTIMIZAÇÃO DA LOGÍSTICA DE CARROS TORPEDO NO TRANSPORTE DE FERRO GUSA PARA A ACIARIA",
-  "descricao": "Projeto visa desenvolver uma abordagem de otimização para o agendamento de carros torpedo em usinas siderúrgicas integradas, combinando modelagem matemática (Programação Linear Inteira Mista) e meta-heurísticas (Simulated Annealing, Algoritmos Genéticos ou Otimização por Colônia de Formigas) para resolver o Torpedo Scheduling Problem (TSP), classificado como NP-difícil e pertencente à classe Pickup and Delivery Problem with Time Windows (PDPTW). O objetivo é minimizar custos, reduzir desperdícios e melhorar a eficiência operacional, considerando restrições como janelas de tempo, capacidade, limites térmicos, manutenção e infraestrutura ferroviária.",
+  "descricao": "O transporte de ferro-gusa líquido entre altos-fornos e conversores a oxigênio (BOF) é uma etapa crítica em usinas siderúrgicas integradas, realizada por carros torpedo. A coordenação eficiente desses equipamentos define o Torpedo Scheduling Problem (TSP), um problema de alta complexidade, classificado como NP-difícil e pertencente à classe Pickup and Delivery Problem With Time Windows (PDPTW). Falhas nesse processo podem gerar atrasos, aumento de custos e perdas operacionais. Este projeto tem como objetivo desenvolver uma abordagem para otimizar o agendamento de carros torpedo, combinando modelagem matemática e meta-heurísticas. Inicialmente, será proposto um modelo de Programação Linear Inteira Mista (PLIM), incorporando restrições como janelas de tempo, capacidade, limites térmicos, manutenção e infraestrutura ferroviária. Esse modelo será utilizado para gerar soluções ótimas em instâncias de menor porte. Posteriormente, será desenvolvida uma meta-heurística para resolver instâncias de grande escala em tempo computacional reduzido. A abordagem será avaliada por meio de experimentos com instâncias sintéticas baseadas em dados reais, comparando-se com soluções ótimas e com a operação de referência.",
   "palavras_chave": [
     "Otimização",
     "Siderurgia",
     "Carro torpedo",
-    "Logística",
-    "Programação Linear Inteira Mista",
-    "Meta-heurísticas",
-    "Torpedo Scheduling Problem",
-    "Pickup and Delivery Problem with Time Windows",
-    "Ferro-gusa",
-    "Agendamento",
-    "Eficiência operacional"
+    "Logística"
   ],
-  "area_conhecimento": "Ciências Exatas e da Terra",
+  "area_conhecimento": "Ciência da Computação",
   "linha_pesquisa": "Pesquisa Operacional",
   "objetivos": {
     "geral": "Propor uma abordagem de otimização para o agendamento de carros torpedo, integrando modelagem matemática e meta-heurísticas, com foco na eficiência operacional e aplicabilidade industrial.",
     "especificos": [
       "Analisar e caracterizar o processo logístico de transporte de ferro-gusa em usinas siderúrgicas integradas, identificando suas principais restrições operacionais, físicas e de segurança.",
-      "Realizar uma revisão sistemática da literatura sobre o problema de agendamento de carros torpedo e problemas correlatos, como o PDPTW, bem como sobre métodos de otimização aplicáveis.",
+      "Realizar uma revisão sistemática da literatura sobre o problema de agendamento de carros torpedo e problemas correlatos, como o Pickup and Delivery Problem with Time Windows (PDPTW), bem como sobre métodos de otimização aplicáveis.",
       "Desenvolver um modelo matemático de Programação Linear Inteira Mista (PLIM) que represente o problema, incorporando restrições como janelas de tempo, capacidade, manutenção, limites térmicos e infraestrutura ferroviária.",
       "Implementar e validar computacionalmente o modelo matemático, utilizando instâncias de pequeno e médio porte para obtenção de soluções ótimas de referência.",
       "Projetar e implementar uma meta-heurística adequada ao problema, visando a obtenção de soluções de alta qualidade em tempo computacional reduzido para instâncias de grande porte.",
@@ -35,139 +28,137 @@
     "campus": null,
     "titulacao": null
   },
-  "equipe": [
-    {
-      "nome": null,
-      "funcao": null,
-      "instituicao": null,
-      "carga_horaria_semanal": null
-    }
-  ],
+  "equipe": [],
   "datas": {
     "inicio": "2026-08-01",
-    "fim": "2027-07-01",
+    "fim": "2027-07-31",
     "duracao_meses": 12
   },
   "cronograma": [
     {
-      "atividade": "Revisão da literatura (TSP, PDPTW, meta-heurísticas)",
-      "inicio": "2026-01",
-      "fim": "2026-03"
+      "atividade": "Revisão da literatura",
+      "inicio": "2026-08",
+      "fim": "2026-10"
     },
     {
       "atividade": "Estudo do problema e levantamento de requisitos operacionais",
-      "inicio": "2026-01",
-      "fim": "2026-03"
+      "inicio": "2026-08",
+      "fim": "2026-10"
     },
     {
       "atividade": "Definição e modelagem matemática (PLIM)",
-      "inicio": "2026-04",
-      "fim": "2026-06"
-    },
-    {
-      "atividade": "Implementação do modelo matemático",
-      "inicio": "2026-05",
-      "fim": "2026-07"
-    },
-    {
-      "atividade": "Geração de base de dados sintéticos",
-      "inicio": "2026-05",
-      "fim": "2026-07"
-    },
-    {
-      "atividade": "Validação do modelo (instâncias pequenas/médias)",
-      "inicio": "2026-07",
-      "fim": "2026-08"
-    },
-    {
-      "atividade": "Estudo e seleção da meta-heurística",
-      "inicio": "2026-08",
-      "fim": "2026-09"
-    },
-    {
-      "atividade": "Desenvolvimento da meta-heurística",
       "inicio": "2026-09",
       "fim": "2026-11"
     },
     {
-      "atividade": "Testes computacionais e comparação de resultados",
+      "atividade": "Implementação do modelo matemático",
       "inicio": "2026-10",
       "fim": "2026-12"
     },
     {
-      "atividade": "Análise dos resultados",
-      "inicio": "2026-11",
+      "atividade": "Geração de base de dados sintéticos",
+      "inicio": "2026-10",
+      "fim": "2026-12"
+    },
+    {
+      "atividade": "Validação do modelo (instâncias pequenas/médias)",
+      "inicio": "2026-12",
       "fim": "2027-01"
     },
     {
-      "atividade": "Redação de artigo científico/dissertação",
-      "inicio": "2026-12",
-      "fim": "2027-02"
-    },
-    {
-      "atividade": "Revisão final e submissão/publicação",
+      "atividade": "Estudo e seleção da meta-heurística",
       "inicio": "2027-01",
       "fim": "2027-02"
     },
     {
+      "atividade": "Desenvolvimento da meta-heurística",
+      "inicio": "2027-02",
+      "fim": "2027-04"
+    },
+    {
+      "atividade": "Testes computacionais e comparação de resultados",
+      "inicio": "2027-04",
+      "fim": "2027-05"
+    },
+    {
+      "atividade": "Análise dos resultados",
+      "inicio": "2027-05",
+      "fim": "2027-07"
+    },
+    {
+      "atividade": "Redação de artigo científico/dissertação",
+      "inicio": "2027-06",
+      "fim": "2027-07"
+    },
+    {
+      "atividade": "Revisão final e submissão/publicação",
+      "inicio": "2027-07",
+      "fim": "2027-07"
+    },
+    {
+      "atividade": "Desenvolvimento de uma heurística para a otimização da logística dos carros torpedos em uma siderurgia integrada",
+      "inicio": "2026-08",
+      "fim": "2027-07"
+    },
+    {
       "atividade": "Revisão bibliográfica (TSP, PDPTW, meta-heurísticas)",
-      "inicio": "2026-01",
-      "fim": "2026-03"
+      "inicio": "2026-08",
+      "fim": "2026-10"
     },
     {
       "atividade": "Estudo do problema e levantamento de requisitos",
-      "inicio": "2026-01",
-      "fim": "2026-03"
+      "inicio": "2026-08",
+      "fim": "2026-10"
     },
     {
       "atividade": "Definição da modelagem e estrutura da solução heurística",
-      "inicio": "2026-04",
-      "fim": "2026-05"
-    },
-    {
-      "atividade": "Estudo e seleção da heurística (SA, AG, ACO, etc.)",
-      "inicio": "2026-05",
-      "fim": "2026-06"
-    },
-    {
-      "atividade": "Desenvolvimento inicial da heurística",
-      "inicio": "2026-06",
-      "fim": "2026-07"
-    },
-    {
-      "atividade": "Implementação computacional (Python e testes preliminares)",
-      "inicio": "2026-07",
-      "fim": "2026-08"
-    },
-    {
-      "atividade": "Geração de instâncias e base de dados",
-      "inicio": "2026-07",
-      "fim": "2026-09"
-    },
-    {
-      "atividade": "Ajuste de parâmetros e calibração da heurística",
-      "inicio": "2026-08",
-      "fim": "2026-09"
-    },
-    {
-      "atividade": "Testes computacionais e experimentos",
       "inicio": "2026-09",
       "fim": "2026-10"
     },
     {
-      "atividade": "Análise dos resultados",
-      "inicio": "2026-10",
-      "fim": "2026-11"
+      "atividade": "Estudo e seleção da heurística (SA, AG, ACO, etc.)",
+      "inicio": "2026-11",
+      "fim": "2026-12"
     },
     {
-      "atividade": "Redação de relatório/artigo científico",
+      "atividade": "Desenvolvimento inicial da heurística",
       "inicio": "2026-11",
       "fim": "2027-01"
     },
     {
-      "atividade": "Revisão final, submissão e divulgação",
-      "inicio": "2027-01",
+      "atividade": "Implementação computacional (Python e testes preliminares)",
+      "inicio": "2026-12",
       "fim": "2027-02"
+    },
+    {
+      "atividade": "Geração de instâncias e base de dados",
+      "inicio": "2026-12",
+      "fim": "2027-02"
+    },
+    {
+      "atividade": "Ajuste de parâmetros e calibração da heurística",
+      "inicio": "2027-02",
+      "fim": "2027-03"
+    },
+    {
+      "atividade": "Testes computacionais e experimentos",
+      "inicio": "2027-03",
+      "fim": "2027-05"
+    },
+    {
+      "atividade": "Análise dos resultados",
+      "inicio": "2027-05",
+      "fim": "2027-06"
+    },
+    {
+      "atividade": "Redação de relatório/artigo científico",
+      "inicio": "2027-06",
+      "fim": "2027-07"
+    },
+    {
+      "atividade": "Revisão final, submissão e divulgação",
+      "inicio": "2027-07",
+      "fim": "2027-07"
     }
   ],
   "financiamento": {
@@ -178,12 +169,13 @@
   "_meta": {
     "arquivo": "PJ_9628.pdf",
     "paginas": 16,
-    "extraido_em": "2026-09-18T21:01:11.897095+00:00",
-    "modelo": "ministral-8b-latest",
+    "extraido_em": "2026-08-10T22:08:33.094527+00:00",
+    "modelo": "mistral-large-latest",
     "fonte_texto": "pdf-text",
     "campos_ausentes": [
       "coordenador.nome",
       "coordenador.email",
+      "equipe",
       "financiamento"
     ]
   }

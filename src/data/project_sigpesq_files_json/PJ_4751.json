@@ -1,100 +1,129 @@
 {
   "codigo": "PJ 4751",
   "titulo": "Monitoramento de emissões das chaminés do Complexo Tubarão por Processamento Digital de Imagens",
-  "descricao": "Projeto de pesquisa que visa a detecção automática do contorno da fumaça por meio de vídeos capturados por câmeras situadas fora do Complexo de Tubarão, utilizando técnicas de segmentação como Optical Flow e Watershed.",
+  "descricao": "A proposta deste projeto é desenvolver um sistema web que faça a segmentação automática, isto é, a detecção do contorno da fumaça, que é emitida pelas chaminés através de imagens capturadas por câmeras situadas em local público e distante do complexo. O objetivo é avaliar técnicas para a segmentação da fumaça, mostrando o contorno da mesma, que é emitida pelas fontes estacionárias localizadas no Complexo Tubarão usando somente câmeras, realizando um monitoramento a distância.",
   "palavras_chave": [
-    "Monitoramento de emissões",
     "Processamento Digital de Imagens",
-    "Técnicas de Segmentação",
-    "Optical Flow",
-    "Watershed",
-    "Poluição ambiental",
-    "Complexo Tubarão",
-    "Visão Computacional"
+    "Monitoramento de emissões de chaminés",
+    "Segmentação de fumaça"
   ],
-  "area_conhecimento": "Ciências Exatas e da Terra; Ciência da Computação",
-  "linha_pesquisa": null,
+  "area_conhecimento": "Ciências Exatas e da Terra",
+  "linha_pesquisa": "Processamento Digital de Imagens",
   "objetivos": {
-    "geral": "Fazer a detecção automática do contorno da fumaça por meio de vídeos capturados por câmeras situadas fora do Complexo de Tubarão, usando técnicas de segmentação como Optical Flow e Watershed.",
+    "geral": "Desenvolver um sistema de segmentação automática da fumaça capturada por câmeras posicionados em pontos externos ao Complexo Tubarão.",
     "especificos": [
-      "Aplicar técnicas de segmentação de imagem (Optical Flow e Watershed) para identificar fumaça emitida pelo Complexo Tubarão",
-      "Comparar a eficácia das técnicas de segmentação em vídeos de emissão de fumaça",
-      "Superar desafios como baixa resolução, luminosidade, ruídos e a ausência de contorno definido na fumaça"
+      "Avaliação de técnicas clássicas como o fluxo ótico.",
+      "Avaliação de técnicas do estado-da-arte em ambiente controlado, tais como o algoritmo Refraction Wiggles, que computa o fluxo de propagação de calor e vento; e outros como o Dense motion estimation for smoke e o FlowNet.",
+      "Avaliação de técnicas do estado-da-arte em ambiente não-controlado, com vídeos gravados do Complexo Tubarão.",
+      "Elaboração de base de dados de vídeos em diferentes condições climáticas e de iluminação.",
+      "Avaliação da performance em tempo real."
     ]
   },
   "coordenador": {
-    "nome": "Karin Satie Komati",
-    "email": "e9a7de842471@anon.lgpd",
-    "campus": "Serra",
+    "nome": null,
+    "email": null,
+    "campus": null,
     "titulacao": null
   },
-  "equipe": [
-    {
-      "nome": "Gabriela Piffer Marinato",
-      "funcao": "Bolsista",
-      "instituicao": "Instituto Federal do Espírito Santo (IFES)",
-      "carga_horaria_semanal": null
-    }
-  ],
+  "equipe": [],
   "datas": {
-    "inicio": "2018-12-01",
+    "inicio": "2018-08-01",
     "fim": "2019-07-31",
-    "duracao_meses": 8
+    "duracao_meses": 12
   },
   "cronograma": [
     {
-      "atividade": "Estudo da situação central que motivou o projeto",
-      "inicio": "2019-01",
-      "fim": null
+      "atividade": "Estudo das técnicas fluxo ótico e Refraction Wiggles",
+      "inicio": "2018-08",
+      "fim": "2018-09"
     },
     {
-      "atividade": "Estudo de aplicações OpenCV e como aproveitá-las no projeto",
-      "inicio": "2019-01",
-      "fim": null
+      "atividade": "Criar ambiente de testes com as bases (A) UCL Ground Truth Optical Flow Dataset v1.2; (B) Middlebury Database; (C) MPI Sintel Flow",
+      "inicio": "2018-08",
+      "fim": "2018-09"
     },
     {
-      "atividade": "Apresentações periódicas sobre os assuntos estudados",
-      "inicio": "2019-01",
-      "fim": null
+      "atividade": "Realizar os experimentos das técnicas fluxo ótico e Refraction Wiggles nas bases A, B e C",
+      "inicio": "2018-08",
+      "fim": "2018-11"
     },
     {
-      "atividade": "Início de aplicações das técnicas e algoritmos no cenário real (vídeo)",
+      "atividade": "Comparação das técnicas nas bases A, B e C",
+      "inicio": "2018-10",
+      "fim": "2018-11"
+    },
+    {
+      "atividade": "Realizar os experimentos das técnicas fluxo ótico e Refraction Wiggles nas bases (D) vídeos próprios em ambiente controlado de laboratório e E (vídeos das chaminés do Complexo Tubarão em cenário real)",
+      "inicio": "2018-10",
+      "fim": "2019-01"
+    },
+    {
+      "atividade": "Comparação das técnicas nas bases D e E",
       "inicio": "2019-02",
-      "fim": null
+      "fim": "2019-02"
     },
     {
-      "atividade": "Aprimoramento e adaptações das técnicas ao vídeo da emissão da fumaça",
+      "atividade": "Escrita de monografia, relatório e artigo",
+      "inicio": "2019-01",
+      "fim": "2019-03"
+    },
+    {
+      "atividade": "Elaborar a base de dados (D) vídeos próprios em ambiente controlado de laboratório",
+      "inicio": "2018-08",
+      "fim": "2018-11"
+    },
+    {
+      "atividade": "Elaborar a base de dados inicial de (E) vídeos das chaminés do Complexo Tubarão em cenário real",
+      "inicio": "2018-08",
+      "fim": "2018-11"
+    },
+    {
+      "atividade": "Estudo das ferramentas para criação de site com disponibilização de vídeos já processados",
+      "inicio": "2018-10",
+      "fim": "2019-02"
+    },
+    {
+      "atividade": "Compreensão do sistema de segmentação, suas técnicas e análise de seus resultados",
+      "inicio": "2019-01",
+      "fim": "2019-02"
+    },
+    {
+      "atividade": "Desenvolvimento do site",
+      "inicio": "2019-01",
+      "fim": "2019-02"
+    },
+    {
+      "atividade": "Disponibilização do site com, pelo menos, uma câmera online",
       "inicio": "2019-03",
+      "fim": "2019-03"
+    },
+    {
+      "atividade": "Comparação das técnicas Fluxo Ótico e Refraction Wiggles para a segmentação de fumaça",
+      "inicio": null,
       "fim": null
     },
     {
-      "atividade": "Captura de resultados",
-      "inicio": "2019-04",
-      "fim": "2019-07"
-    },
-    {
-      "atividade": "Participação em eventos técnico-científicos (I Seminário dos Grupos de Pesquisa do Campus Serra)",
-      "inicio": "2019-04",
-      "fim": "2019-04"
+      "atividade": "Sistema Web para Monitoramento de emissões das chaminés do Complexo Tubarão",
+      "inicio": null,
+      "fim": null
     }
   ],
   "financiamento": {
     "valor_total": null,
     "moeda": "BRL",
-    "fontes": [
-      {
-        "fonte": "Voluntariado: sem financiamento",
-        "valor": null,
-        "tipo": "Voluntário"
-      }
-    ]
+    "fontes": []
   },
   "_meta": {
     "arquivo": "PJ_4751.pdf",
-    "paginas": 6,
-    "extraido_em": "2026-09-18T20:02:25.114213+00:00",
-    "modelo": "ministral-8b-latest",
+    "paginas": 14,
+    "extraido_em": "2026-08-10T20:28:07.578606+00:00",
+    "modelo": "mistral-large-latest",
     "fonte_texto": "pdf-text",
-    "campos_ausentes": []
+    "campos_ausentes": [
+      "coordenador.nome",
+      "coordenador.email",
+      "equipe",
+      "financiamento"
+    ]
   }
 }

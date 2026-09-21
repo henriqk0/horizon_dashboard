@@ -1,7 +1,7 @@
 {
   "codigo": "PJ 4641",
   "titulo": "Aperfeiçoamento do pacote WGCNA para análise de redes de correlações",
-  "descricao": "Desenvolvimento de uma interface gráfica para facilitar a utilização do método WGCNA por pesquisadores da área biológica, além de implementar um módulo de visualização de redes e otimizar funções críticas do pacote para melhorar o desempenho.",
+  "descricao": "Na última década, houve um crescente aumento da utilização de redes de correlação em aplicações de análise de dados biológicos. Neste projeto, desenvolveremos uma interface gráfica visando facilitar a utilização do método WGCNA, bem como pesquisaremos formas de otimizar as funções mais demoradas do pacote, visando aumentar o desempenho do programa. Também implementaremos um módulo de visualização de redes, destacando os principais genes e suas relações para auxiliar na análise dos resultados. Ao final do projeto, espera-se que a utilização do software WGCNA por pesquisadores da área biológica seja grandemente facilitada.",
   "palavras_chave": [
     "Redes de Correlação",
     "Redes de Co-expressão",
@@ -10,27 +10,27 @@
     "Biologia Sistêmica",
     "Expressão Gênica"
   ],
-  "area_conhecimento": "Ciência da Computação",
-  "linha_pesquisa": "Bioinformática / Ciência de Dados",
+  "area_conhecimento": "CIÊNCIA DA COMPUTAÇÃO",
+  "linha_pesquisa": "BIOINFORMÁTICA / CIÊNCIA DE DADOS",
   "objetivos": {
     "geral": "Desenvolver uma interface gráfica para o método WGCNA visando facilitar sua utilização por profissionais da área biológica, bem como implementar um módulo de visualização de redes, destacando os principais nós e suas relações para auxiliar na análise dos resultados.",
     "especificos": [
       "Desenvolver uma interface gráfica (GUI) para utilização das funções implementadas no pacote WGCNA;",
-      "Desenvolver um módulo de visualização de redes utilizando a biblioteca Cytoscape.JS para destacar os principais nós da rede e suas relações;",
-      "Realizar um estudo comparativo entre as linguagens Python e R em relação às características de desempenho e memória;",
-      "Portar algumas funções críticas do pacote WGCNA para linguagem Python/Cython e paralelizar utilizando a biblioteca OpenMPI visando aumentar o desempenho;",
-      "Escrever um tutorial de utilização da interface gráfica exemplificando para pesquisadores da área de saúde"
+      "Desenvolver um módulo de visualização de redes utilizando a biblioteca Cytoscape.JS visando destacar os principais nós da rede e suas relações com os demais para facilitar a análise;",
+      "Realizar um estudo comparativo entre as linguagens Python e R de alguma(s) funcionalidade(s) do pacote WGCNA com relação às características: desempenho e memória;",
+      "Portar algumas funções críticas do pacote WGCNA para linguagem compilada Cython e paralelizar utilizando a biblioteca OpenMPI visando aumentar o desempenho.",
+      "Escrever um tutorial de utilização da interface gráfica exemplificando a um pesquisador da área de saúde como utilizar a ferramenta;"
     ]
   },
   "coordenador": {
     "nome": null,
     "email": null,
-    "campus": "Serra",
+    "campus": "IFES – Campus Serra",
     "titulacao": null
   },
   "equipe": [
     {
-      "nome": "Prof. Dr. David Corrêa Martins Junior",
+      "nome": "David Corrêa Martins Junior",
       "funcao": "Colaborador",
       "instituicao": "CMCC-UFABC",
       "carga_horaria_semanal": null
@@ -38,59 +38,129 @@
   ],
   "datas": {
     "inicio": "2018-08-01",
-    "fim": "2019-07-01",
+    "fim": "2019-07-31",
     "duracao_meses": 12
   },
   "cronograma": [
     {
-      "atividade": "Revisão do estado da arte em análise de redes de correlação e do método WGCNA",
+      "atividade": "Revisão do estado da arte em análise de redes de correlação e do método WGCNA.",
       "inicio": "2018-08",
       "fim": "2018-09"
     },
     {
-      "atividade": "Estudo das ferramentas: Kivy, Cytoscape.JS, linguagens R e Python",
+      "atividade": "Estudo das ferramentas: Kivy, Cytoscape.JS, e das linguagens de programação R e Python.",
       "inicio": "2018-08",
       "fim": "2018-10"
     },
     {
-      "atividade": "Estudo de técnicas de otimização do código usando Cython/C e paralelização em OpenMPI",
+      "atividade": "Estudo de técnicas de otimização do código usando Cython ou C bem como paralelização em OpenMPI.",
       "inicio": "2018-08",
       "fim": "2018-10"
     },
     {
-      "atividade": "Instrumentação do código do pacote WGCNA para encontrar as funções mais demoradas",
+      "atividade": "Instrumentação do código do pacote WGCNA para encontrar as funções mais demoradas.",
+      "inicio": "2018-10",
+      "fim": "2018-11"
+    },
+    {
+      "atividade": "Portar as funções críticas para linguagem Python+Cython ou C e paralelizar usando OpenMPI algumas funções do pacote WGCNA.",
+      "inicio": "2018-11",
+      "fim": "2019-04"
+    },
+    {
+      "atividade": "Desenvolvimento da interface gráfica para o WGCNA utilizando a biblioteca Kivy em Python.",
+      "inicio": "2018-11",
+      "fim": "2019-04"
+    },
+    {
+      "atividade": "Desenvolvimento de um módulo para visualização de redes de co-expressão utilizando o Cytoscape.",
+      "inicio": "2018-12",
+      "fim": "2019-04"
+    },
+    {
+      "atividade": "Integrar a interface desenvolvida em Python+Kivy com o pacote WGCNA em R.",
+      "inicio": "2019-04",
+      "fim": "2019-05"
+    },
+    {
+      "atividade": "Escrever um tutorial de utilização da interface gráfica.",
+      "inicio": "2019-06",
+      "fim": "2019-06"
+    },
+    {
+      "atividade": "Elaborar um poster para submissão em congresso.",
+      "inicio": "2019-06",
+      "fim": "2019-07"
+    },
+    {
+      "atividade": "Desenvolvimento de uma interface gráfica para o pacote WGCNA (Plano de trabalho do estudante 1).",
+      "inicio": null,
+      "fim": null
+    },
+    {
+      "atividade": "Revisão do estado da arte em análise de redes de correlação e do método WGCNA (Plano de trabalho do estudante 1).",
       "inicio": "2018-08",
       "fim": "2018-09"
     },
     {
-      "atividade": "Portar as funções críticas para linguagem Python+Cython ou C e paralelizar usando OpenMPI",
-      "inicio": "2018-09",
-      "fim": "2019-01"
+      "atividade": "Estudo das ferramentas de desenvolvimento: Kivy, Cytoscape.JS, e das linguagens de programação R e Python (Plano de trabalho do estudante 1).",
+      "inicio": "2018-08",
+      "fim": "2018-10"
     },
     {
-      "atividade": "Desenvolvimento da interface gráfica para o WGCNA utilizando a biblioteca Kivy em Python",
-      "inicio": "2018-09",
-      "fim": "2019-01"
+      "atividade": "Desenvolvimento da interface gráfica para o WGCNA utilizando a biblioteca Kivy em Python (Plano de trabalho do estudante 1).",
+      "inicio": "2018-11",
+      "fim": "2019-04"
     },
     {
-      "atividade": "Desenvolvimento de um módulo para visualização de redes de co-expressão utilizando Cytoscape",
-      "inicio": "2018-09",
-      "fim": "2019-01"
+      "atividade": "Desenvolvimento de um módulo para visualização de redes de co-expressão utilizando o Cytoscape (Plano de trabalho do estudante 1).",
+      "inicio": "2018-12",
+      "fim": "2019-03"
     },
     {
-      "atividade": "Integração da interface desenvolvida em Python+Kivy com o pacote WGCNA em R",
-      "inicio": "2019-01",
-      "fim": "2019-02"
+      "atividade": "Integrar a interface desenvolvida em Python+Kivy com o pacote WGCNA em R (Plano de trabalho do estudante 1).",
+      "inicio": "2019-04",
+      "fim": "2019-04"
     },
     {
-      "atividade": "Escrever um tutorial de utilização da interface gráfica",
-      "inicio": "2019-01",
-      "fim": "2019-01"
+      "atividade": "Escrever um tutorial de utilização da interface gráfica (Plano de trabalho do estudante 1).",
+      "inicio": "2019-06",
+      "fim": "2019-06"
     },
     {
-      "atividade": "Elaborar um poster para submissão em congresso",
-      "inicio": "2019-01",
-      "fim": "2019-02"
+      "atividade": "Escrever um poster para submissão em congresso (Plano de trabalho do estudante 1).",
+      "inicio": "2019-07",
+      "fim": "2019-07"
+    },
+    {
+      "atividade": "Otimização das funcionalidades do pacote WGCNA para análises de alto desempenho de redes de correlação em larga escala (Plano de trabalho do estudante 2).",
+      "inicio": null,
+      "fim": null
+    },
+    {
+      "atividade": "Revisão do estado da arte em análise de redes de correlação (Plano de trabalho do estudante 2).",
+      "inicio": "2018-08",
+      "fim": "2018-10"
+    },
+    {
+      "atividade": "Estudo de técnicas de otimização do código usando Cython ou C bem como paralelização em OpenMPI (Plano de trabalho do estudante 2).",
+      "inicio": "2018-08",
+      "fim": "2018-10"
+    },
+    {
+      "atividade": "Instrumentação do código do pacote WGCNA para encontrar as funções mais demoradas (Plano de trabalho do estudante 2).",
+      "inicio": "2018-10",
+      "fim": "2018-11"
+    },
+    {
+      "atividade": "Portar as funções críticas para linguagem Python+Cython ou C e paralelizar usando OpenMPI algumas funções do pacote WGCNA (Plano de trabalho do estudante 2).",
+      "inicio": "2018-11",
+      "fim": "2019-05"
+    },
+    {
+      "atividade": "Escrever um poster para submissão em congresso (Plano de trabalho do estudante 2).",
+      "inicio": "2019-07",
+      "fim": "2019-07"
     }
   ],
   "financiamento": {
@@ -101,8 +171,8 @@
   "_meta": {
     "arquivo": "PJ_4641.pdf",
     "paginas": 12,
-    "extraido_em": "2026-09-18T19:59:56.448784+00:00",
-    "modelo": "ministral-8b-latest",
+    "extraido_em": "2026-08-10T20:26:20.357608+00:00",
+    "modelo": "mistral-large-latest",
     "fonte_texto": "pdf-text",
     "campos_ausentes": [
       "coordenador.nome",

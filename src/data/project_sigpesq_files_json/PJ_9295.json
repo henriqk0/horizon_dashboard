@@ -1,30 +1,23 @@
 {
   "codigo": "PJ 9295",
   "titulo": "Arquitetura Adaptativa em Malha Fechada para Mitigação de Ataques DDoS utilizando eBPF/XDP e Aprendizado de Máquina",
-  "descricao": "Projeto de pesquisa que propõe uma arquitetura adaptativa em malha fechada para mitigação de ataques DDoS em escala de Terabits, integrando tecnologias eBPF/XDP e aprendizado de máquina. A solução separa a defesa em dois planos: Plano de Dados (eBPF/XDP no kernel Linux) e Plano de Controle (Aprendizado de Máquina no espaço de usuário). O projeto visa combater a evolução dos ataques DDoS, que atingem picos de 31,4 Tbps, utilizando uma abordagem autonômica baseada no ciclo MAPE-K (Monitor-Analyze-Plan-Execute).",
+  "descricao": "Um dos principais desafios dos provedores de serviço é a evolução dos ataques de DDoS (Negação de Serviço Distribuída) à escala de Terabits. Esse volume massivo expõe a vulnerabilidade de defesas tradicionais, exigindo soluções mais ágeis e autônomas. Para combater essa ameaça, este projeto propõe uma Arquitetura Adaptativa em Malha Fechada (Closed-Loop), fundamentada no ciclo autonômico MAPE-K (Monitor-Analyze-Plan-Execute over a Knowledge base). A solução inova separando a defesa em dois planos: o Plano de Dados, utilizando eBPF/XDP (Extended Berkeley Packet Filter/eXpress Data Path) no kernel Linux para extração de telemetria e bloqueio de pacotes em velocidade de linha (line-rate); e o Plano de Controle, operando no espaço de usuário com Aprendizado de Máquina (AM). O AM detecta anomalias complexas e retroalimenta autonomamente as regras de mitigação via memórias compartilhadas (eBPF Maps). Planejado para dois anos, o projeto integra fortemente graduação e mestrado.",
   "palavras_chave": [
     "Aprendizado de máquina",
     "Ataques de negação de serviço",
-    "eBPF/XDP",
-    "Arquitetura adaptativa em malha fechada",
-    "DDoS",
-    "Segurança de redes",
-    "Ciclo MAPE-K",
-    "Mitigação de ataques cibernéticos",
-    "Redes programáveis",
-    "Telemetria de rede"
+    "eBPF/XDP"
   ],
-  "area_conhecimento": "Ciências Exatas e da Terra",
+  "area_conhecimento": "1.03.00.00-7 - Ciência da Computação",
   "linha_pesquisa": "Redes de computadores",
   "objetivos": {
     "geral": "Propor, desenvolver e avaliar uma arquitetura adaptativa em malha fechada que integre a capacidade de processamento de pacotes em velocidade de linha do eBPF/XDP com modelos de Aprendizado de Máquina para a detecção e mitigação autônoma de ataques DDoS.",
     "especificos": [
-      "Implementar ambiente de emulação utilizando Containerlab para geração de tráfego legítimo e de ataques cibernéticos.",
-      "Desenvolver o Plano de Dados (operando no kernel) com programas eBPF/XDP para extração de telemetria e aplicação de bloqueios em tempo real.",
-      "Desenvolver o Plano de Controle (operando no espaço de usuário) com módulos de Aprendizado de Máquina para análise de telemetria e retroalimentação autônoma das ações de mitigação.",
-      "Gerar produtos tecnológicos de dados automatizados para extração e criação de datasets de ataques baseados na telemetria nativa do eBPF.",
-      "Gerar produtos tecnológicos visuais, como um Dashboard interativo para monitoramento e visualização de métricas de tráfego e eficácia da mitigação.",
-      "Prover base para hardware offload, consolidando a arquitetura emulada em software para que funcione como ambiente de prova de conceito e base de dados para os alunos de mestrado avançarem na solução do problema de concept drift e escalabilidade."
+      "Implementar Ambiente de Emulação: Construir e configurar um laboratório de redes virtualizado utilizando a ferramenta Containerlab para a geração de tráfego legítimo e de ataques cibernéticos em diferentes camadas.",
+      "Desenvolver o Plano de Dados (Operação no Kernel): Criar programas em eBPF/XDP para a extração contínua de telemetria com custo computacional baixo e para a aplicação em tempo real de ações de bloqueio baseadas em eBPF Maps.",
+      "Desenvolver o Plano de Controle (Inteligência em userspace): Implementar módulos no espaço de usuário capazes de consumir a telemetria do eBPF, extrair características relevantes e aplicar modelos de Aprendizado de Máquina para classificar o tráfego, retroalimentando as ações de mitigação de forma autônoma (fechando a malha do ciclo MAPE-K).",
+      "Gerar Produtos Tecnológicos de Dados: Desenvolver uma ferramenta/produto automatizado voltado à extração e criação de datasets de ataques baseados na telemetria nativa do eBPF, fornecendo dados para treinar os algoritmos de AM.",
+      "Gerar Produtos Tecnológicos Visuais: Projetar e desenvolver um Dashboard integrado com o eBPF, permitindo aos administradores da rede monitorar o tráfego, visualizar os alertas de anomalia e acompanhar a efetividade dos bloqueios aplicados em tempo real.",
+      "Prover Base para Hardware Offload: Consolidar a arquitetura emulada em software pelos alunos de graduação para que funcione como ambiente de prova de conceito e base de dados, permitindo que os alunos de mestrado avancem na solução do plano de controle em AM e realizem o offload das funções de mitigação para hardwares programáveis (SmartNICs e DPUs), visando a escala de Terabits."
     ]
   },
   "coordenador": {
@@ -33,14 +26,7 @@
     "campus": "Serra",
     "titulacao": null
   },
-  "equipe": [
-    {
-      "nome": null,
-      "funcao": null,
-      "instituicao": "Huge Networks",
-      "carga_horaria_semanal": null
-    }
-  ],
+  "equipe": [],
   "datas": {
     "inicio": "2026-09-01",
     "fim": "2028-08-31",
@@ -50,37 +36,37 @@
     {
       "atividade": "Revisão da Literatura e Fundamentação",
       "inicio": "2026-09",
-      "fim": "2027-01"
+      "fim": "2026-11"
     },
     {
       "atividade": "Configuração do Ambiente de Emulação",
       "inicio": "2026-10",
-      "fim": "2027-02"
+      "fim": "2026-12"
     },
     {
-      "atividade": "Geração de Tráfego e Telemetria (Produto Tecnológico 1)",
-      "inicio": "2027-01",
-      "fim": "2027-06"
-    },
-    {
-      "atividade": "Desenvolvimento do Plano de Controle (Userspace)",
+      "atividade": "Geração de Tráfego e Telemetria",
       "inicio": "2026-12",
-      "fim": "2028-06"
+      "fim": "2027-05"
     },
     {
-      "atividade": "Mitigação em eBPF/XDP",
-      "inicio": "2027-01",
-      "fim": "2028-06"
+      "atividade": "Plano de Controle (User) - Inicial",
+      "inicio": "2027-02",
+      "fim": "2027-08"
+    },
+    {
+      "atividade": "Mitigação em eBPF/XDP - Inicial",
+      "inicio": "2027-02",
+      "fim": "2027-08"
     },
     {
       "atividade": "Desenvolvimento de Dashboard",
-      "inicio": "2027-05",
-      "fim": "2028-08"
+      "inicio": "2027-07",
+      "fim": "2027-12"
     },
     {
       "atividade": "Testes e Integração com Mestrado",
-      "inicio": "2027-07",
-      "fim": "2028-08"
+      "inicio": "2027-09",
+      "fim": "2028-02"
     },
     {
       "atividade": "Documentação e Disseminação",
@@ -88,28 +74,43 @@
       "fim": "2028-08"
     },
     {
-      "atividade": "Revisão da Literatura e Fundamentação (Refinamento)",
+      "atividade": "Revisão da Literatura e Fundamentação (Ano 2)",
       "inicio": "2027-09",
-      "fim": "2027-12"
+      "fim": "2027-10"
     },
     {
-      "atividade": "Geração de Tráfego e Telemetria (Refinamento)",
+      "atividade": "Configuração do Ambiente de Emulação (Ano 2)",
       "inicio": "2027-09",
-      "fim": "2027-12"
+      "fim": "2027-09"
     },
     {
-      "atividade": "Plano de Controle (Userspace) - Refinamento",
-      "inicio": "2027-12",
-      "fim": "2028-06"
+      "atividade": "Geração de Tráfego e Telemetria (Ano 2)",
+      "inicio": "2027-09",
+      "fim": "2027-10"
+    },
+    {
+      "atividade": "Plano de Controle (User) - Refinamento",
+      "inicio": "2027-11",
+      "fim": "2028-07"
     },
     {
       "atividade": "Mitigação em eBPF/XDP - Refinamento",
-      "inicio": "2027-12",
-      "fim": "2028-06"
+      "inicio": "2027-11",
+      "fim": "2028-07"
     },
     {
-      "atividade": "Desenvolvimento de Dashboard - Refinamento",
-      "inicio": "2027-12",
+      "atividade": "Desenvolvimento de Dashboard (Ano 2)",
+      "inicio": "2027-11",
+      "fim": "2028-07"
+    },
+    {
+      "atividade": "Testes e Integração com Mestrado (Ano 2)",
+      "inicio": "2028-03",
+      "fim": "2028-07"
+    },
+    {
+      "atividade": "Documentação e Disseminação (Ano 2)",
+      "inicio": "2028-06",
       "fim": "2028-08"
     }
   ],
@@ -121,12 +122,13 @@
   "_meta": {
     "arquivo": "PJ_9295.pdf",
     "paginas": 23,
-    "extraido_em": "2026-09-18T20:55:02.704417+00:00",
-    "modelo": "ministral-8b-latest",
+    "extraido_em": "2026-08-10T21:57:16.419718+00:00",
+    "modelo": "mistral-large-latest",
     "fonte_texto": "pdf-text",
     "campos_ausentes": [
       "coordenador.nome",
       "coordenador.email",
+      "equipe",
       "financiamento"
     ]
   }

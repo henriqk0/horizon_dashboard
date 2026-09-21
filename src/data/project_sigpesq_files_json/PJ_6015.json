@@ -1,105 +1,121 @@
 {
   "codigo": "PJ 6015",
   "titulo": "Implementação de modelos de otimização para projetos de redes ópticas",
-  "descricao": "O rápido crescimento das demandas de tráfego, devido aos novos serviços oferecidos pelas operadoras de telecomunicações, tem sido principal motivador para o desenvolvimento das redes de telecomunicações, tanto em novas tecnologias quanto em novas estratégias de gerenciamento das redes. O projeto busca desenvolver métodos de otimização da configuração de uma rede óptica levando em consideração as características das novas redes de transporte óptico, como as redes elásticas, e o impacto das restrições físicas dessa rede sobre a acomodação do tráfego.",
+  "descricao": "O rápido crescimento das demandas de tráfego, devido aos novos serviços oferecidos pelas operadoras de telecomunicações, tem sido principal motivador para o desenvolvimento das redes de telecomunicações, tanto em novas tecnologias quando em novas estratégias do gerenciamento das redes. Como as redes ópticas oferecem as características para suportar essas novas demandas, essa é atualmente um dos principais focos de pesquisa na área de telecomunicações. Assim, esse trabalho busca desenvolver métodos de otimização da configuração de uma rede óptica levando em consideração as características das novas redes de transporte óptico, como as redes elásticas e o impacto que as restrições física dessa rede impõem sobre a acomodação do tráfego na rede.",
   "palavras_chave": [
-    "Redes ópticas",
-    "Traffic grooming",
-    "Roteamento e alocação de comprimento de onda",
-    "Programação linear inteira",
-    "Redes elásticas",
-    "Otimização de redes ópticas"
+    "Redes Definidas por Software",
+    "Otimização",
+    "Orquestração de Serviços"
   ],
-  "area_conhecimento": "Telecomunicações",
-  "linha_pesquisa": "Projeto de Redes Ópticas e Otimização de Redes de Transporte Óptico",
+  "area_conhecimento": "1.03.00.00-7 Ciência da Computação",
+  "linha_pesquisa": "Redes Ópticas",
   "objetivos": {
-    "geral": "Desenvolver métodos de otimização para configuração de redes ópticas, considerando as características das novas redes de transporte óptico e suas restrições físicas.",
+    "geral": "Dentro do contexto das redes ópticas elásticas esse trabalho propõe investigar o problema de grooming de tráfego, juntamente com os problemas de VTD e RSA, também relacionados à configuração das redes ópticas. O desenvolvimento do trabalho se dá, basicamente, através da elaboração de métodos para encontrar soluções de boa qualidade, seguindo abordagens exatas e/ou heurísticas. O grande desafio de desenvolver tais métodos está em fazer com que estes sejam capazes de simular as novas funcionalidades nas redes ópticas. Assim, de posse de modelos matemáticos representando as redes ópticas é possível propor configurações otimizadas e validar conceitos propostos na literatura.",
     "especificos": [
-      "Levar em conta as novas demandas de tráfego e serviços oferecidos pelas operadoras de telecomunicações.",
-      "Avaliar o impacto das restrições físicas das redes ópticas na acomodação do tráfego.",
-      "Desenvolver modelos matemáticos e heurísticas para otimização de redes ópticas.",
-      "Aplicar técnicas de otimização em redes ópticas elásticas."
+      "Desenvolver um método heurístico de otimização para redes ópticas elásticas. De posse disso, será possível avaliar/comparar as redes WDM e Elásticas, considerando ainda redes transparente e opacas.",
+      "Desenvolver uma interface entre o software de otimização linear inteira Cplex e o software de simulação desenvolvido na Universidade Federal do Espírito Santo, o ElasticO++."
     ]
   },
   "coordenador": {
-    "nome": "Leandro Colombi Resendo",
-    "email": "337ff00e9899@anon.lgpd",
-    "campus": "Instituto Federal do Espírito Santo - Campus Serra",
-    "titulacao": "Doutorado em Engenharia Elétrica"
+    "nome": null,
+    "email": null,
+    "campus": null,
+    "titulacao": null
   },
-  "equipe": [
-    {
-      "nome": "Harrison Felipe Sanches Machado",
-      "funcao": "Aluno de Graduação",
-      "instituicao": "Instituto Federal do Espírito Santo",
-      "carga_horaria_semanal": null
-    },
-    {
-      "nome": "Vitor Zanoni Bermudes",
-      "funcao": "Aluno de Graduação",
-      "instituicao": "Instituto Federal do Espírito Santo",
-      "carga_horaria_semanal": null
-    },
-    {
-      "nome": "Karin Satie Komati",
-      "funcao": "Pesquisadora",
-      "instituicao": "Instituto Federal do Espírito Santo",
-      "carga_horaria_semanal": null
-    },
-    {
-      "nome": "Luciano Lessa Lorenzoni",
-      "funcao": "Colaborador",
-      "instituicao": null,
-      "carga_horaria_semanal": null
-    },
-    {
-      "nome": "Renato Tannure Rotta de Almeida",
-      "funcao": "Colaborador",
-      "instituicao": null,
-      "carga_horaria_semanal": null
-    }
-  ],
+  "equipe": [],
   "datas": {
-    "inicio": "2019-01-01",
-    "fim": null,
-    "duracao_meses": null
+    "inicio": "2020-08-01",
+    "fim": "2021-08-31",
+    "duracao_meses": 12
   },
   "cronograma": [
     {
-      "atividade": "Desenvolvimento de modelos de otimização para redes ópticas elásticas",
-      "inicio": "2019-01",
+      "atividade": "Entendimento do problema e levantamento bibliográfico",
+      "inicio": "2020-08",
+      "fim": "2020-08"
+    },
+    {
+      "atividade": "Estudo de modelos programação linear inteira e heurísticas para o problema do projeto de redes ópticas WDM",
+      "inicio": "2020-09",
+      "fim": "2020-10"
+    },
+    {
+      "atividade": "Implementação de métodos de otimização existentes na literatura",
+      "inicio": "2020-11",
+      "fim": "2020-12"
+    },
+    {
+      "atividade": "Adaptação e análise dos métodos implementados",
+      "inicio": "2021-01",
+      "fim": "2021-02"
+    },
+    {
+      "atividade": "Solução, análise e aprimoramento do modelo",
+      "inicio": "2021-03",
+      "fim": "2021-05"
+    },
+    {
+      "atividade": "Elaboração de relatório e artigo",
+      "inicio": "2021-06",
+      "fim": "2021-08"
+    },
+    {
+      "atividade": "Proposta de uma Heurística para a Otimização de um Orquestrador Multi-Domínio",
+      "inicio": null,
       "fim": null
     },
     {
-      "atividade": "Implementação de algoritmos de otimização para redes ópticas",
-      "inicio": "2019-01",
-      "fim": null
+      "atividade": "Entendimento do funcionamento e características das tecnologias NFV e SDN",
+      "inicio": "2020-08",
+      "fim": "2020-08"
     },
     {
-      "atividade": "Testes e validação dos modelos desenvolvidos",
-      "inicio": "2019-01",
-      "fim": null
+      "atividade": "Estudo de Heurísticas",
+      "inicio": "2020-09",
+      "fim": "2020-09"
+    },
+    {
+      "atividade": "Implementação da heurística Proposta",
+      "inicio": "2020-10",
+      "fim": "2020-11"
+    },
+    {
+      "atividade": "Validação e ajustes do método proposto",
+      "inicio": "2020-12",
+      "fim": "2021-01"
+    },
+    {
+      "atividade": "Adaptação do método proposto às funcionalidades da NFV e SDN",
+      "inicio": "2021-02",
+      "fim": "2021-03"
+    },
+    {
+      "atividade": "Solução, análise e aprimoramento dos resultados",
+      "inicio": "2021-04",
+      "fim": "2021-06"
+    },
+    {
+      "atividade": "Elaboração de relatório e artigo (estudante 1)",
+      "inicio": "2021-07",
+      "fim": "2021-08"
     }
   ],
   "financiamento": {
     "valor_total": null,
     "moeda": "BRL",
-    "fontes": [
-      {
-        "fonte": "Instituto Federal de Educação, Ciência e Tecnologia do Espírito Santo - IFES",
-        "valor": null,
-        "tipo": "Autofinanciamento"
-      }
-    ]
+    "fontes": []
   },
   "_meta": {
     "arquivo": "PJ_6015.pdf",
-    "paginas": 15,
-    "extraido_em": "2026-09-18T20:18:24.331332+00:00",
-    "modelo": "ministral-8b-latest",
+    "paginas": 12,
+    "extraido_em": "2026-08-10T20:52:07.265826+00:00",
+    "modelo": "mistral-large-latest",
     "fonte_texto": "pdf-text",
     "campos_ausentes": [
-      "datas.fim"
+      "coordenador.nome",
+      "coordenador.email",
+      "equipe",
+      "financiamento"
     ]
   }
 }

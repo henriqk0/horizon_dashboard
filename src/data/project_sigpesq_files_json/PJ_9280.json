@@ -1,333 +1,271 @@
 {
   "codigo": "PJ 9280",
-  "titulo": null,
-  "descricao": null,
+  "titulo": "Correção Automática de Redações com Modelos de Linguagem",
+  "descricao": "A correção automática de redações em língua portuguesa ainda enfrenta lacunas em tarefas de detecção/correção de erros (GED/GEC) e avaliação de aderência ao tema. Este projeto objetiva ampliar a base de dados de Amorim e Veloso (2017) e desenvolver modelos de Inteligência Artificial com desempenho superior aos baselines atuais. A metodologia fundamenta-se em uma abordagem experimental e iterativa, que inclui a curadoria de dados naturais (via OCR de redações de alunos do ensino médio) e a geração de dados sintéticos via LLMs. Serão aplicadas técnicas de fine-tuning em arquiteturas encoder (BERT) e decoder-only (Gervásio, Sabiá), além da estratégia Retrieval-Augmented Generation (RAG) com BM25 para verificar a consistência temática. Como produtos principais, o projeto entregará um conjunto de dados inédito e modelos de código aberto para a comunidade científica. Os resultados esperados visam democratizar o acesso à educação, oferecendo feedback pedagógico detalhado e reduzindo custos de correção para estudantes brasileiros.",
   "palavras_chave": [
-    "Prosa contemporânea",
-    "cidade",
-    "Noll",
-    "imanência",
-    "neobarroco",
-    "Literatura Italiana",
-    "melancolia",
-    "niilismo",
-    "contemporaneidade",
-    "literatura contemporânea",
-    "literaturas de língua portuguesa",
-    "produção textual",
-    "ensino",
-    "estudos culturais",
-    "curadoria artística",
-    "cinema",
-    "antropologia",
-    "gastronomia"
+    "Processamento de Linguagem Natural",
+    "Redações do ENEM",
+    "Modelos de Linguagem (LLMs)",
+    "Correção Gramatical",
+    "Aderência ao Tema",
+    "Correção Automática de Redações"
   ],
-  "area_conhecimento": "Linguística, Letras e Artes",
-  "linha_pesquisa": null,
+  "area_conhecimento": "1.03.00.00-7 - CIÊNCIA DA COMPUTAÇÃO",
+  "linha_pesquisa": "Processamento de Linguagem Natural",
   "objetivos": {
-    "geral": null,
+    "geral": "Ampliar a base de dados proposta por Amorim e Veloso (2017), bem como analisar e investigar modelos de aprendizado de máquina capazes de predizer erros gramaticais com desempenho superior a um baseline estabelecido. Além disso, busca-se estudar modelos que permitam atribuir notas ao critério de aderência ao tópico com maior precisão em relação a esse mesmo baseline. Ao alcançar tais objetivos, pretende-se contribuir para o avanço das pesquisas em correção automática de redações no contexto do português brasileiro.",
     "especificos": [
-      "Analisar a prosa contemporânea e sua relação com a cidade e a imanência",
-      "Estudar a obra de João Gilberto Noll e sua contribuição para a literatura brasileira",
-      "Explorar temas como neobarroco, melancolia e niilismo na literatura italiana e contemporânea",
-      "Promover a produção textual e o ensino de literatura contemporânea",
-      "Investigar a relação entre literatura, cinema, antropologia e gastronomia",
-      "Desenvolver projetos de extensão e ensino voltados para a literatura e cultura",
-      "Analisar e promover a diversidade cultural e literária em eventos e feiras",
-      "Estudar e disseminar a literatura lusófona e seus contextos",
-      "Promover a inclusão e diversidade por meio de políticas públicas e eventos culturais"
+      "Estudo e revisão da literatura sobre correção de erros gramaticais em português e em inglês, visto que existe muita pesquisa para esta língua.",
+      "Extrair do dataset apresentado por Amorim e Veloso (2017) os erros embutidos e etiquetados pelo corretor humano. Também pretendemos extrair frases sem erros para que o nosso modelo saiba diferenciar trechos com e sem erros. Este dado será dividido em três partes que serão os conjuntos de treino, validação e teste.",
+      "Estabelecer um baseline com o CoGroo (Kinoshita et al., 2006) que será aplicado no conjunto de teste obtido no objetivo anterior.",
+      "Treinar um modelo utilizando como modelo de linguagem o BERT e um modelo de classificação de tokens para obter os trechos de sentenças que apresentam erros.",
+      "Treinar outro modelo nos dados de treino, utilizando um modelo de linguagem com outra arquitetura, algum modelo ajustado finamente com instruções (instructing fine-tuned). Pretende-se construir prompts com a redação e instruções para que LLMs abertas do tipo decoder-only respondam sobre o possível erro. Modelos possíveis a serem testados são o Gervásio, Sábia e DeepSeek.",
+      "Comparar o resultado destas três estratégias utilizando métricas adequadas, como revocação, precisão e f1.",
+      "Realizar revisão da literatura sobre avaliação automática de aderência ao tema em redações, considerando abordagens aplicadas ao inglês e ao português, com ênfase em métodos baseados em similaridade semântica, recuperação de informação e modelos de linguagem.",
+      "Gerar um corpus inicial de redações sintéticas por meio de modelos de linguagem, utilizando técnicas de engenharia de prompt.",
+      "Realizar o shortlisting de pares sentença–tema por meio da aplicação de um algoritmo de recuperação de informação (BM25), utilizando cada sentença da redação como consulta para recuperar os trechos mais relevantes do comando temático.",
+      "Aplicar uma estratégia do tipo Retrieval + LLM (R+LLM) para reclassificação dos pares selecionados, na qual um modelo de linguagem é utilizado como classificador para avaliar, de forma mais precisa, a relação semântica entre as sentenças da redação e o tema proposto.",
+      "Estabelecer baselines de comparação, incluindo métodos baseados exclusivamente em similaridade semântica (ex: embeddings) e abordagens sem etapa de recuperação (LLM isolado), a fim de avaliar os ganhos da estratégia proposta.",
+      "Definir e aplicar um protocolo de avaliação utilizando métricas de classificação (accuracy, precision, recall e F1-score), com base em um conjunto de dados anotado por especialistas, permitindo a comparação sistemática entre as diferentes abordagens.",
+      "Aplicar propostas de redação a alunos do ensino médio, alinhadas às competências avaliadas pelo ENEM, e realizar a correção por professora especialista, conforme os critérios oficiais.",
+      "Selecionar redações com qualidade adequada e proceder à sua digitalização em alta resolução (JPEG ou PDF), garantindo legibilidade e integridade do conteúdo.",
+      "Empregar ferramentas de OCR para extrair o texto das redações, os comentários de correção feitas pelos especialistas, o comando temático, as notas por competência e a nota final.",
+      "Realizar revisão manual das extrações obtidas via OCR, corrigindo erros e descartando redações com caligrafia ilegível.",
+      "Definir e aplicar um esquema de anotação para estruturar os comentários de correção em rótulos (labels), associados a trechos específicos do texto, contemplando a categorização dos tipos de erro (como gramaticais, ortográficos e de coesão), a forma de representação dos rótulos e a possibilidade de atribuição de múltiplos rótulos a um mesmo trecho.",
+      "Segmentar os textos das redações em sentenças, respeitando critérios linguísticos do português brasileiro.",
+      "Padronizar e normalizar os dados textuais, incluindo codificação, tratamento de caracteres especiais e consistência estrutural.",
+      "Validar a qualidade das anotações, incluindo, quando possível, a participação de múltiplos anotadores e análise de concordância.",
+      "Anonimizar os dados, removendo informações pessoais, em conformidade com princípios éticos e legais.",
+      "Estruturar a base de dados em formato JSON, contendo textos, segmentações, rótulos, notas e metadados relevantes.",
+      "Realizar análise exploratória dos dados, verificando distribuição de notas, frequência de erros e possíveis vieses.",
+      "Documentar a base de dados, descrevendo o processo de coleta, anotação, limitações e estatísticas gerais."
     ]
   },
   "coordenador": {
-    "nome": "Adrianna Machado Meneguelli",
+    "nome": null,
     "email": null,
-    "campus": "Instituto Federal do Espírito Santo (IFES) - Campus Venda Nova do Imigrante",
-    "titulacao": "Doutora em Literatura Comparada pela Universidade Federal de Minas Gerais (UFMG)"
+    "campus": null,
+    "titulacao": null
   },
-  "equipe": [
-    {
-      "nome": "Tatyana Rodrigues Barcelos",
-      "funcao": "Integrante",
-      "instituicao": "Instituto Federal do Espírito Santo (IFES)",
-      "carga_horaria_semanal": null
-    },
-    {
-      "nome": "Eliane Dias",
-      "funcao": "Integrante",
-      "instituicao": null,
-      "carga_horaria_semanal": null
-    },
-    {
-      "nome": "Maria José Correa de Souza",
-      "funcao": "Integrante",
-      "instituicao": null,
-      "carga_horaria_semanal": null
-    },
-    {
-      "nome": "Fabiana Carvalho Rodrigues",
-      "funcao": "Integrante",
-      "instituicao": null,
-      "carga_horaria_semanal": null
-    },
-    {
-      "nome": "Adriane Bernardo Oliveira Moreira",
-      "funcao": "Integrante",
-      "instituicao": null,
-      "carga_horaria_semanal": null
-    },
-    {
-      "nome": "Larissa Haddad Souza Vieira",
-      "funcao": "Integrante",
-      "instituicao": null,
-      "carga_horaria_semanal": null
-    },
-    {
-      "nome": "Vinicius Gonçalves Langa",
-      "funcao": "Integrante",
-      "instituicao": null,
-      "carga_horaria_semanal": null
-    },
-    {
-      "nome": "Alex Caldas Simões",
-      "funcao": "Integrante",
-      "instituicao": null,
-      "carga_horaria_semanal": null
-    },
-    {
-      "nome": "Rafael Cavalcanti do Carmo",
-      "funcao": "Integrante",
-      "instituicao": null,
-      "carga_horaria_semanal": null
-    },
-    {
-      "nome": "Deane Monteiro V. Costa",
-      "funcao": "Integrante",
-      "instituicao": null,
-      "carga_horaria_semanal": null
-    },
-    {
-      "nome": "Ernandes de Oliveira Pereira",
-      "funcao": "Integrante",
-      "instituicao": null,
-      "carga_horaria_semanal": null
-    },
-    {
-      "nome": "Zâmora Cristina dos Santos",
-      "funcao": "Integrante",
-      "instituicao": null,
-      "carga_horaria_semanal": null
-    },
-    {
-      "nome": "Caldas Simões",
-      "funcao": "Integrante",
-      "instituicao": null,
-      "carga_horaria_semanal": null
-    },
-    {
-      "nome": "Fabiano Ricardo Caliman",
-      "funcao": "Integrante",
-      "instituicao": null,
-      "carga_horaria_semanal": null
-    },
-    {
-      "nome": "Karine Silveira",
-      "funcao": "Integrante",
-      "instituicao": null,
-      "carga_horaria_semanal": null
-    },
-    {
-      "nome": "Tatyana Rodrigues Barcelos",
-      "funcao": "Integrante",
-      "instituicao": null,
-      "carga_horaria_semanal": null
-    },
-    {
-      "nome": "Luiz Fernando Dias Ferreira",
-      "funcao": "Integrante",
-      "instituicao": null,
-      "carga_horaria_semanal": null
-    },
-    {
-      "nome": "Vanessa Cristina de Castro",
-      "funcao": "Integrante",
-      "instituicao": null,
-      "carga_horaria_semanal": null
-    },
-    {
-      "nome": "Eliane Oliveira Lorete",
-      "funcao": "Integrante",
-      "instituicao": null,
-      "carga_horaria_semanal": null
-    },
-    {
-      "nome": "Daniela Cordeiro",
-      "funcao": "Integrante",
-      "instituicao": null,
-      "carga_horaria_semanal": null
-    },
-    {
-      "nome": "Marcos Roberto Ribeiro",
-      "funcao": "Integrante",
-      "instituicao": null,
-      "carga_horaria_semanal": null
-    },
-    {
-      "nome": "Rayanne Penha W. Lima",
-      "funcao": "Integrante",
-      "instituicao": null,
-      "carga_horaria_semanal": null
-    },
-    {
-      "nome": "Frederico Castro de Carvalho",
-      "funcao": "Integrante",
-      "instituicao": null,
-      "carga_horaria_semanal": null
-    },
-    {
-      "nome": "Admildo Costa de Freitas",
-      "funcao": "Integrante",
-      "instituicao": null,
-      "carga_horaria_semanal": null
-    },
-    {
-      "nome": "Sidnei Giles de Andrade",
-      "funcao": "Integrante",
-      "instituicao": null,
-      "carga_horaria_semanal": null
-    },
-    {
-      "nome": "Jonadable Alves Palmeira",
-      "funcao": "Integrante",
-      "instituicao": null,
-      "carga_horaria_semanal": null
-    },
-    {
-      "nome": "Michele Aparecida Vieira Curty",
-      "funcao": "Integrante",
-      "instituicao": null,
-      "carga_horaria_semanal": null
-    },
-    {
-      "nome": "Deane Monteiro V. Costa",
-      "funcao": "Integrante",
-      "instituicao": null,
-      "carga_horaria_semanal": null
-    },
-    {
-      "nome": "Edson Kretle dos Santos",
-      "funcao": "Integrante",
-      "instituicao": null,
-      "carga_horaria_semanal": null
-    },
-    {
-      "nome": "Priscila dos Santos Moreira",
-      "funcao": "Integrante",
-      "instituicao": null,
-      "carga_horaria_semanal": null
-    },
-    {
-      "nome": "Maria José Correa de Souza",
-      "funcao": "Integrante",
-      "instituicao": null,
-      "carga_horaria_semanal": null
-    }
-  ],
+  "equipe": [],
   "datas": {
-    "inicio": null,
-    "fim": null,
-    "duracao_meses": null
+    "inicio": "2026-09-01",
+    "fim": "2027-08-31",
+    "duracao_meses": 12
   },
   "cronograma": [
     {
-      "atividade": "Plurilinguagens",
-      "inicio": "2008-01",
-      "fim": "2008-12"
+      "atividade": "Revisão da Literatura",
+      "inicio": "2026-09",
+      "fim": "2026-10"
     },
     {
-      "atividade": "VI Feira de Educação, Ciência, Tecnologia, Arte e Cultura (FECITAC)",
-      "inicio": "2022-01",
-      "fim": "2022-12"
+      "atividade": "Coleta/Produção de Dados",
+      "inicio": "2026-10",
+      "fim": "2026-11"
     },
     {
-      "atividade": "2ª FEIRA LITERÁRIA DE CARIACICA",
-      "inicio": "2019-01",
-      "fim": "2019-12"
+      "atividade": "Construção de um sistema baseline",
+      "inicio": "2026-11",
+      "fim": "2026-12"
     },
     {
-      "atividade": "Narrativas com luz",
-      "inicio": "2017-07",
-      "fim": "2017-08"
+      "atividade": "Construção do script de treino",
+      "inicio": "2026-12",
+      "fim": "2027-05"
     },
     {
-      "atividade": "EcoIfes 2016: Água e energia, até quando?",
-      "inicio": "2016-01",
-      "fim": "2016-12"
+      "atividade": "Treino do Modelo",
+      "inicio": "2027-02",
+      "fim": "2027-04"
     },
     {
-      "atividade": "I Festival gastronômico Receitas de Família - Venda Nova do Imigrante",
-      "inicio": "2016-01",
-      "fim": "2016-12"
+      "atividade": "Experimentos",
+      "inicio": "2027-05",
+      "fim": "2027-05"
     },
     {
-      "atividade": "Teatro Mundo",
-      "inicio": "2016-01",
+      "atividade": "Escrita dos resultados em artigos",
+      "inicio": "2027-06",
+      "fim": "2027-06"
+    },
+    {
+      "atividade": "Construção de um Modelo para Correção Gramatical na Língua Portuguesa (Plano de Trabalho do Estudante 1)",
+      "inicio": null,
       "fim": null
     },
     {
-      "atividade": "Cineclube Nova",
-      "inicio": "2016-01",
+      "atividade": "Revisão da literatura (Estudante 1)",
+      "inicio": "2026-09",
+      "fim": "2026-10"
+    },
+    {
+      "atividade": "Coleta de dados a partir do conjunto de dados de Amorim e Veloso (2017) (Estudante 1)",
+      "inicio": "2026-10",
+      "fim": "2026-11"
+    },
+    {
+      "atividade": "Experimentar o CoGroo na divisão de teste dos dados (Estudante 1)",
+      "inicio": "2026-11",
+      "fim": "2026-12"
+    },
+    {
+      "atividade": "Construção de um script que faz ajuste fino do BERT na divisão de treino dos dados (Estudante 1)",
+      "inicio": "2026-12",
+      "fim": "2027-02"
+    },
+    {
+      "atividade": "Treino do modelo BERT (Estudante 1)",
+      "inicio": "2027-02",
+      "fim": "2027-03"
+    },
+    {
+      "atividade": "Construção de um script para prompting (Estudante 1)",
+      "inicio": "2027-03",
+      "fim": "2027-05"
+    },
+    {
+      "atividade": "Experimentos com diferentes modelos abertos ajustados com instruções (Estudante 1)",
+      "inicio": "2027-05",
+      "fim": "2027-06"
+    },
+    {
+      "atividade": "Experimentos (Estudante 1)",
+      "inicio": "2027-06",
+      "fim": "2027-06"
+    },
+    {
+      "atividade": "Escrita de artigo com resultados (Estudante 1)",
+      "inicio": "2027-07",
+      "fim": "2027-07"
+    },
+    {
+      "atividade": "Construção de um Modelo para Avaliação de Aderência a Tópico de Redações (Plano de Trabalho do Estudante 2)",
+      "inicio": null,
       "fim": null
     },
     {
-      "atividade": "Literaturas lusófonas: textos e contextos",
-      "inicio": "2022-01",
-      "fim": "2022-12"
+      "atividade": "Revisão da literatura (Estudante 2)",
+      "inicio": "2026-09",
+      "fim": "2026-10"
     },
     {
-      "atividade": "Núcleo de Educação Ambiental, Agroecologia e Sustentabilidade (NEAAS)",
-      "inicio": "2023-01",
+      "atividade": "Coleta dos dados de Amorim e Veloso (2017) e Essay-BR (Estudante 2)",
+      "inicio": "2026-10",
+      "fim": "2026-10"
+    },
+    {
+      "atividade": "Construção de um baseline com word2vec (Estudante 2)",
+      "inicio": "2026-10",
+      "fim": "2026-12"
+    },
+    {
+      "atividade": "Treino do modelo word2vec (Estudante 2)",
+      "inicio": "2026-12",
+      "fim": "2027-01"
+    },
+    {
+      "atividade": "Construção de um script que faz ajuste fino do BERT na divisão de treino dos dados (Estudante 2)",
+      "inicio": "2027-01",
+      "fim": "2027-04"
+    },
+    {
+      "atividade": "Treino do modelo BERT (Estudante 2)",
+      "inicio": "2027-04",
+      "fim": "2027-05"
+    },
+    {
+      "atividade": "Experimentos (Estudante 2)",
+      "inicio": "2027-06",
+      "fim": "2027-06"
+    },
+    {
+      "atividade": "Escrita de artigo com resultados (Estudante 2)",
+      "inicio": "2027-07",
+      "fim": "2027-07"
+    },
+    {
+      "atividade": "Ampliação da base de dados de redações por meio de curadoria e anotação (Plano de Trabalho do Estudante 3)",
+      "inicio": null,
       "fim": null
     },
     {
-      "atividade": "Elaboração do projeto do curso de Pós-graduação Lato Sensu em Ciência de Alimentos",
-      "inicio": "2017-01",
-      "fim": null
+      "atividade": "Revisão da literatura sobre bases de dados e anotação em PLN (Estudante 3)",
+      "inicio": "2026-09",
+      "fim": "2026-10"
     },
     {
-      "atividade": "Elaboração do Curso de Pós-graduação Lato Sensu em Educação do IFES-Campus Venda Nova",
-      "inicio": "2015-01",
-      "fim": null
+      "atividade": "Planejamento da curadoria e definição do esquema de anotação (Estudante 3)",
+      "inicio": "2026-10",
+      "fim": "2026-12"
     },
     {
-      "atividade": "Projeto pedagógico do Curso Superior de Licenciatura em Letras",
-      "inicio": "2015-01",
-      "fim": "2015-12"
+      "atividade": "Coleta e seleção de redações (Estudante 3)",
+      "inicio": "2026-11",
+      "fim": "2027-01"
+    },
+    {
+      "atividade": "Digitalização e organização dos dados (Estudante 3)",
+      "inicio": "2026-12",
+      "fim": "2027-02"
+    },
+    {
+      "atividade": "Extração de texto via OCR (Estudante 3)",
+      "inicio": "2027-01",
+      "fim": "2027-03"
+    },
+    {
+      "atividade": "Revisão manual e limpeza dos dados (Estudante 3)",
+      "inicio": "2027-02",
+      "fim": "2027-04"
+    },
+    {
+      "atividade": "Segmentação textual e normalização dos dados (Estudante 3)",
+      "inicio": "2027-03",
+      "fim": "2027-05"
+    },
+    {
+      "atividade": "Anotação dos dados (erros, comentários, rótulos) (Estudante 3)",
+      "inicio": "2027-04",
+      "fim": "2027-06"
+    },
+    {
+      "atividade": "Validação e análise de qualidade das anotações (Estudante 3)",
+      "inicio": "2027-06",
+      "fim": "2027-07"
+    },
+    {
+      "atividade": "Estruturação da base de dados (formato JSON e metadados) (Estudante 3)",
+      "inicio": "2027-07",
+      "fim": "2027-08"
+    },
+    {
+      "atividade": "Análise exploratória dos dados (Estudante 3)",
+      "inicio": "2027-08",
+      "fim": "2027-08"
+    },
+    {
+      "atividade": "Documentação da base de dados e apoio na escrita de relatórios/artigos (Estudante 3)",
+      "inicio": "2027-08",
+      "fim": "2027-08"
     }
   ],
   "financiamento": {
     "valor_total": null,
     "moeda": "BRL",
-    "fontes": [
-      {
-        "fonte": "Instituto Federal de Educação, Ciência e Tecnologia do Espírito Santo (IFES)",
-        "valor": null,
-        "tipo": "Outra"
-      }
-    ]
+    "fontes": []
   },
   "_meta": {
     "arquivo": "PJ_9280.pdf",
-    "paginas": 33,
-    "extraido_em": "2026-09-18T20:54:41.520580+00:00",
-    "modelo": "ministral-8b-latest",
+    "paginas": 21,
+    "extraido_em": "2026-08-10T21:56:42.859800+00:00",
+    "modelo": "mistral-large-latest",
     "fonte_texto": "pdf-text",
     "campos_ausentes": [
-      "titulo",
-      "descricao",
+      "coordenador.nome",
       "coordenador.email",
-      "datas.inicio",
-      "datas.fim",
-      "objetivos.geral"
+      "equipe",
+      "financiamento"
     ]
   }
 }

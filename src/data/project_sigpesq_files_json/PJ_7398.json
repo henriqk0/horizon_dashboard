@@ -1,85 +1,144 @@
 {
   "codigo": "PJ 7398",
   "titulo": "Uso de Inteligência Artificial para o Monitoramento do Estado de Correias Transportadoras",
-  "descricao": "Desenvolvimento e validação de um sistema para identificação e localização de rasgos e furos em correias transportadoras, integrando segmentação de instâncias por visão computacional com um sistema de odometria embarcada em um ESP32, visando manutenção preditiva e redução de riscos operacionais.",
+  "descricao": "Atualmente as correias transportadoras são usadas por inúmeras empresas, no estado do Espírito Santo praticamente todas as empresas do rubro metalúrgico e minero usam este sistema. Problemas como rasgos, furos, o elevado desgaste e desalinhamentos das correias provocam paradas não programadas, contaminação ambiental, riscos para os operadores e perda de material, ocasionando grandes prejuízos. A medição em tempo real do estado das correias transportadoras, detectando e realizando uma previsão sobre possíveis problemas é um desafio para empresas como a VALE, ArcelorMittal, Anglo American, Usiminas, entre outras, que vem buscando há muitos anos uma solução viável; assim, com uma detecção e previsão da seriedade dos problemas, podem ser tomadas medidas para minimizar o impacto destas anomalias (furos, rasgos, alto desgaste e desalinhamento). Para resolver este problema, o grupo de pesquisa propõe o uso de visão computacional para detecção de riscos e furos, a construção de micro sensores inteligentes capacitivos para medir o desgaste e a implementação de algoritmos de visão embarcado para a medição de desalinhamento de correias transportadoras.",
   "palavras_chave": [
-    "Inteligência Artificial",
-    "Visão Computacional",
-    "Odometria",
-    "Manutenção Preditiva",
-    "Correias Transportadoras",
-    "Deep Learning",
-    "Segmentação de Instâncias",
-    "YOLO11n-seg",
-    "Monitoramento de Defeitos"
+    "Correia Transportadora",
+    "Rasgos e Furos",
+    "Desalinhamento",
+    "Visão Computacional"
   ],
-  "area_conhecimento": "Engenharia Elétrica – Robótica, Mecatrônica e Automação",
-  "linha_pesquisa": null,
+  "area_conhecimento": "Robótica, Mecatrônica e Automação",
+  "linha_pesquisa": "Inteligência Artificial e Visão computacional",
   "objetivos": {
-    "geral": "Desenvolver e validar um sistema para identificação e localização de rasgos e furos em correias transportadoras, integrando segmentação de instâncias por visão computacional com um sistema de odometria embarcada, no âmbito da planta piloto do GAIn, Ifes campus Serra.",
+    "geral": "Desenvolver um sistema para a medição e previsão de rasgos, furos, desgaste e desalinhamento de correias transportadoras usando Vision Analytics e sensores inteligentes capacitivos.",
     "especificos": [
-      "Construir um conjunto de dados anotado de imagens de rasgos, furos e da própria esteira, capturadas na planta piloto.",
-      "Treinar e avaliar um modelo de segmentação de instâncias (YOLO11n-seg) para a detecção dos defeitos.",
-      "Desenvolver um método de calibração dinâmica para medição dimensional dos defeitos, sem necessidade de um alvo de calibração externo.",
-      "Implementar um sistema de odometria de baixo custo, baseado em microcontrolador ESP32 e encoder incremental, para localizar cada defeito ao longo do percurso da correia.",
-      "Integrar as unidades de visão computacional e de odometria por meio de um painel supervisório web, com registro histórico dos defeitos identificados.",
-      "Validar o funcionamento conjunto do sistema na planta piloto do GAIn."
+      "Especificar o sistema.",
+      "Montar uma planta piloto.",
+      "Testar o sistema proposto no laboratório.",
+      "Testar o sistema proposto numa planta real.",
+      "Registrar patente, escrever artigos e relatórios."
     ]
   },
   "coordenador": {
     "nome": "Marco Antonio de Souza Leite Cuadros",
-    "email": "4d5315ebc581@anon.lgpd",
+    "email": null,
     "campus": "Serra",
     "titulacao": null
   },
   "equipe": [
     {
-      "nome": "Gianlucas de Jesus Silva",
-      "funcao": "Bolsista",
+      "nome": "Marco Antonio de Souza Leite Cuadros",
+      "funcao": "Coordenador",
       "instituicao": "IFES",
       "carga_horaria_semanal": null
     }
   ],
   "datas": {
-    "inicio": "2025-01-01",
-    "fim": "2026-08-31",
-    "duracao_meses": 19
+    "inicio": "2023-08-01",
+    "fim": "2025-07-31",
+    "duracao_meses": 24
   },
   "cronograma": [
     {
-      "atividade": "Construção do conjunto de dados anotado de imagens de rasgos, furos e esteira",
+      "atividade": "Visita Técnica",
+      "inicio": "2023-08",
+      "fim": "2023-10"
+    },
+    {
+      "atividade": "Especificação dos componentes",
+      "inicio": "2023-08",
+      "fim": "2023-10"
+    },
+    {
+      "atividade": "Desenho 3D animado",
+      "inicio": "2023-11",
+      "fim": "2024-01"
+    },
+    {
+      "atividade": "Compra dos componentes e contratação de serviços",
+      "inicio": "2023-11",
+      "fim": "2024-01"
+    },
+    {
+      "atividade": "Teste dos componentes",
+      "inicio": "2024-02",
+      "fim": "2024-02"
+    },
+    {
+      "atividade": "Manufatura de peças",
+      "inicio": "2024-03",
+      "fim": "2024-03"
+    },
+    {
+      "atividade": "Montagem",
+      "inicio": "2024-02",
+      "fim": "2024-04"
+    },
+    {
+      "atividade": "Adaptação da correia transportadora",
+      "inicio": "2024-05",
+      "fim": "2024-05"
+    },
+    {
+      "atividade": "Adaptação de 5 correias transportadoras com diferentes características",
+      "inicio": "2024-06",
+      "fim": "2024-06"
+    },
+    {
+      "atividade": "Testes e captura de dados",
+      "inicio": "2024-07",
+      "fim": "2024-08"
+    },
+    {
+      "atividade": "Algoritmo de Previsão",
+      "inicio": "2024-09",
+      "fim": "2024-10"
+    },
+    {
+      "atividade": "Visita à VALE e instalação do Sistema",
       "inicio": "2025-01",
-      "fim": "2025-03"
+      "fim": "2025-02"
     },
     {
-      "atividade": "Treino e avaliação do modelo de segmentação de instâncias (YOLO11n-seg)",
-      "inicio": "2025-02",
-      "fim": "2025-05"
-    },
-    {
-      "atividade": "Desenvolvimento do método de calibração dinâmica para medição dimensional dos defeitos",
+      "atividade": "Testes e coleta de dados",
       "inicio": "2025-03",
-      "fim": "2025-06"
+      "fim": "2025-04"
     },
     {
-      "atividade": "Implementação do sistema de odometria embarcada com ESP32 e encoder incremental",
-      "inicio": "2025-04",
+      "atividade": "Medição de desalinhamento em correias transportadoras usando visão computacional e o ESPCAM",
+      "inicio": "2023-08",
+      "fim": "2024-07"
+    },
+    {
+      "atividade": "Instrumentação e montagem de uma planta piloto de correia transportadora para testes de detecção e medição de desalinhamentos, rasgos e furos",
+      "inicio": "2023-08",
+      "fim": "2024-07"
+    },
+    {
+      "atividade": "Detecção de rasgos e furos em correias transportadoras usando visão computacional",
+      "inicio": "2023-08",
+      "fim": "2024-07"
+    },
+    {
+      "atividade": "Construção de sensores capacitivos para medição de desgaste de correias transportadoras",
+      "inicio": "2023-08",
+      "fim": "2024-07"
+    },
+    {
+      "atividade": "Escrita de artigos",
+      "inicio": "2023-11",
       "fim": "2025-07"
     },
     {
-      "atividade": "Integração das unidades de visão computacional e odometria por meio de painel supervisório web",
-      "inicio": "2025-05",
-      "fim": "2025-08"
+      "atividade": "Escrita de Relatórios",
+      "inicio": "2023-11",
+      "fim": "2025-04"
     },
     {
-      "atividade": "Validação do sistema na planta piloto do GAIn",
-      "inicio": "2025-06",
-      "fim": "2025-10"
-    },
-    {
-      "atividade": "Preparação para submissão de artigo ou evento científico",
-      "inicio": "2025-11",
-      "fim": "2026-08"
+      "atividade": "Registro de Patente",
+      "inicio": "2025-01",
+      "fim": "2025-07"
     }
   ],
   "financiamento": {
@@ -87,18 +146,20 @@
     "moeda": "BRL",
     "fontes": [
       {
-        "fonte": "CNPq",
-        "valor": null,
-        "tipo": "PIBIC"
+        "fonte": "FAPES: Edital FAPES Nº 06/2021 BOLSA PESQUISADOR CAPIXABA – BPC",
+        "valor": 36000.0,
+        "tipo": "Bolsa"
       }
     ]
   },
   "_meta": {
     "arquivo": "PJ_7398.pdf",
-    "paginas": 9,
-    "extraido_em": "2026-09-18T20:31:06.984172+00:00",
-    "modelo": "ministral-8b-latest",
+    "paginas": 19,
+    "extraido_em": "2026-08-10T21:14:21.804599+00:00",
+    "modelo": "mistral-large-latest",
     "fonte_texto": "pdf-text",
-    "campos_ausentes": []
+    "campos_ausentes": [
+      "coordenador.email"
+    ]
   }
 }

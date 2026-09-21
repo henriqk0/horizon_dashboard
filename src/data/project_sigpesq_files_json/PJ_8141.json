@@ -1,96 +1,211 @@
 {
   "codigo": "PJ 8141",
-  "titulo": "Identificação de ansiedade e depressão via análise facial em base de dados reduzida",
-  "descricao": "Investigação, implementação e avaliação de modelos de aprendizado de máquina utilizando a abordagem de transferência de aprendizado para a identificação de ansiedade e depressão a partir da análise facial em uma base de dados reduzida.",
+  "titulo": "IDENTIFICAÇÃO DE ANSIEDADE E DEPRESSÃO VIA ANÁLISE FACIAL EM BASE DE DADOS REDUZIDA",
+  "descricao": "Este projeto busca explorar métodos inovadores para identificar sinais de transtornos de ansiedade e depressão por meio da análise de expressões faciais em selfies. A abordagem proposta envolve o uso de selfies como fonte de dados, proporcionando uma experiência mais autêntica em comparação com a captura de imagens em ambientes controlados. Serão exploradas estratégias como transferência de aprendizado, utilizando modelos pré-treinados em emoções básicas para ajuste fino na identificação de depressão e ansiedade, e o uso de ferramentas pré-treinadas de análise de comportamento facial, como o OpenFace, para extração de características faciais relevantes. Além disso, será investigada a detecção de sorrisos falsos em selfies, uma vez que expressões faciais pouco naturais podem mascarar sintomas. Por fim, será desenvolvido um aplicativo para celular que permita realizar coleta de dados (ex. formulários) com captura passiva de selfies.",
   "palavras_chave": [
-    "ansiedade",
-    "depressão",
-    "análise facial",
-    "aprendizado de máquina",
-    "transferência de aprendizado",
-    "reconhecimento de expressões faciais",
-    "base de dados reduzida",
-    "redes neurais convolucionais",
-    "pré-treinamento",
-    "ajuste fino"
+    "COMPUTAÇÃO AFETIVA",
+    "TRANSFERÊNCIA DE APRENDIZADO",
+    "RECONHECIMENTO DE EXPRESSÕES FACIAIS",
+    "SAÚDE MENTAL",
+    "REDES NEURAIS CONVOLUCIONAIS",
+    "APLICATIVO"
   ],
-  "area_conhecimento": "Ciências Exatas e da Terra - Ciência da Computação",
-  "linha_pesquisa": null,
+  "area_conhecimento": "CIÊNCIA DA COMPUTAÇÃO",
+  "linha_pesquisa": "VISÃO COMPUTACIONAL E APRENDIZADO DE MÁQUINA",
   "objetivos": {
-    "geral": "Investigar, implementar e avaliar a eficácia de modelos de aprendizado de máquina, utilizando a abordagem de transferência de aprendizado, para a identificação de ansiedade e depressão a partir da análise facial em uma base de dados reduzida.",
+    "geral": "Construir modelos preditivos eficazes para a identificação de depressão a partir da análise facial em imagens digitais, com foco no uso de selfies como fonte de dados e questionários de autoavaliação como orientação para o treinamento dos modelos.",
     "especificos": [
-      "Realizar a análise e preparação da base de dados do projeto;",
-      "Implementar modelos de Aprendizado de Máquina para a classificação de imagens faciais;",
-      "Aplicar a técnica de transferência de aprendizado, realizando o ajuste fino dos modelos pré-treinados;",
-      "Avaliar e comparar o desempenho dos diferentes modelos por meio de métricas de classificação."
+      "Realizar uma investigação abrangente de modelos de aprendizagem de máquina e bases de dados relacionados ao problema de identificação de emoções não-básicas.",
+      "Investigar a viabilidade e eficácia da utilização de modelos pré-treinados em bases de emoções básicas para o treinamento de modelos específicos de detecção de depressão, por meio de transferência de aprendizado.",
+      "Avaliar o uso de ferramentas pré-treinadas de análise de comportamento facial, como o OpenFace, para a extração de características faciais relevantes na detecção de sintomas de depressão em selfies.",
+      "Avaliar modelos para detecção de sorriso falso e integrar o resultado da análise com a tarefa alvo.",
+      "Analisar qualitativamente o desempenho dos modelos por meio de ferramentas específicas de interpretabilidade visual.",
+      "Desenvolver um aplicativo que possibilite a captura de dados via preenchimento de questionários com aquisição passiva de selfies."
     ]
   },
   "coordenador": {
-    "nome": "Thiago Meireles Paixão",
-    "email": "ab84379a56c9@anon.lgpd",
-    "campus": "Serra",
+    "nome": "Anilton Salles Garcia",
+    "email": null,
+    "campus": null,
     "titulacao": null
   },
   "equipe": [
     {
-      "nome": "Thiago Meireles Paixão",
-      "funcao": "Orientador",
-      "instituicao": "IFES",
+      "nome": "Hermano Tavares",
+      "funcao": "Colaborador",
+      "instituicao": "Faculdade de Medicina da USP (FMUSP)",
       "carga_horaria_semanal": null
     },
     {
-      "nome": "Matheus Silva Caldas",
-      "funcao": "Bolsista",
-      "instituicao": "IFES",
+      "nome": "Kelly dos Santos Prado",
+      "funcao": "Pesquisador Executante",
+      "instituicao": "Faculdade de Medicina da USP (FMUSP)",
+      "carga_horaria_semanal": null
+    },
+    {
+      "nome": "Vera Tess",
+      "funcao": "Colaborador",
+      "instituicao": "Instituto de Psiquiatria do Hospital das Clínicas da USP",
+      "carga_horaria_semanal": null
+    },
+    {
+      "nome": "Marco Aurelio Galletta",
+      "funcao": "Colaborador",
+      "instituicao": "Faculdade de Medicina da USP (FMUSP)",
+      "carga_horaria_semanal": null
+    },
+    {
+      "nome": "Rossana Pulcineli Vieira Francisco",
+      "funcao": "Colaborador",
+      "instituicao": "Faculdade de Medicina da USP (FMUSP)",
+      "carga_horaria_semanal": null
+    },
+    {
+      "nome": "Wiliam Hisatugu",
+      "funcao": "Colaborador",
+      "instituicao": "UFES",
+      "carga_horaria_semanal": null
+    },
+    {
+      "nome": "Maria das Graças da Silva Teixeira",
+      "funcao": "Colaborador",
+      "instituicao": "UFES",
+      "carga_horaria_semanal": null
+    },
+    {
+      "nome": "Anderson da Silva Soares",
+      "funcao": "Colaborador",
+      "instituicao": "UFG",
+      "carga_horaria_semanal": null
+    },
+    {
+      "nome": "Rafael Teixeira Sousa",
+      "funcao": "Colaborador",
+      "instituicao": "UFMT",
       "carga_horaria_semanal": null
     }
   ],
   "datas": {
-    "inicio": "2025-02-06",
-    "fim": null,
-    "duracao_meses": null
+    "inicio": "2024-09-01",
+    "fim": "2025-08-31",
+    "duracao_meses": 12
   },
   "cronograma": [
     {
-      "atividade": "Levantamento bibliográfico para encontrar modelos de classificação de imagem",
-      "inicio": null,
-      "fim": null
+      "atividade": "Levantamento bibliográfico",
+      "inicio": "2024-09",
+      "fim": "2024-10"
     },
     {
-      "atividade": "Implementação do modelo com ajuste fino",
-      "inicio": null,
-      "fim": null
+      "atividade": "Coleta e preparação de bases de dados",
+      "inicio": "2024-09",
+      "fim": "2024-10"
     },
     {
-      "atividade": "Treinamento, validação e teste do classificador usando a base de dados do projeto",
-      "inicio": null,
-      "fim": null
+      "atividade": "Investigação e implementação dos modelos de aprendizagem de máquina",
+      "inicio": "2024-11",
+      "fim": "2025-04"
     },
     {
-      "atividade": "Testes combinando diferentes parâmetros para melhorar os resultados obtidos",
-      "inicio": null,
-      "fim": null
+      "atividade": "Validação experimental e análise dos resultados",
+      "inicio": "2025-03",
+      "fim": "2025-05"
+    },
+    {
+      "atividade": "Desenvolvimento do aplicativo de captura de dados",
+      "inicio": "2024-11",
+      "fim": "2025-08"
+    },
+    {
+      "atividade": "Documentação (confecção de relatórios e artigos)",
+      "inicio": "2025-05",
+      "fim": "2025-08"
+    },
+    {
+      "atividade": "Identificação de depressão e ansiedade via transferência de aprendizado (estudante 1)",
+      "inicio": "2024-09",
+      "fim": "2025-08"
+    },
+    {
+      "atividade": "Desenvolvimento de um aplicativo para coleta de dados com captura passiva de selfies (estudante 2)",
+      "inicio": "2024-09",
+      "fim": "2025-08"
+    },
+    {
+      "atividade": "Investigação do OpenFace para análise facial em selfies na identificação de depressão e ansiedade (estudante 3)",
+      "inicio": "2024-09",
+      "fim": "2025-08"
+    },
+    {
+      "atividade": "Detecção de sorrisos falsos em selfies (estudante 4)",
+      "inicio": "2024-09",
+      "fim": "2025-08"
     }
   ],
   "financiamento": {
-    "valor_total": null,
+    "valor_total": 106100.0,
     "moeda": "BRL",
     "fontes": [
       {
-        "fonte": "CNPq",
-        "valor": null,
-        "tipo": "Bolsa de Iniciação Científica"
+        "fonte": "Bolsa de Mestrado (UFES)",
+        "valor": 36000.0,
+        "tipo": "Bolsa"
+      },
+      {
+        "fonte": "Bolsa de Iniciação Científica (UFES)",
+        "valor": 28800.0,
+        "tipo": "Bolsa"
+      },
+      {
+        "fonte": "Computadores (UFES)",
+        "valor": 15000.0,
+        "tipo": "Equipamento"
+      },
+      {
+        "fonte": "Serviços de armazenagem em computação em nuvem (UFES)",
+        "valor": 7200.0,
+        "tipo": "Serviço"
+      },
+      {
+        "fonte": "Software para modelagem conceitual (UFES)",
+        "valor": 4500.0,
+        "tipo": "Software"
+      },
+      {
+        "fonte": "Passagens nacionais (UFES)",
+        "valor": 4800.0,
+        "tipo": "Deslocamento"
+      },
+      {
+        "fonte": "Diárias nacionais (UFES)",
+        "valor": 3000.0,
+        "tipo": "Deslocamento"
+      },
+      {
+        "fonte": "Bolsa DTI-B (UFG)",
+        "valor": 72000.0,
+        "tipo": "Bolsa"
+      },
+      {
+        "fonte": "Bolsa de Iniciação Científica (UFG)",
+        "valor": 16696.8,
+        "tipo": "Bolsa"
+      },
+      {
+        "fonte": "Serviços de armazenagem em computação em nuvem (UFG)",
+        "valor": 7200.0,
+        "tipo": "Serviço"
       }
     ]
   },
   "_meta": {
     "arquivo": "PJ_8141.pdf",
-    "paginas": 8,
-    "extraido_em": "2026-09-18T20:40:00.301982+00:00",
-    "modelo": "ministral-8b-latest",
+    "paginas": 87,
+    "extraido_em": "2026-08-10T21:30:57.784108+00:00",
+    "modelo": "mistral-large-latest",
     "fonte_texto": "pdf-text",
     "campos_ausentes": [
-      "datas.fim"
+      "coordenador.email"
     ]
   }
 }

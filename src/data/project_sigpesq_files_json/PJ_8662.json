@@ -1,57 +1,146 @@
 {
   "codigo": "PJ 8662",
-  "titulo": "Kit didático utilizando uma planta piloto de correias transportadoras",
-  "descricao": "Desenvolvimento de uma tela de supervisório para controle remoto de correia transportadora utilizando PyQt e ESP32 conectado a um inversor de frequência, visando modernizar processos industriais, melhorar a segurança e integrar conhecimentos teóricos e práticos em automação industrial.",
+  "titulo": "Traçador de Curva I-V para Usina Fotovoltaica",
+  "descricao": "O presente projeto tem como objetivo o desenvolvimento de um traçador de curva I-V (corrente x tensão) para sistemas fotovoltaicos (FV), com características inovadoras e custo reduzido em relação aos dispositivos atualmente disponíveis no mercado. O equipamento proposto será capaz de realizar medições de corrente, tensão e potência em diferentes níveis de carga, obtendo, assim, a curva característica I×V das strings (conjunto de módulos fotovoltaicos conectados em série) que compõem as usinas solares. O equipamento também coletará dados ambientais, como temperatura, umidade, velocidade e direção do vento, além da inclinação dos painéis, permitindo um diagnóstico mais eficiente da curva I×V obtida e diferenciando-se, assim, dos equipamentos atualmente disponíveis no mercado. Para isso, serão utilizados sensores específicos conectados ao microcontrolador ESP32 com tecnologia de comunicação sem fio LoRa, permitindo aplicações em ambientes rurais e urbanos.",
   "palavras_chave": [
-    "automação industrial",
-    "correias transportadoras",
-    "PyQt",
-    "ESP32",
-    "inversor de frequência",
-    "sistemas supervisórios",
-    "planta piloto",
-    "segurança industrial",
-    "ensino de automação",
-    "interface gráfica"
+    "Análise de Desempenho",
+    "Medição de Tensão",
+    "Corrente e tensão",
+    "Curva I-V",
+    "Eficiência Energética",
+    "Painéis Fotovoltaicos",
+    "Usina Fotovoltaica"
   ],
-  "area_conhecimento": "Engenharias",
-  "linha_pesquisa": null,
+  "area_conhecimento": "Engenharia Elétrica",
+  "linha_pesquisa": "Automação Industrial",
   "objetivos": {
-    "geral": "Implementar uma tela de supervisório utilizando a biblioteca PyQt em uma planta piloto de correia transportadora, buscando integrar recursos de programação, automação industrial, supervisão e comunicação entre dispositivos.",
+    "geral": "Desenvolver um traçador de curva I-V (corrente versus tensão) de baixo custo, para aplicações em usinas fotovoltaicas, capaz de realizar medições precisas de parâmetros elétricos (corrente, tensão e potência) e ambientais (radiação solar, temperatura, umidade, velocidade e direção do vento), além da inclinação da placa solar.",
     "especificos": [
-      "Desenvolver uma interface gráfica intuitiva e de fácil utilização para operação e acompanhamento da planta piloto.",
-      "Permitir o monitoramento das principais informações e variáveis relacionadas ao funcionamento da correia transportadora.",
-      "Integrar a interface desenvolvida aos sistemas de controle e comunicação já existentes na planta.",
-      "Aplicar conceitos de programação em Python, utilização da biblioteca PyQt, automação industrial e sistemas supervisórios."
+      "Estudar os principais traçadores de curva I-V disponíveis no mercado, identificando seus recursos, limitações e oportunidades de melhoria.",
+      "Capacitar a equipe envolvida no projeto por meio de treinamentos sobre o microcontrolador ESP32 e suas aplicações em sistemas embarcados.",
+      "Aprender a utilizar e integrar módulos sensores ambientais e elétricos, incluindo sensores de temperatura, umidade, radiação solar, inclinação, GPS, velocidade e direção do vento.",
+      "Compreender e aplicar os principais protocolos de comunicação entre dispositivos (Serial, I2C, SPI), garantindo compatibilidade e eficiência na coleta de dados.",
+      "Desenvolvimento de uma rede de comunicação sem fio entre o ESP LoRa (placa principal) e a unidade remota.",
+      "Projetar e construir o hardware da unidade central, responsável pela medição de corrente, tensão e potência, bem como pela recepção e armazenamento dos dados enviados pelos módulos remotos.",
+      "Desenvolver os módulos remotos com sensores ambientais e de inclinação dos painéis.",
+      "Implementar um sistema de coleta, armazenamento e organização de dados, com banco de dados local.",
+      "Realizar testes de funcionalidade com os sensores, verificando a estabilidade do sistema.",
+      "Desenvolver a interface IHM para visualização e análise dos dados coletados.",
+      "Realizar a calibração e validação do dispositivo desenvolvido por meio de comparações com equipamentos comerciais de referência.",
+      "Otimizar o desempenho do sistema, aprimorando hardware e software com base nos resultados dos testes.",
+      "Divulgar os resultados do projeto por meio de publicações científicas, técnicas e apresentações, promovendo o compartilhamento de conhecimento com a comunidade acadêmica e industrial."
     ]
   },
   "coordenador": {
-    "nome": "Rogério Passos do Amaral Pereira",
-    "email": "c3c5bcd356e7@anon.lgpd",
-    "campus": "Serra",
+    "nome": null,
+    "email": null,
+    "campus": null,
     "titulacao": null
   },
-  "equipe": [
-    {
-      "nome": "Bernardo Ferri Schirmer",
-      "funcao": "Bolsista",
-      "instituicao": "IFES",
-      "carga_horaria_semanal": null
-    }
-  ],
+  "equipe": [],
   "datas": {
-    "inicio": null,
-    "fim": "2026-08-31",
-    "duracao_meses": null
+    "inicio": "2025-01-01",
+    "fim": "2027-12-31",
+    "duracao_meses": 36
   },
   "cronograma": [
     {
-      "atividade": "Minicurso sobre PyQt (atrasado)",
+      "atividade": "Levantamento bibliográfico e análise de equipamentos existentes",
+      "inicio": "2025-01",
+      "fim": "2025-02"
+    },
+    {
+      "atividade": "Capacitação técnica em ESP32 e sensores",
+      "inicio": "2025-03",
+      "fim": "2025-04"
+    },
+    {
+      "atividade": "Planejamento do hardware e software",
+      "inicio": "2025-03",
+      "fim": "2025-04"
+    },
+    {
+      "atividade": "Desenvolvimento do hardware da unidade central",
+      "inicio": "2025-05",
+      "fim": "2025-08"
+    },
+    {
+      "atividade": "Integração e teste inicial de sensor de corrente, tensão e potência",
+      "inicio": "2025-07",
+      "fim": "2025-08"
+    },
+    {
+      "atividade": "Desenvolvimento do sistema de comunicação LoRa",
+      "inicio": "2025-07",
+      "fim": "2025-10"
+    },
+    {
+      "atividade": "Desenvolvimento dos módulos sensores remotos",
+      "inicio": "2025-09",
+      "fim": "2025-12"
+    },
+    {
+      "atividade": "Implementação do sistema de coleta e armazenamento de dados",
+      "inicio": "2025-11",
+      "fim": "2026-02"
+    },
+    {
+      "atividade": "Desenvolvimento da interface IHM",
+      "inicio": "2026-01",
+      "fim": "2026-04"
+    },
+    {
+      "atividade": "Testes funcionais do sistema",
+      "inicio": "2026-05",
+      "fim": "2026-06"
+    },
+    {
+      "atividade": "Calibração e validação com equipamentos de referência",
+      "inicio": "2026-07",
+      "fim": "2026-08"
+    },
+    {
+      "atividade": "Validação do MVP em ambiente real",
+      "inicio": "2026-09",
+      "fim": "2026-10"
+    },
+    {
+      "atividade": "Otimizações do sistema e consolidação do protótipo",
+      "inicio": "2026-11",
+      "fim": "2027-02"
+    },
+    {
+      "atividade": "Desenvolvimento de artigo",
+      "inicio": "2027-03",
+      "fim": "2027-06"
+    },
+    {
+      "atividade": "Implementação dos Sensores Elétricos (potência, tensão e corrente) e do circuito de potência",
       "inicio": null,
       "fim": null
     },
     {
-      "atividade": "Minicurso de Tkinter (com auxílio de outros alunos)",
+      "atividade": "Implementação do banco de dados e do sistema de aquisição utilizando o protocolo LoRa",
+      "inicio": null,
+      "fim": null
+    },
+    {
+      "atividade": "Implementação dos sensores de velocidade e direção do vento",
+      "inicio": null,
+      "fim": null
+    },
+    {
+      "atividade": "Desenvolvimento da interface IHM (Interface homem-máquina)",
+      "inicio": null,
+      "fim": null
+    },
+    {
+      "atividade": "Implementação dos módulos de geolocalização (GPS) e do módulo RTC – Real Time Clock",
+      "inicio": null,
+      "fim": null
+    },
+    {
+      "atividade": "Implementação dos sensores de temperatura e umidade",
       "inicio": null,
       "fim": null
     }
@@ -61,20 +150,22 @@
     "moeda": "BRL",
     "fontes": [
       {
-        "fonte": "CNPq",
+        "fonte": "GainTech",
         "valor": null,
-        "tipo": "Bolsa de Iniciação Científica"
+        "tipo": "Doação de componentes e suporte técnico"
       }
     ]
   },
   "_meta": {
     "arquivo": "PJ_8662.pdf",
-    "paginas": 6,
-    "extraido_em": "2026-09-18T20:47:49.273319+00:00",
-    "modelo": "ministral-8b-latest",
+    "paginas": 17,
+    "extraido_em": "2026-08-10T21:42:56.215955+00:00",
+    "modelo": "mistral-large-latest",
     "fonte_texto": "pdf-text",
     "campos_ausentes": [
-      "datas.inicio"
+      "coordenador.nome",
+      "coordenador.email",
+      "equipe"
     ]
   }
 }

@@ -1,105 +1,109 @@
 {
   "codigo": "PJ 4149",
   "titulo": "Desenvolvimento de uma interface gráfica para utilização do método NERI, para priorização gênica por importância relativa em redes complexas",
-  "descricao": "Desenvolvimento de um módulo autoconfigurável para visualização de redes complexas utilizando o Cytoscape, integrando o método NERI para auxiliar pesquisadores da área médica na análise de doenças complexas por meio de redes biológicas. O projeto visa facilitar a visualização e priorização gênica, melhorando a compreensão de doenças poligênicas e multifatoriais.",
+  "descricao": "Um dos grandes problemas enfrentados pelos pesquisadores da área de saúde é o estudo das doenças complexas, pois elas são poligênicas e multifatoriais, fazendo com que diferentes estudos apresentem baixa replicabilidade. Recentemente, avanços significativos tem sido obtidos por métodos que realizam integração de dados entre expressão gênica e dados de rede PPI (Protein-Protein Interaction Network). Dentre eles destaca-se o método NERI, que obteve bons resultados de replicabilidade. Esse método baseia-se nas hipóteses da Network Medicine combinadas com métodos de importância relativa em redes complexas. Entretanto, o método NERI possui interface baseada em linha de comando, o que dificulta sua utilização por pesquisadores da área médica. Neste projeto, desenvolveremos uma interface gráfica para o método NERI, bem como um tutorial com estudos de caso e um módulo de visualização de redes para análise dos resultados. Além disso, em relação à integração de dados, esta proposta inclui a atualização dos bancos de dados biológicos de PPI (HPRD, MINT e IntAct) e a integração destes com o Bioigrid.",
   "palavras_chave": [
-    "Bioinformática",
-    "Visualização de redes complexas",
-    "Método NERI",
-    "Doenças complexas",
-    "Cytoscape",
-    "Análise gênica",
-    "Interface gráfica",
-    "Redes de interação proteína-proteína (PPI)"
+    "Biologia Sistêmica",
+    "Redes Complexas",
+    "Mineração de Dados",
+    "Integração de Dados Biológicos",
+    "Network Medicine",
+    "Visualização de Dados"
   ],
-  "area_conhecimento": "Ciências Exatas e da Terra – Ciência da Computação – Metodologia e Técnicas da Computação",
-  "linha_pesquisa": "Bioinformática e Visualização de Dados Biológicos",
+  "area_conhecimento": "METODOLOGIAS E TÉCNICAS DA COMPUTAÇÃO",
+  "linha_pesquisa": "BIOINFORMÁTICA / CIÊNCIA DE DADOS",
   "objetivos": {
-    "geral": "Desenvolver um módulo de visualização de redes para análise dos resultados gerados pelo método NERI, visando auxiliar os pesquisadores da área de saúde na integração e análise de dados biológicos relacionados a doenças complexas.",
+    "geral": "Desenvolver uma interface gráfica para o método NERI, bem como um tutorial e um módulo de visualização de redes para análise dos resultados gerados, visando auxiliar os pesquisadores da área de saúde na integração e análise de dados biológicos relacionados com doenças complexas.",
     "especificos": [
       "Desenvolver um módulo de ETL (Extração, Transformação e Carga) de dados biológicos;",
-      "Atualizar e integrar dados de redes PPI (HPRD, MINT e INTACT) com a base BIOGRID;",
-      "Desenvolver um módulo de visualização de redes utilizando a biblioteca Cytoscape.JS para análise e visualização dos genes/interações priorizados pelo método NERI."
+      "Atualizar os dados da rede PPI (HPRD, MINT e INTACT) e integrá-los com os dados de redes PPI da base BIOGRID;",
+      "Estudo comparativo com outros métodos do estado da arte para análise de redes biológicas, tais como a ferramenta WCGNA e o algoritmo RWR.",
+      "Desenvolver um módulo de visualização de redes (utilizando a biblioteca Cytoscape.JS) para análise e visualização dos genes/interações priorizados pelo método NERI.",
+      "Desenvolver uma interface gráfica para o método NERI que contenha todas as funcionalidades;",
+      "Escrever um tutorial com estudos de caso exemplificando a um pesquisador da área de saúde como utilizar a ferramenta;"
     ]
   },
   "coordenador": {
-    "nome": "Sérgio Nery Simões",
-    "email": "a236e60ad8a2@anon.lgpd",
-    "campus": "Campus Serra",
+    "nome": null,
+    "email": null,
+    "campus": "IFES – Campus Serra",
     "titulacao": null
   },
   "equipe": [
     {
-      "nome": "Juliana Yuri Kanezaki de Souza",
-      "funcao": "Bolsista",
-      "instituicao": "Instituto Federal do Espírito Santo (IFES)",
+      "nome": "David Corrêa Martins Junior",
+      "funcao": "Colaborador",
+      "instituicao": "CMCC-UFABC",
       "carga_horaria_semanal": null
     }
   ],
   "datas": {
-    "inicio": "2017-06",
-    "fim": "2018-06-30",
+    "inicio": "2017-08-01",
+    "fim": "2018-07-31",
     "duracao_meses": 12
   },
   "cronograma": [
     {
-      "atividade": "Revisão do estado da arte em soluções para visualização de redes biológicas",
-      "inicio": "2017-01",
-      "fim": "2017-03"
-    },
-    {
-      "atividade": "Estudo do método NERI e do código em Python",
-      "inicio": "2017-02",
-      "fim": "2017-03"
-    },
-    {
-      "atividade": "Desenvolvimento da interface gráfica para utilização do método NERI",
-      "inicio": "2017-03",
-      "fim": "2017-07"
-    },
-    {
-      "atividade": "Estudo de JavaScript e da utilização da ferramenta Cytoscape.JS",
-      "inicio": "2017-05",
-      "fim": "2017-06"
-    },
-    {
-      "atividade": "Desenvolvimento do módulo de visualização de redes complexas",
-      "inicio": "2017-06",
-      "fim": "2017-09"
-    },
-    {
-      "atividade": "Teste de corretude e eventuais correções (utilizando metodologia diferente de TDD)",
+      "atividade": "Revisão do estado da arte em soluções para integração de dados biológicos;",
       "inicio": "2017-08",
       "fim": "2017-10"
     },
     {
-      "atividade": "Documentação da utilização da ferramenta com exemplos de redes complexas reais",
-      "inicio": "2017-10",
-      "fim": "2017-10"
+      "atividade": "Estudo do método NERI, do código Python, do Cytoscape.JS e atualização da rede PPI e Integração dos dados do BIOGRID;",
+      "inicio": "2017-08",
+      "fim": "2017-11"
     },
     {
-      "atividade": "Acompanhamento de testes de uso da ferramenta em parceria com a equipe da UFABC",
-      "inicio": "2017-11",
-      "fim": "2017-12"
+      "atividade": "Desenvolvimento da interface gráfica para utilização do método NERI;",
+      "inicio": "2017-10",
+      "fim": "2018-03"
+    },
+    {
+      "atividade": "Teste de corretude e eventuais correções usando TDD.",
+      "inicio": "2018-02",
+      "fim": "2018-04"
+    },
+    {
+      "atividade": "Documentação da ferramenta e tutorial de utilização com exemplos biológicos reais.",
+      "inicio": "2018-03",
+      "fim": "2018-06"
+    },
+    {
+      "atividade": "Validação do método com base em dados biológicos (Esquizofrenia e Autismo).",
+      "inicio": "2018-05",
+      "fim": "2018-07"
+    },
+    {
+      "atividade": "Escrita de um artigo para publicação em periódico internacional.",
+      "inicio": "2018-06",
+      "fim": "2018-07"
+    },
+    {
+      "atividade": "Desenvolvimento de uma interface gráfica para utilização do método NERI (Plano de trabalho do estudante 1);",
+      "inicio": "2017-10",
+      "fim": "2018-03"
+    },
+    {
+      "atividade": "Desenvolvimento de um módulo autoconfigurável para visualização de redes complexas utilizando o Cytoscape (Plano de trabalho do estudante 2);",
+      "inicio": "2017-12",
+      "fim": "2018-05"
     }
   ],
   "financiamento": {
     "valor_total": null,
     "moeda": "BRL",
-    "fontes": [
-      {
-        "fonte": "Instituto Federal do Espírito Santo (Ifes)",
-        "valor": null,
-        "tipo": "Institucional"
-      }
-    ]
+    "fontes": []
   },
   "_meta": {
     "arquivo": "PJ_4149.pdf",
-    "paginas": 10,
-    "extraido_em": "2026-09-18T19:54:48.839718+00:00",
-    "modelo": "ministral-8b-latest",
+    "paginas": 13,
+    "extraido_em": "2026-08-10T20:19:32.794163+00:00",
+    "modelo": "mistral-large-latest",
     "fonte_texto": "pdf-text",
-    "campos_ausentes": []
+    "campos_ausentes": [
+      "coordenador.nome",
+      "coordenador.email",
+      "financiamento"
+    ]
   }
 }

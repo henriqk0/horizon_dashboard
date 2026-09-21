@@ -1,81 +1,140 @@
 {
   "codigo": "PJ 8302",
   "titulo": "ANÁLISE FACIAL EM SELFIES PARA IDENTIFICAÇÃO DE ANSIEDADE E DEPRESSÃO EM PACIENTES GESTANTES",
-  "descricao": "Projeto de pesquisa que investiga o uso de Unidades de Ação Facial (AUs) extraídas de selfies de gestantes para rastreamento de sinais de depressão e ansiedade, utilizando a biblioteca Py-Feat e modelos de aprendizado de máquina.",
+  "descricao": "O projeto proposto tem como foco o desenvolvimento de um sistema de detecção de ansiedade e depressão em gestantes utilizando inteligência artificial (IA) e análise de expressões faciais. Considerando que a depressão é um problema de saúde pública global, a identificação precoce desses transtornos é crucial para prevenir complicações perinatais e promover o bem-estar materno e fetal. A abordagem envolve o uso de selfies tiradas pelas próprias gestantes, combinadas com questionários de autoavaliação, para treinar modelos preditivos baseados em aprendizado de máquina. Este método permite uma análise autêntica das expressões faciais, evitando limitações associadas a ambientes controlados. O projeto faz parte do macroprojeto 'Grávida Digital', desenvolvido em parceria com a Faculdade de Medicina da Universidade de São Paulo (FMUSP), que busca desenvolver IA para análise de dados obtidos de dispositivos celulares, incluindo voz, expressões faciais e padrões de uso do celular.",
   "palavras_chave": [
-    "Análise facial",
-    "Selfies",
-    "Depressão",
-    "Ansiedade",
-    "Gestantes",
-    "Inteligência Artificial",
-    "Visão Computacional",
-    "Unidades de Ação Facial (AUs)",
-    "Py-Feat",
-    "Aprendizado de Máquina",
-    "Saúde Mental",
-    "Computação Afetiva"
+    "COMPUTAÇÃO AFETIVA",
+    "APRENDIZADO DE MÁQUINA",
+    "RECONHECIMENTO DE EXPRESSÕES FACIAIS",
+    "TRANSFERÊNCIA DE APRENDIZADO",
+    "REDES NEURAIS CONVOLUCIONAIS",
+    "SAÚDE MENTAL"
   ],
   "area_conhecimento": "CIÊNCIA DA COMPUTAÇÃO",
-  "linha_pesquisa": null,
+  "linha_pesquisa": "VISÃO COMPUTACIONAL E APRENDIZADO DE MÁQUINA",
   "objetivos": {
-    "geral": "Investigar e explorar o uso da biblioteca Py-Feat na extração de características faciais a partir de selfies, visando o desenvolvimento e a avaliação de um classificador visual para o rastreamento de sinais de depressão e ansiedade em gestantes.",
+    "geral": "Construir uma IA para identificação de ansiedade e depressão em pacientes gestantes a partir da análise automática de selfies.",
     "especificos": [
-      "Extrair e estruturar as Unidades de Ação Facial (AUs) das selfies utilizando os detectores do Py-Feat.",
-      "Analisar a relação estatística entre as AUs extraídas e as pontuações do questionário PHQ-4.",
-      "Treinar e ajustar uma rede neural Multilayer Perceptron (MLP) testando diferentes quantidades de neurônios na camada oculta.",
-      "Avaliar a capacidade de generalização do modelo aplicando a validação cruzada Leave-One-Subject-Out (LOSO)."
+      "Desenvolver modelos preditivos para identificação de ansiedade e depressão em pacientes gestantes baseados em análise facial e aprendizado de máquina.",
+      "Comparar modelos de análise facial com outras modalidades desenvolvidas no 'Grávida Digital' (ex. análise de voz).",
+      "Incorporar o conhecimento de especialistas aos modelos preditivos baseados em análise facial e aprendizado de máquina.",
+      "Investigar o mecanismo de transferência de aprendizado a partir de modelo treinado em uma base de dados mais extensa em uma tarefa similar.",
+      "Adicionar uma camada de explicabilidade para proporcionar maior transparência nas decisões da IA para analistas humanos.",
+      "Determinar o melhor modelo preditivo como sendo o produto final (IA) do projeto."
     ]
   },
   "coordenador": {
-    "nome": "Thiago Meireles Paixão",
-    "email": "ab84379a56c9@anon.lgpd",
-    "campus": "Campus Serra",
+    "nome": "Thiago M. Paixão",
+    "email": null,
+    "campus": "Colatina",
     "titulacao": null
   },
   "equipe": [
     {
-      "nome": "Gabriela Prajo Beretta",
-      "funcao": "Bolsista",
+      "nome": "Thiago M. Paixão",
+      "funcao": "Coordenador",
       "instituicao": "IFES",
+      "carga_horaria_semanal": null
+    },
+    {
+      "nome": "Eduardo Max Amaro Amaral",
+      "funcao": "Colaborador",
+      "instituicao": "IFES",
+      "carga_horaria_semanal": null
+    },
+    {
+      "nome": "Alessandro L. Koerich",
+      "funcao": "Colaborador",
+      "instituicao": "École de Technologie Supérieure (ÉTS, Montreal, CAN)",
+      "carga_horaria_semanal": null
+    },
+    {
+      "nome": "Hermano Tavares",
+      "funcao": "Coordenador",
+      "instituicao": "FMUSP",
       "carga_horaria_semanal": null
     }
   ],
   "datas": {
-    "inicio": "2025-09-01",
-    "fim": "2026-08-30",
-    "duracao_meses": 12
+    "inicio": "2024-08-01",
+    "fim": "2026-07-31",
+    "duracao_meses": 24
   },
   "cronograma": [
     {
-      "atividade": "Levantamento Bibliográfico",
+      "atividade": "Coleta e preparação de bases de dados públicas (FER2013 e RAF-DB) a serem utilizadas no pré-treino de modelos.",
+      "inicio": "2024-08",
+      "fim": "2024-09"
+    },
+    {
+      "atividade": "Investigação e implementação dos modelos de aprendizado profundo estado-da-arte em reconhecimento de expressões faciais.",
+      "inicio": "2024-08",
+      "fim": "2024-11"
+    },
+    {
+      "atividade": "Treinamento e avaliação dos modelos.",
+      "inicio": "2024-10",
+      "fim": "2024-12"
+    },
+    {
+      "atividade": "Coleta de dados inicial das participantes da pesquisa: selfies e respostas ao questionário PHQ-4.",
+      "inicio": "2024-12",
+      "fim": "2025-02"
+    },
+    {
+      "atividade": "Preparação dos dados: detecção e alinhamento da face, filtragem de amostras espúrias e rotulação com base no PHQ-4.",
+      "inicio": "2025-01",
+      "fim": "2025-03"
+    },
+    {
+      "atividade": "Treinamento (finetuning) do modelo pré-treinado na coleção de selfies.",
+      "inicio": "2025-03",
+      "fim": "2025-05"
+    },
+    {
+      "atividade": "Validação da proposta inicial: experimentos com validação cruzada; comparação de desempenho com sistema baseado em análise de voz.",
+      "inicio": "2025-04",
+      "fim": "2025-06"
+    },
+    {
+      "atividade": "Escrita de um artigo com os resultados preliminares (aluno mestrado).",
+      "inicio": "2025-05",
+      "fim": "2025-07"
+    },
+    {
+      "atividade": "Preparação dos dados: rotulação dos dados com base nos critérios para separação entre depressão e ansiedade.",
+      "inicio": "2025-07",
+      "fim": "2025-08"
+    },
+    {
+      "atividade": "Retreinamento (finetuning) do modelo pré-treinado na coleção de selfies.",
+      "inicio": "2025-08",
+      "fim": "2025-09"
+    },
+    {
+      "atividade": "Validação da proposta: experimentos com validação cruzada; comparação da assertividade do novo modelo (multiclasse) em relação ao cenário mais simples (duas classes).",
       "inicio": "2025-09",
       "fim": "2025-10"
     },
     {
-      "atividade": "Coleta e preparação de bases de dados",
-      "inicio": "2025-09",
-      "fim": "2025-10"
-    },
-    {
-      "atividade": "Estudo de ferramentas para extração de características faciais",
-      "inicio": "2025-10",
+      "atividade": "Levantamento dos pontos críticos (unidades de ação) associados às expressões faciais e quadros de depressão/ansiedade.",
+      "inicio": "2025-11",
       "fim": "2025-12"
     },
     {
-      "atividade": "Implementação dos modelos de aprendizado de máquina",
-      "inicio": "2026-01",
+      "atividade": "Adaptação do modelo e do processo de treinamento para inclusão dos pontos críticos.",
+      "inicio": "2025-12",
+      "fim": "2026-02"
+    },
+    {
+      "atividade": "Validação da proposta: experimentos com validação cruzada; comparação com modelos sem pontos críticos.",
+      "inicio": "2026-02",
       "fim": "2026-04"
     },
     {
-      "atividade": "Validação experimental e análise dos resultados",
-      "inicio": "2026-03",
-      "fim": "2026-07"
-    },
-    {
-      "atividade": "Relatórios",
-      "inicio": "2026-06",
-      "fim": "2026-08"
+      "atividade": "Escrita de um artigo com a consolidação dos resultados.",
+      "inicio": "2026-04",
+      "fim": "2026-06"
     }
   ],
   "financiamento": {
@@ -83,18 +142,20 @@
     "moeda": "BRL",
     "fontes": [
       {
-        "fonte": "CNPq",
+        "fonte": "Instituto Nacional de Ciência e Tecnologia - Instituto Nacional de Psiquiatria do Desenvolvimento (INPD)",
         "valor": null,
-        "tipo": null
+        "tipo": "Financiamento público"
       }
     ]
   },
   "_meta": {
     "arquivo": "PJ_8302.pdf",
-    "paginas": 10,
-    "extraido_em": "2026-09-18T20:43:07.645912+00:00",
-    "modelo": "ministral-8b-latest",
+    "paginas": 83,
+    "extraido_em": "2026-08-10T21:36:03.245163+00:00",
+    "modelo": "mistral-large-latest",
     "fonte_texto": "pdf-text",
-    "campos_ausentes": []
+    "campos_ausentes": [
+      "coordenador.email"
+    ]
   }
 }

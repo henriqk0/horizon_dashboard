@@ -1,96 +1,261 @@
 {
   "codigo": "PJ 4559",
   "titulo": "Cadeira de Rodas Inteligente",
-  "descricao": "Projeto de pesquisa que visa realizar um levantamento de conceitos e tecnologias para implementação de aplicações de controle autônomo de robôs, utilizando o framework ROS (Robot Operating System) em ambiente on-cloud. O projeto aborda soluções para integração de robôs com processamento remoto, como ROSLink e ROSRemote, além de explorar arquiteturas de software e processamento em nuvem para melhorar o desempenho e a autonomia de robôs.",
+  "descricao": "No Brasil existem mais de 24 milhões de deficientes e uma grande parte é cadeirante. Assim, neste projeto se propõe melhorar a qualidade de vida dos cadeirantes, através do desenvolvimento de uma cadeira de rodas inteligente. Desta forma o cadeirante poderá especificar de diferentes formas o destino e a cadeira de rodas navegará de forma inteligente até o lugar desejado. Este é um objetivo bastante desafiador, já que envolve a implementação de diferentes algoritmos de controle, localização, inteligência artificial, entre outros. O grupo de pesquisa vem trabalhando há vários anos estudando inicialmente o hardware e os algoritmos básicos de navegação. Em outros projetos de pesquisa se instrumentou a cadeira de rodas com encoders, sensores inerciais (Giroscópio, acelerômetros e magnetômetros) e com um sistema embarcado com wifi para supervisão e programação remota. Também foram implementados algoritmos como odometria, controladores PID de velocidade das rodas, controladores de trajetória, calibração de sensores inerciais, fusão de dados usando o Filtro de Kalman para localização do robô, algoritmos de localização por visão computacional, entre outros mais básicos. Com esta proposta esperamos continuar com os trabalhos consolidando o estudo e implantação de diferentes algoritmos que permitam realizar uma navegação real e segura de um cadeirante.",
   "palavras_chave": [
-    "Cadeira de Rodas Inteligente",
-    "ROS (Robot Operating System)",
-    "Controle Autônomo",
-    "Processamento On-Cloud",
-    "ROSLink",
-    "ROSRemote",
-    "Arquitetura de Software",
-    "SLAM (Simultaneous Localization and Mapping)",
-    "PythonRobotics",
-    "Arduino",
-    "Python",
-    "Automação",
-    "Engenharia de Controle"
+    "Robótica móvel",
+    "Evasão de obstáculos",
+    "Controladores de trajetória",
+    "Filtro de partículas"
   ],
-  "area_conhecimento": "Engenharias IV",
-  "linha_pesquisa": null,
+  "area_conhecimento": "Robótica, Mecatrônica e Automação",
+  "linha_pesquisa": "Robótica móvel",
   "objetivos": {
-    "geral": "Realizar um levantamento de conceitos e tecnologias que possibilitem a implementação de aplicações para controle autônomo de robôs, on cloud, utilizando ROS.",
+    "geral": "Estudar e implementar os algoritmos necessários para desenvolver uma cadeira de rodas inteligente.",
     "especificos": [
-      "Estudo do ROS (Robot Operating System)",
-      "Explorar a coleção PythonRobotics",
-      "Explorar soluções de arquitetura de software on cloud",
-      "Estudo do ROSLink e ROSRemote"
+      "Contribuir com a formação científica dos alunos do IFES na área da robótica aplicada.",
+      "Dar continuidade aos trabalhos iniciados no ano 2015 com o projeto: 'Desenvolvimento de uma cadeira de rodas autônoma'.",
+      "Instalar e configurar um Scanner Laser LIDAR na cadeira de rodas motorizada.",
+      "Implementar o Filtro de Partículas para localização da cadeira de rodas.",
+      "Avaliar o uso de LandMarks para facilitar a navegação de robôs móveis.",
+      "Testar a fusão de dados de um Giroscópio com a odometria.",
+      "Implementar um hardware e um algoritmo para a calibração de um magnetômetro.",
+      "Realizar a fusão de dados do giroscópio, odometria e do magnetômetro.",
+      "Propor um algoritmo de navegação usando fusão de dados dos sensores inerciais com a odometria e com o Filtro de Partículas.",
+      "Propor uma rede neural que permita a cadeira inteligente escolher o caminho a ser percorrido.",
+      "Motivar os jovens estudantes a participar em atividades de inovação tecnológica, feiras, escrita de artigos e eventos científicos."
     ]
   },
   "coordenador": {
-    "nome": "Marco Antonio de Souza Leite Cuadros",
-    "email": "aff22c278b26@anon.lgpd",
+    "nome": "Marco Antonio de Souza L. Cuadros",
+    "email": null,
     "campus": "Serra",
     "titulacao": null
   },
   "equipe": [
     {
-      "nome": "Matheus Corteletti Delfino",
-      "funcao": "Bolsista",
-      "instituicao": "Instituto Federal de Educação, Ciência e Tecnologia do Espírito Santo (IFES)",
+      "nome": "Marco Antonio de Souza L. Cuadros",
+      "funcao": "Coordenador",
+      "instituicao": "IFES",
+      "carga_horaria_semanal": null
+    },
+    {
+      "nome": "H. G. Faria",
+      "funcao": "Pesquisador",
+      "instituicao": null,
+      "carga_horaria_semanal": null
+    },
+    {
+      "nome": "R. P. Amaral",
+      "funcao": "Pesquisador",
+      "instituicao": null,
+      "carga_horaria_semanal": null
+    },
+    {
+      "nome": "G. M. Almeida",
+      "funcao": "Pesquisador",
+      "instituicao": null,
+      "carga_horaria_semanal": null
+    },
+    {
+      "nome": "D. F. T. Gamarra",
+      "funcao": "Pesquisador",
+      "instituicao": null,
+      "carga_horaria_semanal": null
+    },
+    {
+      "nome": "L. G. Batista",
+      "funcao": "Pesquisador",
+      "instituicao": null,
+      "carga_horaria_semanal": null
+    },
+    {
+      "nome": "R. S. Alves",
+      "funcao": "Pesquisador",
+      "instituicao": null,
+      "carga_horaria_semanal": null
+    },
+    {
+      "nome": "G. S. Martins",
+      "funcao": "Pesquisador",
+      "instituicao": null,
+      "carga_horaria_semanal": null
+    },
+    {
+      "nome": "P. F. Salarolli",
+      "funcao": "Pesquisador",
+      "instituicao": null,
+      "carga_horaria_semanal": null
+    },
+    {
+      "nome": "V. R. Motta",
+      "funcao": "Pesquisador",
+      "instituicao": null,
+      "carga_horaria_semanal": null
+    },
+    {
+      "nome": "B. P. S. Freitas",
+      "funcao": "Pesquisador",
+      "instituicao": null,
+      "carga_horaria_semanal": null
+    },
+    {
+      "nome": "M. G. Medeiros",
+      "funcao": "Pesquisador",
+      "instituicao": null,
+      "carga_horaria_semanal": null
+    },
+    {
+      "nome": "J. Silva",
+      "funcao": "Pesquisador",
+      "instituicao": null,
+      "carga_horaria_semanal": null
+    },
+    {
+      "nome": "N. D. B. Bernardes",
+      "funcao": "Pesquisador",
+      "instituicao": null,
+      "carga_horaria_semanal": null
+    },
+    {
+      "nome": "Felipe A. de Castro",
+      "funcao": "Pesquisador",
+      "instituicao": null,
+      "carga_horaria_semanal": null
+    },
+    {
+      "nome": "L. M. Ayres",
+      "funcao": "Pesquisador",
+      "instituicao": null,
+      "carga_horaria_semanal": null
+    },
+    {
+      "nome": "L. L. S. Fortes",
+      "funcao": "Pesquisador",
+      "instituicao": null,
+      "carga_horaria_semanal": null
+    },
+    {
+      "nome": "S. Q. Andrade",
+      "funcao": "Pesquisador",
+      "instituicao": null,
+      "carga_horaria_semanal": null
+    },
+    {
+      "nome": "E. Rocha",
+      "funcao": "Pesquisador",
+      "instituicao": null,
+      "carga_horaria_semanal": null
+    },
+    {
+      "nome": "A. P. F. Machado",
+      "funcao": "Pesquisador",
+      "instituicao": null,
+      "carga_horaria_semanal": null
+    },
+    {
+      "nome": "D. Cabaglieir",
+      "funcao": "Pesquisador",
+      "instituicao": null,
       "carga_horaria_semanal": null
     }
   ],
   "datas": {
-    "inicio": "2019-07-01",
-    "fim": "2020-08-01",
-    "duracao_meses": 13
+    "inicio": "2019-08-01",
+    "fim": "2021-07-31",
+    "duracao_meses": 24
   },
   "cronograma": [
     {
-      "atividade": "Revisão da literatura",
-      "inicio": "2019-01",
+      "atividade": "Revisão da literatura (Estado da arte)",
+      "inicio": "2019-08",
       "fim": "2019-08"
     },
     {
-      "atividade": "Estudo do framework ROS",
-      "inicio": "2019-01",
-      "fim": "2019-04"
+      "atividade": "Complementar a instrumentação da cadeira inteligente com sensores ultrassom e scanner laser LIDAR",
+      "inicio": "2019-09",
+      "fim": "2019-10"
     },
     {
-      "atividade": "Estudo de implementação de robô usando Arduino",
-      "inicio": "2019-03",
-      "fim": "2019-06"
+      "atividade": "Implementação e testes em ambiente real da fusão sensorial do giroscópio, magnetômetro e a odometria",
+      "inicio": "2019-11",
+      "fim": "2020-03"
     },
     {
-      "atividade": "Estudo da implementação usando Python",
-      "inicio": "2019-04",
-      "fim": "2019-11"
+      "atividade": "Implementação e testes da fusão dos sensores inerciais e dos LandMarks",
+      "inicio": "2020-04",
+      "fim": "2020-06"
     },
     {
-      "atividade": "Estudo da implementação das soluções on-cloud",
-      "inicio": "2019-07",
-      "fim": "2020-01"
+      "atividade": "Estudo e implementação do Filtro de Partículas para localização",
+      "inicio": "2020-05",
+      "fim": "2020-08"
+    },
+    {
+      "atividade": "Propor e implementar uma estrutura de navegação usando a fusão de dados inerciais e o filtro de partículas",
+      "inicio": "2020-09",
+      "fim": "2020-11"
+    },
+    {
+      "atividade": "Implementar uma rede neural para escolha de caminho de um robô móvel",
+      "inicio": "2020-12",
+      "fim": "2021-02"
+    },
+    {
+      "atividade": "Propor uma estrutura geral de navegação para uma cadeira de rodas inteligente e realização de testes usando o Framework ROS",
+      "inicio": "2021-03",
+      "fim": "2021-05"
+    },
+    {
+      "atividade": "Testes com pessoas deficientes",
+      "inicio": "2021-06",
+      "fim": "2021-06"
+    },
+    {
+      "atividade": "Escrita de relatórios",
+      "inicio": "2021-06",
+      "fim": "2021-07"
+    },
+    {
+      "atividade": "Submissão de artigos. Participação em eventos, feiras, congressos, etc.",
+      "inicio": "2021-07",
+      "fim": "2021-07"
+    },
+    {
+      "atividade": "Criação de um ambiente de Simulação no Gazebo da cadeira de Rodas Inteligente",
+      "inicio": "2019-08",
+      "fim": "2020-07"
+    },
+    {
+      "atividade": "Como usar o OpenCV no ROS, seguidor de linha de uma cadeira de Rodas Robotizada usando Imagens",
+      "inicio": "2019-08",
+      "fim": "2020-07"
+    },
+    {
+      "atividade": "Instrumentar a cadeira de Rodas com uma rede de sensores Ultrassom usando I2C",
+      "inicio": "2019-08",
+      "fim": "2020-05"
     }
   ],
   "financiamento": {
-    "valor_total": null,
+    "valor_total": 12000.0,
     "moeda": "BRL",
     "fontes": [
       {
-        "fonte": "Instituto Federal de Educação, Ciência e Tecnologia do Espírito Santo (Ifes)",
-        "valor": null,
-        "tipo": "Voluntariado: sem financiamento externo"
+        "fonte": "CNPq-SETEC/MEC",
+        "valor": 12000.0,
+        "tipo": "Financiamento público"
       }
     ]
   },
   "_meta": {
     "arquivo": "PJ_4559.pdf",
-    "paginas": 15,
-    "extraido_em": "2026-09-18T19:58:41.695426+00:00",
-    "modelo": "ministral-8b-latest",
+    "paginas": 17,
+    "extraido_em": "2026-08-10T20:25:00.304467+00:00",
+    "modelo": "mistral-large-latest",
     "fonte_texto": "pdf-text",
-    "campos_ausentes": []
+    "campos_ausentes": [
+      "coordenador.email"
+    ]
   }
 }

@@ -1,7 +1,7 @@
 {
   "codigo": "PJ 5430",
   "titulo": "Roteamento Multi-Caminho com Filas Programáveis dirigido pelo Sistema Numérico de Resíduos",
-  "descricao": "Projeto de pesquisa que propõe investigar o roteamento multi-caminho com filas programáveis dirigido pelo sistema numérico de resíduos, visando simplificar o modelo de encaminhamento de pacotes em redes, utilizando operações matemáticas simples como resto da divisão (módulo) em vez de buscas em tabelas. O projeto busca avançar o estado da arte em redes de computadores, especialmente em redes definidas por software (SDN), com foco em melhorar a eficiência, flexibilidade e agilidade das redes, além de explorar a programabilidade de filas e a utilização de algoritmos baseados em sistemas de congruências.",
+  "descricao": "Programabilidade em rede permite aos projetistas adicionar, remover ou modificar o estado das conexões sob demanda. Configurando dinamicamente os estados nos elementos de rede, projetistas podem arquitetar suas redes de modo que essas se comportem otimamente de acordo com algum objetivo de desempenho (ex. baixa latência ou alta vazão). Isso pode ser alcançado de vários modos, tais como pela programação dos nós intermediários, pela programação do roteamento, ou mesmo gerenciando os fluxos dirigidos por algoritmos para garantir os serviços oferecidos aos sistemas finais. Recentemente, as Redes Definidas por Software (SDN) foram introduzidas com a finalidade de definir uma interface programável padronizada (exemplo, protocolo OpenFlow). Apesar dos avanços tecnológicos, no projeto da arquitetura SDN clássica, não há distinção clara entre as partes funcionais, tais como os elementos de núcleo e borda. Nesse projeto de pesquisa, propomos investigar o roteamento multi-caminho com filas programáveis dirigido pelo sistema numérico de resíduos. Essa ideia tem potencial para avançar o estado da arte na área de redes, essencialmente devido a uma simplificação no modelo de encaminhamento para os nós de rede. Ao invés de encaminhar pacotes baseado em operações de busca em tabela, os nós encaminham pacotes usando operações simples de resto da divisão (módulo).",
   "palavras_chave": [
     "Redes de Computadores",
     "Redes Definidas por Software",
@@ -10,151 +10,156 @@
   "area_conhecimento": "Ciência da Computação » Sistemas de Computação » Teleinformática",
   "linha_pesquisa": null,
   "objetivos": {
-    "geral": "Propor uma arquitetura de redes de computadores programável, utilizando métodos flexíveis de encaminhamento no plano de dados, baseados em redes definidas por resíduos (RDN), orquestrando fluxos de dados com ciência da topologia e carga, e utilizando a linguagem de programação P4.",
+    "geral": "O presente projeto tem como objetivo propor uma arquitetura de redes de computadores programável, utilizando métodos flexíveis de encaminhamento no plano de dados. A programabilidade será provida pela (i) abordagem de roteamento sem tabelas (tableless) inerente à proposta de Redes Definidas por Resíduos (do inglês Residue Defined Network – RDN), (ii) orquestrando os fluxos de dados tendo ciência da topologia e carga, (iii) utilizando a linguagem de programação P4, embarcada em dispositivos e servidores de rede.",
     "especificos": [
-      "Projetar, implementar e avaliar uma arquitetura de rede programável capaz de suportar o crescimento dos estados de encaminhamento.",
-      "Melhorar a eficiência na comutação de pacotes para comunicação unicast e multicast.",
-      "Flexibilizar as arquiteturas de rede para separar claramente as partes funcionais (núcleo, borda e gerenciamento).",
-      "Desenvolver mecanismos para fornecer proteção em todo o caminho principal de forma simples, sem reescrita de pacotes ou troca de mensagens de controle.",
-      "Prototipar e implementar a proposta em ambientes emulados e físicos, avaliando o desempenho e a programabilidade distribuída e centralizada."
+      "Projeto, implementação e avaliação de uma arquitetura de rede programável, capaz de suportar o crescimento dos estados de encaminhamento;",
+      "Melhorar a eficiência na comutação de pacotes para comunicação unicast e multicast, colaborando assim para evolução das aplicações e serviços;",
+      "Flexibilizar as arquiteturas de rede para suportar a separação clara entre as partes funcionais de uma Rede de DataCenter, como núcleo, borda e gerenciamento, a fim de facilitar o desenvolvimento contínuo de forma inovadora, independente e escalável;",
+      "Desenvolver e avaliar mecanismos habilitadores para fornecer proteção em todo o caminho principal de forma simples, sem reescrita do pacote a cada salto, sem troca de mensagens de controle e sinalização."
     ]
   },
   "coordenador": {
     "nome": "Magnos Martinello",
-    "email": "13cd4b6f6af2@anon.lgpd",
-    "campus": "Vitória",
+    "email": "d361f9c25f0d@anon.lgpd",
+    "campus": "VITÓRIA",
     "titulacao": "Doutor"
   },
   "equipe": [
     {
+      "nome": "Magnos Martinello",
+      "funcao": "Coordenador",
+      "instituicao": "UFES - VITÓRIA",
+      "carga_horaria_semanal": null
+    },
+    {
       "nome": "Diego Rossi Mafioletti",
-      "funcao": "Aluno de Doutorado",
-      "instituicao": "IFES - Colatina",
-      "carga_horaria_semanal": 2.0
+      "funcao": "Estudante/Orientando",
+      "instituicao": "IFES - COLATINA",
+      "carga_horaria_semanal": null
     },
     {
       "nome": "Cristina Klippel Dominicini",
-      "funcao": "Aluno de Doutorado",
-      "instituicao": "IFES - Serra",
-      "carga_horaria_semanal": 2.0
+      "funcao": "Estudante/Orientando",
+      "instituicao": "IFES - SERRA",
+      "carga_horaria_semanal": null
     },
     {
       "nome": "Rafael Silva Guimarães",
-      "funcao": "Aluno de Doutorado",
-      "instituicao": "IFES - Cachoeiro de Itapemirim",
-      "carga_horaria_semanal": 2.0
+      "funcao": "Estudante/Orientando",
+      "instituicao": "IFES - CACHOEIRO DE ITAPEMIRIM",
+      "carga_horaria_semanal": null
     },
     {
       "nome": "Christian Esteve Rothenberg",
-      "funcao": "Pesquisador Principal",
+      "funcao": "Pesquisador",
       "instituicao": "Unicamp",
-      "carga_horaria_semanal": 2.0
+      "carga_horaria_semanal": null
     },
     {
       "nome": "Luis Carlos Erpen de Bona",
-      "funcao": "Pesquisador Principal",
+      "funcao": "Pesquisador",
       "instituicao": "UFPR",
-      "carga_horaria_semanal": 2.0
+      "carga_horaria_semanal": null
     },
     {
       "nome": "Roberta Lima Gomes",
-      "funcao": "Pesquisador Principal",
-      "instituicao": "UFES - Vitória",
-      "carga_horaria_semanal": 2.0
+      "funcao": "Pesquisador",
+      "instituicao": "UFES - VITÓRIA",
+      "carga_horaria_semanal": null
     },
     {
       "nome": "Alextian Bartholomeu Liberato",
-      "funcao": "Pesquisador Colaborador",
-      "instituicao": "IFES - Colatina",
-      "carga_horaria_semanal": 2.0
+      "funcao": "Colaborador",
+      "instituicao": "IFES - COLATINA",
+      "carga_horaria_semanal": null
     },
     {
       "nome": "Allan Francisco Forzza Amaral",
-      "funcao": "Pesquisador Colaborador",
-      "instituicao": "IFES - Colatina",
-      "carga_horaria_semanal": 2.0
+      "funcao": "Colaborador",
+      "instituicao": "IFES - COLATINA",
+      "carga_horaria_semanal": null
     }
   ],
   "datas": {
     "inicio": "2019-02-01",
-    "fim": null,
+    "fim": "2021-01-31",
     "duracao_meses": 24
   },
   "cronograma": [
     {
-      "atividade": "Análise das topologias centradas a servidores",
+      "atividade": "1.1. Análise das topologias centradas a servidores",
       "inicio": "2019-02",
       "fim": "2019-07"
     },
     {
-      "atividade": "Execução do relatório técnico do projeto",
+      "atividade": "9.1. Execução do relatório técnico do projeto",
       "inicio": "2019-02",
-      "fim": "2020-11"
+      "fim": "2021-01"
     },
     {
-      "atividade": "Criação de protótipos em emulação",
-      "inicio": "2019-04",
-      "fim": "2019-09"
+      "atividade": "2.1. Criação de protótipos em emulação",
+      "inicio": "2019-05",
+      "fim": "2019-10"
     },
     {
-      "atividade": "Estudo e compreensão da linguagem P4",
-      "inicio": "2019-04",
-      "fim": "2019-09"
+      "atividade": "1.2. Estudo e compreensão da linguagem P4",
+      "inicio": "2019-05",
+      "fim": "2019-10"
     },
     {
-      "atividade": "Implantação da proposta em ambiente emulado",
-      "inicio": "2019-07",
-      "fim": "2020-03"
+      "atividade": "3.1. Implantação da proposta em ambiente emulado",
+      "inicio": "2019-08",
+      "fim": "2020-04"
     },
     {
-      "atividade": "Avaliação de desempenho",
-      "inicio": "2019-07",
-      "fim": "2019-12"
-    },
-    {
-      "atividade": "Implantação da proposta em ambiente físico",
-      "inicio": "2019-07",
-      "fim": "2020-03"
-    },
-    {
-      "atividade": "Implantação da proposta de roteamento por RDN",
-      "inicio": "2019-10",
-      "fim": "2020-06"
-    },
-    {
-      "atividade": "Avaliação da proposta de roteamento por RDN",
-      "inicio": "2019-10",
-      "fim": "2020-06"
-    },
-    {
-      "atividade": "Prototipação da proposta",
-      "inicio": "2019-13",
-      "fim": "2020-11"
-    },
-    {
-      "atividade": "Implementação da proposta",
-      "inicio": "2019-13",
-      "fim": "2020-11"
-    },
-    {
-      "atividade": "Visita técnica-científica internacional",
-      "inicio": "2019-16",
-      "fim": "2020-02"
-    },
-    {
-      "atividade": "Avaliação da programabilidade distribuída",
-      "inicio": "2019-16",
+      "atividade": "2.2. Avaliação de desempenho",
+      "inicio": "2019-08",
       "fim": "2020-01"
     },
     {
-      "atividade": "Publicação de artigos",
-      "inicio": "2019-16",
-      "fim": "2020-02"
+      "atividade": "3.2. Implantação da proposta em ambiente físico",
+      "inicio": "2019-08",
+      "fim": "2020-04"
     },
     {
-      "atividade": "Avaliação da programabilidade centralizada na rede",
-      "inicio": "2019-16",
-      "fim": "2020-01"
+      "atividade": "4.1. Implantação da proposta de roteamento por RDN",
+      "inicio": "2019-11",
+      "fim": "2020-07"
+    },
+    {
+      "atividade": "4.2. Avaliação da proposta de roteamento por RDN",
+      "inicio": "2019-11",
+      "fim": "2020-07"
+    },
+    {
+      "atividade": "5.1. Prototipação da proposta",
+      "inicio": "2020-02",
+      "fim": "2020-10"
+    },
+    {
+      "atividade": "5.2. Implementação da proposta",
+      "inicio": "2020-02",
+      "fim": "2020-10"
+    },
+    {
+      "atividade": "7.1. Visita técnica-científica internacional",
+      "inicio": "2020-05",
+      "fim": "2021-01"
+    },
+    {
+      "atividade": "6.2. Avaliação da programabilidade distribuída",
+      "inicio": "2020-05",
+      "fim": "2020-10"
+    },
+    {
+      "atividade": "8.1. Publicação de artigos",
+      "inicio": "2020-05",
+      "fim": "2021-01"
+    },
+    {
+      "atividade": "6.1. Avaliação da programabilidade centralizada na rede",
+      "inicio": "2020-05",
+      "fim": "2020-10"
     }
   ],
   "financiamento": {
@@ -164,18 +169,16 @@
       {
         "fonte": "FAPES",
         "valor": 43400.0,
-        "tipo": "Recursos Aprovados"
+        "tipo": "Financiamento público"
       }
     ]
   },
   "_meta": {
     "arquivo": "PJ_5430.pdf",
     "paginas": 12,
-    "extraido_em": "2026-09-18T20:09:08.836787+00:00",
-    "modelo": "ministral-8b-latest",
+    "extraido_em": "2026-08-10T20:38:31.395786+00:00",
+    "modelo": "mistral-large-latest",
     "fonte_texto": "pdf-text",
-    "campos_ausentes": [
-      "datas.fim"
-    ]
+    "campos_ausentes": []
   }
 }

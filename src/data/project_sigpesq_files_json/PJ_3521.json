@@ -1,103 +1,111 @@
 {
   "codigo": "PJ 3521",
   "titulo": "Pré-classificação de Base de Dados Multibiométricos de Grande Escala baseado em Medidas Biométricas Leves e Não-invasivas",
-  "descricao": "Projeto de pesquisa que visa comparar a assertividade das respostas de aplicações de análise cognitiva (IBM Watson, Amazon Rekognition e Microsoft Azure Cognitive Services) quanto à identificação de biometrias leves, como idade aparente e gênero aparente, em uma base de dados com anotações humanas. Analisou-se também a influência de atributos como raça, presença de pelos faciais, maquiagem e emoção na precisão das ferramentas.",
+  "descricao": "Um dos desafios num sistema de identificação biométrica é a questão de performance quando a base de dados for de larga escala. A proposta deste projeto é o desenvolvimento de um sistema de filtro de pesquisa para a diminuição de base de dados biométricos baseado em medidas biométricas leves e não invasivas. Todos os atributos biométricos leves são extraídos automaticamente a partir de imagens das câmeras de segurança. O sistema multibiométrico proposto é unisensor (câmera tradicional), unimodal (apenas imagens) e multi-algoritmos (pois extrai vários atributos do mesmo dado biométrico) e deverá ser capaz de refinar a base, mesmo que não tenha todas as medidas listadas no conjunto de biometrias leves.",
   "palavras_chave": [
-    "biometria leve",
-    "análise cognitiva",
-    "reconhecimento facial",
-    "idade aparente",
-    "gênero aparente",
-    "IBM Watson",
-    "Amazon Rekognition",
-    "Microsoft Azure Cognitive Services",
-    "base de dados biométricos",
-    "iniciação científica"
+    "Biometria Leve",
+    "Biometria Não Invasiva",
+    "Base de dados Multibiométricos"
   ],
-  "area_conhecimento": "Ciência da Computação",
-  "linha_pesquisa": null,
+  "area_conhecimento": "Ciências Exatas e da Terra",
+  "linha_pesquisa": "Reconhecimento de Padrões",
   "objetivos": {
-    "geral": "Comparar a assertividade das respostas das aplicações de análise cognitiva (IBM Watson, Amazon Rekognition e Microsoft Azure Cognitive Services) quanto à identificação de biometrias leves, idade aparente e gênero aparente, em uma base de dados com anotações humanas.",
+    "geral": "A proposta deste projeto é o desenvolvimento de um sistema de refinamento de pesquisa para a aplicação de identificação pessoal baseado em medidas biométricas leves e não invasivas, na qual todos os atributos biométricos são extraídos automaticamente a partir de imagens.",
     "especificos": [
-      "Analisar a precisão de cada ferramenta na identificação de gênero e idade aparente.",
-      "Estudar a influência de atributos como raça, presença de pelos faciais, maquiagem e emoção na precisão das ferramentas.",
-      "Identificar padrões ou correlações entre os resultados das APIs e atributos anotados na base de dados.",
-      "Comparar o desempenho das ferramentas em relação à quantidade de imagens processadas com sucesso."
+      "Realizar estudo de sistema correlatos para as medidas biométrica leves: sexo, raça, altura, idade, peso, cor do cabelo, cor da pele e cor dos olhos.",
+      "Para cada medida biométrica leve (sexo, raça, altura, idade, peso, cor do cabelo, cor da pele, cor dos olhos, andar e tatuagem), comparar a eficiência do sistema de reconhecimento de faces com e sem o uso da medida biométrica leve.",
+      "Para cada medida biométrica leve (sexo, raça, altura, idade, peso, cor do cabelo, cor da pele, cor dos olhos, andar e tatuagem), criar base de dados classificada e disponibilizá-la publicamente.",
+      "Integrar os sistemas de classificação de medidas biométricas leves com o sistema de identificação facial existente.",
+      "Comparar a eficiência do sistema de reconhecimento de faces sem e com o uso de combinação de medidas biométricas leves.",
+      "Comparar o tempo de processamento do sistema de reconhecimento de faces sem e com o uso de combinação de medidas biométricas leves."
     ]
   },
   "coordenador": {
     "nome": "Karin Satie Komati",
-    "email": "c1626e59f629@anon.lgpd",
-    "campus": "Serra",
+    "email": "e0d173a86b0e@anon.lgpd",
+    "campus": "Ifes",
     "titulacao": null
   },
   "equipe": [
     {
-      "nome": "Lavínia Corteletti",
-      "funcao": "Bolsista",
-      "instituicao": "Instituto Federal do Espírito Santo (IFES)",
+      "nome": "Karin Satie Komati",
+      "funcao": "Coordenador",
+      "instituicao": "Ifes",
+      "carga_horaria_semanal": null
+    },
+    {
+      "nome": "Daniel Cruz Cavalieri",
+      "funcao": "Colaborador",
+      "instituicao": "Ifes",
+      "carga_horaria_semanal": null
+    },
+    {
+      "nome": "Jefferson Oliveira Andrade",
+      "funcao": "Colaborador",
+      "instituicao": "Ifes",
       "carga_horaria_semanal": null
     }
   ],
   "datas": {
-    "inicio": "2018-01",
+    "inicio": "2016-08-01",
     "fim": "2019-07-31",
-    "duracao_meses": 19
+    "duracao_meses": 36
   },
   "cronograma": [
     {
-      "atividade": "Aprendizado sobre a API Microsoft Azure, desenvolvimento do sistema para reconhecimento de idade e gênero em imagens e realização de testes",
-      "inicio": "2018-01",
-      "fim": "2018-01"
+      "atividade": "Desenvolvimento de sistemas e base de dados para identificação das características: cor do cabelo, cor da pele e cor dos olhos. Comparar a eficiência do sistema de reconhecimento de faces e o tempo de processamento com e sem o uso da medida biométrica leve.",
+      "inicio": "2016-08",
+      "fim": "2017-05"
     },
     {
-      "atividade": "Aprendizado sobre a API Amazon Rekognition, desenvolvimento do sistema para reconhecimento de idade e gênero em imagens e realização de testes",
-      "inicio": "2018-02",
+      "atividade": "Desenvolvimento de sistemas e base de dados para identificação das características: sexo; comparar a eficiência do sistema de reconhecimento de faces e o tempo de processamento com e sem o uso da medida biométrica leve.",
+      "inicio": "2016-08",
+      "fim": "2017-08"
+    },
+    {
+      "atividade": "Desenvolvimento de sistemas e base de dados para identificação das características: raça; comparar a eficiência do sistema de reconhecimento de faces e o tempo de processamento com e sem o uso da medida biométrica leve.",
+      "inicio": "2016-11",
+      "fim": "2017-08"
+    },
+    {
+      "atividade": "Desenvolvimento de sistemas e base de dados para identificação das características: idade; comparar a eficiência do sistema de reconhecimento de faces e o tempo de processamento com e sem o uso da medida biométrica leve.",
+      "inicio": "2017-02",
+      "fim": "2017-11"
+    },
+    {
+      "atividade": "Desenvolvimento de sistemas e base de dados para identificação das características: altura e peso, comparar a eficiência do sistema de reconhecimento de faces e o tempo de processamento com e sem o uso da medida biométrica leve.",
+      "inicio": "2017-05",
       "fim": "2018-02"
     },
     {
-      "atividade": "Aprendizado sobre a API IBM Watson, desenvolvimento do sistema para reconhecimento de idade e gênero em imagens e realização de testes",
-      "inicio": "2018-03",
-      "fim": "2018-03"
-    },
-    {
-      "atividade": "Comparação entre os resultados para gênero e idade das três APIs",
-      "inicio": "2018-04",
-      "fim": "2018-07"
-    },
-    {
-      "atividade": "Estudo acerca das características das imagens da base de dados estática utilizada",
-      "inicio": "2018-05",
-      "fim": "2018-06"
-    },
-    {
-      "atividade": "Análise dos dados das três APIs em relação aos atributos faciais anotados das imagens",
-      "inicio": "2018-06",
-      "fim": "2018-08"
-    },
-    {
-      "atividade": "Escrita de relatório e artigo",
-      "inicio": "2018-07",
+      "atividade": "Comparar a eficiência e o tempo de processamento do sistema de reconhecimento de faces e o tempo de processamento sem e com o uso de combinação de medidas biométricas leves.",
+      "inicio": "2017-11",
       "fim": "2019-07"
+    },
+    {
+      "atividade": "Desenvolvimento de sistema para identificação das características biométricas leves: cor do cabelo, cor da pele e cor dos olhos",
+      "inicio": "2016-08",
+      "fim": "2017-07"
+    },
+    {
+      "atividade": "Desenvolvimento de sistema para identificação de pessoas por características de gênero",
+      "inicio": "2016-08",
+      "fim": "2017-07"
     }
   ],
   "financiamento": {
     "valor_total": null,
     "moeda": "BRL",
-    "fontes": [
-      {
-        "fonte": "CNPq",
-        "valor": null,
-        "tipo": "Bolsa de Iniciação Científica"
-      }
-    ]
+    "fontes": []
   },
   "_meta": {
     "arquivo": "PJ_3521.pdf",
-    "paginas": 9,
-    "extraido_em": "2026-09-18T19:50:21.268462+00:00",
-    "modelo": "ministral-8b-latest",
+    "paginas": 18,
+    "extraido_em": "2026-08-10T20:12:22.979233+00:00",
+    "modelo": "mistral-large-latest",
     "fonte_texto": "pdf-text",
-    "campos_ausentes": []
+    "campos_ausentes": [
+      "financiamento"
+    ]
   }
 }

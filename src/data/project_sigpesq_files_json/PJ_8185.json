@@ -1,34 +1,30 @@
 {
   "codigo": "PJ 8185",
-  "titulo": "Sistema web para detecção e contagem de ácaros (Tetranychus urticae, Phytoseiulus macropilis e Neoseiulus californicus) em culturas capixabas de morango usando deep learning",
-  "descricao": "Projeto de pesquisa aplicada que visa desenvolver um sistema web com núcleo baseado na rede neural convolucional You Only Look Once (YOLOv8) para detectar e contar ácaros em fotos de folhas de morangueiros capturadas por smartphones em áreas de plantio na região centro-serrana do Espírito Santo, com foco no município de Santa Maria de Jetibá. O sistema auxiliará agricultores na identificação e controle de infestações por ácaros rajados (Tetranychus urticae), além de recomendar ações de monitoramento e manejo, como uso de acaricidas químicos ou controle biológico por meio de ácaros predadores (Phytoseiulus macropilis e Neoseiulus californicus).",
+  "titulo": "Sistema web para detecção e contagem de ácaros (tetranychus urticae, phytoseiulus macropilis e neoseiulus californicus) em culturas capixabas de morango usando deep learning",
+  "descricao": "Este projeto de pesquisa aplicada visa desenvolver um sistema web com núcleo baseado na rede neural convolucional You Only Look Once (YOLO), em sua oitava versão, treinada para detectar e contar as populações dos ácaros Tetranychus urticae, Phytoseiulus macropilis e Neoseiulus californicus em fotos de folhas de morangueiros capturadas por smartphones em áreas de plantio na região centro-serrana do estado do ES, com foco no município de Santa Maria de Jetibá. O sistema recomendará ações de monitoramento, como o uso de acaricidas químicos ou realização de controle biológico por meio de ácaros predadores. Espera-se possibilitar que os agricultores adotem medidas preventivas e corretivas com maior precisão, evitando a disseminação de infestações e o uso excessivo de agrotóxicos.",
   "palavras_chave": [
     "Inteligência Computacional",
     "Culturas de morango",
     "Visão Computacional",
     "Entomologia",
     "Redes Neurais Convolucionais",
-    "Ácaros",
-    "Deep Learning",
-    "Controle Biológico",
-    "Agricultura 4.0",
-    "Sistemas de Recomendação"
+    "Ácaros"
   ],
   "area_conhecimento": "Ciências Exatas e da Terra",
   "linha_pesquisa": "Inteligência Computacional",
   "objetivos": {
-    "geral": "Desenvolver um sistema web para detecção e contagem de ácaros (Tetranychus urticae, Phytoseiulus macropilis e Neoseiulus californicus) em culturas capixabas de morango a partir da análise automática de fotos das plantas.",
+    "geral": "Desenvolver um sistema web para detecção e contagem de ácaros (tetranychus urticae, phytoseiulus macropilis e neoseiulus californicus) em culturas capixabas de morango a partir da análise automática de fotos das plantas.",
     "especificos": [
-      "Montar uma base de dados de fotos de morangueiros contendo ou não os ácaros rajados, Phytoseiulus macropilis e Neoseiulus californicus;",
+      "Montar uma base de dados de fotos de morangueiros contendo ou não os ácaros rajados, phytoseiulus macropilis e neoseiulus californicus;",
       "Aumentar a base de dados usando imagens sintéticas criadas por redes generativas;",
       "Pré-processar a base de dados obtida por meio de técnicas morfológicas e colorimétricas subdividindo-a em outras bases de dados;",
       "Criar subconjuntos de treinamento, validação e teste a partir das bases pré-processadas;",
       "Realizar fine-tuning automático nos hiperparâmetros de uma rede neural do tipo YOLO usando inferência Bayesiana;",
-      "Avaliar o desempenho de modelos de aprendizado profundo na base processada na tarefa de identificação e contagem de ácaros;",
+      "Avaliar o desempenho de modelos de aprendizagem profunda na base processada na tarefa de identificação e contagem de ácaros;",
       "Determinar medidas de correlação entre densidades populacionais de ácaros e extensões de danos foliares;",
       "Desenvolver um backend consonante às necessidades do sistema;",
       "Implementar um frontend a partir das necessidades dos produtores de morango que agregue usabilidade e responsividade;",
-      "Integrar o backend, o core e o frontend da solução para fornecer recomendações práticas aos produtores;",
+      "Integrar o backend, o core e o frontend da solução no sentido de ao receber-se um conjunto de novas fotos tiradas, fornecer recomendações de caráter prático aos produtores;",
       "Desenvolver um sistema de recomendação de boas práticas em cultivos de morango."
     ]
   },
@@ -40,10 +36,34 @@
   },
   "equipe": [
     {
-      "nome": "Choa Mun Yun",
-      "funcao": "Colaborador",
-      "instituicao": "Sherpa Space (Coreia)",
-      "carga_horaria_semanal": null
+      "nome": "estudante1",
+      "funcao": "Bolsista",
+      "instituicao": null,
+      "carga_horaria_semanal": 20.0
+    },
+    {
+      "nome": "estudante2",
+      "funcao": "Bolsista",
+      "instituicao": null,
+      "carga_horaria_semanal": 20.0
+    },
+    {
+      "nome": "estudante3",
+      "funcao": "Bolsista",
+      "instituicao": null,
+      "carga_horaria_semanal": 20.0
+    },
+    {
+      "nome": "estudante4",
+      "funcao": "Bolsista",
+      "instituicao": null,
+      "carga_horaria_semanal": 20.0
+    },
+    {
+      "nome": "estudante5",
+      "funcao": "Bolsista",
+      "instituicao": null,
+      "carga_horaria_semanal": 20.0
     }
   ],
   "datas": {
@@ -53,129 +73,44 @@
   },
   "cronograma": [
     {
-      "atividade": "Realizar visitas ao município de Santa Maria de Jetibá, junto à prefeitura e à cooperativa de agricultores, para coletar as necessidades dos produtores e do município, bem como as dores decorrentes do problema",
+      "atividade": "Realizar visitas ao município de Santa Maria de Jetibá, junto à prefeitura e à cooperativa de agricultores, para coletar, em lócus de pesquisa, as necessidades dos produtores e do município, bem como as dores decorrentes do problema.",
       "inicio": "2024-09",
       "fim": "2024-10"
     },
     {
-      "atividade": "Elaborar uma série de documentos, tais como o diagrama de classes e o backlog do projeto, para direcionar a transição do protótipo para o sistema web",
+      "atividade": "Elaborar uma série de documentos, tais como o diagrama de classes e o backlog do projeto, para direcionar a transição do protótipo previamente desenvolvido para o sistema web.",
       "inicio": "2024-09",
       "fim": "2024-10"
     },
     {
-      "atividade": "Configurar o ambiente de desenvolvimento para a solução monolítica, instalando as ferramentas necessárias e integrando-o a uma plataforma de versionamento de software online",
+      "atividade": "Configurar o ambiente de desenvolvimento para a solução monolítica, instalando as ferramentas necessárias e integrando-o a uma plataforma de versionamento de software online.",
       "inicio": "2024-09",
       "fim": "2024-10"
     },
     {
-      "atividade": "Capacitar a equipe para utilização de ferramentas de desenvolvimento de aplicações web",
+      "atividade": "Capacitar a equipe para utilização de ferramentas de desenvolvimento de aplicações web.",
       "inicio": "2024-09",
       "fim": "2024-10"
     },
     {
-      "atividade": "Desenvolver a aplicação com base nos documentos elaborados anteriormente usando as ferramentas estudadas",
-      "inicio": "2024-10",
-      "fim": "2025-08"
-    },
-    {
-      "atividade": "Criar um dataset com imagens de folhas de morangueiros em diferentes níveis de danos causados pelo ácaro rajado (Tetranychus urticae), para correlacionar sua densidade populacional com os danos foliares",
-      "inicio": "2024-09",
-      "fim": "2024-10"
-    },
-    {
-      "atividade": "Criar, treinar e validar o modelo de Inteligência Artificial utilizando o novo dataset produzido",
-      "inicio": "2024-10",
-      "fim": "2025-03"
-    },
-    {
-      "atividade": "Realizar ajustes nos modelos em consonância com as necessidades da comunidade",
-      "inicio": "2025-04",
-      "fim": "2025-05"
-    },
-    {
-      "atividade": "Participação em treinamentos para desenvolver as hard skills necessárias para desenvolver a solução",
-      "inicio": "2024-09",
-      "fim": "2024-10"
-    },
-    {
-      "atividade": "Definição dos requisitos funcionais e não funcionais do sistema",
-      "inicio": "2024-09",
-      "fim": "2024-10"
-    },
-    {
-      "atividade": "Elaboração da arquitetura do sistema",
-      "inicio": "2024-10",
-      "fim": "2024-11"
-    },
-    {
-      "atividade": "Desenvolvimento do sistema",
+      "atividade": "Desenvolver a aplicação com base nos documentos elaborados anteriormente usando as ferramentas estudadas e/ou elaboradas pelos alunos bolsistas.",
       "inicio": "2024-11",
       "fim": "2025-08"
     },
     {
-      "atividade": "Coleta de fotos variadas em lócus de pesquisa para criação do dataset",
+      "atividade": "Criar um dataset com imagens de folhas de morangueiros em diferentes níveis de danos causados pelo ácaro rajado (Tetranychus urticae), para correlacionar sua densidade populacional com os danos foliares.",
       "inicio": "2024-09",
       "fim": "2024-10"
     },
     {
-      "atividade": "Revisão de literatura",
-      "inicio": "2024-09",
-      "fim": "2024-10"
-    },
-    {
-      "atividade": "Escolha de um modelo de rede neural do tipo YOLO",
-      "inicio": "2024-10",
-      "fim": "2024-11"
-    },
-    {
-      "atividade": "Adaptação de um código em Python da rede neural",
+      "atividade": "Criar, treinar e validar o modelo de Inteligência Artificial utilizando o novo dataset produzido.",
       "inicio": "2024-11",
-      "fim": "2025-01"
-    },
-    {
-      "atividade": "Ajuste de parâmetros da rede neural",
-      "inicio": "2025-01",
       "fim": "2025-04"
     },
     {
-      "atividade": "Treinamento e validação da rede neural",
-      "inicio": "2025-01",
-      "fim": "2025-05"
-    },
-    {
-      "atividade": "Realização de testes de inferência com o modelo treinado",
+      "atividade": "Realizar ajustes nos modelos em consonância com as necessidades da comunidade.",
       "inicio": "2025-05",
       "fim": "2025-06"
-    },
-    {
-      "atividade": "Publicação de resultados na literatura",
-      "inicio": "2025-06",
-      "fim": "2025-08"
-    },
-    {
-      "atividade": "Participação em treinamentos para melhor compreender as necessidades e dificuldades da equipe",
-      "inicio": "2024-09",
-      "fim": "2024-10"
-    },
-    {
-      "atividade": "Revisão de literatura",
-      "inicio": "2024-09",
-      "fim": "2024-11"
-    },
-    {
-      "atividade": "Realização de visitas técnicas",
-      "inicio": "2024-09",
-      "fim": "2025-08"
-    },
-    {
-      "atividade": "Produção de documentários e audiovisuais",
-      "inicio": "2024-10",
-      "fim": "2025-08"
-    },
-    {
-      "atividade": "Apoio técnico e administrativo",
-      "inicio": "2024-09",
-      "fim": "2025-08"
     }
   ],
   "financiamento": {
@@ -186,8 +121,8 @@
   "_meta": {
     "arquivo": "PJ_8185.pdf",
     "paginas": 31,
-    "extraido_em": "2026-09-18T20:41:01.342315+00:00",
-    "modelo": "ministral-8b-latest",
+    "extraido_em": "2026-08-10T21:32:36.414517+00:00",
+    "modelo": "mistral-large-latest",
     "fonte_texto": "pdf-text",
     "campos_ausentes": [
       "coordenador.nome",

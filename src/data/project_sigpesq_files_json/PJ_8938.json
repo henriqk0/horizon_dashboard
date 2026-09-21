@@ -1,96 +1,268 @@
 {
   "codigo": "PJ 8938",
   "titulo": "ChatRad: Um Sistema de Conversação Multimodal para Análise Automatizada de Radiografias Torácicas",
-  "descricao": "Projeto que investiga técnicas de *image captioning* e modelos Vision-Language (VLMs) para geração automática de descrições textuais a partir de imagens de radiografias torácicas, visando auxiliar na elaboração de laudos médicos preliminares. O plano de trabalho abrange levantamento de modelos, preparação de datasets, testes e seleção de técnicas de *fine-tuning* (LoRa) para otimização do modelo Qwen2-VL-2B-Instruct.",
+  "descricao": "Este projeto de pesquisa propõe o desenvolvimento de um protótipo de sistema de conversação (chatbot) voltado à avaliação automatizada de radiografias torácicas, utilizando técnicas de Processamento de Linguagem Natural (PLN) e Visão Computacional. O chatbot atuará como um orquestrador inteligente, oferecendo uma interface interativa em linguagem natural capaz de integrar três módulos principais: (i) um módulo de geração automática de laudos radiológicos a partir de imagens, baseado em técnicas de image captioning; (ii) um módulo de classificação e localização de achados patológicos por meio de técnicas de detecção visual fundamentadas em redes neurais profundas; e (iii) um módulo de recuperação aumentada por geração, responsável por recuperar exames similares a partir de um banco de dados vetorial contendo imagens e laudos médicos emparelhados. O objetivo geral da solução vislumbrada é fornecer suporte à tomada de decisão clínica, promovendo diagnósticos mais rápidos, precisos e baseados em evidências extraídas de exames anteriores.",
   "palavras_chave": [
-    "Inteligência Artificial",
+    "Processamento de Linguagem Natural",
+    "Visão Computacional",
     "Image Captioning",
-    "Vision-Language Models (VLMs)",
-    "Radiografias Torácicas",
-    "Geração Automática de Laudos Médicos",
-    "LoRA",
-    "Processamento de Imagens Médicas",
-    "Chatbot Multimodal"
+    "Chatbots",
+    "Imagens radiográficas"
   ],
   "area_conhecimento": "Ciência da Computação",
-  "linha_pesquisa": "Processamento de Linguagem Natural e Visão Computacional Aplicada à Saúde",
+  "linha_pesquisa": "Inteligência Artificial",
   "objetivos": {
-    "geral": "Desenvolver um módulo que gere laudos médicos a partir de imagens de radiografias torácicas, utilizando técnicas de *image captioning* e modelos de visão e linguagem (VLMs), para auxiliar na elaboração de laudos preliminares.",
+    "geral": "Desenvolver um protótipo de sistema de conversação (chatbot) no domínio médico, baseado em técnicas de Processamento de Linguagem Natural (PLN) e Visão Computacional, para a avaliação automatizada de radiografias torácicas. A proposta visa oferecer suporte à tomada de decisão clínica por meio da geração automática de laudos, da identificação de achados patológicos em imagens e da recuperação de diagnósticos anteriores a partir de laudos e/ou imagens.",
     "especificos": [
-      "Investigar e selecionar modelos de linguagem multimodais (VLMs) aplicáveis à geração automática de laudos médicos a partir de imagens de radiografias torácicas.",
-      "Preparar e estruturar datasets contendo imagens de radiografia de tórax e os laudos respectivos para utilização nos experimentos.",
-      "Testar diferentes modelos e analisar a qualidade dos laudos a partir das imagens.",
-      "Realizar o *fine-tuning* do modelo utilizando a técnica LoRA, adaptando-o para a tarefa de geração automática de laudos radiológicos."
+      "Projetar e implementar um módulo de geração automática de laudos a partir de radiografias torácicas, utilizando técnicas de image captioning com modelos multimodais de linguagem e visão.",
+      "Desenvolver um módulo para classificação e localização de achados patológicos, capaz de identificar e destacar regiões de interesse em radiografias, com base em arquiteturas de redes neurais convolucionais e transformadores visuais.",
+      "Construir um banco de dados vetorial multimodal, contendo imagens de radiografias e seus respectivos laudos médicos, para viabilizar a recuperação de casos semelhantes com base em representações conjuntas de texto e imagem.",
+      "Integrar ao sistema um módulo de Recuperação Aumentada por Geração (RAG), possibilitando a busca semântica de exames anteriores e a geração de respostas contextualizadas com base em casos análogos.",
+      "Desenvolver a interface conversacional do chatbot, que atuará como orquestrador dos módulos mencionados, sendo capaz de interagir com os usuários em linguagem natural para facilitar o acesso às funcionalidades do sistema.",
+      "Avaliar a eficácia do protótipo desenvolvido com base em métricas específicas para cada módulo (por exemplo, ROUGE e BERTScore para geração de laudos; mAP e AUC para detecção de achados; revocação e precisão para recuperação de casos). Além disso, serão adotadas métricas baseadas no uso de modelos de linguagem de grande escala (LLMs) como avaliadores, com o objetivo de fornecer análises mais robustas e contextualizadas.",
+      "Divulgar os resultados do projeto por meio de artigos científicos, apresentações em conferências e workshops, contribuindo assim para o avanço do conhecimento na área."
     ]
   },
   "coordenador": {
-    "nome": "Francisco Boldt de Assis",
-    "email": "599c018740ca@anon.lgpd",
-    "campus": "Campus Serra",
+    "nome": null,
+    "email": null,
+    "campus": "Serra",
     "titulacao": null
   },
-  "equipe": [
-    {
-      "nome": "Erick Machado Ferreira",
-      "funcao": "Bolsista",
-      "instituicao": "Instituto Federal do Espírito Santo (IFES)",
-      "carga_horaria_semanal": null
-    }
-  ],
+  "equipe": [],
   "datas": {
     "inicio": "2025-01-01",
-    "fim": "2026-07-10",
-    "duracao_meses": 19
+    "fim": "2026-12-31",
+    "duracao_meses": 24
   },
   "cronograma": [
     {
-      "atividade": "Revisão bibliográfica e seleção de modelos",
+      "atividade": "Revisão bibliográfica da literatura",
+      "inicio": "2025-01",
+      "fim": "2025-03"
+    },
+    {
+      "atividade": "Catalogação e análise das bases de dados de interesse do projeto",
+      "inicio": "2025-01",
+      "fim": "2025-03"
+    },
+    {
+      "atividade": "Desenvolvimento e Avaliação do Módulo de Image Captioning",
+      "inicio": "2025-04",
+      "fim": "2025-08"
+    },
+    {
+      "atividade": "Implementação e testes do Módulo de RAG",
+      "inicio": "2025-04",
+      "fim": "2025-08"
+    },
+    {
+      "atividade": "Desenvolvimento e avaliação do módulo de Classificação e Localização de Achados Patológicos",
+      "inicio": "2025-04",
+      "fim": "2025-08"
+    },
+    {
+      "atividade": "Implementação e testes do Chatbot",
+      "inicio": "2025-04",
+      "fim": "2025-06"
+    },
+    {
+      "atividade": "Integração dos Módulos ao Chatbot",
+      "inicio": "2025-07",
+      "fim": "2025-09"
+    },
+    {
+      "atividade": "Execução de experimentos para avaliar os módulos integrados",
+      "inicio": "2025-10",
+      "fim": "2025-12"
+    },
+    {
+      "atividade": "Elaboração do relatório final do projeto, documentando os resultados obtidos, conclusões e recomendações",
+      "inicio": "2026-11",
+      "fim": "2026-12"
+    },
+    {
+      "atividade": "ChatBot Orquestrador (Plano de Trabalho do estudante 1)",
+      "inicio": null,
+      "fim": null
+    },
+    {
+      "atividade": "Estudo inicial: revisão de literatura sobre chatbots orquestradores, arquitetura de agentes conversacionais, ferramentas de PLN. Escolha da stack de desenvolvimento (ex.: Rasa, Python, spaCy, FastAPI).",
+      "inicio": "2025-01",
+      "fim": "2025-01"
+    },
+    {
+      "atividade": "Mapeamento de requisitos: definição dos tipos de interações esperadas, identificação dos módulos que o chatbot deverá orquestrar, levantamento de intenções e entidades.",
+      "inicio": "2025-02",
+      "fim": "2025-02"
+    },
+    {
+      "atividade": "Modelagem do fluxo conversacional: criação de diagramas de diálogo (ex.: fluxogramas ou stories do Rasa), definição de intents e possíveis respostas.",
+      "inicio": "2025-03",
+      "fim": "2025-03"
+    },
+    {
+      "atividade": "Protótipo inicial do chatbot: desenvolvimento da primeira versão com respostas estáticas e simulação de orquestração com módulos fictícios.",
+      "inicio": "2025-04",
+      "fim": "2025-04"
+    },
+    {
+      "atividade": "Integração básica com módulos simulados: criação de endpoints mockados para simular respostas dos módulos especializados (ex.: gerador de laudo, classificador de imagem).",
+      "inicio": "2025-05",
+      "fim": "2025-05"
+    },
+    {
+      "atividade": "Treinamento do modelo de linguagem: implementação da extração de intenções e entidades usando Rasa NLU, spaCy ou outras ferramentas. Testes iniciais.",
+      "inicio": "2025-06",
+      "fim": "2025-07"
+    },
+    {
+      "atividade": "Orquestração real: criação do componente de roteamento de tarefas, com lógica para identificar o módulo correto com base na intenção detectada.",
+      "inicio": "2025-08",
+      "fim": "2025-09"
+    },
+    {
+      "atividade": "Tratamento de contexto: implementação de controle de contexto para conversas com múltiplas etapas (ex.: salvar estado da conversa, retorno a tarefas anteriores).",
+      "inicio": "2025-09",
+      "fim": "2025-10"
+    },
+    {
+      "atividade": "Melhorias na interface conversacional: tornar os retornos mais naturais e adaptáveis ao usuário, com linguagem mais acessível. Inclusão de feedbacks.",
+      "inicio": "2025-10",
+      "fim": "2025-11"
+    },
+    {
+      "atividade": "Testes com usuários simulados: aplicação de testes com cenários de uso típicos. Coleta de feedback, identificação de falhas e refinamento do fluxo.",
+      "inicio": "2025-12",
+      "fim": "2026-01"
+    },
+    {
+      "atividade": "Documentação técnica e científica: elaboração de documentação do sistema, relatório de resultados e preparação de artigo técnico ou científico.",
+      "inicio": "2026-11",
+      "fim": "2026-12"
+    },
+    {
+      "atividade": "Entrega final e apresentação: ajustes finais, empacotamento do projeto, apresentação dos resultados em evento institucional ou científico.",
+      "inicio": "2026-12",
+      "fim": "2026-12"
+    },
+    {
+      "atividade": "Geração Automática de Laudos Médicos a Partir de Imagens Usando Image Captioning (Plano de Trabalho do estudante 2)",
+      "inicio": null,
+      "fim": null
+    },
+    {
+      "atividade": "Levantamento bibliográfico e seleção de modelos",
       "inicio": "2025-01",
       "fim": "2025-04"
     },
     {
       "atividade": "Treinamento e ajuste dos modelos",
-      "inicio": "2025-02",
-      "fim": "2025-07"
-    },
-    {
-      "atividade": "Avaliação da qualidade das legendas",
-      "inicio": "2025-05",
+      "inicio": "2025-03",
       "fim": "2025-08"
     },
     {
+      "atividade": "Avaliação da qualidade das legendas",
+      "inicio": "2025-07",
+      "fim": "2025-10"
+    },
+    {
       "atividade": "Otimização e refinamento do modelo",
+      "inicio": "2025-09",
+      "fim": "2025-12"
+    },
+    {
+      "atividade": "Integração com chatbot e testes práticos",
+      "inicio": "2026-01",
+      "fim": "2026-04"
+    },
+    {
+      "atividade": "Documentação e artigo acadêmico",
+      "inicio": "2026-11",
+      "fim": "2026-12"
+    },
+    {
+      "atividade": "Classificação e Localização de Achados Patológicos em Radiografias torácicas (Plano de Trabalho do estudante 3)",
+      "inicio": null,
+      "fim": null
+    },
+    {
+      "atividade": "Levantamento bibliográfico",
+      "inicio": "2025-01",
+      "fim": "2025-02"
+    },
+    {
+      "atividade": "Análise e preparação da base de dados",
+      "inicio": "2025-01",
+      "fim": "2025-02"
+    },
+    {
+      "atividade": "Implementação dos treinamento e testes dos detecção de objetos",
+      "inicio": "2025-03",
+      "fim": "2025-06"
+    },
+    {
+      "atividade": "Validação experimental e análise dos resultados",
       "inicio": "2025-07",
       "fim": "2025-11"
     },
     {
-      "atividade": "Integração com chatbot e testes práticos",
-      "inicio": "2025-10",
-      "fim": "2026-02"
+      "atividade": "Escrita de artigo/relatório",
+      "inicio": "2026-09",
+      "fim": "2026-11"
     },
     {
-      "atividade": "Documentação e artigo acadêmico",
-      "inicio": "2025-11",
-      "fim": "2026-06"
+      "atividade": "Recuperação Aumentada via Geração para busca de laudos a partir de bancos de dados de imagens e laudos médicos (Plano de Trabalho do estudante 4)",
+      "inicio": null,
+      "fim": null
+    },
+    {
+      "atividade": "Revisão de literatura sobre trabalhos envolvendo o uso de técnicas RAG para a área médica, modelos de visão e linguagem e embeddings multimodais",
+      "inicio": "2025-01",
+      "fim": "2025-03"
+    },
+    {
+      "atividade": "Análise exploratória e estruturação das bases de dados",
+      "inicio": "2025-03",
+      "fim": "2025-04"
+    },
+    {
+      "atividade": "Implementação do módulo de recuperação usando um banco de dados vetorial",
+      "inicio": "2025-05",
+      "fim": "2025-07"
+    },
+    {
+      "atividade": "Desenvolvimento do módulo de geração usando VLMs",
+      "inicio": "2025-07",
+      "fim": "2025-09"
+    },
+    {
+      "atividade": "Realização de experimentos para avaliar o sistema de RAG",
+      "inicio": "2025-10",
+      "fim": "2025-11"
+    },
+    {
+      "atividade": "Escrita de artigo/relatório",
+      "inicio": "2026-11",
+      "fim": "2026-12"
     }
   ],
   "financiamento": {
     "valor_total": null,
     "moeda": "BRL",
-    "fontes": [
-      {
-        "fonte": "Instituto Federal do Espírito Santo (IFES)",
-        "valor": null,
-        "tipo": "Voluntariado (sem financiamento externo)"
-      }
-    ]
+    "fontes": []
   },
   "_meta": {
     "arquivo": "PJ_8938.pdf",
-    "paginas": 11,
-    "extraido_em": "2026-09-18T20:50:11.206141+00:00",
-    "modelo": "ministral-8b-latest",
+    "paginas": 24,
+    "extraido_em": "2026-08-10T21:48:01.527197+00:00",
+    "modelo": "mistral-large-latest",
     "fonte_texto": "pdf-text",
-    "campos_ausentes": []
+    "campos_ausentes": [
+      "coordenador.nome",
+      "coordenador.email",
+      "equipe",
+      "financiamento"
+    ]
   }
 }

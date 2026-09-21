@@ -1,103 +1,123 @@
 {
   "codigo": "PJ 8079",
   "titulo": "Aplicação de roteamento na origem para ciência de dados intensiva",
-  "descricao": "Desenvolvimento de uma solução para programabilidade de recursos de rede baseada em sistema de resíduos polinomial para aplicações de redes científicas com uso intensivo de dados, focando na arquitetura PolKA (Polynomial Key-based Architecture) para criar uma rede totalmente stateless, simplificando a operação e a eficiência da rede em ambientes de Ciência de Dados Intensiva (DIS).",
+  "descricao": "Pesquisas científicas atuais têm gerado conjuntos de dados digitais na escala de petabytes por meio de detectores, simulações e análises. Muitas dessas pesquisas exigem colaboração com outras instituições e pesquisadores geograficamente dispersos pelo mundo para dar suporte a aplicações de DIS (Ciência de Dados Intensiva). Essas aplicações requerem redes com alta largura de banda, tolerância a falhas, roteamento baseado em políticas e administração ágil. Para garantir esses requisitos, propomos investigar o roteamento de fonte PolKA em redes programáveis para aplicações de DIS. Essa ideia tem potencial para avançar o estado da arte devido a uma simplificação no modelo de encaminhamento para os nós de rede. Ao invés de encaminhar pacotes baseado em operações de busca em tabela, os nós usam operações simples de resto da divisão. Assim, as entidades responsáveis pela engenharia de tráfego conseguem associar um rótulo de rota para selecionar facilmente um caminho específico na rede para os fluxos de interesse, permitindo a orquestração dinâmica e eficiente da infraestrutura de redes de DIS.",
   "palavras_chave": [
-    "roteamento na origem",
-    "Ciência de Dados Intensiva",
-    "redes programáveis",
-    "SDN",
-    "Source Routing",
-    "PolKA",
-    "automação de experimentos",
-    "emulação de redes",
-    "Mininet",
-    "P4"
+    "Redes programáveis",
+    "Plano de dados",
+    "Virtualização",
+    "Redes Definidas por Software",
+    "Ciência de Dados Intensiva"
   ],
   "area_conhecimento": "Ciência da Computação",
-  "linha_pesquisa": "Redes de Computadores e Ciência de Dados Intensiva",
+  "linha_pesquisa": "Redes de computadores",
   "objetivos": {
-    "geral": "Desenvolver uma solução para programabilidade de recursos de rede baseada em sistema de resíduos polinomial para aplicações de redes científicas com uso intensivo de dados.",
+    "geral": "O objetivo geral desta proposta é investigar como uma estratégia de roteamento baseada em sistema de resíduos polinomial, e implementada em camada de rede programável pode garantir o atendimento dos requisitos de desempenho da engenharia de tráfego para aplicações de redes científicas com uso intensivo de dados.",
     "especificos": [
-      "Analisar os requisitos de engenharia de tráfego para aplicações de redes científicas com uso intensivo de dados.",
-      "Analisar o estado da arte das áreas de programabilidade de redes e de roteamento explorando o sistema de resíduos polinomial.",
-      "Projetar uma solução para um sistema programável com APIs de southbound do controlador PolKA para configuração de recursos de rede para aplicações de Ciência de Dados Intensiva.",
-      "Desenvolver e avaliar protótipos como provas de conceito da solução proposta em ambiente emulado."
+      "Analisar os requisitos de engenharia de tráfego para aplicações de redes científicas com uso intensivo de dados",
+      "Analisar o estado da arte e as limitações da área de programabilidade de redes para atender os requisitos desses serviços",
+      "Projetar uma solução programável de roteamento de redes usando a arquitetura PolKA",
+      "Desenvolver e avaliar protótipos como provas de conceito da solução proposta em ambientes de produção"
     ]
   },
   "coordenador": {
-    "nome": "Cristina Klippel Dominicini",
-    "email": "678fc44a55f0@anon.lgpd",
+    "nome": "Cristina Dominicini",
+    "email": null,
     "campus": "Serra",
     "titulacao": null
   },
   "equipe": [
     {
-      "nome": "Ana Júlia Caetano Martins",
-      "funcao": "Bolsista",
-      "instituicao": "Instituto Federal do Espírito Santo (IFES)",
+      "nome": "Gilmar Luiz Vassoler",
+      "funcao": "Pesquisador",
+      "instituicao": "Ifes Campus Serra",
+      "carga_horaria_semanal": null
+    },
+    {
+      "nome": "Leandro Colombi Resendo",
+      "funcao": "Pesquisador",
+      "instituicao": "Ifes Campus Serra",
+      "carga_horaria_semanal": null
+    },
+    {
+      "nome": "Everson S. Borges",
+      "funcao": "Colaborador",
+      "instituicao": "Ifes",
+      "carga_horaria_semanal": null
+    },
+    {
+      "nome": "Rafael Silva Guimarães",
+      "funcao": "Colaborador",
+      "instituicao": "Ifes",
       "carga_horaria_semanal": null
     }
   ],
   "datas": {
-    "inicio": "2024-01",
-    "fim": "2025-08-27",
-    "duracao_meses": 19
+    "inicio": "2024-09-01",
+    "fim": "2025-08-31",
+    "duracao_meses": 12
   },
   "cronograma": [
     {
-      "atividade": "Revisão bibliográfica",
-      "inicio": "2024-01",
-      "fim": "2024-03"
-    },
-    {
-      "atividade": "API de southbound do controlador PolKA",
-      "inicio": "2024-02",
-      "fim": "2024-04"
-    },
-    {
-      "atividade": "Projeto de sistema",
-      "inicio": "2024-03",
-      "fim": "2024-06"
-    },
-    {
-      "atividade": "Implementação e integração",
-      "inicio": "2024-04",
-      "fim": "2024-12"
-    },
-    {
-      "atividade": "Avaliação e validação da estratégia",
-      "inicio": "2024-07",
+      "atividade": "Análise de estado da arte e requisitos",
+      "inicio": "2024-09",
       "fim": "2024-10"
     },
     {
-      "atividade": "Escrita de relatório, artigos e documentação",
-      "inicio": "2024-08",
+      "atividade": "Projetar solução",
+      "inicio": "2024-11",
+      "fim": "2024-12"
+    },
+    {
+      "atividade": "Implementar protótipo",
+      "inicio": "2025-01",
+      "fim": "2025-07"
+    },
+    {
+      "atividade": "Avaliar solução",
+      "inicio": "2025-05",
+      "fim": "2025-07"
+    },
+    {
+      "atividade": "Formar recursos humanos qualificados",
+      "inicio": "2024-09",
       "fim": "2025-08"
     },
     {
-      "atividade": "Participação em eventos técnico-científicos",
-      "inicio": "2024-10",
-      "fim": "2025-04"
+      "atividade": "Realizar produção acadêmica",
+      "inicio": "2024-09",
+      "fim": "2025-08"
+    },
+    {
+      "atividade": "Programabilidade de recursos de rede para aplicações de Ciência de Dados Intensiva (estudante 1)",
+      "inicio": null,
+      "fim": null
+    },
+    {
+      "atividade": "Gerenciamento de recursos de rede para aplicações de Ciência de Dados Intensiva (estudante 2)",
+      "inicio": null,
+      "fim": null
+    },
+    {
+      "atividade": "Engenharia de tráfego para aplicações de Ciência de Dados Intensiva (estudante 3)",
+      "inicio": null,
+      "fim": null
     }
   ],
   "financiamento": {
     "valor_total": null,
     "moeda": "BRL",
-    "fontes": [
-      {
-        "fonte": "CNPq",
-        "valor": null,
-        "tipo": "Bolsa de Iniciação Científica"
-      }
-    ]
+    "fontes": []
   },
   "_meta": {
     "arquivo": "PJ_8079.pdf",
-    "paginas": 10,
-    "extraido_em": "2026-09-18T20:39:00.977725+00:00",
-    "modelo": "ministral-8b-latest",
+    "paginas": 15,
+    "extraido_em": "2026-08-10T21:28:10.912882+00:00",
+    "modelo": "mistral-large-latest",
     "fonte_texto": "pdf-text",
-    "campos_ausentes": []
+    "campos_ausentes": [
+      "coordenador.email",
+      "financiamento"
+    ]
   }
 }

@@ -1,11 +1,11 @@
 {
     "metadata": {
-        "generated_at": "2026-09-19T02:43:23.873826+00:00",
+        "generated_at": "2026-09-21T18:19:57.199295+00:00",
         "sources": {
-            "researchers": "/home/rafael/horizon_etl/data/exports/researchers_canonical.json",
-            "initiatives": "/home/rafael/horizon_etl/data/exports/initiatives_canonical.json",
-            "research_groups": "/home/rafael/horizon_etl/data/exports/research_groups_canonical.json",
-            "advisorships": "/home/rafael/horizon_etl/data/exports/advisorships_canonical.json"
+            "researchers": "/home/henriq/Projects/gith/forks/others/horizon_etl/data/exports/researchers_canonical.json",
+            "initiatives": "/home/henriq/Projects/gith/forks/others/horizon_etl/data/exports/initiatives_canonical.json",
+            "research_groups": "/home/henriq/Projects/gith/forks/others/horizon_etl/data/exports/research_groups_canonical.json",
+            "advisorships": "/home/henriq/Projects/gith/forks/others/horizon_etl/data/exports/advisorships_canonical.json"
         },
         "scope": {
             "type": "research_group",
@@ -33,7 +33,7 @@
         "largest_component_size": 4,
         "relation_event_totals": {
             "initiative": 0,
-            "research_group": 7,
+            "research_group": 6,
             "advisorship": 0
         },
         "edge_relation_presence": {
@@ -46,20 +46,6 @@
         },
         "top_people_by_weighted_degree": [
             {
-                "id": 2937,
-                "name": "Tiago de Araujo Camillo",
-                "classification": "researcher",
-                "weighted_degree": 4,
-                "degree": 3
-            },
-            {
-                "id": 4643,
-                "name": "Ernesto Charpinel Borges",
-                "classification": "researcher",
-                "weighted_degree": 4,
-                "degree": 3
-            },
-            {
                 "id": 297,
                 "name": "Amarildo Mendes Lemos",
                 "classification": "researcher",
@@ -67,7 +53,21 @@
                 "degree": 3
             },
             {
-                "id": 4644,
+                "id": 1093,
+                "name": "Ernesto Charpinel Borges",
+                "classification": "researcher",
+                "weighted_degree": 3,
+                "degree": 3
+            },
+            {
+                "id": 1094,
+                "name": "Tiago de Araujo Camillo",
+                "classification": "researcher",
+                "weighted_degree": 3,
+                "degree": 3
+            },
+            {
+                "id": 1095,
                 "name": "Wander Luiz Demartini Nunes",
                 "classification": "researcher",
                 "weighted_degree": 3,
@@ -80,19 +80,6 @@
         "multigraph": false,
         "graph": {},
         "nodes": [
-            {
-                "name": "Tiago de Araujo Camillo",
-                "classification": "researcher",
-                "classification_confidence": "high",
-                "was_student": false,
-                "was_staff": true,
-                "campus_name": "Vila Velha",
-                "degree": 3,
-                "weighted_degree": 4,
-                "is_group_member": true,
-                "is_advisorship_neighbor": false,
-                "id": 2937
-            },
             {
                 "name": "Amarildo Mendes Lemos",
                 "classification": "researcher",
@@ -110,14 +97,27 @@
                 "name": "Ernesto Charpinel Borges",
                 "classification": "researcher",
                 "classification_confidence": "high",
-                "was_student": true,
+                "was_student": false,
                 "was_staff": true,
-                "campus_name": "Vila Velha",
+                "campus_name": "Serra",
                 "degree": 3,
-                "weighted_degree": 4,
+                "weighted_degree": 3,
                 "is_group_member": true,
                 "is_advisorship_neighbor": false,
-                "id": 4643
+                "id": 1093
+            },
+            {
+                "name": "Tiago de Araujo Camillo",
+                "classification": "researcher",
+                "classification_confidence": "high",
+                "was_student": false,
+                "was_staff": true,
+                "campus_name": "Serra",
+                "degree": 3,
+                "weighted_degree": 3,
+                "is_group_member": true,
+                "is_advisorship_neighbor": false,
+                "id": 1094
             },
             {
                 "name": "Wander Luiz Demartini Nunes",
@@ -130,7 +130,7 @@
                 "weighted_degree": 3,
                 "is_group_member": true,
                 "is_advisorship_neighbor": false,
-                "id": 4644
+                "id": 1095
             }
         ],
         "edges": [
@@ -142,30 +142,8 @@
                 "relation_types": [
                     "research_group"
                 ],
-                "source": 2937,
-                "target": 297
-            },
-            {
-                "weight": 2,
-                "initiative_count": 0,
-                "research_group_count": 2,
-                "advisorship_count": 0,
-                "relation_types": [
-                    "research_group"
-                ],
-                "source": 2937,
-                "target": 4643
-            },
-            {
-                "weight": 1,
-                "initiative_count": 0,
-                "research_group_count": 1,
-                "advisorship_count": 0,
-                "relation_types": [
-                    "research_group"
-                ],
-                "source": 2937,
-                "target": 4644
+                "source": 297,
+                "target": 1093
             },
             {
                 "weight": 1,
@@ -176,7 +154,7 @@
                     "research_group"
                 ],
                 "source": 297,
-                "target": 4643
+                "target": 1094
             },
             {
                 "weight": 1,
@@ -187,7 +165,7 @@
                     "research_group"
                 ],
                 "source": 297,
-                "target": 4644
+                "target": 1095
             },
             {
                 "weight": 1,
@@ -197,8 +175,30 @@
                 "relation_types": [
                     "research_group"
                 ],
-                "source": 4643,
-                "target": 4644
+                "source": 1093,
+                "target": 1094
+            },
+            {
+                "weight": 1,
+                "initiative_count": 0,
+                "research_group_count": 1,
+                "advisorship_count": 0,
+                "relation_types": [
+                    "research_group"
+                ],
+                "source": 1093,
+                "target": 1095
+            },
+            {
+                "weight": 1,
+                "initiative_count": 0,
+                "research_group_count": 1,
+                "advisorship_count": 0,
+                "relation_types": [
+                    "research_group"
+                ],
+                "source": 1094,
+                "target": 1095
             }
         ]
     }

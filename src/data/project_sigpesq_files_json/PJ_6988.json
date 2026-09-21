@@ -1,109 +1,103 @@
 {
   "codigo": "PJ 6988",
   "titulo": "Processo de Treinamento de Classificadores Visuais Utilizando Bases de Dados Reduzidas",
-  "descricao": "O projeto avaliou métodos para aquisição de dados de páginas da web com estrutura limitada ou inexistente, utilizando técnicas de extração de dados (Web Scraping) para criar uma base de dados denominada 'Scraper'. Essa base foi integrada à base original do Kaggle, resultando em uma base 'Mesclada'. Foram testadas duas abordagens de limpeza de dados (manual e automatizada com YOLOv8) e avaliado o desempenho do modelo Xception em diferentes cenários de bases de dados, buscando aprimorar a classificação de raças de cães.",
+  "descricao": "Será desenvolvido um processo para treinar classificadores visuais a partir de dados extraídos da web. Para avaliar o processo, este será implementado em uma prova de conceito que coletará dados do site wikipedia.com. Serão validadas e baixadas imagens de páginas relacionadas a um domínio, e os rótulos dessas imagens serão definidos de acordo com os textos contidos na página de onde cada imagem foi baixada. A partir da base de dados extraída, classificadores serão treinados ou aprimorados para classificar imagens do domínio selecionado. Diversas técnicas de treinamento de classificadores visuais serão comparadas.",
   "palavras_chave": [
-    "Inteligência Artificial",
-    "Visão Computacional",
-    "Web Scraping",
-    "Deep Learning",
-    "Classificação de Imagens",
+    "Computação Visual",
     "Transfer Learning",
-    "Processamento de Dados",
-    "Machine Learning",
-    "Bases de Dados",
-    "Pós-processamento de Imagens"
+    "Web Scraper",
+    "Automação Eletrônica de Processos Elétricos e Industriais",
+    "Deep Learning",
+    "Inteligência Artificial"
   ],
-  "area_conhecimento": "Inteligência Artificial Aplicada a Processos Industriais",
-  "linha_pesquisa": null,
+  "area_conhecimento": "Engenharia Elétrica",
+  "linha_pesquisa": "Inteligência Artificial Aplicada a Processos Industriais",
   "objetivos": {
-    "geral": "Aprimorar modelos de classificação de imagens por meio da utilização de dados enriquecidos via Web Scraping, com o intuito de melhorar o desempenho do modelo Xception na tarefa de identificação de raças de cães, utilizando a competição Dog Breed Identification do Kaggle como estudo de caso.",
+    "geral": "Desenvolver um processo ponta a ponta, capaz de extrair e estruturar informações a partir de páginas web não estruturadas, gerando uma base de dados para aprimorar modelos de classificação de objetos pré-treinados, que, após seu aprimoramento, devem ser capazes de identificar classes de objetos não contidos na base de dados do treinamento original do modelo pré-treinado. Este processo deverá ser utilizado em uma prova de conceito.",
     "especificos": [
-      "Desenvolver um processo automatizado de extração de dados (Web Scraping) utilizando a biblioteca Puppeteer para criar a base de dados 'Scraper' a partir da página 'List of Dog Breeds' da Wikipedia.",
-      "Fazer a fusão da base 'Scraper' com a base original do Kaggle, resultando na base 'Mesclada', para enriquecer o conjunto de treinamento.",
-      "Aplicar técnicas de limpeza e processamento de dados, implementando e avaliando abordagens manuais e automatizadas (utilizando YOLOv8) para aprimorar a qualidade das imagens.",
-      "Treinar e testar o modelo de classificação Xception em diferentes cenários de bases de dados (base original do Kaggle, base mesclada sem limpeza, e base mesclada com limpezas manual e automatizada), comparando métricas como acurácia, recall, precisão e F1 Score.",
-      "Validar a eficácia das abordagens propostas para determinar se a adição de dados via Web Scraping e as etapas subsequentes de limpeza contribuem para a melhoria do desempenho do modelo de classificação."
+      "Implementar um web crawler capaz buscar imagens em páginas web não estruturadas. As imagens devem ser validadas por um serviço de IA que define as imagens encontradas como apropriadas ou não. Imagens consideradas apropriadas ao contexto do problema serão armazenadas de forma estruturada de acordo com seus rótulos encontrados na própria página web.",
+      "Implementar um servidor web que utiliza modelos pré-treinados de identificação de objetos em imagens. O servidor deve validar as imagens encontradas pelo web crawler. Este servidor funcionará como um intermediário entre o cliente do serviço (web crawler) e um classificador mais geral para rotular imagens.",
+      "Definir um processo de aprimoramento de modelos pré-treinados para que estes possam identificar novas categorias não incluídas em seu treinamento original. Este processo vai desde a estruturação dos dados até o arcabouço de avaliação dos modelos a serem aprimorados.",
+      "Comparar os modelos aprimorados com técnicas tradicionais e técnicas não convencionais. As técnicas tradicionais incluem classificadores como kNN, Random Forest e SVM. As técnicas não convencionais incluem Redes de Hopfield e técnicas de One Shot Learning.",
+      "Validar o processo através de um estudo de caso com uma aplicação de aprendizado contínuo (active learning) que utiliza um ou mais modelos aprimorados."
     ]
   },
   "coordenador": {
-    "nome": "Francisco Boldt de Assis",
-    "email": "599c018740ca@anon.lgpd",
-    "campus": "Serra",
+    "nome": null,
+    "email": null,
+    "campus": null,
     "titulacao": null
   },
   "equipe": [
     {
-      "nome": "Ludmila Dias",
-      "funcao": "Bolsista",
-      "instituicao": "Instituto Federal do Espírito Santo (IFES)",
+      "nome": "Avelino Forechi",
+      "funcao": "Colaborador",
+      "instituicao": "Ifes - Campus Aracruz",
       "carga_horaria_semanal": null
     }
   ],
   "datas": {
-    "inicio": "2023-08-01",
-    "fim": "2024-08-15",
-    "duracao_meses": 12
+    "inicio": "2022-01-01",
+    "fim": "2024-12-31",
+    "duracao_meses": 36
   },
   "cronograma": [
     {
-      "atividade": "Estudo do contexto",
-      "inicio": "2023-01",
-      "fim": "2023-03"
+      "atividade": "Desenvolvimento do Web Scraper",
+      "inicio": "2022-01",
+      "fim": "2023-12"
     },
     {
-      "atividade": "Seleção do modelo pré-treinado",
-      "inicio": "2023-01",
-      "fim": "2023-02"
+      "atividade": "Desenvolvimento do Serviço de Validação",
+      "inicio": "2022-01",
+      "fim": "2023-12"
     },
     {
-      "atividade": "Mesclagem das bases de dados",
-      "inicio": "2023-03",
-      "fim": "2023-05"
+      "atividade": "Implementação do Classificador de Validação",
+      "inicio": "2022-01",
+      "fim": "2023-12"
     },
     {
-      "atividade": "Treino e teste do modelo",
-      "inicio": "2023-04",
-      "fim": "2023-06"
+      "atividade": "Avaliação de Modelos de Transfer Learning",
+      "inicio": "2022-01",
+      "fim": "2023-12"
     },
     {
-      "atividade": "Limpeza das bases de dados",
-      "inicio": "2023-05",
-      "fim": "2023-05"
+      "atividade": "Avaliação de Técnicas Tradicionais e não Convencionais",
+      "inicio": "2022-01",
+      "fim": "2023-12"
     },
     {
-      "atividade": "Treino e teste com bases pós-limpeza",
-      "inicio": "2023-06",
-      "fim": "2023-07"
+      "atividade": "Validação do Processo",
+      "inicio": "2022-01",
+      "fim": "2023-12"
     },
     {
-      "atividade": "Compilação dos resultados",
-      "inicio": "2023-07",
-      "fim": "2023-08"
+      "atividade": "Implementação da Prova de Conceito",
+      "inicio": "2022-01",
+      "fim": "2023-12"
     },
     {
-      "atividade": "Apresentação das conclusões",
-      "inicio": "2023-09",
-      "fim": "2023-10"
+      "atividade": "Escrita dos Artigos",
+      "inicio": "2022-01",
+      "fim": "2023-12"
     }
   ],
   "financiamento": {
     "valor_total": null,
     "moeda": "BRL",
-    "fontes": [
-      {
-        "fonte": "Instituto Federal do Espírito Santo (Ifes)",
-        "valor": null,
-        "tipo": "Voluntariado (sem financiamento)"
-      }
-    ]
+    "fontes": []
   },
   "_meta": {
     "arquivo": "PJ_6988.pdf",
-    "paginas": 9,
-    "extraido_em": "2026-09-18T20:26:07.123104+00:00",
-    "modelo": "ministral-8b-latest",
+    "paginas": 6,
+    "extraido_em": "2026-08-10T21:05:45.583639+00:00",
+    "modelo": "mistral-large-latest",
     "fonte_texto": "pdf-text",
-    "campos_ausentes": []
+    "campos_ausentes": [
+      "coordenador.nome",
+      "coordenador.email",
+      "financiamento"
+    ]
   }
 }

@@ -1,97 +1,194 @@
 {
   "codigo": "PJ 3907",
   "titulo": "Cooperação Entre um Robô Aéreo e um Robô Terrestre Aplicados a Vigilância",
-  "descricao": "Desenvolvimento de um algoritmo para o controle de navegação do robô móvel Starter Kit 2.0 usando redes neurais, permitindo que o robô desvie de obstáculos e siga trajetórias de forma autônoma.",
+  "descricao": "Este projeto aborda o problema de cooperação entre um robô aéreo e um robô terrestre aplicados à vigilância. A ideia é implementar um sistema de vigilância composto por um robô móvel que terá a missão de realizar rondas por um ambiente previamente mapeado, nele estarão instaladas câmeras que detectarão um movimento suspeito, e quando o ambiente a ser inspecionado estiver fora do seu alcance solicitará a colaboração de um drone localizado numa estação. Este projeto é a continuidade do projeto 'Robô móvel para vigilância em ambiente internos' onde foi construído um robô móvel com capacidade de se locomover por horas, por conta da sua robustez construtiva.",
   "palavras_chave": [
-    "Robótica",
-    "Mecatrônica",
-    "Automação",
-    "Redes neurais",
-    "Controle de navegação",
-    "Robô móvel",
-    "Sensores ultrassônicos",
-    "LabVIEW",
-    "Python",
-    "Vigilância autônoma"
+    "Robótica móvel",
+    "Evasão de obstáculos",
+    "Controladores de trajetória",
+    "Reconhecimento de Voz"
   ],
   "area_conhecimento": "Robótica, Mecatrônica e Automação",
-  "linha_pesquisa": null,
+  "linha_pesquisa": "Robótica móvel",
   "objetivos": {
-    "geral": "Implementar um algoritmo, utilizando redes neurais, que torne o Starter Kit 2.0 capaz de guiar-se autonomamente.",
+    "geral": "Desenvolver um sistema de vigilância com a cooperação de um robô aéreo e um robô terrestre para cumprir missões de vigilância.",
     "especificos": [
-      "Estudo de redes neurais multicamadas.",
-      "Estudo da integração entre Python 3.6 e LabVIEW"
+      "Contribuir com a formação científica dos alunos do IFES na área da robótica aplicada.",
+      "Dar continuidade aos trabalhos iniciados no ano 2014 com o projeto: 'Desenvolvimento de um robô móvel para monitoramento da vigilância do Campus Serra. Progrupos 3 -2012' e com o projeto do ano 2015: 'Robô móvel para vigilância em ambiente internos'.",
+      "Avaliar e melhorar a estrutura do robô móvel.",
+      "Implementar um programa para enviar way points para o drone.",
+      "Implementar um programa que interatue com o robô terrestre e o aéreo.",
+      "Realizar testes práticos usando o campus Serra como estudo de caso.",
+      "Motivar os jovens estudantes a participar em atividades de inovação tecnológica, feiras e eventos científicos.",
+      "Avaliar possibilidade de registro de patente."
     ]
   },
   "coordenador": {
-    "nome": "Marco Antonio de Souza Leite Cuadros",
-    "email": "aff22c278b26@anon.lgpd",
+    "nome": "Marco Antonio de Souza L. Cuadros",
+    "email": null,
     "campus": "Serra",
     "titulacao": null
   },
   "equipe": [
     {
-      "nome": "Marco Antonio de Souza Leite Cuadros",
-      "funcao": "Orientador",
+      "nome": "H. G. Faria",
+      "funcao": "Pesquisador",
       "instituicao": null,
       "carga_horaria_semanal": null
     },
     {
-      "nome": "Matheus Caillaux Bacelar Andrade",
-      "funcao": "Estudante/Voluntário",
-      "instituicao": "Instituto Federal do Espírito Santo (IFES)",
+      "nome": "R. P. Amaral",
+      "funcao": "Pesquisador",
+      "instituicao": null,
+      "carga_horaria_semanal": null
+    },
+    {
+      "nome": "G. M. Almeida",
+      "funcao": "Pesquisador",
+      "instituicao": null,
+      "carga_horaria_semanal": null
+    },
+    {
+      "nome": "D. F. T. Gamarra",
+      "funcao": "Pesquisador",
+      "instituicao": null,
+      "carga_horaria_semanal": null
+    },
+    {
+      "nome": "L. G. Batista",
+      "funcao": "Pesquisador",
+      "instituicao": null,
+      "carga_horaria_semanal": null
+    },
+    {
+      "nome": "R. S. Alves",
+      "funcao": "Pesquisador",
+      "instituicao": null,
+      "carga_horaria_semanal": null
+    },
+    {
+      "nome": "G. S. Martins",
+      "funcao": "Pesquisador",
+      "instituicao": null,
+      "carga_horaria_semanal": null
+    },
+    {
+      "nome": "P. F. Salarolli",
+      "funcao": "Pesquisador",
+      "instituicao": null,
+      "carga_horaria_semanal": null
+    },
+    {
+      "nome": "V. R. Motta",
+      "funcao": "Pesquisador",
+      "instituicao": null,
+      "carga_horaria_semanal": null
+    },
+    {
+      "nome": "B. P. S. Freitas",
+      "funcao": "Pesquisador",
+      "instituicao": null,
+      "carga_horaria_semanal": null
+    },
+    {
+      "nome": "M. G. Medeiros",
+      "funcao": "Pesquisador",
+      "instituicao": null,
+      "carga_horaria_semanal": null
+    },
+    {
+      "nome": "J. Silva",
+      "funcao": "Pesquisador",
+      "instituicao": null,
       "carga_horaria_semanal": null
     }
   ],
   "datas": {
-    "inicio": "2018-01",
-    "fim": "2019-07-30",
-    "duracao_meses": 19
+    "inicio": "2017-08-01",
+    "fim": "2019-07-31",
+    "duracao_meses": 24
   },
   "cronograma": [
     {
       "atividade": "Revisão da literatura (Estado da arte)",
-      "inicio": "2018-01",
+      "inicio": "2017-08",
+      "fim": "2017-09"
+    },
+    {
+      "atividade": "Implementação dos algoritmos de navegação no robô móvel",
+      "inicio": "2017-08",
+      "fim": "2018-03"
+    },
+    {
+      "atividade": "Estudo e implementação dos algoritmos de detecção de movimento",
+      "inicio": "2017-10",
       "fim": "2018-05"
     },
     {
-      "atividade": "Estudo do LabVIEW e dos conceitos básicos de robótica móvel",
-      "inicio": "2018-01",
+      "atividade": "Desenvolvimento de um programa para envio de way points para o drone",
+      "inicio": "2017-11",
+      "fim": "2018-07"
+    },
+    {
+      "atividade": "Definição sobre a estrutura geral do funcionamento do sistema de vigilância",
+      "inicio": "2017-12",
+      "fim": "2018-02"
+    },
+    {
+      "atividade": "Realização de testes de simulação",
+      "inicio": "2018-03",
+      "fim": "2018-06"
+    },
+    {
+      "atividade": "Testes práticos na navegação do robô terrestre",
+      "inicio": "2018-04",
       "fim": "2018-09"
     },
     {
-      "atividade": "Estudo de redes neurais e sua implementação",
-      "inicio": "2018-04",
+      "atividade": "Testes práticos na navegação do drone",
+      "inicio": "2018-05",
+      "fim": "2018-10"
+    },
+    {
+      "atividade": "Implementação dos algoritmos de cooperação",
+      "inicio": "2018-08",
+      "fim": "2019-01"
+    },
+    {
+      "atividade": "Testes práticos de cooperação",
+      "inicio": "2018-10",
+      "fim": "2019-03"
+    },
+    {
+      "atividade": "Escrita de relatórios",
+      "inicio": "2019-02",
       "fim": "2019-06"
     },
     {
-      "atividade": "Testes, correções e escrita de relatórios",
-      "inicio": "2019-01",
+      "atividade": "Submissão de artigos. Participação em eventos, feiras, congressos, etc.",
+      "inicio": "2018-01",
       "fim": "2019-07"
     },
     {
-      "atividade": "Submissão de artigos e participação em feiras",
-      "inicio": "2019-05",
-      "fim": "2019-07"
+      "atividade": "Desenvolvimento de um Sistema Embarcado para Envio de way points para o Drone DJI Phantom 3",
+      "inicio": "2017-08",
+      "fim": "2018-07"
     }
   ],
   "financiamento": {
     "valor_total": null,
     "moeda": "BRL",
-    "fontes": [
-      {
-        "fonte": "Voluntariado",
-        "valor": null,
-        "tipo": "Sem financiamento"
-      }
-    ]
+    "fontes": []
   },
   "_meta": {
     "arquivo": "PJ_3907.pdf",
-    "paginas": 10,
-    "extraido_em": "2026-09-18T19:53:02.405446+00:00",
-    "modelo": "ministral-8b-latest",
+    "paginas": 8,
+    "extraido_em": "2026-08-10T20:16:53.844065+00:00",
+    "modelo": "mistral-large-latest",
     "fonte_texto": "pdf-text",
-    "campos_ausentes": []
+    "campos_ausentes": [
+      "coordenador.email",
+      "financiamento"
+    ]
   }
 }

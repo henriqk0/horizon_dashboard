@@ -1,52 +1,35 @@
 {
   "codigo": "PJ 6413",
-  "titulo": "Processamento de Linguagem Natural Aplicada na Bibliometria Automatizada",
-  "descricao": "Desenvolvimento de um modelo de relevância de artigos científicos usando algoritmos de aprendizado de máquina para auxiliar na triagem e análise de artigos científicos em revisões sistemáticas da literatura, visando otimizar o processo de revisão bibliográfica e minimizar erros humanos.",
+  "titulo": "Processamento de linguagem natural aplicada na bibliometria automatizada",
+  "descricao": "A triagem de títulos e resumos de artigos científicos na etapa de levantamento bibliográfico é uma tarefa maçante que consome um tempo considerável no trabalho de pesquisadores e estudantes. Atividades como revisões sistemáticas e meta-análises da literatura científica devem ser verificadas sistematicamente. Verificar milhares de estudos manualmente é ineficiente, sujeito a erros e difícil de se repetir. Este projeto visa continuar os estudos de outro projeto, financiado pela Fapes, com o título: 'Bibliometria automatizada: Um estudo de caso sobre o uso de lamas de beneficiamento de rochas ornamentais'. Entretanto, o atual projeto pretende analisar a utilização de diferentes métodos no sistema feito para auxiliar os pesquisadores em seus levantamentos bibliográficos, não limitados ao escopo do projeto anterior.",
   "palavras_chave": [
     "Processamento de Linguagem Natural",
+    "Bibliometria",
     "Aprendizado de Máquina",
-    "Bibliometria Automatizada",
-    "Revisão Sistemática da Literatura",
-    "Classificação de Artigos Científicos",
-    "Relevância de Documentos",
-    "Bag-of-Words (BOW)",
-    "TF-IDF",
-    "SMOTE",
-    "Regressão Logística",
-    "Máquina de Vetores de Suporte (SVM)",
-    "Floresta Aleatória",
-    "XGBoost"
+    "Web Scraping"
   ],
-  "area_conhecimento": "Ciência da Computação",
-  "linha_pesquisa": "Inteligência Artificial e Processamento de Linguagem Natural",
+  "area_conhecimento": "Ciências Exatas e da Terra",
+  "linha_pesquisa": "Bibliometria automatizada",
   "objetivos": {
-    "geral": "Desenvolver um modelo de relevância para artigos científicos utilizando técnicas de Processamento de Linguagem Natural (PLN) e algoritmos de Aprendizado de Máquina (AM) para auxiliar na triagem e análise de artigos científicos em revisões sistemáticas da literatura.",
+    "geral": "Implementar um sistema computacional que auxilia pesquisadores a fazer um levantamento bibliográfico de um determinado tema.",
     "especificos": [
-      "Identificar técnicas, modelos e ferramentas de PLN e AM para automatizar a coleta e análise de artigos científicos.",
-      "Utilizar corpora de artigos científicos para treinar e avaliar modelos de classificação de relevância.",
-      "Implementar algoritmos de AM para classificar artigos como relevantes ou irrelevantes com base em consultas de usuários.",
-      "Aplicar técnicas de balanceamento de dados para mitigar o desbalanceamento entre artigos relevantes e irrelevantes.",
-      "Avaliar o desempenho dos modelos implementados utilizando métricas como acurácia, precisão, cobertura e medida-F."
+      "Aplicar técnicas de Web Scraping para acessar sites indexadores de trabalhos científicos para encontrar textos potencialmente relevantes.",
+      "Analisar métodos de processamento de linguagem natural para avaliar semanticamente a potencial relevância dos artigos encontrados.",
+      "Comparar algoritmos de aprendizado de máquina para automatizar a classificação de relevância dos trabalhos selecionados.",
+      "Implementar um sistema interativo para gerar ciclos de active learning para que os usuários façam ajustes no sistema sem a necessidade de reprogramação."
     ]
   },
   "coordenador": {
-    "nome": "Hilário Tomaz Alves de Oliveira",
-    "email": "6088ccd9c12d@anon.lgpd",
+    "nome": null,
+    "email": null,
     "campus": "Serra",
     "titulacao": null
   },
-  "equipe": [
-    {
-      "nome": "Matheus Santiago Ribeiro",
-      "funcao": "Bolsista",
-      "instituicao": "IFES - Campus Serra",
-      "carga_horaria_semanal": null
-    }
-  ],
+  "equipe": [],
   "datas": {
     "inicio": "2021-01-01",
-    "fim": "2022-08-20",
-    "duracao_meses": 20
+    "fim": "2022-12-31",
+    "duracao_meses": 24
   },
   "cronograma": [
     {
@@ -55,32 +38,67 @@
       "fim": "2021-03"
     },
     {
-      "atividade": "Identificação de corpora para a tarefa de ranqueamento de documentos",
+      "atividade": "Catalogação dos repositórios de artigos",
       "inicio": "2021-02",
+      "fim": "2021-03"
+    },
+    {
+      "atividade": "Identificação de corpora para a tarefa de ranqueamento de documentos",
+      "inicio": "2021-03",
       "fim": "2021-04"
     },
     {
       "atividade": "Estudo de bibliotecas para PLN e AM",
-      "inicio": "2021-03",
-      "fim": "2021-07"
+      "inicio": "2021-04",
+      "fim": "2021-05"
+    },
+    {
+      "atividade": "Criação dos sistemas de coleta para os repositórios selecionados",
+      "inicio": "2021-05",
+      "fim": "2021-09"
+    },
+    {
+      "atividade": "Implementação do módulo de extração dos metadados dos artigos",
+      "inicio": "2021-05",
+      "fim": "2021-09"
     },
     {
       "atividade": "Implementação do módulo de estimação de relevância dos documentos",
-      "inicio": "2021-04",
-      "fim": "2021-08"
+      "inicio": "2021-07",
+      "fim": "2021-10"
     },
     {
-      "atividade": "Execução de experimentos",
-      "inicio": "2021-08",
-      "fim": "2022-06"
+      "atividade": "Execução de experimentos para avaliação do desempenho",
+      "inicio": "2021-09",
+      "fim": "2021-11"
+    },
+    {
+      "atividade": "Integração com o módulo de recuperação de artigos científicos",
+      "inicio": "2021-10",
+      "fim": "2021-12"
     },
     {
       "atividade": "Integração dos sistemas de coleta em um framework",
+      "inicio": "2021-10",
+      "fim": "2021-12"
+    },
+    {
+      "atividade": "Execução de Experimentos",
+      "inicio": "2022-01",
+      "fim": "2022-02"
+    },
+    {
+      "atividade": "Escrita de trabalhos científicos",
+      "inicio": "2022-03",
+      "fim": "2022-04"
+    },
+    {
+      "atividade": "Desenvolvimento de um sistema de recuperação de artigos científicos",
       "inicio": null,
       "fim": null
     },
     {
-      "atividade": "Escrita de trabalhos científicos",
+      "atividade": "Desenvolvimento de um modelo de relevância de artigos científicos usando algoritmos de aprendizado de máquina",
       "inicio": null,
       "fim": null
     }
@@ -90,18 +108,22 @@
     "moeda": "BRL",
     "fontes": [
       {
-        "fonte": "IFES",
+        "fonte": "Fapes",
         "valor": null,
-        "tipo": "Programa Institucional de Bolsas de Iniciação Científica"
+        "tipo": null
       }
     ]
   },
   "_meta": {
     "arquivo": "PJ_6413.pdf",
-    "paginas": 10,
-    "extraido_em": "2026-09-18T20:20:42.048657+00:00",
-    "modelo": "ministral-8b-latest",
+    "paginas": 11,
+    "extraido_em": "2026-08-10T20:57:35.528142+00:00",
+    "modelo": "mistral-large-latest",
     "fonte_texto": "pdf-text",
-    "campos_ausentes": []
+    "campos_ausentes": [
+      "coordenador.nome",
+      "coordenador.email",
+      "equipe"
+    ]
   }
 }

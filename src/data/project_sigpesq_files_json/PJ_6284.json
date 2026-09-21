@@ -1,78 +1,155 @@
 {
   "codigo": "PJ 6284",
-  "titulo": "Programa Institucional de Iniciação Científica e Tecnológica Ifes 2023-2024",
-  "descricao": "Validação de modelos matemáticos de painéis fotovoltaicos e geração eólica utilizando dados reais coletados no Laboratório Espaço Energia IFES Campus Serra.",
+  "titulo": "Sistema de gerenciamento energético para microrredes – etapa 01 – estudos iniciais",
+  "descricao": "Este trabalho propõe estudos iniciais para a implantação de um sistema de gerenciamento energético de microrredes inteligentes. O proponente, em seu doutorado, desenvolveu modelos matemáticos de painéis fotovoltaicos, turbina eólica e três estratégias de otimização aplicadas no gerenciamento de microrredes. Tais modelos e estratégias foram programados no MATLAB, que é um ambiente fácil de programar, porém difícil de implementar em sistemas reais por ser uma linguagem lenta do ponto de vista computacional. É proposto a continuação desta investigação com a especificação de hardware para um sistema de controle central de microrredes e o projeto de um software que utiliza os algoritmos de otimização desenvolvidos no doutorado. Os principais produtos desta investigação são a documentação técnica necessária para aquisição de um sistema de controle central e uma versão de testes do software de gerenciamento energético feito em uma linguagem de programação rápida, orientada a objetos e com recursos para implementar futuramente uma interface gráfica.",
   "palavras_chave": [
-    "Energia eólica",
-    "Modelos matemáticos",
-    "MATLAB",
-    "Geração de energia",
-    "Dados meteorológicos",
-    "Turbinas eólicas",
-    "Validação de modelos",
-    "Energia renovável",
-    "Estação meteorológica",
-    "Simulação de energia"
+    "Microrrede",
+    "Fontes renováveis de energia",
+    "Sistema de controle central",
+    "Software",
+    "Sistema de Armazenamento de Energia",
+    "Conversores Multiníveis"
   ],
-  "area_conhecimento": "Engenharia Elétrica",
-  "linha_pesquisa": null,
+  "area_conhecimento": "Engenharia Elétrica - 3.04.00.00-7",
+  "linha_pesquisa": "Gerenciamento Energético",
   "objetivos": {
-    "geral": "Analisar a geração de energia eólica e validar modelos matemáticos no MATLAB com base em dados meteorológicos coletados no IFES, campus Serra.",
+    "geral": "O objetivo geral deste projeto é iniciar os estudos computacionais e gerar documentação técnica para fornecer subsídios para projetos de pesquisa futuros com o intuito de capacitar a residência protótipo com uma MG inteligente através de um sistema de controle central com microgeração distribuída (potência de geração renovável menor ou igual que 75 kW) e a construção de um software de gerenciamento energético na versão de testes (alfa).",
     "especificos": [
-      "Extrair dados meteorológicos (irradiação solar, velocidade do vento, temperatura) da estação meteorológica do IFES campus Serra.",
-      "Coletar dados de geração de energia a partir do site da turbina eólica instalada no IFES campus Serra.",
-      "Estudar o MATLAB e desenvolver um modelo de turbina eólica utilizando dados meteorológicos coletados.",
-      "Comparar e validar os resultados simulados com os dados reais de geração de energia, identificando discrepâncias e oportunidades de otimização."
+      "Validar os modelos matemáticos de painéis fotovoltaicos e da turbina eólica desenvolvidos por [10].",
+      "Desenvolvimento modelos matemáticos de sistemas de armazenamento de energia tais como, ultracapacitores e banco de baterias;",
+      "Converter o algoritmo de gerenciamento feito por [10] em uma linguagem de programação rápida e orientada a objetos. Atualmente o algoritmo roda no MATLAB, uma linguagem interpretada e lenta para implantação em tempo real;",
+      "Desenvolver e projetar conversor multinível baseado em H bridge que atendam às características de conexão de rede e controle de reativos de fontes renováveis;",
+      "Desenvolver estudos para alocação de conversores na rede elétrica proposta e suas funções na estabilidade na mesma;",
+      "Desenvolver estratégias de controle preditivo do conversor proposto;",
+      "Simulação em software MATLAB e implementação em plataforma HIL do conversor;",
+      "Montagem do conversor."
     ]
   },
   "coordenador": {
-    "nome": "Danilo da Paula e Silva",
-    "email": "882938764799@anon.lgpd",
-    "campus": "Serra ES",
-    "titulacao": null
+    "nome": "Danilo de Paula e Silva",
+    "email": null,
+    "campus": "Serra",
+    "titulacao": "Doutor"
   },
-  "equipe": [
-    {
-      "nome": "Danilo da Paula e Silva",
-      "funcao": "Orientador",
-      "instituicao": "IFES",
-      "carga_horaria_semanal": null
-    },
-    {
-      "nome": "Jordana Correia Aguiar",
-      "funcao": "Bolsista",
-      "instituicao": "IFES",
-      "carga_horaria_semanal": null
-    }
-  ],
+  "equipe": [],
   "datas": {
-    "inicio": null,
-    "fim": "2024-08-23",
-    "duracao_meses": null
+    "inicio": "2021-08-01",
+    "fim": "2024-07-31",
+    "duracao_meses": 36
   },
   "cronograma": [
     {
-      "atividade": "Acessar a base de dados da estação meteorológica e extrair dados como irradiação solar, velocidade do vento, temperatura e outros.",
+      "atividade": "Pesquisa Bibliográfica",
+      "inicio": "2021-08",
+      "fim": "2024-07"
+    },
+    {
+      "atividade": "SW de Gerenciamento: modelo híbrido eólico",
+      "inicio": "2022-04",
+      "fim": "2022-11"
+    },
+    {
+      "atividade": "Especificação do Sistema de Controle Central",
+      "inicio": "2022-07",
+      "fim": "2022-11"
+    },
+    {
+      "atividade": "Validação de modelo fotovoltaico",
+      "inicio": "2021-08",
+      "fim": "2021-12"
+    },
+    {
+      "atividade": "Modelo matemático de ESS",
+      "inicio": "2022-03",
+      "fim": "2022-08"
+    },
+    {
+      "atividade": "Estudos dos modelos solar, bateria e ultracapacitor",
+      "inicio": "2022-11",
+      "fim": "2023-02"
+    },
+    {
+      "atividade": "Modelo matemático do sistema bateria-ultracapacitor",
+      "inicio": "2023-03",
+      "fim": "2023-06"
+    },
+    {
+      "atividade": "Integração dos modelos solar - bateria - ultracapacitor",
+      "inicio": "2023-05",
+      "fim": "2023-08"
+    },
+    {
+      "atividade": "Estudo sobre o conversor bidirecional",
+      "inicio": "2022-11",
+      "fim": "2022-12"
+    },
+    {
+      "atividade": "Modelo Matemático do conversor bidirecional",
+      "inicio": "2023-01",
+      "fim": "2023-04"
+    },
+    {
+      "atividade": "Simulação eletrônica do conversor",
+      "inicio": "2023-05",
+      "fim": "2023-08"
+    },
+    {
+      "atividade": "Validação do modelo do conversor",
+      "inicio": "2023-07",
+      "fim": "2023-10"
+    },
+    {
+      "atividade": "Estudo sobre diversas estratégias de controle preditivo",
+      "inicio": "2022-11",
+      "fim": "2022-12"
+    },
+    {
+      "atividade": "Desenvolvimento, simulações e implementação em HIL das estratégias de controle preditivo escolhida",
+      "inicio": "2023-01",
+      "fim": "2023-04"
+    },
+    {
+      "atividade": "Implementação das novas topologias em bancada experimental",
+      "inicio": "2023-05",
+      "fim": "2023-08"
+    },
+    {
+      "atividade": "Obtenção e análise dos dados da bancada experimental",
+      "inicio": "2023-09",
+      "fim": "2023-10"
+    },
+    {
+      "atividade": "Estudo da abordagem de sistemas híbridos",
+      "inicio": "2023-11",
+      "fim": "2024-02"
+    },
+    {
+      "atividade": "SW de Gerenciamento: modelo híbrido banco de baterias",
+      "inicio": "2023-12",
+      "fim": "2024-05"
+    },
+    {
+      "atividade": "SW de Gerenciamento: modelo híbrido supercapacitor",
+      "inicio": "2023-12",
+      "fim": "2024-05"
+    },
+    {
+      "atividade": "Submissão de artigo em congresso",
+      "inicio": "2021-10",
+      "fim": "2024-07"
+    },
+    {
+      "atividade": "Relatórios finais",
+      "inicio": "2021-12",
+      "fim": "2024-07"
+    },
+    {
+      "atividade": "Validação de modelos matemáticos de painéis fotovoltaicos e geração eólica utilizando dados reais coletados no Laboratório Espaço Energia IFES Campus Serra",
       "inicio": null,
       "fim": null
     },
     {
-      "atividade": "Acessar os serviços dos inversores e coletar histórico de geração de energia solar e eólica para formar uma base de dados históricos.",
-      "inicio": null,
-      "fim": null
-    },
-    {
-      "atividade": "Estudar teoria de sistemas híbridos, MATLAB e equações de turbinas eólicas disponíveis na literatura.",
-      "inicio": null,
-      "fim": null
-    },
-    {
-      "atividade": "Desenvolver o modelo da turbina eólica no MATLAB, simular o modelo com dados meteorológicos e comparar a potência simulada com a gerada.",
-      "inicio": null,
-      "fim": null
-    },
-    {
-      "atividade": "Elaborar relatório final do modelo.",
+      "atividade": "Coleta de dados dos painéis fotovoltaicos, geração eólica e estação meteorológica do Laboratório Espaço Energia IFES Campus Serra",
       "inicio": null,
       "fim": null
     }
@@ -82,20 +159,21 @@
     "moeda": "BRL",
     "fontes": [
       {
-        "fonte": "Fapes",
+        "fonte": "Fundação de Amparo à Pesquisa e Inovação do Espírito Santo - FAPES (EDITAL FAPES Nº 03/2021 - UNIVERSAL, Nº FAPES:415/2021 e Nº SIAFEM:2021-T75CV)",
         "valor": null,
-        "tipo": "Institucional"
+        "tipo": "Auxílio financeiro"
       }
     ]
   },
   "_meta": {
     "arquivo": "PJ_6284.pdf",
-    "paginas": 9,
-    "extraido_em": "2026-09-18T20:19:52.117438+00:00",
-    "modelo": "ministral-8b-latest",
+    "paginas": 21,
+    "extraido_em": "2026-08-10T20:54:54.059374+00:00",
+    "modelo": "mistral-large-latest",
     "fonte_texto": "pdf-text",
     "campos_ausentes": [
-      "datas.inicio"
+      "coordenador.email",
+      "equipe"
     ]
   }
 }

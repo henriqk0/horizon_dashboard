@@ -1,28 +1,25 @@
 {
   "codigo": "PJ 9535",
-  "titulo": "NOVA-IA Indústria (Núcleo Otimizado e Virtualizado para Aplicações de Inteligência Artificial para Indústria): um estudo sobre uso de PINNs no processo de sinterização",
-  "descricao": "Projeto de pesquisa aplicada que visa desenvolver e aplicar Physics-Informed Neural Networks (PINNs) para modelar as reações termodinâmicas do leito de sinterização, utilizando dados industriais reais da ArcelorMittal Tubarão. O objetivo é otimizar o processo de sinterização de minério de ferro, reduzindo emissões de CO e melhorando a eficiência energética, com foco na sustentabilidade industrial e na transformação digital.",
+  "titulo": "NOVA-IA Indústria (Núcleo Otimizado e Virtualizado para Aplicações de Inteligência Artificial para Indústria): um estudo sobre uso de PINNs no processo de sinter",
+  "descricao": "Este projeto de Iniciação Científica insere-se no contexto da transformação digital e da sustentabilidade na siderurgia (Aço Verde), com foco na otimização do processo de sinterização de minério de ferro. A sinterização é uma etapa de alto consumo energético, onde a eficiência da combustão impacta diretamente as emissões de poluentes, como o CO. O objetivo é desenvolver e aplicar Physics-Informed Neural Networks (PINNs) para modelar as reações termodinâmicas do leito de sinterização, utilizando dados industriais reais da ArcelorMittal Tubarão. As PINNs incorporam as leis da física diretamente em sua função de perda, garantindo soluções mais fisicamente consistentes com menor dependência de grandes volumes de dados rotulados.",
   "palavras_chave": [
     "Mineração e Siderurgia Inteligentes",
     "Sustentabilidade Industrial",
     "PINNs (Physics-Informed Neural Networks)",
     "Aço verde",
     "Transformação Digital",
-    "Datacenter",
-    "Processo de sinterização",
-    "Eficiência energética",
-    "Redução de emissões de CO"
+    "Datacenter"
   ],
-  "area_conhecimento": "Ciência da Computação",
+  "area_conhecimento": "1.03.03.00-6 Metodologia e Técnicas da Computação",
   "linha_pesquisa": "Inteligência Artificial",
   "objetivos": {
-    "geral": "Usar um modelo híbrido de redes neurais artificiais, as Physics-Informed Neural Networks (PINNs), para a modelagem de um sinter pot, visando otimizar o processo de sinterização de minério de ferro e reduzir emissões de CO.",
+    "geral": "O objetivo é usar um modelo híbrido de redes neurais artificiais, as Physics-Informed Neural Networks (PINNs), para a modelagem de um sinter pot.",
     "especificos": [
-      "Coletar e organizar dados históricos da planta de sinterização da ArcelorMittal.",
-      "Capacitar bolsistas na modelagem de Equações Diferenciais Parciais (PDEs) em redes neurais através da implementação inicial da equação do calor usando diferenciação automática.",
+      "Coletar e organizar dados históricos da planta de sinterização.",
+      "Capacitar os bolsistas na modelagem de PDEs em redes neurais através da implementação inicial da equação do calor via diferenciação automática.",
       "Mapear e isolar as equações de conservação de energia e massa (fases sólida e gasosa) descritas na literatura de sinterização e injeção de vapor.",
       "Codificar o balanço físico na função de perda (Physics Loss) da rede neural.",
-      "Tratar os dados da ArcelorMittal para contornar *time delays* e ruídos típicos da produção, formando o conjunto de aprendizado (Data Loss).",
+      "Tratar os dados da ArcelorMittal para contornar time delays e ruídos típicos da produção, formando o conjunto de aprendizado (Data Loss).",
       "Treinar a PINN unificada e comparar seu desempenho preditivo em relação à modelagem estritamente guiada por dados."
     ]
   },
@@ -32,55 +29,42 @@
     "campus": null,
     "titulacao": null
   },
-  "equipe": [
-    {
-      "nome": "Estudante 1",
-      "funcao": "Bolsista",
-      "instituicao": "Instituto Federal do Espírito Santo (IFES)",
-      "carga_horaria_semanal": null
-    },
-    {
-      "nome": "Estudante 2",
-      "funcao": "Bolsista",
-      "instituicao": "Instituto Federal do Espírito Santo (IFES)",
-      "carga_horaria_semanal": null
-    }
-  ],
+  "equipe": [],
   "datas": {
     "inicio": "2026-09-01",
-    "fim": "2027-08-01",
-    "duracao_meses": 12
+    "fim": "2028-08-31",
+    "duracao_meses": 24
   },
   "cronograma": [
     {
-      "atividade": "Revisão bibliográfica sobre PINNs e o processo de Sinterização (Estudantes 1 e 2)",
+      "atividade": "Revisão bibliográfica sobre PINNs e o processo de Sinterização",
       "inicio": "2026-09",
       "fim": "2026-11"
     },
     {
-      "atividade": "Implementação do tutorial prático de PINN para Equações do Calor (Estudantes 1 e 2)",
+      "atividade": "Implementação do tutorial prático de PINN para Equações do Calor",
       "inicio": "2026-09",
       "fim": "2026-11"
     },
     {
-      "atividade": "Levantamento das equações do artigo de referência (Li et al., 2026) e modelagem matemática (Estudante 1) / Recebimento e tratamento da base de dados da ArcelorMittal (Estudante 2)",
-      "inicio": "2026-10",
-      "fim": "2026-12"
-    },
-    {
-      "atividade": "Tradução das equações de sinterização para a função Loss da rede no TensorFlow/PyTorch (Estudante 1) / Treinamento somente com os dados da ArcelorMittal, na abordagem de Modelos Guiados por Dados (Data-Driven) (Estudante 2)",
-      "inicio": "2026-11",
+      "atividade": "Levantamento das equações do artigo de referência (Li et al., 2026) e modelagem matemática / Recebimento e tratamento da base de dados da ArcelorMittal",
+      "inicio": "2026-12",
       "fim": "2027-02"
     },
     {
-      "atividade": "Treinamento do modelo híbrido (Dados + Física) e realização de experimentos (Estudantes 1 e 2)",
-      "inicio": "2027-01",
-      "fim": "2027-06"
+      "atividade": "Tradução das equações de sinterização para a função Loss da rede no TensorFlow/PyTorch / Treinamento somente com os dados da ArcelorMittal, na abordagem de Modelos Guiados por Dados (Data-Driven)",
+      "inicio": "2027-03",
+      "fim": "2027-05"
     },
     {
-      "atividade": "Ajustes finais, validação de resultados com especialistas da empresa e redação do Relatório Final / Artigo Científico (Estudantes 1 e 2)",
-      "inicio": "2027-05",
+      "atividade": "Treinamento do modelo híbrido (Dados + Física) e realização de experimentos",
+      "inicio": "2027-06",
       "fim": "2027-08"
+    },
+    {
+      "atividade": "Ajustes finais, validação de resultados com especialistas da empresa e redação do Relatório Final / Artigo Científico",
+      "inicio": "2027-09",
+      "fim": "2028-08"
     }
   ],
   "financiamento": {
@@ -88,21 +72,22 @@
     "moeda": "BRL",
     "fontes": [
       {
-        "fonte": "FAPES (com financiamento aprovado em edital Finep)",
+        "fonte": "Finep (via FAPES)",
         "valor": null,
-        "tipo": "Pesquisa Aplicada"
+        "tipo": "Edital"
       }
     ]
   },
   "_meta": {
     "arquivo": "PJ_9535.pdf",
     "paginas": 10,
-    "extraido_em": "2026-09-18T20:59:09.731209+00:00",
-    "modelo": "ministral-8b-latest",
+    "extraido_em": "2026-08-10T22:04:48.992068+00:00",
+    "modelo": "mistral-large-latest",
     "fonte_texto": "pdf-text",
     "campos_ausentes": [
       "coordenador.nome",
-      "coordenador.email"
+      "coordenador.email",
+      "equipe"
     ]
   }
 }
