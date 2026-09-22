@@ -12,6 +12,7 @@ import Breadcrumbs from "../components/Breadcrumbs.astro";
 import CampusGlobalSelect from "../components/campus/CampusGlobalSelect.astro";
 import { getRealCampuses, resolveCampusId } from "../lib/tenant-data";
 import { USERWAY_ACCOUNT_ID } from "../lib/accessibility-settings";
+import { CLARITY_PROJECT_ID, GA_MEASUREMENT_ID } from "../lib/analytics-settings";
 
 const campuses = getRealCampuses();
 const campusCatalog = campuses.map(({ id, name, slug }) => ({ id, name, slug }));
@@ -180,6 +181,46 @@ const navItems = [
 		/>
 		<style is:global set:html={fontFaceCss}></style>
 		<title>{title} | Horizon</title>
+
+		<!-- Analytics: Google Analytics 4 + Microsoft Clarity (IDs públicos) -->
+		{
+			GA_MEASUREMENT_ID && (
+				<>
+					<script
+						is:inline
+						async
+						src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
+					></script>
+					<script is:inline define:vars={{ GA_MEASUREMENT_ID }}>
+						window.dataLayer = window.dataLayer || [];
+						function gtag() {
+							dataLayer.push(arguments);
+						}
+						gtag("js", new Date());
+						gtag("config", GA_MEASUREMENT_ID);
+					</script>
+				</>
+			)
+		}
+
+		{
+			CLARITY_PROJECT_ID && (
+				<script is:inline define:vars={{ CLARITY_PROJECT_ID }}>
+					(function (c, l, a, r, i, t, y) {
+						c[a] =
+							c[a] ||
+							function () {
+								(c[a].q = c[a].q || []).push(arguments);
+							};
+						t = l.createElement(r);
+						t.async = 1;
+						t.src = "https://www.clarity.ms/tag/" + i;
+						y = l.getElementsByTagName(r)[0];
+						y.parentNode.insertBefore(t, y);
+					})(window, document, "clarity", "script", CLARITY_PROJECT_ID);
+				</script>
+			)
+		}
 
 		{
 			USERWAY_ACCOUNT_ID && (
