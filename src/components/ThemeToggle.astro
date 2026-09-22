@@ -45,26 +45,47 @@
 </button>
 
 <script>
+  // Ciclo de 3 estados: claro → escuro → auto (decisão D-1).
+  // O tema é aplicado pelo applyThemeSettings global declarado no <head> do Layout
+  // (espelho de src/lib/accessibility-settings.ts) — mesmo fluxo em todo o site.
+  const THEME_PREFERENCE_KEY = "theme-preference";
+  const ORDER = ["light", "dark", "auto"] as const;
+
   // Select ALL theme toggle buttons
-  const themeToggles = document.querySelectorAll(".theme-toggle-btn");
+  const themeToggles = document.querySelectorAll<HTMLButtonElement>(
+    ".theme-toggle-btn",
+  );
+
+  const LABELS: Record<string, string> = {
+    light: "Ativar tema escuro",
+    dark: "Ativar tema claro",
+    auto: "Alternar para tema automático (sistema)",
+  };
+
+  const currentPreference = (): string =>
+    localStorage.getItem(THEME_PREFERENCE_KEY) || "auto";
+
+  const updateLabel = () => {
+    const current = currentPreference();
+    themeToggles.forEach((btn) => {
+      btn.setAttribute("aria-label", LABELS[current] || LABELS.auto!);
+    });
+  };
 
   const handleToggleClick = () => {
-    const element = document.documentElement;
-    element.classList.toggle("dark");
-
-    const isDark = element.classList.contains("dark");
-    localStorage.setItem("theme-preference", isDark ? "dark" : "light");
-
-    // Update ARIA label for ALL buttons
-    themeToggles.forEach((btn) => {
-      btn.setAttribute(
-        "aria-label",
-        isDark ? "Ativar tema claro" : "Ativar tema escuro",
-      );
-    });
+    const current = ORDER.includes(currentPreference() as (typeof ORDER)[number])
+      ? currentPreference()
+      : "auto";
+    const next =
+      ORDER[(ORDER.indexOf(current as (typeof ORDER)[number]) + 1) % ORDER.length];
+    localStorage.setItem(THEME_PREFERENCE_KEY, next);
+    window.applyThemeSettings?.();
+    updateLabel();
   };
 
   themeToggles.forEach((btn) => {
     btn.addEventListener("click", handleToggleClick);
   });
+
+  updateLabel();
 </script>

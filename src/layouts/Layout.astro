@@ -8,10 +8,10 @@ const { title, breadcrumbReplacements } = Astro.props;
 import "../styles/global.css";
 import ThemeToggle from "../components/ThemeToggle.astro";
 import BrandStripe from "../components/BrandStripe.astro";
-import AccessibilityToggle from "../components/AccessibilityToggle.astro";
 import Breadcrumbs from "../components/Breadcrumbs.astro";
 import CampusGlobalSelect from "../components/campus/CampusGlobalSelect.astro";
 import { getRealCampuses, resolveCampusId } from "../lib/tenant-data";
+import { USERWAY_ACCOUNT_ID } from "../lib/accessibility-settings";
 
 const campuses = getRealCampuses();
 const campusCatalog = campuses.map(({ id, name, slug }) => ({ id, name, slug }));
@@ -181,81 +181,69 @@ const navItems = [
 		<style is:global set:html={fontFaceCss}></style>
 		<title>{title} | Horizon</title>
 
+		{
+			USERWAY_ACCOUNT_ID && (
+				<script
+					is:inline
+					id="a11yWidgetSrc"
+					src="https://cdn.userway.org/widget.js"
+					data-account={USERWAY_ACCOUNT_ID}
+					async
+					crossorigin="anonymous"
+				/>
+			)
+		}
+
 		<script is:inline>
-			// Function to apply all settings from localStorage
+			// Tema: espelho mínimo de src/lib/accessibility-settings.ts — manter em
+			// sincronia (o teste de paridade em tests/accessibility-settings.test.ts
+			// detecta divergência de defaults entre os dois).
+			const THEME_PREFERENCE_KEY = "theme-preference";
+			const LEGACY_ACCESSIBILITY_KEYS = [
+				"contrast",
+				"text-scale",
+				"reduce-motion",
+				"enhanced-focus",
+				"screen-reader-optimized",
+				"high-contrast",
+				"theme",
+			];
+
 			function applyThemeSettings() {
 				if (typeof localStorage === "undefined") return;
 
-				// 1. Theme — claro é o padrão canônico (Ifes / Rede Federal).
-				// O modo escuro continua disponível pelo botão e persiste.
-				const themePreference =
-					localStorage.getItem("theme-preference") || "light";
-				let theme = themePreference;
-
+				// 1. Tema — default "auto" (segue o sistema). D-1.
+				let theme = localStorage.getItem(THEME_PREFERENCE_KEY) || "auto";
+				if (theme !== "light" && theme !== "dark") theme = "auto";
 				if (theme === "auto") {
-					theme = window.matchMedia("(prefers-color-scheme: dark)")
-						.matches
+					theme = window.matchMedia("(prefers-color-scheme: dark)").matches
 						? "dark"
 						: "light";
 				}
+				document.documentElement.classList.toggle("dark", theme === "dark");
 
-				if (theme === "light") {
-					document.documentElement.classList.remove("dark");
-				} else {
-					document.documentElement.classList.add("dark");
-				}
-
-				// 2. Contrast
-				const contrast = localStorage.getItem("contrast") || "normal";
-				document.documentElement.classList.remove(
-					"contrast-high",
-					"contrast-maximum",
-				);
-				if (contrast === "high") {
-					document.documentElement.classList.add("contrast-high");
-				} else if (contrast === "maximum") {
-					document.documentElement.classList.add("contrast-maximum");
-				}
-
-				// Legacy migration
-				if (
-					localStorage.getItem("high-contrast") === "true" &&
-					!localStorage.getItem("contrast")
-				) {
-					document.documentElement.classList.add("contrast-high");
-					localStorage.setItem("contrast", "high");
-				}
-
-				// 3. Font Scale
-				const textScale = localStorage.getItem("text-scale") || "base";
-				const scales = ["sm", "base", "lg", "xl"];
-				scales.forEach((s) => {
-					document.documentElement.classList.toggle(
-						`text-scale-${s}`,
-						textScale === s,
-					);
+				// 2. Limpeza idempotente das chaves órfãs do painel antigo (AC-2.2).
+				LEGACY_ACCESSIBILITY_KEYS.forEach((key) => {
+					try {
+						if (localStorage.getItem(key) !== null) {
+							localStorage.removeItem(key);
+						}
+					} catch {
+						// localStorage indisponível: ignora a chave e segue.
+					}
 				});
-
-				// 4. Additional Options
-				document.documentElement.classList.toggle(
-					"reduce-motion",
-					localStorage.getItem("reduce-motion") === "true",
-				);
-				document.documentElement.classList.toggle(
-					"enhanced-focus",
-					localStorage.getItem("enhanced-focus") === "true",
-				);
-				document.documentElement.classList.toggle(
-					"screen-reader-optimized",
-					localStorage.getItem("screen-reader-optimized") === "true",
-				);
 			}
 
-			// Apply on initial load
+			// Aplica no carregamento inicial
 			applyThemeSettings();
 
-			// Re-apply on View Transitions navigation (astro:after-swap)
+			// Reaplica em navegação View Transitions (astro:after-swap)
 			document.addEventListener("astro:after-swap", applyThemeSettings);
+
+			// Segue mudanças do sistema no modo "auto" (AC-3.4)
+			window
+				.matchMedia("(prefers-color-scheme: dark)")
+				.addEventListener("change", applyThemeSettings);
 		</script>
 
 		<script
@@ -360,7 +348,6 @@ const navItems = [
 						currentCampusId={currentCampusId}
 						compact={true}
 					/>
-					<AccessibilityToggle />
 					<ThemeToggle />
 					<label
 						for="mobile-menu-toggle"
@@ -705,7 +692,6 @@ const navItems = [
 							campuses={campuses}
 							currentCampusId={currentCampusId}
 						/>
-						<AccessibilityToggle />
 						<ThemeToggle />
 					</div>
 				</div>

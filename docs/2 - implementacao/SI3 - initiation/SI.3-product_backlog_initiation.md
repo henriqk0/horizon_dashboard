@@ -841,6 +841,10 @@ Como um usuário com baixa visão ou daltonismo, quero poder ativar modos de vis
     - [ ] Localizar o seletor próximo ao `ThemeToggle`.
     - [ ] Respeitar os padrões WCAG 2.1 AA de contraste.
 
+**Implementação atual (widget UserWay)**: os recursos de alto contraste/filtros deste item são
+fornecidos pelo widget UserWay (ferramentas de contraste/cor), carregado em todas as páginas via
+`USERWAY_ACCOUNT_ID` — ver RF-27 e `specs/accessibility-userway-widget/`.
+
 ### US-020 – Recursos para Baixa Visão (Magnificação de Texto)
 **GitHub Issue**: [#31](https://github.com/ifesserra-lab/horizon_dashboard/issues/31)
 
@@ -865,6 +869,10 @@ Como um usuário com baixa visão, quero poder aumentar o tamanho da fonte e o e
     - [ ] Garantir que o layout não quebre ao aumentar a fonte (design responsivo).
     - [ ] Prover feedback visual no menu para a opção selecionada.
 
+**Implementação atual (widget UserWay)**: a magnificação de texto / escala de fonte deste item é
+fornecida pelas ferramentas de texto do widget UserWay — ver RF-27 e
+`specs/accessibility-userway-widget/`.
+
 ### US-021 – Auditoria de Qualidade (Lighthouse)
 **GitHub Issue**: [#31](https://github.com/ifesserra-lab/horizon_dashboard/issues/31)
 
@@ -885,6 +893,10 @@ Como um gestor de qualidade, quero realizar uma auditoria Lighthouse em páginas
     - [ ] Gerar relatório Lighthouse para a Home e listagem de Projetos.
     - [ ] Identificar oportunidades de melhoria (Score < 90).
     - [ ] Documentar os resultados no walkthrough.
+
+**Atualização (widget UserWay)**: a auditoria deve avaliar a integração do widget UserWay + o
+`ThemeToggle` de 3 estados (Claro/Escuro/Auto) como solução de acessibilidade — ver RF-27 e
+`specs/accessibility-userway-widget/`.
 
 ### US-022 – SEO Social (Open Graph Tags)
 **GitHub Issue**: [#32](https://github.com/ifesserra-lab/horizon_dashboard/issues/32)

@@ -258,13 +258,6 @@ const plural = (n: number) => (n === 1 ? "publicação" : "publicações");
 	}
 
 	/* Reduzir movimento: sem animação, estado final imediato. */
-	:global(:root.reduce-motion) .hero-line,
-	:global(:root.reduce-motion) .hero-area,
-	:global(:root.reduce-motion) .hero-peak {
-		animation: none;
-		stroke-dashoffset: 0;
-		opacity: 1;
-	}
 	@media (prefers-reduced-motion: reduce) {
 		.hero-line,
 		.hero-area,

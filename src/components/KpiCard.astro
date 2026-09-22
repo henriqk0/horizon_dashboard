@@ -80,7 +80,6 @@ const countTo = canCount ? Number(raw.replace(/\./g, "")) : null;
 <script>
   // Contagem crescente ao entrar na viewport. Desligada com reduzir-movimento.
   const prefersReduced =
-    document.documentElement.classList.contains("reduce-motion") ||
     window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
   const targets = document.querySelectorAll<HTMLElement>("[data-count-to]");
