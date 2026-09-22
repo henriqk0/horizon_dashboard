@@ -117,8 +117,17 @@
         --tag-bg-accent: #24322b;
     }
 
+    html {
+        /* Overflow horizontal "clip" (não "hidden"): impede que conteúdo largo
+           (palavras longas sem quebra, tabelas, abas) alargue o <html> inteiro em
+           telas estreitas, sem criar scroll container — preserva position:sticky
+           e fixed. A correção real dos focos de overflow fica nos componentes. */
+        overflow-x: clip;
+    }
+
     body {
         @apply bg-page-bg text-text-main antialiased transition-colors duration-300;
+        overflow-x: clip;
     }
 }
 

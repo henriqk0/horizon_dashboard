@@ -44,7 +44,7 @@ const projectData = Array.from(projectYearMap.entries())
 
 <section aria-labelledby="dashboard-title" class="space-y-6">
     <div
-        class="flex items-center justify-between border-b border-border-main pb-4"
+        class="flex flex-wrap items-center justify-between gap-3 border-b border-border-main pb-4"
     >
         <h3
             id="dashboard-title"
@@ -53,7 +53,9 @@ const projectData = Array.from(projectYearMap.entries())
             Painel
         </h3>
         <!-- Tabs Navigation -->
-        <div class="flex space-x-2 bg-tag-bg/50 p-1 rounded-xl">
+        <div
+            class="flex space-x-2 bg-tag-bg/50 p-1 rounded-xl overflow-x-auto max-w-full"
+        >
             <button
                 class="tab-btn px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 text-text-secondary hover:text-text-main hover:bg-premium-accent/5 data-[active=true]:bg-premium-purple/20 data-[active=true]:text-premium-purple"
                 data-tab="articles"

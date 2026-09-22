@@ -31,18 +31,18 @@ const visibleSources = (sources || []).filter(Boolean);
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 title={source.title}
-                                class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-track border border-border-main text-[10px] font-bold text-text-secondary hover:text-premium-accent hover:border-premium-accent/30 transition-colors"
+                                class="inline-flex max-w-full items-center gap-1.5 px-2.5 py-1 rounded-lg bg-track border border-border-main text-[10px] font-bold text-text-secondary hover:text-premium-accent hover:border-premium-accent/30 transition-colors"
                             >
                                 <span class="text-premium-accent">{source.systemLabel}</span>
-                                <span>{source.sourceLabel}</span>
+                                <span class="min-w-0 break-all">{source.sourceLabel}</span>
                             </a>
                         ) : (
                             <span
                                 title={source.title}
-                                class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-track border border-border-main text-[10px] font-bold text-text-secondary"
+                                class="inline-flex max-w-full items-center gap-1.5 px-2.5 py-1 rounded-lg bg-track border border-border-main text-[10px] font-bold text-text-secondary"
                             >
                                 <span class="text-premium-accent">{source.systemLabel}</span>
-                                <span>{source.sourceLabel}</span>
+                                <span class="min-w-0 break-all">{source.sourceLabel}</span>
                             </span>
                         ),
                     )
