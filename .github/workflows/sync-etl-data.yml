@@ -97,6 +97,15 @@ jobs:
           # Exports podem conter NaN/Infinity (nao-JSON); normaliza para null.
           node scripts/sanitize-json.mjs src/data
 
+      - name: Normalize names to Title Case
+        if: steps.zip.outputs.found == 'true'
+        shell: bash
+        run: |
+          # Re-casa nomes/titulos em CAPS LOCK (e suas variantes minusculas)
+          # para Title Case, preservando siglas da whitelist interna
+          # (PIBIC, SCADA, IFES, COPPE/UFRJ, ...) — veja scripts/normalize-names.mjs.
+          node scripts/normalize-names.mjs
+
       - name: Detect data changes
         id: changed
         if: steps.zip.outputs.found == 'true'
