@@ -29,9 +29,10 @@ jobs:
           ref: ${{ github.ref }}
           fetch-depth: 0
 
-      # O zip de exportacao vem do branch `mistral` do fork do ETL
-      # (henriqk0/horizon_etl). Se faltar zip no diretorio apontado por
-      # EXPORTS_DIR, o job termina verde com um aviso (nada a sincronizar).
+      # O zip de exportacao vem de RafaelDeps/horizon_etl@main (data/exports),
+      # publicado pelos workflows semanais do ETL. Se nao houver zip no
+      # diretorio apontado por EXPORTS_DIR, o job termina verde com um aviso
+      # (nada a sincronizar).
       - name: Resolve export zip from ETL data/exports
         id: zip
         env:
@@ -85,7 +86,21 @@ jobs:
         run: |
           set -euo pipefail
           mkdir -p src/data
-          unzip -o "${RUNNER_TEMP}/etl_exports.zip" -d src/data
+          tmp="$(mktemp -d)"
+          # Primeiro nivel: o zip publicado pelo ETL. Pode conter os JSONs
+          # diretamente ou um zip interno (exports_canonical.zip aninhado no
+          # proprio pacote). Desempacota os dois niveis, quando houver.
+          unzip -o "${RUNNER_TEMP}/etl_exports.zip" -d "$tmp"
+          if ls "$tmp"/*.zip >/dev/null 2>&1; then
+            for bundle in "$tmp"/*.zip; do
+              unzip -o "$bundle" -d src/data
+            done
+          else
+            cp -R "$tmp"/. src/data/
+          fi
+          # O bundle em si nao e dado consumido pelo dashboard (gitignored);
+          # remove o placeholder/sobra para manter src/data limpo.
+          rm -f src/data/exports_canonical.zip
           # Remove cruft de arquivos empacotados em macOS/Windows (nao sao dados).
           find src/data -name '.DS_Store' -delete
           find src/data -type d -name '__MACOSX' -prune -exec rm -rf {} +
@@ -111,10 +126,15 @@ jobs:
         if: steps.zip.outputs.found == 'true'
         shell: bash
         run: |
-          if git diff --quiet -- src/data ':(exclude)src/data/_meta.json'; then
-            echo "changed=false" >> "$GITHUB_OUTPUT"
-          else
+          # git diff ignora arquivos untracked/ignorados (ex.: exports_canonical.zip);
+          # usa status porcelana para detectar tambem arquivos novos no pacote.
+          # Obs.: evita `grep -q` (fecha o pipe cedo -> SIGPIPE -> pipefail) e
+          # `grep -v` sem protetor (exit 1 quando nada sobra -> set -e aborta).
+          changed_files="$(git status --porcelain -- src/data | grep -v 'src/data/_meta.json' || true)"
+          if [[ -n "$changed_files" ]]; then
             echo "changed=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "changed=false" >> "$GITHUB_OUTPUT"
           fi
 
       - name: Setup Node
