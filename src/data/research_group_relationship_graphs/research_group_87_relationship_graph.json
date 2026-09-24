@@ -1,11 +1,11 @@
 {
     "metadata": {
-        "generated_at": "2026-09-21T18:19:57.098547+00:00",
+        "generated_at": "2026-09-23T21:46:09.314737+00:00",
         "sources": {
-            "researchers": "/home/henriq/Projects/gith/forks/others/horizon_etl/data/exports/researchers_canonical.json",
-            "initiatives": "/home/henriq/Projects/gith/forks/others/horizon_etl/data/exports/initiatives_canonical.json",
-            "research_groups": "/home/henriq/Projects/gith/forks/others/horizon_etl/data/exports/research_groups_canonical.json",
-            "advisorships": "/home/henriq/Projects/gith/forks/others/horizon_etl/data/exports/advisorships_canonical.json"
+            "researchers": "/home/runner/work/horizon_etl/horizon_etl/data/exports/researchers_canonical.json",
+            "initiatives": "/home/runner/work/horizon_etl/horizon_etl/data/exports/initiatives_canonical.json",
+            "research_groups": "/home/runner/work/horizon_etl/horizon_etl/data/exports/research_groups_canonical.json",
+            "advisorships": "/home/runner/work/horizon_etl/horizon_etl/data/exports/advisorships_canonical.json"
         },
         "scope": {
             "type": "research_group",
@@ -54,21 +54,21 @@
                 "degree": 3
             },
             {
-                "id": 640,
+                "id": 641,
                 "name": "Davi Miranda Soares",
                 "classification": "student",
                 "weighted_degree": 3,
                 "degree": 1
             },
             {
-                "id": 987,
+                "id": 988,
                 "name": "Phillipe Rocha Maia",
                 "classification": "student",
                 "weighted_degree": 3,
                 "degree": 1
             },
             {
-                "id": 3315,
+                "id": 8744,
                 "name": "Wallastan Melo da Silva Junior",
                 "classification": "student",
                 "weighted_degree": 2,
@@ -82,6 +82,19 @@
         "graph": {},
         "nodes": [
             {
+                "name": "Wallastan Melo da Silva Junior",
+                "classification": "student",
+                "classification_confidence": "high",
+                "was_student": true,
+                "was_staff": false,
+                "campus_name": null,
+                "degree": 1,
+                "weighted_degree": 2,
+                "is_group_member": false,
+                "is_advisorship_neighbor": true,
+                "id": 8744
+            },
+            {
                 "name": "Davi Miranda Soares",
                 "classification": "student",
                 "classification_confidence": "high",
@@ -92,7 +105,7 @@
                 "weighted_degree": 3,
                 "is_group_member": false,
                 "is_advisorship_neighbor": true,
-                "id": 640
+                "id": 641
             },
             {
                 "name": "Vinícius Secchin De Melo",
@@ -118,23 +131,22 @@
                 "weighted_degree": 3,
                 "is_group_member": false,
                 "is_advisorship_neighbor": true,
-                "id": 987
-            },
-            {
-                "name": "Wallastan Melo da Silva Junior",
-                "classification": "student",
-                "classification_confidence": "high",
-                "was_student": true,
-                "was_staff": false,
-                "campus_name": null,
-                "degree": 1,
-                "weighted_degree": 2,
-                "is_group_member": false,
-                "is_advisorship_neighbor": true,
-                "id": 3315
+                "id": 988
             }
         ],
         "edges": [
+            {
+                "weight": 2,
+                "initiative_count": 1,
+                "research_group_count": 0,
+                "advisorship_count": 1,
+                "relation_types": [
+                    "initiative",
+                    "advisorship"
+                ],
+                "source": 8744,
+                "target": 123
+            },
             {
                 "weight": 3,
                 "initiative_count": 2,
@@ -144,7 +156,7 @@
                     "initiative",
                     "advisorship"
                 ],
-                "source": 640,
+                "source": 641,
                 "target": 123
             },
             {
@@ -157,19 +169,7 @@
                     "advisorship"
                 ],
                 "source": 123,
-                "target": 987
-            },
-            {
-                "weight": 2,
-                "initiative_count": 1,
-                "research_group_count": 0,
-                "advisorship_count": 1,
-                "relation_types": [
-                    "initiative",
-                    "advisorship"
-                ],
-                "source": 123,
-                "target": 3315
+                "target": 988
             }
         ]
     }
