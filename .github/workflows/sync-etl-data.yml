@@ -12,6 +12,7 @@ concurrency:
 
 permissions:
   contents: write
+  actions: write
 
 env:
   ETL_OWNER: RafaelDeps
@@ -179,6 +180,22 @@ jobs:
             git show --stat --oneline HEAD
             echo '```'
           } >> "$GITHUB_STEP_SUMMARY"
+
+      # O push feito pelo sync usa o GITHUB_TOKEN padrao, que NAO aciona
+      # workflows `on: push` (regra do GitHub). Para garantir o redeploy,
+      # dispara o deploy.yml explicitamente via workflow_dispatch (excecao
+      # permitida com GITHUB_TOKEN desde 2022-09).
+      - name: Trigger deploy after data sync
+        if: steps.changed.outputs.changed == 'true'
+        uses: actions/github-script@v7
+        with:
+          script: |
+            await github.rest.actions.createWorkflowDispatch({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              workflow_id: 'deploy.yml',
+              ref: 'main',
+            });
 
       - name: No export zip published yet
         if: steps.zip.outputs.found != 'true'
