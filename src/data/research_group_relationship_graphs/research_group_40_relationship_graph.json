@@ -1,11 +1,11 @@
 {
     "metadata": {
-        "generated_at": "2026-09-15T16:09:44.337708+00:00",
+        "generated_at": "2026-09-23T21:46:06.682363+00:00",
         "sources": {
-            "researchers": "/home/henriq/Projects/gith/forks/others/horizon_etl/data/exports/researchers_canonical.json",
-            "initiatives": "/home/henriq/Projects/gith/forks/others/horizon_etl/data/exports/initiatives_canonical.json",
-            "research_groups": "/home/henriq/Projects/gith/forks/others/horizon_etl/data/exports/research_groups_canonical.json",
-            "advisorships": "/home/henriq/Projects/gith/forks/others/horizon_etl/data/exports/advisorships_canonical.json"
+            "researchers": "/home/runner/work/horizon_etl/horizon_etl/data/exports/researchers_canonical.json",
+            "initiatives": "/home/runner/work/horizon_etl/horizon_etl/data/exports/initiatives_canonical.json",
+            "research_groups": "/home/runner/work/horizon_etl/horizon_etl/data/exports/research_groups_canonical.json",
+            "advisorships": "/home/runner/work/horizon_etl/horizon_etl/data/exports/advisorships_canonical.json"
         },
         "scope": {
             "type": "research_group",
@@ -42,8 +42,8 @@
             "advisorship": 0
         },
         "classification_distribution": {
-            "researcher": 1,
-            "student": 3
+            "student": 3,
+            "researcher": 1
         },
         "top_people_by_weighted_degree": [
             {
@@ -54,21 +54,21 @@
                 "degree": 3
             },
             {
-                "id": 1876,
+                "id": 1881,
                 "name": "Mel Dos Santos Mota",
                 "classification": "student",
                 "weighted_degree": 3,
                 "degree": 3
             },
             {
-                "id": 1877,
+                "id": 1882,
                 "name": "Myllena Campos Alves",
                 "classification": "student",
                 "weighted_degree": 3,
                 "degree": 3
             },
             {
-                "id": 1878,
+                "id": 1883,
                 "name": "Nively Santana do Carmo",
                 "classification": "student",
                 "weighted_degree": 3,
@@ -81,6 +81,19 @@
         "multigraph": false,
         "graph": {},
         "nodes": [
+            {
+                "name": "Mel Dos Santos Mota",
+                "classification": "student",
+                "classification_confidence": "medium",
+                "was_student": true,
+                "was_staff": false,
+                "campus_name": "São Mateus",
+                "degree": 3,
+                "weighted_degree": 3,
+                "is_group_member": true,
+                "is_advisorship_neighbor": false,
+                "id": 1881
+            },
             {
                 "name": "Fabio Paiva Reis",
                 "classification": "researcher",
@@ -95,19 +108,6 @@
                 "id": 57
             },
             {
-                "name": "Mel Dos Santos Mota",
-                "classification": "student",
-                "classification_confidence": "medium",
-                "was_student": true,
-                "was_staff": false,
-                "campus_name": "São Mateus",
-                "degree": 3,
-                "weighted_degree": 3,
-                "is_group_member": true,
-                "is_advisorship_neighbor": false,
-                "id": 1876
-            },
-            {
                 "name": "Myllena Campos Alves",
                 "classification": "student",
                 "classification_confidence": "medium",
@@ -118,7 +118,7 @@
                 "weighted_degree": 3,
                 "is_group_member": true,
                 "is_advisorship_neighbor": false,
-                "id": 1877
+                "id": 1882
             },
             {
                 "name": "Nively Santana do Carmo",
@@ -131,7 +131,7 @@
                 "weighted_degree": 3,
                 "is_group_member": true,
                 "is_advisorship_neighbor": false,
-                "id": 1878
+                "id": 1883
             }
         ],
         "edges": [
@@ -143,8 +143,30 @@
                 "relation_types": [
                     "research_group"
                 ],
-                "source": 57,
-                "target": 1876
+                "source": 1881,
+                "target": 57
+            },
+            {
+                "weight": 1,
+                "initiative_count": 0,
+                "research_group_count": 1,
+                "advisorship_count": 0,
+                "relation_types": [
+                    "research_group"
+                ],
+                "source": 1881,
+                "target": 1882
+            },
+            {
+                "weight": 1,
+                "initiative_count": 0,
+                "research_group_count": 1,
+                "advisorship_count": 0,
+                "relation_types": [
+                    "research_group"
+                ],
+                "source": 1881,
+                "target": 1883
             },
             {
                 "weight": 1,
@@ -155,7 +177,7 @@
                     "research_group"
                 ],
                 "source": 57,
-                "target": 1877
+                "target": 1882
             },
             {
                 "weight": 1,
@@ -166,7 +188,7 @@
                     "research_group"
                 ],
                 "source": 57,
-                "target": 1878
+                "target": 1883
             },
             {
                 "weight": 1,
@@ -176,30 +198,8 @@
                 "relation_types": [
                     "research_group"
                 ],
-                "source": 1876,
-                "target": 1877
-            },
-            {
-                "weight": 1,
-                "initiative_count": 0,
-                "research_group_count": 1,
-                "advisorship_count": 0,
-                "relation_types": [
-                    "research_group"
-                ],
-                "source": 1876,
-                "target": 1878
-            },
-            {
-                "weight": 1,
-                "initiative_count": 0,
-                "research_group_count": 1,
-                "advisorship_count": 0,
-                "relation_types": [
-                    "research_group"
-                ],
-                "source": 1877,
-                "target": 1878
+                "source": 1882,
+                "target": 1883
             }
         ]
     }

@@ -1,20 +1,20 @@
 {
     "metadata": {
-        "generated_at": "2026-09-21T17:23:11.952917+00:00",
+        "generated_at": "2026-09-23T21:46:09.266228+00:00",
         "sources": {
-            "researchers": "/home/henriq/Projects/gith/forks/others/horizon_etl/data/exports/researchers_canonical.json",
-            "initiatives": "/home/henriq/Projects/gith/forks/others/horizon_etl/data/exports/initiatives_canonical.json",
-            "research_groups": "/home/henriq/Projects/gith/forks/others/horizon_etl/data/exports/research_groups_canonical.json",
-            "advisorships": "/home/henriq/Projects/gith/forks/others/horizon_etl/data/exports/advisorships_canonical.json"
+            "researchers": "/home/runner/work/horizon_etl/horizon_etl/data/exports/researchers_canonical.json",
+            "initiatives": "/home/runner/work/horizon_etl/horizon_etl/data/exports/initiatives_canonical.json",
+            "research_groups": "/home/runner/work/horizon_etl/horizon_etl/data/exports/research_groups_canonical.json",
+            "advisorships": "/home/runner/work/horizon_etl/horizon_etl/data/exports/advisorships_canonical.json"
         },
         "scope": {
             "type": "research_group",
             "research_group": {
                 "id": 86,
-                "name": "Grupo de Apoio ao Ensino de Eletrônica",
-                "short_name": "GAEE",
-                "member_count": 1,
-                "expanded_node_count": 1,
+                "name": "Grupo de Análises em Educação e Linguagens",
+                "short_name": "GAEL",
+                "member_count": 3,
+                "expanded_node_count": 3,
                 "advisorship_neighbor_count": 0
             }
         },
@@ -26,31 +26,45 @@
         }
     },
     "graph_stats": {
-        "nodes": 1,
-        "edges": 0,
-        "isolated_nodes": 1,
+        "nodes": 3,
+        "edges": 3,
+        "isolated_nodes": 0,
         "connected_components": 1,
-        "largest_component_size": 1,
+        "largest_component_size": 3,
         "relation_event_totals": {
             "initiative": 0,
-            "research_group": 0,
+            "research_group": 3,
             "advisorship": 0
         },
         "edge_relation_presence": {
             "initiative": 0,
-            "research_group": 0,
+            "research_group": 3,
             "advisorship": 0
         },
         "classification_distribution": {
-            "null": 1
+            "researcher": 3
         },
         "top_people_by_weighted_degree": [
             {
                 "id": 122,
-                "name": "Celso José Munaro",
-                "classification": null,
-                "weighted_degree": 0,
-                "degree": 0
+                "name": "Rafael da Silva Marques Ferreira",
+                "classification": "researcher",
+                "weighted_degree": 2,
+                "degree": 2
+            },
+            {
+                "id": 2700,
+                "name": "Claudia Rodrigues Muzy Fernandes",
+                "classification": "researcher",
+                "weighted_degree": 2,
+                "degree": 2
+            },
+            {
+                "id": 2701,
+                "name": "Willian Timóteo Oliveira",
+                "classification": "researcher",
+                "weighted_degree": 2,
+                "degree": 2
             }
         ]
     },
@@ -60,19 +74,79 @@
         "graph": {},
         "nodes": [
             {
-                "name": "Celso José Munaro",
-                "classification": null,
-                "classification_confidence": "low",
+                "name": "Rafael da Silva Marques Ferreira",
+                "classification": "researcher",
+                "classification_confidence": "high",
                 "was_student": false,
-                "was_staff": false,
-                "campus_name": null,
-                "degree": 0,
-                "weighted_degree": 0,
+                "was_staff": true,
+                "campus_name": "Viana",
+                "degree": 2,
+                "weighted_degree": 2,
                 "is_group_member": true,
                 "is_advisorship_neighbor": false,
                 "id": 122
+            },
+            {
+                "name": "Claudia Rodrigues Muzy Fernandes",
+                "classification": "researcher",
+                "classification_confidence": "high",
+                "was_student": false,
+                "was_staff": true,
+                "campus_name": "Viana",
+                "degree": 2,
+                "weighted_degree": 2,
+                "is_group_member": true,
+                "is_advisorship_neighbor": false,
+                "id": 2700
+            },
+            {
+                "name": "Willian Timóteo Oliveira",
+                "classification": "researcher",
+                "classification_confidence": "high",
+                "was_student": false,
+                "was_staff": true,
+                "campus_name": "Viana",
+                "degree": 2,
+                "weighted_degree": 2,
+                "is_group_member": true,
+                "is_advisorship_neighbor": false,
+                "id": 2701
             }
         ],
-        "edges": []
+        "edges": [
+            {
+                "weight": 1,
+                "initiative_count": 0,
+                "research_group_count": 1,
+                "advisorship_count": 0,
+                "relation_types": [
+                    "research_group"
+                ],
+                "source": 122,
+                "target": 2700
+            },
+            {
+                "weight": 1,
+                "initiative_count": 0,
+                "research_group_count": 1,
+                "advisorship_count": 0,
+                "relation_types": [
+                    "research_group"
+                ],
+                "source": 122,
+                "target": 2701
+            },
+            {
+                "weight": 1,
+                "initiative_count": 0,
+                "research_group_count": 1,
+                "advisorship_count": 0,
+                "relation_types": [
+                    "research_group"
+                ],
+                "source": 2700,
+                "target": 2701
+            }
+        ]
     }
 }

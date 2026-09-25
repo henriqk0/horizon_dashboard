@@ -1,21 +1,21 @@
 {
     "metadata": {
-        "generated_at": "2026-09-21T17:23:12.011223+00:00",
+        "generated_at": "2026-09-23T21:46:20.004304+00:00",
         "sources": {
-            "researchers": "/home/henriq/Projects/gith/forks/others/horizon_etl/data/exports/researchers_canonical.json",
-            "initiatives": "/home/henriq/Projects/gith/forks/others/horizon_etl/data/exports/initiatives_canonical.json",
-            "research_groups": "/home/henriq/Projects/gith/forks/others/horizon_etl/data/exports/research_groups_canonical.json",
-            "advisorships": "/home/henriq/Projects/gith/forks/others/horizon_etl/data/exports/advisorships_canonical.json"
+            "researchers": "/home/runner/work/horizon_etl/horizon_etl/data/exports/researchers_canonical.json",
+            "initiatives": "/home/runner/work/horizon_etl/horizon_etl/data/exports/initiatives_canonical.json",
+            "research_groups": "/home/runner/work/horizon_etl/horizon_etl/data/exports/research_groups_canonical.json",
+            "advisorships": "/home/runner/work/horizon_etl/horizon_etl/data/exports/advisorships_canonical.json"
         },
         "scope": {
             "type": "research_group",
             "research_group": {
                 "id": 271,
-                "name": "Nucleo de Estudos em Ensino de Fisica",
-                "short_name": "NEEF",
-                "member_count": 2,
+                "name": "Núcleo de Estudos em Ensino de Ciências e Matemática",
+                "short_name": "NEECM",
+                "member_count": 3,
                 "expanded_node_count": 3,
-                "advisorship_neighbor_count": 1
+                "advisorship_neighbor_count": 0
             }
         },
         "weight_definition": "Each edge weight equals the total number of relationship evidences between two people. Every shared initiative, shared research group, and advisorship adds 1 to the edge weight.",
@@ -32,39 +32,37 @@
         "connected_components": 1,
         "largest_component_size": 3,
         "relation_event_totals": {
-            "initiative": 4,
-            "research_group": 1,
-            "advisorship": 1
+            "initiative": 0,
+            "research_group": 3,
+            "advisorship": 0
         },
         "edge_relation_presence": {
-            "initiative": 2,
-            "research_group": 1,
-            "advisorship": 1
+            "initiative": 0,
+            "research_group": 3,
+            "advisorship": 0
         },
         "classification_distribution": {
-            "outside_ifes": 1,
-            "student": 1,
-            "researcher": 1
+            "researcher": 3
         },
         "top_people_by_weighted_degree": [
             {
-                "id": 374,
-                "name": "Dirceu Soares Júnior",
+                "id": 375,
+                "name": "Andre Oakes de Oliveira Goncalves",
                 "classification": "researcher",
-                "weighted_degree": 5,
-                "degree": 2
-            },
-            {
-                "id": 377,
-                "name": "Thiago Pinto Wandekoken",
-                "classification": "student",
-                "weighted_degree": 5,
+                "weighted_degree": 2,
                 "degree": 2
             },
             {
                 "id": 376,
-                "name": "Paulo Henrique Zanandrea",
-                "classification": "outside_ifes",
+                "name": "Ádila Motta Leite Seferin",
+                "classification": "researcher",
+                "weighted_degree": 2,
+                "degree": 2
+            },
+            {
+                "id": 5731,
+                "name": "Emerson Crizoé Pereira",
+                "classification": "researcher",
                 "weighted_degree": 2,
                 "degree": 2
             }
@@ -76,12 +74,12 @@
         "graph": {},
         "nodes": [
             {
-                "name": "Paulo Henrique Zanandrea",
-                "classification": "outside_ifes",
-                "classification_confidence": "medium",
+                "name": "Ádila Motta Leite Seferin",
+                "classification": "researcher",
+                "classification_confidence": "high",
                 "was_student": false,
-                "was_staff": false,
-                "campus_name": null,
+                "was_staff": true,
+                "campus_name": "Nova Venécia",
                 "degree": 2,
                 "weighted_degree": 2,
                 "is_group_member": true,
@@ -89,43 +87,43 @@
                 "id": 376
             },
             {
-                "name": "Thiago Pinto Wandekoken",
-                "classification": "student",
-                "classification_confidence": "medium",
-                "was_student": true,
-                "was_staff": false,
-                "campus_name": null,
-                "degree": 2,
-                "weighted_degree": 5,
-                "is_group_member": true,
-                "is_advisorship_neighbor": false,
-                "id": 377
-            },
-            {
-                "name": "Dirceu Soares Júnior",
+                "name": "Emerson Crizoé Pereira",
                 "classification": "researcher",
                 "classification_confidence": "high",
                 "was_student": false,
                 "was_staff": true,
-                "campus_name": null,
+                "campus_name": "Nova Venécia",
                 "degree": 2,
-                "weighted_degree": 5,
-                "is_group_member": false,
-                "is_advisorship_neighbor": true,
-                "id": 374
+                "weighted_degree": 2,
+                "is_group_member": true,
+                "is_advisorship_neighbor": false,
+                "id": 5731
+            },
+            {
+                "name": "Andre Oakes de Oliveira Goncalves",
+                "classification": "researcher",
+                "classification_confidence": "high",
+                "was_student": false,
+                "was_staff": true,
+                "campus_name": "Nova Venécia",
+                "degree": 2,
+                "weighted_degree": 2,
+                "is_group_member": true,
+                "is_advisorship_neighbor": false,
+                "id": 375
             }
         ],
         "edges": [
             {
                 "weight": 1,
-                "initiative_count": 1,
-                "research_group_count": 0,
+                "initiative_count": 0,
+                "research_group_count": 1,
                 "advisorship_count": 0,
                 "relation_types": [
-                    "initiative"
+                    "research_group"
                 ],
                 "source": 376,
-                "target": 374
+                "target": 375
             },
             {
                 "weight": 1,
@@ -136,19 +134,18 @@
                     "research_group"
                 ],
                 "source": 376,
-                "target": 377
+                "target": 5731
             },
             {
-                "weight": 4,
-                "initiative_count": 3,
-                "research_group_count": 0,
-                "advisorship_count": 1,
+                "weight": 1,
+                "initiative_count": 0,
+                "research_group_count": 1,
+                "advisorship_count": 0,
                 "relation_types": [
-                    "initiative",
-                    "advisorship"
+                    "research_group"
                 ],
-                "source": 377,
-                "target": 374
+                "source": 5731,
+                "target": 375
             }
         ]
     }
