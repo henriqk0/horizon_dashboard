@@ -99,12 +99,12 @@ export default function parquetPlugin() {
           graph_stats: meta.graph_stats,
           graph: { ...(meta.graph || {}), nodes, edges },
         };
-        return `export default ${JSON.stringify(assembled)};`;
+        return `export default JSON.parse(${JSON.stringify(JSON.stringify(assembled))});`;
       }
 
       if (id.endsWith(".parquet")) {
         const rows = await readTable(id);
-        return `export default ${JSON.stringify(rows)};`;
+        return `export default JSON.parse(${JSON.stringify(JSON.stringify(rows))});`;
       }
 
       return null;
