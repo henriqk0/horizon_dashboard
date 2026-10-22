@@ -151,7 +151,7 @@ idêntico dos dois lados. Serialização multi-tipo confirmada em escala: 904 oc
 2. **`PeopleNetworkOverview.astro` continua órfão**: nenhuma página o importa. Ele foi tornado
    robusto, não religado — a decisão de reconectar ou remover fica com o time.
 3. **Rankings ausentes no export**: a correção mostra um estado vazio honesto. A origem do problema
-   está no ETL (`henriqk0/horizon_etl`) e não neste repositório.
+   está no ETL (`ifesserra-lab/horizon_etl`) e não neste repositório.
 4. **13 falhas pré-existentes na suíte**: fora do escopo desta especificação, mas devem ser
    endereçadas antes do próximo release, já que mascaram regressões futuras.
 5. **`specs/graph-label-positioning`** declara ter criado `src/utils/graphLabelLayout.ts` e

@@ -154,7 +154,7 @@ Os exports atuais do ETL confirmam o cenário. Em `people_collaboration_graph.js
 ## 4. Fora de Escopo
 
 - Remover ou reconectar `PeopleNetworkOverview.astro` ao fluxo de páginas.
-- Corrigir a ausência dos campos no export do ETL (`henriqk0/horizon_etl`) — o dashboard apenas
+- Corrigir a ausência dos campos no export do ETL (`ifesserra-lab/horizon_etl`) — o dashboard apenas
   passa a lidar com a ausência corretamente.
 - Harmonizar as divergências de cor entre SVG e Canvas (coberto por `specs/graph-color-legend`).
 - Adicionar `namedItems` para vínculos do tipo `article`.
