@@ -1,120 +1,151 @@
 {
   "codigo": "PJ 5797",
   "titulo": "Aprimoramento de assistente virtual inteligente para a solução de dúvidas dos estudantes em relação às rotinas acadêmicas",
-  "descricao": "Assistentes virtuais autônomos vêm sendo cada vez mais inseridos nas mais diversas áreas, como em vendas de produtos e serviços, na educação enquanto tutores inteligentes, no entretenimento e para diagnósticos e/ou aconselhamentos em um domínio específico. No contexto de funcionamento de um Instituto da Rede Federal de Educação Profissional, Científica e Tecnológica (IF), esta tecnologia ainda vem sendo pouco empregada, principalmente em relação às informações relacionadas ao seu funcionamento, processos e atividades de ensino, pesquisa e extensão. Este projeto propõe o aprimoramento de um chatbot, denominado ifes.talk, estendendo sua base de conhecimento e utilizando funcionalidades de processamento de linguagem natural para o gerenciamento de sua base e da interface com o usuário. Espera-se com este sistema de informação aprimorar a relação entre os institutos e seus discentes, facilitando o acesso à informação.",
+  "descricao": "Projeto de pesquisa que visa aprimorar assistentes virtuais inteligentes (chatbots) para auxiliar estudantes e setores administrativos do IFES em dúvidas relacionadas ao Regulamento da Organização Didática (ROD) e rotinas acadêmicas, utilizando funcionalidades de inteligência artificial na plataforma Rasa. Inclui desenvolvimento de dois chatbots: *ifes.talk* (para discentes) e *ping* (para helpdesk da DTI).",
   "palavras_chave": [
-    "Assistente virtual",
-    "Chatbots",
-    "Mineração de textos",
-    "Processamento de Linguagem Natural",
     "Inteligência Artificial",
-    "Rotinas Acadêmicas"
+    "Chatbot",
+    "Assistente Virtual",
+    "Regulamento da Organização Didática (ROD)",
+    "Rasa",
+    "Helpdesk",
+    "Desenvolvimento de Software",
+    "Natural Language Understanding (NLU)",
+    "Plataforma Rasa",
+    "Telegram",
+    "Docker",
+    "GitHub"
   ],
   "area_conhecimento": "Ciências Exatas e da Terra",
-  "linha_pesquisa": "Inteligência Computacional",
+  "linha_pesquisa": null,
   "objetivos": {
-    "geral": "Otimizar a solução de questionamentos dos discentes do IFES, através da disponibilização automatizada, com interface amigável, de informações publicadas nos RODs dos cursos.",
+    "geral": "Planejar e construir assistentes virtuais inteligentes para auxiliar estudantes e setores administrativos do IFES em dúvidas relacionadas a rotinas acadêmicas e regulamentos institucionais, utilizando inteligência artificial na plataforma Rasa.",
     "especificos": [
-      "Realizar revisão bibliográfica nas áreas de PLN, mineração de textos, aprendizado de máquina e desenvolvimento de chatbots;",
-      "Identificar as principais questões dos alunos do IFES, em relação às suas rotinas acadêmicas;",
-      "Categorizar as principais críticas e sugestões feitas pelos discentes em relação ao uso da versão atual do bot ifes.talk;",
-      "Analisar funcionalidades disponíveis no Dialogflow que possam trazer melhorias para o sistema ifes.talk;",
-      "Mapear as principais informações contidas nos RODs dos cursos de graduação e pós-graduação em perguntas e respostas, que poderão ser incluídas na base de conhecimento do ifes.talk;",
-      "Avaliar a nova versão do ifes.talk produzida neste projeto, em relação ao escopo de atuação inicialmente planejado, a razoabilidade das respostas e ao desempenho em geral;",
-      "Ampliar a formação e a capacitação de recursos humanos no Estado do Espírito Santo nas áreas de PLN e Mineração de Dados, realizando orientação de alunos do ensino técnico;",
-      "Gerar resultados a partir das avaliações realizadas visando a divulgação científica do trabalho, por meio de publicações de artigos em conferências e revistas especializadas, e apresentar o projeto em feiras e eventos de divulgação científica."
+      "Conhecer a história e funcionalidades do projeto anterior do chatbot *ifes.talk* (2017-2019) e entender o que já foi desenvolvido.",
+      "Criar um manual para levantar requisitos e objetivos do assistente virtual *ifes.talk*.",
+      "Instalar e aprender a utilizar o software Rasa para construção do bot.",
+      "Comparar o conhecimento do chatbot antigo com as informações contidas no ROD atualizado (2020) e organizar documentação para o novo assistente.",
+      "Construir o chatbot *ifes.talk* com base nas documentações e conhecimentos adquiridos.",
+      "Acompanhar os testes do chatbot *ifes.talk*.",
+      "Participar de reuniões com a equipe da DTI para definir necessidades do chatbot *ping* e levantar assuntos frequentes.",
+      "Utilizar conhecimentos prévios para construir um chatbot básico *ping* com cumprimentos e três assuntos detalhados.",
+      "Integrar o assistente *ping* como um widget em um site usando o Botfront - Rasa WebChat.",
+      "Deixar todos os arquivos com explicações e detalhamentos no site do GitLab do IFES.",
+      "Realizar testes do assistente *ping* e acompanhar os testes do *ifes.talk*."
     ]
   },
   "coordenador": {
-    "nome": null,
-    "email": null,
+    "nome": "Bruno Cardoso Coutinho",
+    "email": "8874624b5c3e@anon.lgpd",
     "campus": "Serra",
     "titulacao": null
   },
-  "equipe": [],
+  "equipe": [
+    {
+      "nome": "Jessica Nogueira Duque",
+      "funcao": "Bolsista",
+      "instituicao": "Instituto Federal do Espírito Santo (IFES)",
+      "carga_horaria_semanal": null,
+      "fonte_bolsa": "IFES"
+    },
+    {
+      "nome": "Lara Aguilar de Amorim",
+      "funcao": "Colaborador",
+      "instituicao": "Instituto Federal do Espírito Santo (IFES)",
+      "carga_horaria_semanal": null,
+      "fonte_bolsa": null
+    }
+  ],
   "datas": {
-    "inicio": "2020-08-01",
-    "fim": "2021-07-31",
-    "duracao_meses": 12
+    "inicio": "2020-01-01",
+    "fim": "2021-09-15",
+    "duracao_meses": 20
   },
   "cronograma": [
     {
-      "atividade": "Conhecer as principais dúvidas e sugestões feitas em relação ao uso da versão atual do bot",
-      "inicio": "2020-08",
+      "atividade": "Estudar a arquitetura interna da versão atual do *ifes.talk*, considerando a interface com o usuário e o portal administrativo.",
+      "inicio": "2020-01",
+      "fim": "2020-01"
+    },
+    {
+      "atividade": "Levantar as principais questões relacionadas às rotinas acadêmicas dos estudantes do IFES.",
+      "inicio": "2020-01",
+      "fim": "2020-01"
+    },
+    {
+      "atividade": "Mapear as questões levantadas com as seções e artigos dos RODs.",
+      "inicio": "2020-01",
+      "fim": "2020-02"
+    },
+    {
+      "atividade": "Montar diagrama de perguntas e respostas para estender a base de conhecimento do *ifes.talk* (feito através de documentos).",
+      "inicio": "2020-01",
       "fim": "2020-08"
     },
     {
-      "atividade": "Realizar uma investigação sobre o estado da arte e trabalhos relacionados nas áreas de PLN e mineração de textos",
-      "inicio": "2020-08",
-      "fim": "2020-09"
+      "atividade": "Inicializar a criação do chatbot *ifes.talk*, principalmente relacionados a assuntos básicos.",
+      "inicio": "2020-01",
+      "fim": "2020-08"
     },
     {
-      "atividade": "Estudar trabalhos relacionados relevantes e identificar as principais dificuldades enfrentadas na construção de assistentes virtuais autônomos",
-      "inicio": "2020-08",
-      "fim": "2020-09"
+      "atividade": "Agregar novos conhecimentos ao *ifes.talk* e utilizar seu portal administrativo para isso (posteriormente feito por programação).",
+      "inicio": "2020-04",
+      "fim": "2020-08"
     },
     {
-      "atividade": "Propor funcionalidades que atendam aos requisitos levantados",
+      "atividade": "Avaliar o desempenho do protótipo construído e realizar alterações conforme avaliação.",
+      "inicio": "2020-08",
+      "fim": "2020-10"
+    },
+    {
+      "atividade": "Estreitar a relação dos usuários com o chatbot *ifes.talk* através das redes sociais do IFES (interrompido para auxílio ao projeto *ping*).",
       "inicio": "2020-09",
       "fim": "2020-10"
     },
     {
-      "atividade": "Agregar as novas funcionalidades ao bot com base nos estudos realizados",
-      "inicio": "2020-10",
-      "fim": "2021-02"
+      "atividade": "Atualizar a documentação do projeto de pesquisa e do bot *ifes.talk* por meio de pastas compartilhadas e ambientes virtuais como o Moodle.",
+      "inicio": "2020-01",
+      "fim": "2021-01"
     },
     {
-      "atividade": "Avaliar o desempenho do protótipo construído baseado em parâmetros estudados na literatura",
-      "inicio": "2021-03",
-      "fim": "2021-05"
+      "atividade": "Realizar testes com o chatbot *ping* e terminar a organização dos arquivos utilizados no projeto.",
+      "inicio": "2021-11",
+      "fim": "2021-12"
     },
     {
-      "atividade": "Estreitar a relação dos usuários com o chatbot através das redes sociais do IF",
-      "inicio": "2021-04",
-      "fim": "2021-05"
-    },
-    {
-      "atividade": "Envolver alunos de mestrado, graduação e dos cursos técnicos na pesquisa",
-      "inicio": "2020-08",
-      "fim": "2021-07"
-    },
-    {
-      "atividade": "Publicar trabalhos em anais de eventos",
-      "inicio": "2021-06",
-      "fim": "2021-07"
-    },
-    {
-      "atividade": "Documentar o projeto e todas as suas atividades",
-      "inicio": "2020-08",
-      "fim": "2021-07"
-    },
-    {
-      "atividade": "Uso de funcionalidades de inteligência artificial, disponíveis na plataforma Dialogflow, para aprimoramento do chatbot ifes.talk (Plano de Trabalho do estudante 1)",
-      "inicio": null,
-      "fim": null
-    },
-    {
-      "atividade": "Manutenção da base de conhecimento do chatbot ifes.talk a partir dos RODs dos cursos do IFES (Plano de Trabalho do estudante 2)",
-      "inicio": null,
-      "fim": null
+      "atividade": "Escrever relatórios finais, resumos e pôsters para publicação e/ou apresentação.",
+      "inicio": "2021-11",
+      "fim": "2021-14"
     }
   ],
   "financiamento": {
     "valor_total": null,
     "moeda": "BRL",
-    "fontes": []
+    "fontes": [
+      {
+        "fonte": "Programa Institucional de Bolsas de Iniciação Científica (PIBIC-EM)",
+        "valor": null,
+        "tipo": "Bolsa de Iniciação Científica"
+      }
+    ]
   },
+  "bolsas": [
+    {
+      "tipo": "PIBIC-EM",
+      "fonte": "Edital 04/2020",
+      "orgao_pagador": "IFES",
+      "e_parceria": false,
+      "parceiro": null,
+      "beneficiario": "Jessica Nogueira Duque",
+      "valor": null
+    }
+  ],
   "_meta": {
     "arquivo": "PJ_5797.pdf",
-    "paginas": 23,
-    "extraido_em": "2026-08-10T20:44:32.281365+00:00",
-    "modelo": "mistral-large-latest",
+    "paginas": 11,
+    "extraido_em": "2026-10-14T22:50:19.129129+00:00",
+    "modelo": "ministral-8b-latest",
     "fonte_texto": "pdf-text",
-    "campos_ausentes": [
-      "coordenador.nome",
-      "coordenador.email",
-      "equipe",
-      "financiamento"
-    ]
+    "campos_ausentes": []
   }
 }

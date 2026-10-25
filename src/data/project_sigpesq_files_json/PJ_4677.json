@@ -1,22 +1,27 @@
 {
   "codigo": "PJ 4677",
   "titulo": "Implementação de modelos de otimização para o problema de colheita florestal",
-  "descricao": "Desde a década de 40 a Pesquisa Operacional tem auxiliado no processo de tomada de decisão, em diversas áreas. No Brasil, devido a um histórico distanciamento entre a comunidade acadêmica e os ambientes empresariais, as ferramentas de pesquisa operacional são bem conhecidas em pesquisas dentro da comunidade acadêmica, porém ainda são pouco populares comercialmente. A principal meta desse projeto é o desenvolvimento de sistemas com valor agregado para o processo de decisão em dois problemas, ambos na área de otimização, demandados pela empresa parceira Mogai. Para a efetiva aplicabilidade dos sistemas desenvolvidos, é necessário que o demandante apresente as restrições reais dos problemas abordados, incluindo as restrições de factibilidade das soluções e o tempo computacional desejável para que o operador possa utilizar as informações do sistema.",
+  "descricao": "Projeto que busca desenvolver sistemas de apoio à decisão com valor agregado para o processo de tomada de decisão em problemas de otimização, demandados pela empresa parceira Mogai. O foco é criar um protótipo de software para otimizar o ciclo logístico de abastecimento de madeira em uma fábrica de celulose, minimizando tempo de ciclo logístico, tempo de espera de veículos e filas na fábrica, além de considerar a alocação de empilhadeiras e restrições de tempo de resposta. O projeto visa estreitar laços entre academia e empresas, transformando trabalhos acadêmicos em protótipos funcionais e contribuindo para a qualificação profissional na área de otimização e tecnologia da informação.",
   "palavras_chave": [
     "Logística de transporte",
-    "Otimização"
+    "Otimização",
+    "Pesquisa Operacional",
+    "Sistemas de apoio à decisão",
+    "Ciclo logístico",
+    "Algoritmos genéticos",
+    "Tecnologia da Informação e Comunicação (TIC)"
   ],
-  "area_conhecimento": "3.10.01.00-9 – Planejamento de Transporte",
+  "area_conhecimento": "3.10.00.00-2 – Engenharia de Transporte",
   "linha_pesquisa": "Logística",
   "objetivos": {
-    "geral": "O principal objetivo desse projeto é buscar parcerias que estreitem os laços entre empresas e academia. Para isso, a meta a ser atingida será transformar trabalhos acadêmicos, tipicamente trabalhos de graduação e mestrado, em protótipos funcionais para sistemas de apoio à tomada de decisão, de tal forma que este protótipo esteja apto a ser implantado.",
+    "geral": "Buscar parcerias que estreitem os laços entre empresas e academia, transformando trabalhos acadêmicos em protótipos funcionais para sistemas de apoio à tomada de decisão, aptos a serem implantados.",
     "especificos": [
-      "Fazer um levantamento das capacidades de movimentação, recursos e características dos veículos (caminhões e empilhadeiras) e áreas de atividade (campo, estradas e pátio da empresa).",
-      "Investigar métodos de otimização que melhor se adaptem às características do problema, inclusive considerando o tempo de resposta necessário para o operador usar a solução.",
-      "Buscar a validação do método desenvolvido nos seguintes aspectos: factibilidades de solução e qualidade da solução obtida.",
-      "Criação de um produto (software) 'tomador de decisões' computacional para automatizar o ciclo logístico da empresa.",
-      "Facilitar a integração do software produzido ao sistema desenvolvido pela empresa de tecnologia parceira desse trabalho (Mogai).",
-      "Adicionalmente, os algoritmos e o software deverão ser totalmente parametrizáveis, para que possam ser utilizados em qualquer outra empresa com características de negócio similares."
+      "Fazer levantamento das capacidades de movimentação, recursos e características dos veículos e áreas de atividade (campo, estradas e pátio da empresa).",
+      "Investigar métodos de otimização que melhor se adaptem às características do problema, considerando o tempo de resposta necessário para o operador usar a solução.",
+      "Validar o método desenvolvido quanto à factibilidade e qualidade da solução obtida.",
+      "Criar um produto (software) 'tomador de decisões' computacional para automatizar o ciclo logístico da empresa.",
+      "Facilitar a integração do software produzido ao sistema da empresa parceira (Mogai).",
+      "Desenvolver algoritmos e software totalmente parametrizáveis para uso em outras empresas com características similares."
     ]
   },
   "coordenador": {
@@ -25,7 +30,15 @@
     "campus": null,
     "titulacao": null
   },
-  "equipe": [],
+  "equipe": [
+    {
+      "nome": "Estudante 1",
+      "funcao": "Bolsista",
+      "instituicao": "IFES",
+      "carga_horaria_semanal": null,
+      "fonte_bolsa": null
+    }
+  ],
   "datas": {
     "inicio": "2018-08",
     "fim": "2019-08",
@@ -33,9 +46,9 @@
   },
   "cronograma": [
     {
-      "atividade": "Ambientação das equipes do meio acadêmico, no escopo do projeto, e início das interações com as equipes dos planos de trabalho da Mogai. Aprendizado superficial acerca das operações referentes aos dois problemas.",
+      "atividade": "Ambientação das equipes do meio acadêmico e início das interações com a Mogai; aprendizado superficial sobre operações.",
       "inicio": "2018-08",
-      "fim": "2018-08"
+      "fim": "2018-09"
     },
     {
       "atividade": "Capacitação dos alunos em algoritmos de otimização para solução dos problemas.",
@@ -44,56 +57,51 @@
     },
     {
       "atividade": "Implementação dos primeiros métodos para solução dos problemas.",
-      "inicio": "2018-11",
-      "fim": "2018-12"
+      "inicio": "2018-10",
+      "fim": "2019-01"
     },
     {
-      "atividade": "Criação e Implementação do primeiro modelo matemático para validação de resultados – Pelo coordenador do projeto.",
+      "atividade": "Criação e implementação do primeiro modelo matemático para validação de resultados (pelo coordenador).",
+      "inicio": "2018-10",
+      "fim": "2019-01"
+    },
+    {
+      "atividade": "Implementação do segundo método para solução de cada problema e aprimoramento do modelo matemático.",
       "inicio": "2019-01",
-      "fim": "2019-02"
+      "fim": "2019-05"
     },
     {
-      "atividade": "Implementação do segundo método para solução de cada problema e aprimoramento do modelo matemático desenvolvido pelo coordenador do projeto.",
-      "inicio": "2019-03",
-      "fim": "2019-04"
-    },
-    {
-      "atividade": "Testes e ajustes, Elaboração de documentação e relatório final.",
+      "atividade": "Testes e ajustes, elaboração de documentação e relatório final.",
       "inicio": "2019-05",
       "fim": "2019-08"
     },
     {
-      "atividade": "Desenvolvimento de um algoritmo genético para o problema da colheita florestal (Meta 1 – Entendimento do funcionamento e características do problema).",
+      "atividade": "Entendimento do funcionamento e características do problema; estudo de heurísticas clássicas.",
       "inicio": "2018-08",
-      "fim": "2018-08"
-    },
-    {
-      "atividade": "Desenvolvimento de um algoritmo genético para o problema da colheita florestal (Meta 2 – Estudo de heurísticas clássicas relacionadas ao problema).",
-      "inicio": "2018-09",
       "fim": "2018-09"
     },
     {
-      "atividade": "Desenvolvimento de um algoritmo genético para o problema da colheita florestal (Meta 3 – Estudos para programação da heurística usando a estratégia de algoritmos genéticos).",
-      "inicio": "2018-10",
+      "atividade": "Estudos para programação da heurística usando estratégia de algoritmos genéticos.",
+      "inicio": "2018-09",
       "fim": "2018-10"
     },
     {
-      "atividade": "Desenvolvimento de um algoritmo genético para o problema da colheita florestal (Meta 4 – Implementação do método proposto).",
-      "inicio": "2018-11",
-      "fim": "2018-12"
+      "atividade": "Implementação do método proposto (algoritmo genético).",
+      "inicio": "2018-10",
+      "fim": "2019-01"
     },
     {
-      "atividade": "Desenvolvimento de um algoritmo genético para o problema da colheita florestal (Meta 5 – Adaptação do método proposto às funcionalidades e restrições do problema).",
+      "atividade": "Adaptação do método proposto às funcionalidades e restrições do problema.",
       "inicio": "2019-01",
-      "fim": "2019-02"
+      "fim": "2019-03"
     },
     {
-      "atividade": "Desenvolvimento de um algoritmo genético para o problema da colheita florestal (Meta 6 – Solução, análise e aprimoramento da heurística).",
+      "atividade": "Solução, análise e aprimoramento da heurística.",
       "inicio": "2019-03",
-      "fim": "2019-05"
+      "fim": "2019-06"
     },
     {
-      "atividade": "Desenvolvimento de um algoritmo genético para o problema da colheita florestal (Meta 7 – Elaboração de relatório e artigo).",
+      "atividade": "Elaboração de relatório e artigo.",
       "inicio": "2019-06",
       "fim": "2019-08"
     }
@@ -103,16 +111,26 @@
     "moeda": "BRL",
     "fontes": []
   },
+  "bolsas": [
+    {
+      "tipo": null,
+      "fonte": null,
+      "orgao_pagador": "IFES",
+      "e_parceria": false,
+      "parceiro": null,
+      "beneficiario": "Estudante 1",
+      "valor": null
+    }
+  ],
   "_meta": {
     "arquivo": "PJ_4677.pdf",
     "paginas": 9,
-    "extraido_em": "2026-08-10T20:26:58.890923+00:00",
-    "modelo": "mistral-large-latest",
+    "extraido_em": "2026-10-14T22:38:29.293760+00:00",
+    "modelo": "ministral-8b-latest",
     "fonte_texto": "pdf-text",
     "campos_ausentes": [
       "coordenador.nome",
       "coordenador.email",
-      "equipe",
       "financiamento"
     ]
   }

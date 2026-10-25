@@ -1,69 +1,122 @@
 {
   "codigo": "PJ 2447",
   "titulo": "Implementação de uma Plataforma Didática para Simulação, Análise e Controle de uma Coluna de Destilação",
-  "descricao": "A destilação é o processo de separação mais utilizado na indústria química, com grande aplicação na área petroquímica. Este projeto propõe a implementação de uma plataforma didática para simulação, análise e controle de uma coluna de destilação utilizando o software Hysys®. O simulador dinâmico será desenvolvido com base em uma coluna de destilação real de separação etanol/água, permitindo análises e testes de algoritmos de controle convencional, inteligente e preditivo.",
+  "descricao": "Projeto de pesquisa que visa implementar algoritmos de controle avançado (Controle Preditivo Baseado em Modelos e Controle Fuzzy) em uma coluna de destilação simulada no software Hysys, utilizando o MATLAB para desenvolvimento dos algoritmos. O objetivo é comparar o desempenho dos controladores preditivos (DMC e GPC) com os tradicionais PID, buscando otimizar o controle de processos industriais, especialmente em refinarias de petróleo.",
   "palavras_chave": [
+    "Controle Preditivo",
     "Coluna de Destilação",
-    "Controle",
-    "Simulação",
-    "Software Hysys"
+    "Hysys",
+    "MATLAB",
+    "Controle DMC",
+    "Controle GPC",
+    "Controle PID",
+    "Processos Industriais",
+    "Petróleo",
+    "Simulação de Processos"
   ],
-  "area_conhecimento": "Eletrônica Industrial, Sistemas e Controles Eletrônicos",
-  "linha_pesquisa": "Controle e Automação",
+  "area_conhecimento": "Engenharia Elétrica / Sistemas e Controles Eletrônicos",
+  "linha_pesquisa": "Controle Avançado de Processos Industriais",
   "objetivos": {
-    "geral": "Desenvolvimento de um Simulador Dinâmico de uma Coluna de Destilação para Simulação, Análise e Controle.",
+    "geral": "Implementar algoritmos de controle avançado (DMC e GPC) em uma plataforma didática de simulação de coluna de destilação, visando otimizar o controle de processos industriais e comparar seu desempenho com controladores PID tradicionais.",
     "especificos": [
-      "Desenvolvimento de um Simulador Dinâmico de uma Coluna de Destilação no Software HYSYS que representará uma cópia fiel de uma Coluna de Destilação",
-      "Estudo da Interface de Comunicação entre o HYSYS e o MATLAB",
-      "Desenvolvimento de Algoritmos de Controle para a Implementação na Coluna de Destilação Desenvolvida"
+      "Desenvolver um modelo dinâmico de uma coluna de destilação no software Hysys, baseado em dados reais de laboratório.",
+      "Implementar controladores PID, DMC e GPC no MATLAB para controle da coluna simulada.",
+      "Validar o modelo e os controladores através de testes de resposta a degraus e comparação de desempenho.",
+      "Analisar a eficiência dos controladores preditivos em relação aos PID, considerando estabilidade, tempo de resposta e otimização energética."
     ]
   },
   "coordenador": {
     "nome": "Gustavo Maia de Almeida",
-    "email": "dcdde80d8131@anon.lgpd",
-    "campus": "IFES - SERRA",
+    "email": "9b3df2512e39@anon.lgpd",
+    "campus": "Serra",
     "titulacao": null
   },
   "equipe": [
     {
       "nome": "Gustavo Maia de Almeida",
-      "funcao": "Coordenador",
-      "instituicao": "IFES - SERRA",
-      "carga_horaria_semanal": null
+      "funcao": "Orientador",
+      "instituicao": "Instituto Federal do Espírito Santo (IFES)",
+      "carga_horaria_semanal": null,
+      "fonte_bolsa": null
     },
     {
-      "nome": "Marco Antônio de Souza Cuadros",
-      "funcao": "Pesquisador",
-      "instituicao": "IFES-SERRA",
-      "carga_horaria_semanal": null
-    },
-    {
-      "nome": "Rogério Passos do Amaral Pereira",
-      "funcao": "Pesquisador",
-      "instituicao": "IFES-SERRA",
-      "carga_horaria_semanal": null
+      "nome": "Igor Rodrigues Salcides",
+      "funcao": "Estudante/Bolsista",
+      "instituicao": "Instituto Federal do Espírito Santo (IFES)",
+      "carga_horaria_semanal": null,
+      "fonte_bolsa": "IFES"
     }
   ],
   "datas": {
-    "inicio": "2015-01-01",
-    "fim": "2018-12-31",
-    "duracao_meses": 48
+    "inicio": "2016-01",
+    "fim": "2017-07",
+    "duracao_meses": 18
   },
-  "cronograma": [],
+  "cronograma": [
+    {
+      "atividade": "Revisão Bibliográfica sobre Controle em Coluna de Destilação",
+      "inicio": "2016-01",
+      "fim": "2016-03"
+    },
+    {
+      "atividade": "Implementação de Controladores PID's na Coluna de Destilação",
+      "inicio": "2016-04",
+      "fim": "2016-06"
+    },
+    {
+      "atividade": "Revisão Bibliográfica das Técnicas de Controle Preditivo (DMC e GPC)",
+      "inicio": "2016-07",
+      "fim": "2016-09"
+    },
+    {
+      "atividade": "Escrita do Relatório Parcial",
+      "inicio": "2016-10",
+      "fim": "2017-02"
+    },
+    {
+      "atividade": "Implementação dos Algoritmos de DMC e GPC na Plataforma Didática",
+      "inicio": "2016-05",
+      "fim": "2017-01"
+    },
+    {
+      "atividade": "Comparação das Técnicas de Controle DMC e GPC com o PID",
+      "inicio": "2017-02",
+      "fim": "2017-04"
+    },
+    {
+      "atividade": "Escrita do Relatório Final e Elaboração de um Artigo",
+      "inicio": "2017-05",
+      "fim": "2017-07"
+    }
+  ],
   "financiamento": {
     "valor_total": null,
     "moeda": "BRL",
-    "fontes": []
+    "fontes": [
+      {
+        "fonte": "Programa Institucional de Bolsas de Iniciação Científica (PIBIC) - IFES",
+        "valor": null,
+        "tipo": "Bolsa de Iniciação Científica"
+      }
+    ]
   },
+  "bolsas": [
+    {
+      "tipo": "PIBIC",
+      "fonte": "Edital 05/2016",
+      "orgao_pagador": "IFES",
+      "e_parceria": false,
+      "parceiro": null,
+      "beneficiario": "Igor Rodrigues Salcides",
+      "valor": null
+    }
+  ],
   "_meta": {
     "arquivo": "PJ_2447.pdf",
-    "paginas": 9,
-    "extraido_em": "2026-08-10T19:58:43.449355+00:00",
-    "modelo": "mistral-large-latest",
+    "paginas": 10,
+    "extraido_em": "2026-10-14T22:23:11.749821+00:00",
+    "modelo": "ministral-8b-latest",
     "fonte_texto": "pdf-text",
-    "campos_ausentes": [
-      "cronograma",
-      "financiamento"
-    ]
+    "campos_ausentes": []
   }
 }

@@ -1,68 +1,92 @@
 {
   "codigo": "PJ 3623",
-  "titulo": "SENSORIAMENTO POR CÂMERA, VIBRAÇÃO, E SOM PARA PREDIÇÃO DE PROJEÇÃO DE MATERIAIS DE CONVERTEDORES",
-  "descricao": "No processo de fabricação de aço por conversão do gusa a oxigênio, uma emulsão de gás, escória e gotas de metal se forma espontaneamente no interior do reator metalúrgico. Este fenômeno é responsável pela elevada produtividade deste processo e determina a eficiência do refino do gusa líquido em aço. Não obstante, alguns problemas surgem quando o nível da emulsão excede a altura do reator e transborda, causando perda de metal, interrupção do processo e poluição ambiental. O objetivo deste estudo é projetar um algoritmo que use imagem, vibração e som para predizer o transbordo da emulsão no reator ao longo do tempo de processamento para que as ações apropriadas sejam tomadas em tempo de evitar a ocorrência desta anomalia. O algoritmo será testado usando os dados obtidos do reator de refino instalado na ArcelorMittal na planta de Tubarão (conversor LD tecnologia MTBI-Multi Toyere Bottom Injection).",
+  "titulo": "Sensoriamento por câmera, vibração, e som para previsão de projeção de materiais de convertedores",
+  "descricao": "Projeto que visa projetar um algoritmo para predizer o transbordo de emulsão no reator de conversão de gusa a oxigênio usando dados de imagem, vibração e som, com testes em dados obtidos do reator de refino da ArcelorMittal em Tubarão.",
   "palavras_chave": [
-    "sensoramento",
-    "câmera",
+    "sensoriamento por câmera",
     "vibração",
     "som",
-    "predição",
-    "transbordo",
+    "predição de transbordo",
     "emulsão",
-    "conversor"
+    "reator metalúrgico",
+    "processo de fabricação de aço",
+    "visão computacional",
+    "análise de dados",
+    "tecnologia TRL 4"
   ],
-  "area_conhecimento": null,
-  "linha_pesquisa": null,
+  "area_conhecimento": "Engenharia de Materiais / Ciência dos Materiais",
+  "linha_pesquisa": "Processos metalúrgicos e controle de qualidade industrial",
   "objetivos": {
-    "geral": "Projetar um algoritmo que use imagem, vibração e som para predizer o transbordo da emulsão no reator ao longo do tempo de processamento para evitar a ocorrência de anomalias como perda de metal, interrupção do processo e poluição ambiental.",
+    "geral": "Desenvolver um algoritmo que utilize imagem, vibração e som para predizer o transbordo de emulsão no reator de conversão de gusa a oxigênio, evitando perdas de metal, interrupções do processo e poluição ambiental.",
     "especificos": [
-      "Realizar estudo dos dados disponíveis do processo (câmera, som, etc) e factibilidade para instalar sensor de vibração.",
-      "Definir dados necessários para o modelo de predição e metodologia de coleta.",
-      "Obter dados de imagem, som e vibração conforme planejamento.",
-      "Desenvolver modelo de predição do transbordo da emulsão usando análise por imagem e som de forma independente.",
-      "Desenvolver modelo de predição do transbordo da emulsão usando análise conjunta de imagem e som."
+      "Estudar dados disponíveis do processo de conversão (câmera, som) e avaliar a viabilidade de instalação de sensores de vibração.",
+      "Determinar o instante em que o nível da emulsão excede a altura do reator e transborda.",
+      "Definir os dados necessários para o modelo de predição e metodologias de coleta.",
+      "Coletar dados de imagem e som para treinamento e validação do modelo de previsão.",
+      "Desenvolver modelos de previsão do transbordo usando análise de imagem e som de forma independente e conjunta."
     ]
   },
   "coordenador": {
     "nome": "Marco Antonio de Souza Leite Cuadros",
-    "email": "c7d51d67a9c5@anon.lgpd",
-    "campus": "Ifes",
-    "titulacao": null
+    "email": "5f5cd4972458@anon.lgpd",
+    "campus": null,
+    "titulacao": "Doutor (Dr.)"
   },
   "equipe": [
     {
-      "nome": "Marco Antonio de Souza Leite Cuadros",
+      "nome": "Prof. Dr. Lotado no IFES",
       "funcao": "Coordenador",
-      "instituicao": "Ifes",
-      "carga_horaria_semanal": 6.0
+      "instituicao": "IFES",
+      "carga_horaria_semanal": 6.0,
+      "fonte_bolsa": "CPO"
+    },
+    {
+      "nome": "Prof. Dr. Lotado no IFES",
+      "funcao": "Pesquisador",
+      "instituicao": "IFES",
+      "carga_horaria_semanal": 7.0,
+      "fonte_bolsa": "PEQ-B"
+    },
+    {
+      "nome": "Estudante ou Técnico de Laboratório",
+      "funcao": "Pesquisador",
+      "instituicao": "IFES",
+      "carga_horaria_semanal": 7.0,
+      "fonte_bolsa": "PEQ-E"
+    },
+    {
+      "nome": "Estudante ou Técnico de Laboratório",
+      "funcao": "Pesquisador",
+      "instituicao": "IFES",
+      "carga_horaria_semanal": 7.0,
+      "fonte_bolsa": "PEQ-E"
     }
   ],
   "datas": {
-    "inicio": null,
+    "inicio": "2016-11-23",
     "fim": null,
     "duracao_meses": 12
   },
   "cronograma": [
     {
       "atividade": "Macro entrega 1 – Estudo para obtenção dos dados do processo de conversão do gusa a oxigênio",
-      "inicio": "2016-11",
-      "fim": "2017-04"
+      "inicio": "2017-01",
+      "fim": "2017-06"
     },
     {
       "atividade": "Macro entrega 2 – Obtenção de dados",
-      "inicio": "2017-05",
-      "fim": "2017-08"
-    },
-    {
-      "atividade": "Macro entrega 3 – Predição do nível da emulsão usando imagem e som",
-      "inicio": "2017-09",
+      "inicio": "2017-07",
       "fim": "2017-10"
     },
     {
-      "atividade": "Macro entrega 4 – Predição com fusão de dados",
+      "atividade": "Macro entrega 3 – Predição do nível da emulsão usando imagem e som",
       "inicio": "2017-11",
-      "fim": "2017-12"
+      "fim": "2018-02"
+    },
+    {
+      "atividade": "Macro entrega 4 – Predição com fusão de dados",
+      "inicio": "2018-03",
+      "fim": null
     }
   ],
   "financiamento": {
@@ -70,21 +94,67 @@
     "moeda": "BRL",
     "fontes": [
       {
-        "fonte": "Arcelor Mittal",
-        "valor": 129877.0,
-        "tipo": "Financeiro"
+        "fonte": "Bolsas",
+        "valor": 85980.0,
+        "tipo": "Pessoal"
+      },
+      {
+        "fonte": "Custeio – Material de consumo e serviços",
+        "valor": 16097.0,
+        "tipo": "Operacional"
+      },
+      {
+        "fonte": "Capital – Ressarcimento ao IFES",
+        "valor": 27800.0,
+        "tipo": "Capital"
       }
     ]
   },
+  "bolsas": [
+    {
+      "tipo": "CPO",
+      "fonte": "Programa de Capacitação Permanente (CPO)",
+      "orgao_pagador": "IFES",
+      "e_parceria": false,
+      "parceiro": null,
+      "beneficiario": "Prof. Dr. Lotado no IFES",
+      "valor": 2700.0
+    },
+    {
+      "tipo": "PEQ-B",
+      "fonte": "Programa de Excelência em Pesquisa (PEQ-B)",
+      "orgao_pagador": "IFES",
+      "e_parceria": false,
+      "parceiro": null,
+      "beneficiario": "Prof. Dr. Lotado no IFES",
+      "valor": 1470.0
+    },
+    {
+      "tipo": "PEQ-E",
+      "fonte": "Programa de Excelência em Pesquisa (PEQ-E)",
+      "orgao_pagador": "IFES",
+      "e_parceria": false,
+      "parceiro": null,
+      "beneficiario": "Estudante ou Técnico de Laboratório",
+      "valor": 577.5
+    },
+    {
+      "tipo": "PEQ-E",
+      "fonte": "Programa de Excelência em Pesquisa (PEQ-E)",
+      "orgao_pagador": "IFES",
+      "e_parceria": false,
+      "parceiro": null,
+      "beneficiario": "Estudante ou Técnico de Laboratório",
+      "valor": 577.5
+    }
+  ],
   "_meta": {
     "arquivo": "PJ_3623.pdf",
     "paginas": 3,
-    "extraido_em": "2026-08-10T20:15:04.202779+00:00",
-    "modelo": "mistral-large-latest",
+    "extraido_em": "2026-10-14T22:31:31.340085+00:00",
+    "modelo": "ministral-8b-latest",
     "fonte_texto": "pdf-text",
     "campos_ausentes": [
-      "area_conhecimento",
-      "datas.inicio",
       "datas.fim"
     ]
   }

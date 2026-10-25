@@ -1,7 +1,7 @@
 {
   "codigo": "PJ 7223",
   "titulo": "Sistema de fusão de sensores para posicionamento milimétrico em tempo real, em ambientes sem sinal de GPS",
-  "descricao": "Sistema de posicionamento com precisão milimétrica para sensores ou equipamentos industriais em áreas fechadas ou locais sem sinal de GPS e outras tecnologias de posicionamento. O sistema será desenvolvido utilizando tecnologia mista de visão de máquina, IMU e comunicação sem fio para melhorar a acurácia dos produtos comerciais de posicionamento indoor para nível milimétrico e posicionamento em tempo real, podendo ser embutido em sensores inteligentes ou equipamentos de pequeno porte.",
+  "descricao": "Desenvolvimento de uma tecnologia para posicionamento dinâmico e com precisão milimétrica para ser acoplada a sensores ou equipamentos industriais em áreas fechadas e/ou locais sem sinal de GPS ou outras tecnologias de posicionamento com tal precisão. A solução utilizará fusão de tecnologias como visão de máquina, sensores inerciais e comunicação sem fio (Bluetooth, Wi-Fi e GPS) para melhorar a acurácia dos produtos comerciais de posicionamento indoor.",
   "palavras_chave": [
     "RTLS",
     "VI-SLAM",
@@ -13,107 +13,151 @@
     "UWB",
     "Bluetooth Direction Finding"
   ],
-  "area_conhecimento": "Ciência da Computação » Sistemas de Computação » Teleinformática",
+  "area_conhecimento": "Ciência da Computação » Sistemas de Computação » Teleinformática, Software Básico e Hardware",
   "linha_pesquisa": null,
   "objetivos": {
-    "geral": "Estamos propondo o desenvolvimento de uma solução (hardware + software) para calcular o posicionamento do equipamento com uma precisão milimétrica num ambiente industrial. O sistema será embutido em sensores inteligentes ou equipamentos industriais em áreas fechadas ou locais sem sinal de GPS e outras tecnologias de posicionamento.",
+    "geral": "Desenvolver uma solução (hardware + software) para calcular o posicionamento de equipamentos com precisão milimétrica em ambientes industriais, utilizando fusão de sensores como visão de máquina, sensores inerciais e comunicação sem fio.",
     "especificos": [
-      "Desenvolver uma tecnologia para posicionamento dinâmico e com precisão milimétrica para ser acoplada a sensores ou equipamentos industriais em áreas fechadas e/ou locais sem sinal de GPS.",
-      "Utilizar fusão de tecnologias, englobando visão de máquina, sensores inerciais diversos e comunicação sem fio (Bluetooth, Wi-fi e GPS) para melhorar a acurácia dos produtos comerciais de posicionamento indoor para nível milimétrico.",
-      "Criar uma plataforma flexível que possa usar parte dos sensores e sinais disponíveis ou ser facilmente integrável a outros sensores ou sinais.",
-      "Alcançar erro menor que 10 mm em uma área de cobertura de até 2000 metros quadrados, com robustez industrial e baixo consumo de energia."
+      "Atingir precisão inferior a 10 mm em uma área de cobertura de até 2000 metros quadrados.",
+      "Desenvolver uma plataforma flexível e integrável a outros sensores ou sistemas.",
+      "Criar um sistema robusto, de baixo consumo de energia, alimentado por USB ou baterias portáteis.",
+      "Automatizar a geração de dados em 3D posicionados com precisão para uso em aplicações industriais.",
+      "Integrar a tecnologia a equipamentos industriais como câmeras 3D HammerHead, pontes rolantes, trippers e drones."
     ]
   },
   "coordenador": {
     "nome": "Franco Machado",
-    "email": "646b2a0bbacf@anon.lgpd",
-    "campus": "Vitória",
+    "email": "154cb2570d80@anon.lgpd",
+    "campus": null,
     "titulacao": null
   },
   "equipe": [
     {
       "nome": "Franco Machado",
-      "funcao": "Coordenador",
-      "instituicao": "Mogai",
-      "carga_horaria_semanal": null
+      "funcao": "Coordenador(a)",
+      "instituicao": "Mogai - Mogai Tecnologia de Informação",
+      "carga_horaria_semanal": 40.0,
+      "fonte_bolsa": null
     },
     {
       "nome": "Daniel Luis Cosmo",
-      "funcao": "Pesquisador",
-      "instituicao": "Mogai",
-      "carga_horaria_semanal": null
+      "funcao": "Pesquisador Principal",
+      "instituicao": "Mogai - Mogai Tecnologia de Informação",
+      "carga_horaria_semanal": 40.0,
+      "fonte_bolsa": null
     },
     {
       "nome": "Karin Satie Komati",
       "funcao": "Pesquisador Colaborador",
       "instituicao": "IFES - SERRA",
-      "carga_horaria_semanal": null
+      "carga_horaria_semanal": 40.0,
+      "fonte_bolsa": null
     }
   ],
   "datas": {
     "inicio": "2022-10-10",
-    "fim": "2024-10-09",
+    "fim": null,
     "duracao_meses": 24
   },
   "cronograma": [
     {
       "atividade": "Sensores - especificação, compra, testes",
       "inicio": "2022-10",
-      "fim": "2022-12"
+      "fim": "2023-01"
     },
     {
       "atividade": "Fabricação do equipamento",
       "inicio": "2022-11",
-      "fim": "2023-01"
+      "fim": "2023-02"
     },
     {
       "atividade": "Software interno ao equipamento",
-      "inicio": "2023-03",
-      "fim": "2023-09"
-    },
-    {
-      "atividade": "Software para recepção dos dados em nuvem",
-      "inicio": "2023-10",
+      "inicio": "2023-06",
       "fim": "2024-02"
     },
     {
-      "atividade": "Integração da solução na câmera 3D HammerHead",
-      "inicio": "2024-03",
+      "atividade": "Software para recepção dos dados em nuvem",
+      "inicio": "2024-01",
       "fim": "2024-06"
     },
     {
-      "atividade": "Teste de campo",
+      "atividade": "Integração da solução na câmera 3D HammerHead",
       "inicio": "2024-07",
-      "fim": "2024-09"
+      "fim": "2024-11"
+    },
+    {
+      "atividade": "Teste de campo",
+      "inicio": "2025-01",
+      "fim": "2025-04"
     },
     {
       "atividade": "Relatório final de prestação de contas",
-      "inicio": "2024-10",
-      "fim": "2024-10"
+      "inicio": "2025-05",
+      "fim": "2025-06"
     }
   ],
   "financiamento": {
-    "valor_total": 445450.0,
+    "valor_total": 387450.0,
     "moeda": "BRL",
     "fontes": [
       {
         "fonte": "FAPES",
         "valor": 387450.0,
-        "tipo": "Financiamento"
+        "tipo": "Fomento institucional"
       },
       {
-        "fonte": "Mogai",
+        "fonte": "Contrapartida da Mogai",
         "valor": 58000.0,
-        "tipo": "Contrapartida"
+        "tipo": "Salário da equipe"
       }
     ]
   },
+  "bolsas": [
+    {
+      "tipo": "Desenvolvimento Tecnológico Industrial B - DTI-B",
+      "fonte": "Bolsa de Incentivo à Pesquisa e/ou Inovação - BIPI (IV)",
+      "orgao_pagador": "FAPES",
+      "e_parceria": false,
+      "parceiro": null,
+      "beneficiario": "Bolsista hardware e apoio na programação",
+      "valor": 2420.0
+    },
+    {
+      "tipo": "Bolsa de Incentivo à Pesquisa e/ou Inovação - BIPI (IV)",
+      "fonte": "Desenvolvimento Tecnológico Industrial B - DTI-B",
+      "orgao_pagador": "FAPES",
+      "e_parceria": false,
+      "parceiro": null,
+      "beneficiario": "Pesquisador vinculado à ICTI",
+      "valor": 2200.0
+    },
+    {
+      "tipo": "Desenvolvimento Tecnológico Industrial B - DTI-B",
+      "fonte": "Bolsa de Incentivo à Pesquisa e/ou Inovação - BIPI (IV)",
+      "orgao_pagador": "FAPES",
+      "e_parceria": false,
+      "parceiro": null,
+      "beneficiario": "Programador para codificar os softwares projetados",
+      "valor": 2420.0
+    },
+    {
+      "tipo": "Desenvolvimento Tecnológico Industrial A - DTI-A",
+      "fonte": "Bolsa de Incentivo à Pesquisa e/ou Inovação - BIPI (IV)",
+      "orgao_pagador": "FAPES",
+      "e_parceria": false,
+      "parceiro": null,
+      "beneficiario": "Programador de visão computacional",
+      "valor": 3520.0
+    }
+  ],
   "_meta": {
     "arquivo": "PJ_7223.pdf",
     "paginas": 9,
-    "extraido_em": "2026-08-10T21:11:23.608602+00:00",
-    "modelo": "mistral-large-latest",
+    "extraido_em": "2026-10-14T23:07:06.229952+00:00",
+    "modelo": "ministral-8b-latest",
     "fonte_texto": "pdf-text",
-    "campos_ausentes": []
+    "campos_ausentes": [
+      "datas.fim"
+    ]
   }
 }

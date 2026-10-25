@@ -1,37 +1,43 @@
 {
   "codigo": "PJ 3461",
   "titulo": "Desenvolvimento de um Comutador Óptico baseado em rede Ômega controlado via OpenFlow",
-  "descricao": "A inserção de comutador óticos em redes de data center apresenta um novo conjunto de possibilidades de comunicação, como por exemplo, a criação de 'atalhos' entre elementos da rede que estão trocando tráfego de forma intensa. No entanto, os comutadores óticos baseados em MEMS, além de possuírem um alto custo, apresentam um tempo de reconfiguração demasiadamente alto para atender os requisitos das redes de dados de data center. Desta forma este trabalho propõe o desenvolvimento de um comutador ótico por meio de chaves magneto-óticas 2x2, conectadas de acordo com a topologia conhecida como rede ômega, que permite mapear qualquer entrada em qualquer saída, de forma semi-bloqueante. O comutador óptico será acoplado a um microcontrolador que tornará este comutador compatível com o protocolo OpenFlow, permitindo assim que o mesmo possa fazer parte de uma rede definida por software (Software-Defined Networking – SDN).",
+  "descricao": "Projeto de pesquisa que propõe o desenvolvimento de um comutador óptico de baixo custo, utilizando chaves magneto-óticas 2x2 conectadas em topologia Ômega, compatível com o protocolo OpenFlow para redes definidas por software (SDN). O objetivo é viabilizar a integração de redes ópticas em data centers, melhorando escalabilidade, desempenho e eficiência energética sem os altos custos e tempos de comutação dos comutadores baseados em MEMS.",
   "palavras_chave": [
     "Rede de data center",
     "Comutadores ópticos",
     "Rede Ômega",
-    "OpenFlow"
+    "OpenFlow",
+    "Software-Defined Networking (SDN)",
+    "Chaves magneto-óticas",
+    "Baixo custo",
+    "Computação em nuvem",
+    "Telemática"
   ],
-  "area_conhecimento": "1.03.04.00-2 – Sistemas de Computação",
+  "area_conhecimento": "Sistemas de Computação",
   "linha_pesquisa": "Redes para data center",
   "objetivos": {
-    "geral": "Propor e construir um comutador óptico utilizando chaves magneto-óticas 2x2 de baixo custo, conectadas de acordo com a topologia conhecida como rede ômega, que permite mapear qualquer entrada em qualquer saída, de forma semi-bloqueante",
+    "geral": "Propor e construir um comutador óptico utilizando chaves magneto-óticas 2x2 de baixo custo, conectadas em topologia Ômega, que permita mapear qualquer entrada em qualquer saída, de forma semi-bloqueante e compatível com OpenFlow.",
     "especificos": [
-      "Entender as propriedades das chaves magneto-óptica quanto ao seu tempo de chaveamento",
-      "Projetar uma rede Ômega composta por chaves magneto-ópticas 2x2, capaz de mapear qualquer entrada em qualquer saída",
-      "Projetar um circuito integrado para acionar das chaves ópticas",
-      "Projetar um algoritmo que controle o funcionamento da rede ômega e defina os estados das chaves ópticas por meio do circuito integrado de acionamento",
-      "Integrar o algoritmo de controle da rede ômega a um controlador SDN"
+      "Entender as propriedades das chaves magneto-óticas quanto ao seu tempo de chaveamento;",
+      "Projetar uma rede Ômega composta por chaves magneto-óticas 2x2, capaz de mapear qualquer entrada em qualquer saída;",
+      "Projetar um circuito integrado para acionar as chaves ópticas;",
+      "Projetar um algoritmo que controle o funcionamento da rede Ômega e defina os estados das chaves ópticas por meio do circuito integrado de acionamento;",
+      "Integrar o algoritmo de controle da rede Ômega a um controlador SDN."
     ]
   },
   "coordenador": {
     "nome": "Gilmar Luiz Vassoler",
-    "email": "16e9b2c065b9@anon.lgpd",
+    "email": "ada43b3da3bb@anon.lgpd",
     "campus": "Serra",
-    "titulacao": null
+    "titulacao": "Docente"
   },
   "equipe": [
     {
-      "nome": "Gilmar Luiz Vassoler",
-      "funcao": "Coordenador",
+      "nome": "Estudante 1 (não identificado no texto)",
+      "funcao": "Estudante/Orientando",
       "instituicao": "Ifes/Serra",
-      "carga_horaria_semanal": null
+      "carga_horaria_semanal": null,
+      "fonte_bolsa": "IFES"
     }
   ],
   "datas": {
@@ -41,52 +47,42 @@
   },
   "cronograma": [
     {
-      "atividade": "Pesquisa bibliográfica sobre o estado da arte sobre comutadores óticos, SDN, protocolo OpenFlow e demais tecnologias envolvidas",
+      "atividade": "Revisão bibliográfica (Pesquisa bibliográfica sobre estado da arte, identificação de ferramentas e aprendizagem de uso)",
       "inicio": "2016-08",
-      "fim": "2016-08"
+      "fim": "2016-12"
     },
     {
-      "atividade": "Identificar as ferramentas necessárias para permitir o desenvolvimento deste trabalho",
-      "inicio": "2016-09",
-      "fim": "2016-09"
+      "atividade": "Construção da matriz de comutação",
+      "inicio": "2017-01",
+      "fim": "2017-04"
     },
     {
-      "atividade": "Apreender a utilizar as ferramentas escolhidas para este projeto",
-      "inicio": "2016-10",
-      "fim": "2016-10"
-    },
-    {
-      "atividade": "Construir a matriz de comutação",
-      "inicio": "2016-11",
-      "fim": "2017-01"
-    },
-    {
-      "atividade": "Implementar o circuito de acionamento necessário para a matriz de comutação",
+      "atividade": "Implementação do circuito de acionamento da matriz de comutação",
       "inicio": "2017-02",
-      "fim": "2017-03"
-    },
-    {
-      "atividade": "Implementar o algoritmo de controle do comutador óptico integrado a um controlador OpenFlow",
-      "inicio": "2017-04",
       "fim": "2017-05"
     },
     {
-      "atividade": "Avaliar o sistema desenvolvido e produzir resultados para publicação",
-      "inicio": "2017-06",
-      "fim": "2017-07"
-    },
-    {
-      "atividade": "Elaborar o relatório parcial",
+      "atividade": "Implementação do algoritmo de controle do comutador óptico integrado a um controlador OpenFlow",
       "inicio": "2017-03",
-      "fim": "2017-03"
+      "fim": "2017-06"
     },
     {
-      "atividade": "Elaborar um artigo para submissão em congresso",
-      "inicio": "2017-07",
+      "atividade": "Avaliação do sistema desenvolvido e produção de resultados para publicação",
+      "inicio": "2017-04",
       "fim": "2017-07"
     },
     {
-      "atividade": "Elaborar o relatório final",
+      "atividade": "Elaboração do relatório parcial",
+      "inicio": "2017-05",
+      "fim": "2017-06"
+    },
+    {
+      "atividade": "Elaboração de artigo para submissão em congresso",
+      "inicio": "2017-06",
+      "fim": "2017-08"
+    },
+    {
+      "atividade": "Elaboração do relatório final",
       "inicio": "2017-07",
       "fim": "2017-07"
     }
@@ -96,11 +92,22 @@
     "moeda": "BRL",
     "fontes": []
   },
+  "bolsas": [
+    {
+      "tipo": null,
+      "fonte": null,
+      "orgao_pagador": "IFES",
+      "e_parceria": false,
+      "parceiro": null,
+      "beneficiario": "Estudante 1 (não identificado no texto)",
+      "valor": 240.0
+    }
+  ],
   "_meta": {
     "arquivo": "PJ_3461.pdf",
     "paginas": 10,
-    "extraido_em": "2026-08-10T20:11:56.736814+00:00",
-    "modelo": "mistral-large-latest",
+    "extraido_em": "2026-10-14T22:29:35.608859+00:00",
+    "modelo": "ministral-8b-latest",
     "fonte_texto": "pdf-text",
     "campos_ausentes": [
       "financiamento"

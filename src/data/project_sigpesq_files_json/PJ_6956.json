@@ -1,28 +1,33 @@
 {
   "codigo": "PJ 6956",
   "titulo": "Análise de transcrição musical automática do tipo piano roll por compositor",
-  "descricao": "A tarefa de 'Transcrição Musical Automática' é a elaboração de algoritmos para converter sinais acústicos de música em alguma forma de notação musical, sendo uma destas notações a piano roll. A técnica que está ganhando cada vez mais espaço é o uso de arquiteturas de aprendizado profundo (DL, do inglês Deep Learning). Trabalhos anteriores usam uma única arquitetura para o aprendizado de vários compositores diferentes. A hipótese deste trabalho é que arquiteturas de DL podem ter resultados melhores de acurácia caso sejam treinadas separadamente para cada compositor. Esta abordagem é usada em sistemas biomédicos, em que a rede neural é treinada para cada paciente, pois cada um tem um padrão diferente do outro. Para os experimentos será usada a base de dados MusicNet, com métricas padrões: precisão, revocação e acurácia. O fluxo do sistema será a conversão do áudio em imagem, usando a imagem do gráfico do espectograma associado, que será a entrada para uma rede neural.",
+  "descricao": "Projeto de pesquisa que investiga a aplicação de arquiteturas de redes neurais treinadas separadamente por compositor para o problema de transcrição musical automática do tipo piano roll, utilizando a base de dados MusicNet e avaliando métricas como precisão, revocação e acurácia.",
   "palavras_chave": [
     "Processamento de Sinais",
     "Aprendizado Profundo",
     "Análise musical",
-    "Transcrição musical"
+    "Transcrição musical",
+    "Redes neurais",
+    "Piano roll",
+    "Inteligência Artificial",
+    "MusicNet",
+    "Transcrição automática"
   ],
-  "area_conhecimento": "Ciências Exatas e da Terra",
+  "area_conhecimento": "Ciência da Computação",
   "linha_pesquisa": "Processamento de Sinais",
   "objetivos": {
-    "geral": "O objetivo deste trabalho é investigar as arquiteturas de rede neural treinadas especificamente por compositor para o problema de transcrição musical automática do tipo piano roll.",
+    "geral": "Investigar as arquiteturas de rede neural treinadas especificamente por compositor para o problema de transcrição musical automática do tipo piano roll.",
     "especificos": [
-      "Compreender a base de dados MusicNet e sua anotação piano roll",
-      "Desenvolver arquiteturas de redes neurais baseadas no trabalho de Thickstun et al. (2018)",
-      "Coletar métricas da execução de experimentos por compositor",
+      "Compreender a base de dados MusicNet e sua anotação piano roll;",
+      "Desenvolver arquiteturas de redes neurais baseadas no trabalho de Thickstun et al. (2018);",
+      "Coletar métricas da execução de experimentos por compositor;",
       "Comparar os resultados da abordagem proposta com o trabalho original de Thickstun et al. (2018)"
     ]
   },
   "coordenador": {
     "nome": null,
     "email": null,
-    "campus": "Serra",
+    "campus": null,
     "titulacao": null
   },
   "equipe": [],
@@ -44,28 +49,23 @@
     },
     {
       "atividade": "Desenvolvimento do sistema",
-      "inicio": "2022-10",
+      "inicio": "2022-08",
       "fim": "2023-02"
     },
     {
       "atividade": "Treinamento e execução dos experimentos",
-      "inicio": "2023-03",
-      "fim": "2023-06"
+      "inicio": "2022-09",
+      "fim": "2023-02"
     },
     {
       "atividade": "Análise da coleta de dados",
-      "inicio": "2023-07",
-      "fim": "2023-09"
+      "inicio": "2022-10",
+      "fim": "2023-01"
     },
     {
       "atividade": "Escrita de relatórios e artigo",
-      "inicio": "2023-10",
+      "inicio": "2023-01",
       "fim": "2023-12"
-    },
-    {
-      "atividade": "Análise de transcrição musical automática do tipo piano roll por compositor (Plano de Trabalho do estudante 1)",
-      "inicio": null,
-      "fim": null
     }
   ],
   "financiamento": {
@@ -73,11 +73,22 @@
     "moeda": "BRL",
     "fontes": []
   },
+  "bolsas": [
+    {
+      "tipo": null,
+      "fonte": "Iniciação Científica",
+      "orgao_pagador": "IFES",
+      "e_parceria": false,
+      "parceiro": null,
+      "beneficiario": null,
+      "valor": null
+    }
+  ],
   "_meta": {
     "arquivo": "PJ_6956.pdf",
     "paginas": 10,
-    "extraido_em": "2026-08-10T21:05:20.781155+00:00",
-    "modelo": "mistral-large-latest",
+    "extraido_em": "2026-10-14T23:02:37.018579+00:00",
+    "modelo": "ministral-8b-latest",
     "fonte_texto": "pdf-text",
     "campos_ausentes": [
       "coordenador.nome",

@@ -1,151 +1,101 @@
 {
   "codigo": "PJ 4166",
   "titulo": "Sistema de monitoramento de temperatura para preparação de caixas de transporte de órgão",
-  "descricao": "O presente projeto partiu de necessidades do Banco de Olhos do Hospital Evangélico e do CNCDO/ES (Central de Notificação, Captação e Distribuição de Órgãos) de preparar a caixa responsável pelo transporte de órgão no estado do Espírito Santo. Atualmente, o processo de preparação de caixa para o transporte do órgão é oneroso e o monitoramento de temperatura é feito manualmente. Este projeto visa desenvolver um sistema embarcado de monitoramento automático de temperatura dentro da caixa, onde o usuário terá acesso às informações via um software, mitigando problemas como erros de medição e intervenção humana excessiva.",
+  "descricao": "Desenvolvimento de um sistema embarcado para monitoramento automático de temperatura em caixas de transporte de órgãos, visando substituir o processo manual atual, melhorando a eficiência e precisão no transporte de órgãos para transplante.",
   "palavras_chave": [
+    "Monitoramento de temperatura",
     "Sistemas embarcados",
     "Transporte de órgãos",
-    "Medição de temperatura",
-    "Controle de temperatura",
-    "Transporte de córnea",
-    "Sistemas de Informação"
+    "Transplantes",
+    "Software de validação",
+    "Temperatura ideal para órgãos",
+    "Banco de Olhos",
+    "Caixas térmicas"
   ],
-  "area_conhecimento": "Arquitetura de Sistemas de Computação",
-  "linha_pesquisa": "E-science e Ciência da Informação: informação, tecnologia e o uso-intensivo de dados",
+  "area_conhecimento": "Sistemas de Computação",
+  "linha_pesquisa": null,
   "objetivos": {
-    "geral": "Desenvolver uma proposta de um protótipo de soluções que permitam monitorar a temperatura e a vibração da caixa de transporte de órgão. Para isso vislumbram-se ferramentas embarcadas, assim como possíveis sistemas de informação. Para atingir o objetivo geral, será utilizado como estudo de caso o transporte de córnea.",
+    "geral": "Desenvolver um software e sistema embarcado para monitorar automaticamente a temperatura interna de caixas de transporte de órgãos, auxiliando no processo de validação e preparação para transplantes.",
     "especificos": [
-      "Especificar requisitos e análise do sistema completo",
-      "Estudar o processo de troca de calor dentro da caixa",
-      "Definir os pontos de medições de temperatura dentro e fora da caixa",
-      "Projetar e implementar subsistema de medição de temperatura interna e externa da caixa de transporte",
-      "Projetar e implementar um subsistema de controle da temperatura interna da caixa",
-      "Projetar e implementar subsistema de monitoramento para dispositivos móveis",
-      "Aplicar microcontroladores em automação de sistemas",
-      "Estudar outros microcontroladores com aplicações em medição e controle de temperatura",
-      "Implantar e testar sistema",
-      "Realizar a nucleação dos estudantes e elaboração de estratégias de estudo visando à aprendizagem dos conteúdos inerentes à formação dos técnicos em automação industrial e de informática, bacharéis em sistemas de informação e de engenharia de controle e automação",
-      "Promover sistematicamente o estudo para a disseminação de uma atitude investigativa entre discentes e docentes",
-      "Direcionar o aluno à construção do pensamento a partir de um escopo metodológico específico",
-      "Ampliar um espaço de diálogo na área de automação, em uma ação que possibilite o compartilhamento e a construção de conhecimentos entre educandos e professores",
-      "Diagnosticar a aprendizagem dos estudantes através do acompanhamento sistemático da aprendizagem tanto na teoria quanto na prática"
+      "Criar uma interface de comunicação serial para leitura de dados de temperatura interna e externa.",
+      "Desenvolver uma interface web para validação das caixas com base nos dados gerados.",
+      "Monitorar a temperatura da caixa durante o transporte e preparação para garantir que permaneça na faixa ideal (2°C a 8°C).",
+      "Auxiliar na previsão do tempo em que a caixa se mantém na temperatura ideal com a quantidade necessária de gelo.",
+      "Detectar possíveis violações da caixa durante o transporte."
     ]
   },
   "coordenador": {
-    "nome": null,
-    "email": null,
+    "nome": "Carlos Lins Borges Azevedo",
+    "email": "5a057c58fe1d@anon.lgpd",
     "campus": "Serra",
     "titulacao": null
   },
-  "equipe": [],
+  "equipe": [
+    {
+      "nome": "Lucas de Souza Almeida",
+      "funcao": "Estudante/Orientando",
+      "instituicao": "Instituto Federal do Espírito Santo (IFES)",
+      "carga_horaria_semanal": null,
+      "fonte_bolsa": "IFES"
+    }
+  ],
   "datas": {
-    "inicio": "2017-06-01",
-    "fim": "2018-06-30",
-    "duracao_meses": 13
+    "inicio": null,
+    "fim": "2018-07-31",
+    "duracao_meses": 12
   },
   "cronograma": [
     {
       "atividade": "Concepção",
-      "inicio": "2017-06",
-      "fim": "2017-08"
+      "inicio": "2017-01",
+      "fim": "2017-03"
     },
     {
       "atividade": "Implementação",
-      "inicio": "2017-09",
-      "fim": "2018-01"
+      "inicio": "2017-04",
+      "fim": "2017-09"
     },
     {
       "atividade": "Implantação",
-      "inicio": "2018-02",
-      "fim": "2018-06"
+      "inicio": "2017-10",
+      "fim": "2018-01"
     },
     {
       "atividade": "Registro de Resultados",
-      "inicio": "2018-05",
-      "fim": "2018-06"
-    },
-    {
-      "atividade": "Estudo de um sistema embarcado para medição da temperatura em caixas de transporte de órgãos",
-      "inicio": null,
-      "fim": null
-    },
-    {
-      "atividade": "Pesquisar procedimentos de medição de temperatura",
-      "inicio": "2017-06",
-      "fim": "2017-07"
-    },
-    {
-      "atividade": "Pesquisar e fazer uma modelagem matemática de como se dá a troca de calor dentro da caixa de transporte de órgãos",
-      "inicio": "2017-06",
-      "fim": "2017-08"
-    },
-    {
-      "atividade": "Definir os pontos para a medição da temperatura dentro da caixa",
-      "inicio": "2017-08",
-      "fim": "2017-09"
-    },
-    {
-      "atividade": "Estudar o microcontrolador arduino e outros microcontroladores open-sources",
-      "inicio": "2017-09",
-      "fim": "2017-10"
-    },
-    {
-      "atividade": "Implementar o circuito para a medição de temperatura",
-      "inicio": "2017-11",
-      "fim": "2018-02"
-    },
-    {
-      "atividade": "Realizar testes em loco para verificar o funcionamento do protótipo",
-      "inicio": "2018-03",
-      "fim": "2018-05"
-    },
-    {
-      "atividade": "Relatórios sobre o aprendizado",
-      "inicio": "2018-05",
-      "fim": "2018-06"
-    },
-    {
-      "atividade": "Elaboração de artigos científicos",
-      "inicio": "2018-05",
-      "fim": "2018-06"
-    },
-    {
-      "atividade": "Um software para auxiliar na medição de temperatura no processo de preparação da caixa para o transporte de órgão",
-      "inicio": null,
-      "fim": null
-    },
-    {
-      "atividade": "Estudar tecnologias para o desenvolvimento do software",
-      "inicio": "2017-08",
-      "fim": "2017-09"
-    },
-    {
-      "atividade": "Implementar o software para a medição de temperatura",
-      "inicio": "2017-11",
-      "fim": "2018-02"
-    },
-    {
-      "atividade": "Realizar testes em loco para verificar o funcionamento do dispositivo",
-      "inicio": "2018-03",
-      "fim": "2018-05"
+      "inicio": "2018-02",
+      "fim": "2018-03"
     }
   ],
   "financiamento": {
     "valor_total": null,
     "moeda": "BRL",
-    "fontes": []
+    "fontes": [
+      {
+        "fonte": "Voluntariado: sem financiamento",
+        "valor": null,
+        "tipo": "Voluntário"
+      }
+    ]
   },
+  "bolsas": [
+    {
+      "tipo": "PIBIC",
+      "fonte": "Edital 05/2017",
+      "orgao_pagador": "IFES",
+      "e_parceria": false,
+      "parceiro": null,
+      "beneficiario": "Lucas de Souza Almeida",
+      "valor": null
+    }
+  ],
   "_meta": {
     "arquivo": "PJ_4166.pdf",
-    "paginas": 18,
-    "extraido_em": "2026-08-10T20:20:18.365594+00:00",
-    "modelo": "mistral-large-latest",
+    "paginas": 6,
+    "extraido_em": "2026-10-14T22:34:36.069601+00:00",
+    "modelo": "ministral-8b-latest",
     "fonte_texto": "pdf-text",
     "campos_ausentes": [
-      "coordenador.nome",
-      "coordenador.email",
-      "equipe",
-      "financiamento"
+      "datas.inicio"
     ]
   }
 }

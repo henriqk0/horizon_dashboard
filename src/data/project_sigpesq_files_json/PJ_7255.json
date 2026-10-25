@@ -1,130 +1,119 @@
 {
   "codigo": "PJ 7255",
   "titulo": "Desenvolvimento de um Scanner 3D baseado em Sensor de Perfil Laser",
-  "descricao": "Um scanner 3D é um dispositivo de medição sem contato e não destrutivo que usa luz ou laser para capturar com precisão a forma e a aparência de objetos e do ambiente. Os dados coletados podem ser usados para construir um modelo digital 3D. Esses modelos podem ser usados para reproduzir e analisar a forma de objetos por meio de impressão 3D, programas de análise científica, engenharia reversa e até mesmo no desenvolvimento de próteses. A proposta desta pesquisa é a construção de uma plataforma para a movimentação linear de um sensor de perfil laser, modelo Wenglor MLSL276, que já está disponível no laboratório. Este sensor possui resolução na faixa de 270 a 1170 micrômetros e taxa de amostragem de 200 a 4000 medidas por segundo, o que permite a captura de detalhes bem pequenos de objetos. A plataforma que será desenvolvida neste projeto deve ter um sistema de controle de posição e velocidade que devem ser sincronizadas com a captura de dados feita pelo sensor de perfil laser. Esse equipamento será capaz de realizar a coleta de dados de peças visando a construção de seu modelo tridimensional para, em uma etapa futura, reproduzir essas peças a partir de processos de manufatura existentes, tais como usinagem CNC ou impressão 3D.",
+  "descricao": "Projeto de pesquisa que visa desenvolver uma plataforma móvel para scanner 3D utilizando sensor de perfil laser, focando na construção de uma estrutura de suporte e circuitos eletrônicos para movimentação linear precisa, além de integrar sistemas microcontrolados e sensores para obtenção de modelos tridimensionais detalhados.",
   "palavras_chave": [
     "Scanner 3D",
-    "Reconstrução 3D",
-    "Sensor de perfil laser"
+    "Sensor de Perfil Laser",
+    "Triangulação a laser",
+    "Movimentação linear",
+    "Microcontrolador ESP32",
+    "Engenharia Elétrica",
+    "Modelagem 3D",
+    "Precisão dimensional",
+    "Plataforma móvel"
   ],
   "area_conhecimento": "3.04.00.00-7 Engenharia Elétrica",
-  "linha_pesquisa": "Sistemas Inteligentes",
+  "linha_pesquisa": null,
   "objetivos": {
-    "geral": "Este projeto de pesquisa tem como principal objetivo desenvolver uma plataforma para a movimentação linear de um sensor de perfil laser de forma que seja possível se obter dados tridimensionais (Scanner 3D) para criação de arquivos que contenham dados 3D a partir de objetos físicos.",
+    "geral": "Desenvolver uma plataforma móvel para scanner 3D baseado em sensor de perfil laser, garantindo alta precisão e estabilidade na coleta de dados tridimensionais.",
     "especificos": [
-      "Desenvolver a estrutura de suporte e movimentação para o sensor de perfil laser.",
-      "Desenvolver os circuitos eletrônicos de integração do sistema microcontrolado, do motor de movimentação linear do sensor de perfil laser.",
-      "Implementar o programa que controla o processo de aquisição de dados a partir de um computador.",
-      "Desenvolver o algoritmo para gerar nuvem de pontos a partir dos dados escaneados do objeto tridimensional.",
-      "Desenvolver um algoritmo que gere o modelo 3D do objeto escaneado.",
-      "Criar uma peça, a partir de impressão 3D ou usinagem 3D, a partir do modelo criado e comparar com a peça original."
+      "Desenvolver a estrutura de suporte e movimentação para o sensor de perfil laser, projetando e construindo uma estrutura física robusta e estável que minimize vibrações e oscilações.",
+      "Projetar e implementar circuitos eletrônicos para integrar o sistema microcontrolado (ESP32) com o motor de movimentação linear, garantindo controle preciso e sincronizado.",
+      "Programar o microcontrolador para gerenciar a movimentação linear do sensor, controlar parâmetros de escaneamento e processar dados adquiridos.",
+      "Realizar testes de funcionamento e integração de todos os componentes eletrônicos e mecânicos para assegurar operação eficiente e sincronizada."
     ]
   },
   "coordenador": {
-    "nome": null,
-    "email": null,
+    "nome": "Flávio Garcia Pereira",
+    "email": "24207a7a93ff@anon.lgpd",
     "campus": "Serra",
     "titulacao": null
   },
-  "equipe": [],
+  "equipe": [
+    {
+      "nome": "Mariana Pinto Ferraz Tassan",
+      "funcao": "Estudante/Bolsista",
+      "instituicao": "Instituto Federal de Educação, Ciência e Tecnologia do Espírito Santo (IFES)",
+      "carga_horaria_semanal": null,
+      "fonte_bolsa": "IFES"
+    }
+  ],
   "datas": {
-    "inicio": "2023-09-01",
-    "fim": "2024-08-31",
+    "inicio": "2023-MM",
+    "fim": "2024-08-29",
     "duracao_meses": 12
   },
   "cronograma": [
     {
-      "atividade": "Estudar sobre teoria de reconstrução 3D",
-      "inicio": "2023-09",
-      "fim": "2023-11"
+      "atividade": "Estudos sobre teoria de reconstrução 3D e embasamento teórico",
+      "inicio": "2023-01",
+      "fim": "2023-03"
     },
     {
-      "atividade": "Projeto da estrutura mecânica para do scanner",
-      "inicio": "2023-10",
-      "fim": "2023-12"
-    },
-    {
-      "atividade": "Estudo do funcionamento do sensor de perfil laser",
-      "inicio": "2023-09",
-      "fim": "2023-12"
-    },
-    {
-      "atividade": "Desenvolvimento de software (em Python ou em C++) que possibilite a captura dos dados do laser",
-      "inicio": "2023-11",
-      "fim": "2024-02"
+      "atividade": "Projeto da estrutura mecânica para o scanner (design e planejamento)",
+      "inicio": "2023-02",
+      "fim": "2023-05"
     },
     {
       "atividade": "Montagem da estrutura mecânica",
-      "inicio": "2023-12",
-      "fim": "2024-03"
+      "inicio": "2023-03",
+      "fim": "2023-06"
     },
     {
-      "atividade": "Integração da estrutura mecânica com os componentes eletrônicos",
-      "inicio": "2024-03",
-      "fim": "2024-05"
+      "atividade": "Integração da estrutura mecânica com componentes eletrônicos",
+      "inicio": "2023-06",
+      "fim": "2023-06"
     },
     {
       "atividade": "Instalação do sensor laser na plataforma",
-      "inicio": "2024-04",
-      "fim": "2024-04"
+      "inicio": "2023-06",
+      "fim": "2023-09"
     },
     {
-      "atividade": "Integração do programa desenvolvido com a movimentação da estrutura mecânica",
-      "inicio": "2024-04",
-      "fim": "2024-07"
+      "atividade": "Ajustes na plataforma para otimização do desempenho",
+      "inicio": "2023-04",
+      "fim": "2023-10"
     },
     {
-      "atividade": "Desenvolvimento de software (em Python ou em C++) para a interpretação da nuvem de pontos gerada pelo scanner",
-      "inicio": "2024-04",
-      "fim": "2024-09"
+      "atividade": "Testes de movimentação para validar precisão e suavidade",
+      "inicio": "2023-05",
+      "fim": "2023-10"
     },
     {
-      "atividade": "Ajustes na plataforma",
-      "inicio": "2024-07",
-      "fim": "2024-09"
-    },
-    {
-      "atividade": "Geração de um arquivo 3D que possa ser lido e interpretado por um programa CAD a partir da nuvem de pontos obtida",
-      "inicio": "2024-06",
-      "fim": "2024-11"
-    },
-    {
-      "atividade": "Testes de movimentação",
-      "inicio": "2024-08",
-      "fim": "2024-12"
-    },
-    {
-      "atividade": "Realizar experimentos e comparar com resultados já existentes na literatura para validar o equipamento proposto",
-      "inicio": "2024-09",
-      "fim": "2024-12"
-    },
-    {
-      "atividade": "Construção de uma Plataforma Móvel para Scanner 3D baseado em Sensor de Perfil Laser",
-      "inicio": null,
-      "fim": null
-    },
-    {
-      "atividade": "Desenvolvimento de Software para um Scanner 3D utilizando dados de um Sensor de Perfil Laser",
-      "inicio": null,
-      "fim": null
+      "atividade": "Experimentos comparativos para avaliar desempenho do equipamento",
+      "inicio": "2023-10",
+      "fim": "2023-12"
     }
   ],
   "financiamento": {
     "valor_total": null,
     "moeda": "BRL",
-    "fontes": []
+    "fontes": [
+      {
+        "fonte": "Programa Institucional de Bolsas de Iniciação Científica (PIBIC) - IFES",
+        "valor": null,
+        "tipo": "Bolsa de Iniciação Científica"
+      }
+    ]
   },
+  "bolsas": [
+    {
+      "tipo": "PIBIC",
+      "fonte": "Edital 02/2023",
+      "orgao_pagador": "IFES",
+      "e_parceria": false,
+      "parceiro": null,
+      "beneficiario": "Mariana Pinto Ferraz Tassan",
+      "valor": null
+    }
+  ],
   "_meta": {
     "arquivo": "PJ_7255.pdf",
-    "paginas": 16,
-    "extraido_em": "2026-08-10T21:12:49.687454+00:00",
-    "modelo": "mistral-large-latest",
+    "paginas": 10,
+    "extraido_em": "2026-10-14T23:08:07.201421+00:00",
+    "modelo": "ministral-8b-latest",
     "fonte_texto": "pdf-text",
-    "campos_ausentes": [
-      "coordenador.nome",
-      "coordenador.email",
-      "equipe",
-      "financiamento"
-    ]
+    "campos_ausentes": []
   }
 }

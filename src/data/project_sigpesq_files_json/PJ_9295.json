@@ -1,23 +1,29 @@
 {
   "codigo": "PJ 9295",
   "titulo": "Arquitetura Adaptativa em Malha Fechada para Mitigação de Ataques DDoS utilizando eBPF/XDP e Aprendizado de Máquina",
-  "descricao": "Um dos principais desafios dos provedores de serviço é a evolução dos ataques de DDoS (Negação de Serviço Distribuída) à escala de Terabits. Esse volume massivo expõe a vulnerabilidade de defesas tradicionais, exigindo soluções mais ágeis e autônomas. Para combater essa ameaça, este projeto propõe uma Arquitetura Adaptativa em Malha Fechada (Closed-Loop), fundamentada no ciclo autonômico MAPE-K (Monitor-Analyze-Plan-Execute over a Knowledge base). A solução inova separando a defesa em dois planos: o Plano de Dados, utilizando eBPF/XDP (Extended Berkeley Packet Filter/eXpress Data Path) no kernel Linux para extração de telemetria e bloqueio de pacotes em velocidade de linha (line-rate); e o Plano de Controle, operando no espaço de usuário com Aprendizado de Máquina (AM). O AM detecta anomalias complexas e retroalimenta autonomamente as regras de mitigação via memórias compartilhadas (eBPF Maps). Planejado para dois anos, o projeto integra fortemente graduação e mestrado.",
+  "descricao": "Projeto de pesquisa que propõe uma arquitetura adaptativa em malha fechada para mitigação de ataques DDoS em escala de Terabits, integrando tecnologias eBPF/XDP e aprendizado de máquina. A solução separa a defesa em dois planos: Plano de Dados (eBPF/XDP no kernel Linux) e Plano de Controle (Aprendizado de Máquina no espaço de usuário). O projeto visa combater a evolução dos ataques DDoS, que atingem picos de 31,4 Tbps, e oferece soluções mais ágeis e autônomas para a segurança de redes.",
   "palavras_chave": [
     "Aprendizado de máquina",
     "Ataques de negação de serviço",
-    "eBPF/XDP"
+    "eBPF/XDP",
+    "Arquitetura adaptativa",
+    "Malha fechada",
+    "Mitigação de DDoS",
+    "Segurança de redes",
+    "Teleinformática",
+    "Redes de computadores"
   ],
-  "area_conhecimento": "1.03.00.00-7 - Ciência da Computação",
+  "area_conhecimento": "Ciências Exatas e da Terra",
   "linha_pesquisa": "Redes de computadores",
   "objetivos": {
     "geral": "Propor, desenvolver e avaliar uma arquitetura adaptativa em malha fechada que integre a capacidade de processamento de pacotes em velocidade de linha do eBPF/XDP com modelos de Aprendizado de Máquina para a detecção e mitigação autônoma de ataques DDoS.",
     "especificos": [
-      "Implementar Ambiente de Emulação: Construir e configurar um laboratório de redes virtualizado utilizando a ferramenta Containerlab para a geração de tráfego legítimo e de ataques cibernéticos em diferentes camadas.",
-      "Desenvolver o Plano de Dados (Operação no Kernel): Criar programas em eBPF/XDP para a extração contínua de telemetria com custo computacional baixo e para a aplicação em tempo real de ações de bloqueio baseadas em eBPF Maps.",
-      "Desenvolver o Plano de Controle (Inteligência em userspace): Implementar módulos no espaço de usuário capazes de consumir a telemetria do eBPF, extrair características relevantes e aplicar modelos de Aprendizado de Máquina para classificar o tráfego, retroalimentando as ações de mitigação de forma autônoma (fechando a malha do ciclo MAPE-K).",
-      "Gerar Produtos Tecnológicos de Dados: Desenvolver uma ferramenta/produto automatizado voltado à extração e criação de datasets de ataques baseados na telemetria nativa do eBPF, fornecendo dados para treinar os algoritmos de AM.",
-      "Gerar Produtos Tecnológicos Visuais: Projetar e desenvolver um Dashboard integrado com o eBPF, permitindo aos administradores da rede monitorar o tráfego, visualizar os alertas de anomalia e acompanhar a efetividade dos bloqueios aplicados em tempo real.",
-      "Prover Base para Hardware Offload: Consolidar a arquitetura emulada em software pelos alunos de graduação para que funcione como ambiente de prova de conceito e base de dados, permitindo que os alunos de mestrado avancem na solução do plano de controle em AM e realizem o offload das funções de mitigação para hardwares programáveis (SmartNICs e DPUs), visando a escala de Terabits."
+      "Implementar ambiente de emulação utilizando Containerlab para geração de tráfego legítimo e de ataques cibernéticos.",
+      "Desenvolver o Plano de Dados (operando no kernel) com programas eBPF/XDP para extração de telemetria e aplicação de bloqueios em tempo real.",
+      "Desenvolver o Plano de Controle (operando no espaço de usuário) com módulos de Aprendizado de Máquina para análise de telemetria e retroalimentação autônoma das regras de mitigação.",
+      "Gerar produtos tecnológicos de dados, como ferramentas automatizadas para extração e criação de datasets de ataques.",
+      "Gerar produtos tecnológicos visuais, como um Dashboard interativo para monitoramento e visualização de métricas de tráfego e eficácia da mitigação.",
+      "Prover base para offload de hardware, consolidando a arquitetura em software para que os alunos de mestrado avancem na solução de problemas mais complexos, como o offload das funções de mitigação para hardwares programáveis (SmartNICs/DPUs)."
     ]
   },
   "coordenador": {
@@ -26,7 +32,50 @@
     "campus": "Serra",
     "titulacao": null
   },
-  "equipe": [],
+  "equipe": [
+    {
+      "nome": "Estudante 1",
+      "funcao": "Bolsista",
+      "instituicao": "IFES Campus Serra",
+      "carga_horaria_semanal": null,
+      "fonte_bolsa": null
+    },
+    {
+      "nome": "Estudante 2",
+      "funcao": "Bolsista",
+      "instituicao": "IFES Campus Serra",
+      "carga_horaria_semanal": null,
+      "fonte_bolsa": null
+    },
+    {
+      "nome": "Estudante 3",
+      "funcao": "Bolsista",
+      "instituicao": "IFES Campus Serra",
+      "carga_horaria_semanal": null,
+      "fonte_bolsa": null
+    },
+    {
+      "nome": "Estudante 4",
+      "funcao": "Bolsista",
+      "instituicao": "IFES Campus Serra",
+      "carga_horaria_semanal": null,
+      "fonte_bolsa": null
+    },
+    {
+      "nome": "Estudante 5",
+      "funcao": "Bolsista",
+      "instituicao": "IFES Campus Serra",
+      "carga_horaria_semanal": null,
+      "fonte_bolsa": null
+    },
+    {
+      "nome": "Estudante 6",
+      "funcao": "Bolsista",
+      "instituicao": "IFES Campus Serra",
+      "carga_horaria_semanal": null,
+      "fonte_bolsa": null
+    }
+  ],
   "datas": {
     "inicio": "2026-09-01",
     "fim": "2028-08-31",
@@ -36,41 +85,41 @@
     {
       "atividade": "Revisão da Literatura e Fundamentação",
       "inicio": "2026-09",
-      "fim": "2026-11"
+      "fim": "2027-02"
     },
     {
       "atividade": "Configuração do Ambiente de Emulação",
       "inicio": "2026-10",
-      "fim": "2026-12"
+      "fim": "2027-03"
     },
     {
-      "atividade": "Geração de Tráfego e Telemetria",
-      "inicio": "2026-12",
-      "fim": "2027-05"
+      "atividade": "Geração de Tráfego e Extração de Telemetria",
+      "inicio": "2027-01",
+      "fim": "2027-06"
     },
     {
-      "atividade": "Plano de Controle (User) - Inicial",
+      "atividade": "Desenvolvimento do Plano de Controle (Userspace)",
       "inicio": "2027-02",
-      "fim": "2027-08"
-    },
-    {
-      "atividade": "Mitigação em eBPF/XDP - Inicial",
-      "inicio": "2027-02",
-      "fim": "2027-08"
-    },
-    {
-      "atividade": "Desenvolvimento de Dashboard",
-      "inicio": "2027-07",
       "fim": "2027-12"
     },
     {
+      "atividade": "Mitigação em eBPF/XDP",
+      "inicio": "2027-03",
+      "fim": "2027-12"
+    },
+    {
+      "atividade": "Desenvolvimento de Dashboard",
+      "inicio": "2027-05",
+      "fim": "2028-03"
+    },
+    {
       "atividade": "Testes e Integração com Mestrado",
-      "inicio": "2027-09",
+      "inicio": "2027-07",
       "fim": "2028-02"
     },
     {
       "atividade": "Documentação e Disseminação",
-      "inicio": "2027-10",
+      "inicio": "2027-09",
       "fim": "2028-08"
     },
     {
@@ -79,39 +128,9 @@
       "fim": "2027-10"
     },
     {
-      "atividade": "Configuração do Ambiente de Emulação (Ano 2)",
-      "inicio": "2027-09",
-      "fim": "2027-09"
-    },
-    {
-      "atividade": "Geração de Tráfego e Telemetria (Ano 2)",
-      "inicio": "2027-09",
-      "fim": "2027-10"
-    },
-    {
-      "atividade": "Plano de Controle (User) - Refinamento",
-      "inicio": "2027-11",
-      "fim": "2028-07"
-    },
-    {
-      "atividade": "Mitigação em eBPF/XDP - Refinamento",
-      "inicio": "2027-11",
-      "fim": "2028-07"
-    },
-    {
-      "atividade": "Desenvolvimento de Dashboard (Ano 2)",
-      "inicio": "2027-11",
-      "fim": "2028-07"
-    },
-    {
-      "atividade": "Testes e Integração com Mestrado (Ano 2)",
-      "inicio": "2028-03",
-      "fim": "2028-07"
-    },
-    {
-      "atividade": "Documentação e Disseminação (Ano 2)",
-      "inicio": "2028-06",
-      "fim": "2028-08"
+      "atividade": "Refinamento e Validação Avançada",
+      "inicio": "2027-13",
+      "fim": "2028-24"
     }
   ],
   "financiamento": {
@@ -119,16 +138,80 @@
     "moeda": "BRL",
     "fontes": []
   },
+  "bolsas": [
+    {
+      "tipo": null,
+      "fonte": null,
+      "orgao_pagador": null,
+      "e_parceria": null,
+      "parceiro": "Huge Networks",
+      "beneficiario": "Estudantes de graduação e mestrado",
+      "valor": null
+    },
+    {
+      "tipo": null,
+      "fonte": "Iniciação Científica",
+      "orgao_pagador": "IFES",
+      "e_parceria": false,
+      "parceiro": null,
+      "beneficiario": "Estudante 1",
+      "valor": null
+    },
+    {
+      "tipo": null,
+      "fonte": "Iniciação Científica",
+      "orgao_pagador": "IFES",
+      "e_parceria": false,
+      "parceiro": null,
+      "beneficiario": "Estudante 2",
+      "valor": null
+    },
+    {
+      "tipo": null,
+      "fonte": "Iniciação Científica",
+      "orgao_pagador": "IFES",
+      "e_parceria": false,
+      "parceiro": null,
+      "beneficiario": "Estudante 3",
+      "valor": null
+    },
+    {
+      "tipo": null,
+      "fonte": "Mestrado Profissional em Computação Aplicada",
+      "orgao_pagador": "IFES",
+      "e_parceria": false,
+      "parceiro": null,
+      "beneficiario": "Estudante 4",
+      "valor": null
+    },
+    {
+      "tipo": null,
+      "fonte": "Mestrado Profissional em Computação Aplicada",
+      "orgao_pagador": "IFES",
+      "e_parceria": false,
+      "parceiro": null,
+      "beneficiario": "Estudante 5",
+      "valor": null
+    },
+    {
+      "tipo": null,
+      "fonte": "Mestrado Profissional em Computação Aplicada",
+      "orgao_pagador": "IFES",
+      "e_parceria": false,
+      "parceiro": null,
+      "beneficiario": "Estudante 6",
+      "valor": null
+    }
+  ],
   "_meta": {
     "arquivo": "PJ_9295.pdf",
     "paginas": 23,
-    "extraido_em": "2026-08-10T21:57:16.419718+00:00",
-    "modelo": "mistral-large-latest",
+    "extraido_em": "2026-10-14T23:39:33.928643+00:00",
+    "modelo": "ministral-8b-latest",
     "fonte_texto": "pdf-text",
     "campos_ausentes": [
       "coordenador.nome",
       "coordenador.email",
-      "equipe",
       "financiamento"
     ]
   }
