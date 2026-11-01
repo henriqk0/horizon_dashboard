@@ -1,6 +1,6 @@
 {
     "metadata": {
-        "generated_at": "2026-10-24T09:17:07.863627+00:00",
+        "generated_at": "2026-10-31T12:23:49.416609+00:00",
         "sources": {
             "researchers": "/home/runner/work/horizon_etl/horizon_etl/data/exports/researchers_canonical.json",
             "initiatives": "/home/runner/work/horizon_etl/horizon_etl/data/exports/initiatives_canonical.json",
@@ -47,14 +47,14 @@
         },
         "top_people_by_weighted_degree": [
             {
-                "id": 2299,
+                "id": 2242,
                 "name": "Sâmela Pedrada Cardoso",
                 "classification": "researcher",
                 "weighted_degree": 5,
                 "degree": 4
             },
             {
-                "id": 2584,
+                "id": 2479,
                 "name": "Sérgio Adriany Santos Moreira",
                 "classification": "researcher",
                 "weighted_degree": 5,
@@ -68,14 +68,14 @@
                 "degree": 3
             },
             {
-                "id": 3511,
+                "id": 3204,
                 "name": "Ricardo dos Santos Dias",
                 "classification": "researcher",
                 "weighted_degree": 4,
                 "degree": 3
             },
             {
-                "id": 9559,
+                "id": 9237,
                 "name": "Eliane Alves Luz Magnoler",
                 "classification": "student",
                 "weighted_degree": 2,
@@ -89,17 +89,17 @@
         "graph": {},
         "nodes": [
             {
-                "name": "Ricardo dos Santos Dias",
+                "name": "Sâmela Pedrada Cardoso",
                 "classification": "researcher",
                 "classification_confidence": "high",
                 "was_student": false,
                 "was_staff": true,
-                "campus_name": "Barra de São Francisco",
-                "degree": 3,
-                "weighted_degree": 4,
+                "campus_name": "Centro-Serrano",
+                "degree": 4,
+                "weighted_degree": 5,
                 "is_group_member": true,
                 "is_advisorship_neighbor": false,
-                "id": 3511
+                "id": 2242
             },
             {
                 "name": "Isaac Gezer Silva De Oliveira",
@@ -115,17 +115,17 @@
                 "id": 194
             },
             {
-                "name": "Eliane Alves Luz Magnoler",
-                "classification": "student",
+                "name": "Ricardo dos Santos Dias",
+                "classification": "researcher",
                 "classification_confidence": "high",
-                "was_student": true,
-                "was_staff": false,
-                "campus_name": null,
-                "degree": 1,
-                "weighted_degree": 2,
-                "is_group_member": false,
-                "is_advisorship_neighbor": true,
-                "id": 9559
+                "was_student": false,
+                "was_staff": true,
+                "campus_name": "Barra de São Francisco",
+                "degree": 3,
+                "weighted_degree": 4,
+                "is_group_member": true,
+                "is_advisorship_neighbor": false,
+                "id": 3204
             },
             {
                 "name": "Sérgio Adriany Santos Moreira",
@@ -138,23 +138,35 @@
                 "weighted_degree": 5,
                 "is_group_member": true,
                 "is_advisorship_neighbor": false,
-                "id": 2584
+                "id": 2479
             },
             {
-                "name": "Sâmela Pedrada Cardoso",
-                "classification": "researcher",
+                "name": "Eliane Alves Luz Magnoler",
+                "classification": "student",
                 "classification_confidence": "high",
-                "was_student": false,
-                "was_staff": true,
-                "campus_name": "Centro-Serrano",
-                "degree": 4,
-                "weighted_degree": 5,
-                "is_group_member": true,
-                "is_advisorship_neighbor": false,
-                "id": 2299
+                "was_student": true,
+                "was_staff": false,
+                "campus_name": null,
+                "degree": 1,
+                "weighted_degree": 2,
+                "is_group_member": false,
+                "is_advisorship_neighbor": true,
+                "id": 9237
             }
         ],
         "edges": [
+            {
+                "weight": 2,
+                "initiative_count": 1,
+                "research_group_count": 0,
+                "advisorship_count": 1,
+                "relation_types": [
+                    "initiative",
+                    "advisorship"
+                ],
+                "source": 2242,
+                "target": 9237
+            },
             {
                 "weight": 1,
                 "initiative_count": 0,
@@ -163,7 +175,7 @@
                 "relation_types": [
                     "research_group"
                 ],
-                "source": 3511,
+                "source": 2242,
                 "target": 194
             },
             {
@@ -174,19 +186,19 @@
                 "relation_types": [
                     "research_group"
                 ],
-                "source": 3511,
-                "target": 2299
+                "source": 2242,
+                "target": 2479
             },
             {
-                "weight": 2,
+                "weight": 1,
                 "initiative_count": 0,
-                "research_group_count": 2,
+                "research_group_count": 1,
                 "advisorship_count": 0,
                 "relation_types": [
                     "research_group"
                 ],
-                "source": 3511,
-                "target": 2584
+                "source": 2242,
+                "target": 3204
             },
             {
                 "weight": 2,
@@ -197,7 +209,7 @@
                     "research_group"
                 ],
                 "source": 194,
-                "target": 2584
+                "target": 2479
             },
             {
                 "weight": 1,
@@ -208,30 +220,18 @@
                     "research_group"
                 ],
                 "source": 194,
-                "target": 2299
+                "target": 3204
             },
             {
                 "weight": 2,
-                "initiative_count": 1,
-                "research_group_count": 0,
-                "advisorship_count": 1,
-                "relation_types": [
-                    "initiative",
-                    "advisorship"
-                ],
-                "source": 9559,
-                "target": 2299
-            },
-            {
-                "weight": 1,
                 "initiative_count": 0,
-                "research_group_count": 1,
+                "research_group_count": 2,
                 "advisorship_count": 0,
                 "relation_types": [
                     "research_group"
                 ],
-                "source": 2584,
-                "target": 2299
+                "source": 3204,
+                "target": 2479
             }
         ]
     }
