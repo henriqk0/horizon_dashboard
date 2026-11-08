@@ -1,6 +1,6 @@
 {
     "metadata": {
-        "generated_at": "2026-10-31T12:23:47.409059+00:00",
+        "generated_at": "2026-11-07T12:08:38.354029+00:00",
         "sources": {
             "researchers": "/home/runner/work/horizon_etl/horizon_etl/data/exports/researchers_canonical.json",
             "initiatives": "/home/runner/work/horizon_etl/horizon_etl/data/exports/initiatives_canonical.json",
@@ -27,18 +27,18 @@
     },
     "graph_stats": {
         "nodes": 3,
-        "edges": 3,
+        "edges": 2,
         "isolated_nodes": 0,
         "connected_components": 1,
         "largest_component_size": 3,
         "relation_event_totals": {
             "initiative": 6,
-            "research_group": 4,
+            "research_group": 1,
             "advisorship": 4
         },
         "edge_relation_presence": {
             "initiative": 1,
-            "research_group": 3,
+            "research_group": 1,
             "advisorship": 1
         },
         "classification_distribution": {
@@ -49,22 +49,22 @@
                 "id": 127,
                 "name": "Bruno Neves Amigo",
                 "classification": "researcher",
-                "weighted_degree": 13,
+                "weighted_degree": 11,
                 "degree": 2
             },
             {
                 "id": 454,
                 "name": "Rodrigo Varejão Andreão",
                 "classification": "researcher",
-                "weighted_degree": 12,
-                "degree": 2
+                "weighted_degree": 10,
+                "degree": 1
             },
             {
                 "id": 128,
                 "name": "Diego Nunes Bertolani",
                 "classification": "researcher",
-                "weighted_degree": 3,
-                "degree": 2
+                "weighted_degree": 1,
+                "degree": 1
             }
         ]
     },
@@ -79,9 +79,9 @@
                 "classification_confidence": "high",
                 "was_student": false,
                 "was_staff": true,
-                "campus_name": "Cefor",
-                "degree": 2,
-                "weighted_degree": 3,
+                "campus_name": "Guarapari",
+                "degree": 1,
+                "weighted_degree": 1,
                 "is_group_member": true,
                 "is_advisorship_neighbor": false,
                 "id": 128
@@ -93,8 +93,8 @@
                 "was_student": false,
                 "was_staff": true,
                 "campus_name": "Vitória",
-                "degree": 2,
-                "weighted_degree": 12,
+                "degree": 1,
+                "weighted_degree": 10,
                 "is_group_member": false,
                 "is_advisorship_neighbor": true,
                 "id": 454
@@ -107,24 +107,13 @@
                 "was_staff": true,
                 "campus_name": "Guarapari",
                 "degree": 2,
-                "weighted_degree": 13,
+                "weighted_degree": 11,
                 "is_group_member": true,
                 "is_advisorship_neighbor": false,
                 "id": 127
             }
         ],
         "edges": [
-            {
-                "weight": 2,
-                "initiative_count": 0,
-                "research_group_count": 2,
-                "advisorship_count": 0,
-                "relation_types": [
-                    "research_group"
-                ],
-                "source": 128,
-                "target": 127
-            },
             {
                 "weight": 1,
                 "initiative_count": 0,
@@ -134,16 +123,15 @@
                     "research_group"
                 ],
                 "source": 128,
-                "target": 454
+                "target": 127
             },
             {
-                "weight": 11,
+                "weight": 10,
                 "initiative_count": 6,
-                "research_group_count": 1,
+                "research_group_count": 0,
                 "advisorship_count": 4,
                 "relation_types": [
                     "initiative",
-                    "research_group",
                     "advisorship"
                 ],
                 "source": 454,
